@@ -13,9 +13,13 @@
     <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Urievent</a>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <!-- buat togle menu bar -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button> -->
+            </button>
+            <!-- end of buat togle menu bar -->
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -72,7 +76,41 @@
     </div>
     <!-- END OF INTRO BOX -->
 
+    <!-- WEBSITE INFO -->
+    <div>
+        <div class="text-center">
+            Website No.1 Organisasi & Komunitas Indonesia
+        </div>
+        <div class="p-3 m-2 d-flex justify-content-center">
+            <div class=" bg-light m-2 ">
+                <img src="" alt="">
+                <h4>MedPart</h4>
+                <p>Temukan 2000+ Media Partner untuk dukung eventmu. Kamu bisa upload dan promosi organisasimu juga, lho!</p>
+            </div>
+            <div class=" bg-light m-2">
+                <img src="" alt="">
+                <h4>Sponsorship</h4>
+                <p>Temukan 2000+ Media Partner untuk dukung eventmu. Kamu bisa upload dan promosi organisasimu juga, lho!</p>
+            </div>
+            <div class=" bg-light m-2">
+                <img src="" alt="">
+                <h4>Vendor</h4>
+                <p>Temukan 2000+ Media Partner untuk dukung eventmu. Kamu bisa upload dan promosi organisasimu juga, lho!</p>
+            </div>
+            <div class=" bg-light m-2">
+                <img src="" alt="">
+                <h4>Venue</h4>
+                <p>Temukan 2000+ Media Partner untuk dukung eventmu. Kamu bisa upload dan promosi organisasimu juga, lho!</p>
+            </div>
+        </div>
+    </div>
 
+    <!-- END OF WEBSITE INFO -->
+
+    <!-- footer -->
+    <footer class="p-3 mb-2 text-white d-flex justify-content-center" style="background-color: #161625;">
+        Copyright © 2022 UriEvent. All Rights Reserved
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 
