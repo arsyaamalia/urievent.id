@@ -52,14 +52,15 @@
     <!-- Recomendations -->
     <h3>Recomendations</h3>
     <div class="col d-flex flex-wrap">
+
         <?php
-        for ($i = 0; $i < 12; $i++) : ?>
+        foreach ($recom_layanan as $layanan) : ?>
             <div class="row-3 m-4 p-1 border border-dark">
-                <div><img src="" alt=""></div>
-                <h4>Nama Layanan</h4>
+                <div><img src="/img/<?= $layanan['picture_poster'] ?>" alt=""></div>
+                <h4><?= $layanan['nama_layanan'] ?></h4>
                 <h6>harga Layanan</h6>
             </div>
-        <?php endfor; ?>
+        <?php endforeach; ?>
     </div>
     <!-- end of Recomendations -->
 

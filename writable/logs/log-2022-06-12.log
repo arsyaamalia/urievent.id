@@ -1,0 +1,8 @@
+CRITICAL - 2022-06-12 01:16:07 --> Undefined array key "harga layanan"
+in APPPATH\Controllers\Pages.php on line 23.
+ 1 APPPATH\Controllers\Pages.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "harga layanan"', 'APPPATH\\Controllers\\Pages.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Pages->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
