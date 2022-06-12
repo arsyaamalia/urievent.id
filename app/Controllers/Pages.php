@@ -2,8 +2,15 @@
 
 namespace App\Controllers;
 
+use App\Models\Produk_LayananModel;
+
 class Pages extends BaseController
 {
+    protected $recom_layanan;
+    public function __construct()
+    {
+        $this->recom_layanan = new Produk_LayananModel;
+    }
     public function index()
     // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
     {

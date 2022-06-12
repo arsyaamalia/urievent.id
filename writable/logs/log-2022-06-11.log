@@ -20,3 +20,21 @@ in APPPATH\Views\pages\home.php on line 8.
  6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-11 22:19:27 --> Class "App\Models\Brand_LayananModel" not found
+in APPPATH\Controllers\Pages.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Pages->index()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-11 22:22:29 --> Undefined variable $brand_layananmodel
+in APPPATH\Controllers\Pages.php on line 17.
+ 1 APPPATH\Controllers\Pages.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $brand_layananmodel', 'APPPATH\\Controllers\\Pages.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Pages->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-11 22:31:11 --> Cannot use temporary expression in write context
+in APPPATH\Controllers\Pages.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
