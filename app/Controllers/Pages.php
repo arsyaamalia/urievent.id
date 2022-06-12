@@ -19,15 +19,21 @@ class Pages extends BaseController
     // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
     {
         $recom_layanan = $this->produk_layanan->findAll();
-        $paket_layanan = $this->produk_layanan->findAll();
-        // $harga_layanan = $paket_layanan['harga layanan'];
+        $paket_layanan = $this->paket_layanan->findAll();
+
 
         $dataPage = [
             'title' => "Urievent | Homepage",
-            'recom_layanan' => $recom_layanan
+            'recom_layanan' => $recom_layanan,
+            // 'harga_min' => $id_layanan
         ];
         return view('pages/home', $dataPage);
         // return view('pages/home');
+    }
+
+    public function getHargaMin($id_layanan)
+
+    {
     }
 
     public function about()
