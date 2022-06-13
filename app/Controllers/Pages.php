@@ -15,6 +15,7 @@ class Pages extends BaseController
         $this->produk_layanan = new produk_layananModel();
         $this->paket_layanan = new paket_layananModel();
     }
+
     public function index()
     // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
     {
@@ -38,7 +39,6 @@ class Pages extends BaseController
             return $produk;
         }, $dataProduk);
 
-
         $dataPage = [
             'title' => "Urievent | Homepage",
             'daftar_produk' => $daftar_produk,
@@ -46,11 +46,6 @@ class Pages extends BaseController
 
         return view('pages/home', $dataPage);
         // return view('pages/home');
-    }
-
-    public function getHargaMin($id_layanan)
-
-    {
     }
 
     public function about()

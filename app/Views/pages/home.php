@@ -1,70 +1,226 @@
 <?= $this->extend('layouts/template') ?>
+
 <?= $this->section('content'); ?>
-<style>
-    .row.categories>.col {
-        height: 100px;
-        border: 1px solid black;
-    }
-</style>
-
-<div class="container">
-    <!-- Iklan Box -->
-    <!-- ini bisa pake fitur  slider di  bootstrap-->
-    <div class="row  p-4 bg-light">
-        <div class="col-4 m-2 text-center text-white " style="background-color: #0F3460 ;">
-            <h6>Ads Media Partner, Ads Sponsorship, Ads Vendor, Ads Venue</h6>
+<div class="ads-container">
+    <div class="ads-box">
+        <div class="big-ads" id="ads">
+            <div class="ads-text">Ads Media Partner, Ads Sponsorship, Ads Vendor, Ads Venue</div>
+            <div class="circle-slide">
+                <div class="circle" id="active-circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
         </div>
-        <div class="col-2 text-center text-white" style="background-color: #0F3460 ;">
-            <!-- rectangle?? -->
-            <h4>This Is Rectangle</h4>
-        </div>
+        <div class="small-ads" id="ads"></div>
     </div>
-
-    <!-- Categories box -->
-    <div class="mt-4">
-        <div class="row">
-            <div class="col">
-                <h2>Hello, User! Choose a Category below! </h2>
-                <!-- nanti user diganti $username_user -->
-            </div>
-        </div>
-        <div class="row categories pb-3">
-            <div class="col">
-                <img src="" alt="">
-                <h5>Media Partner</h5>
-            </div>
-            <div class="col">
-                <img src="" alt="">
-                <h5>Sponsorship</h5>
-            </div>
-            <div class="col">
-                <img src="" alt="">
-                <h5>Vendor</h5>
-            </div>
-            <div class="col">
-                <img src="" alt="">
-                <h5>Venue</h5>
-            </div>
-        </div>
-    </div>
-    <!-- end of Categories box -->
-
-    <!-- Recomendations -->
-    <h3>Recomendations</h3>
-    <div class="col d-flex flex-wrap">
-
-        <?php
-        foreach ($daftar_produk as $produk) : ?>
-            <div class="row-3 m-4 p-1 border border-dark">
-                <div><?= $produk['id_layanan'] ?></div>
-                <div><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
-                <h4><?= $produk['nama_layanan'] ?></h4>
-                <h6><?= $produk['harga_min'] ?> - <?= $produk['harga_max'] ?></h6>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <!-- end of Recomendations -->
-
-    <button>see more</button>
 </div>
+
+<div class="batas-body">
+    <div class="body-urievent">
+        <div class="categories-container">
+            <h2>Hello User! Choose a Category below!</h2>
+            <div class="categories-box">
+                <div class="hover">
+                    <a href="medpart.html">
+                        <div class="categories-item">
+                            <div class="category-circle">
+                                <img src="ICON/medpart.png" alt="medpart">
+                            </div>
+                            <h4>Media Partner</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="hover">
+                    <a href="sponsor.html">
+                        <div class="categories-item">
+                            <div class="category-circle">
+                                <img src="ICON/sponsorship.png" alt="sponsorship">
+                            </div>
+                            <h4>Sponsorship</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="hover">
+                    <a href="vendor.html">
+                        <div class="categories-item">
+                            <div class="category-circle">
+                                <img src="ICON/vendor.png" alt="vendor">
+                            </div>
+                            <h4>Vendor</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="hover">
+                    <a href="venue.html">
+                        <div class="categories-item">
+                            <div class="category-circle">
+                                <img src="ICON/venue.png" alt="venue">
+                            </div>
+                            <h4>Venue</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendation-container">
+            <h2>Recommendations</h2>
+
+            <div class="recommendation-box">
+                <?php
+                foreach ($daftar_produk as $produk) : ?>
+                    <div class="recom-hover">
+                        <a href="recom-button">
+                            <div class="recom-item">
+                                <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
+                                <h4><?= $produk['nama_layanan'] ?></h4>
+                                <h3>Rp <?= $produk['harga_min'] ?></h3>
+                            </div>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+                <!-- <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>Dibimbing</h4>
+                            <h3>Rp0</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>HariSenin.com</h4>
+                            <h3>Rp10.000</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>Aksel Official</h4>
+                            <h3>Rp15.000</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>Revo U</h4>
+                            <h3>Rp15.000</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="recommendation-box">
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>MagangUpdate</h4>
+                            <h3>Rp25.000</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>Dibimbing</h4>
+                            <h3>Rp0</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>HariSenin.com</h4>
+                            <h3>Rp10.000</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>Aksel Official</h4>
+                            <h3>Rp15.000</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>Revo U</h4>
+                            <h3>Rp15.000</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="recommendation-box">
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>MagangUpdate</h4>
+                            <h3>Rp25.000</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>Dibimbing</h4>
+                            <h3>Rp0</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>HariSenin.com</h4>
+                            <h3>Rp10.000</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>Aksel Official</h4>
+                            <h3>Rp15.000</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="recom-hover">
+                    <a href="recom-button">
+                        <div class="recom-item">
+                            <div class="item-circle"></div>
+                            <h4>Revo U</h4>
+                            <h3>Rp15.000</h3>
+                        </div>
+                    </a>
+                </div> -->
+            </div>
+            <div class="seeall-button">
+                <a href="see-more-recom">
+                    <div class="see-all">
+                        <h4>See More</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?= $this->endsection(); ?>

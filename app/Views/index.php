@@ -5,12 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Urievent</title>
+
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/css/style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
+    <div class="coba-css">NYOBASE MASUK APA GA</div>
     <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
             <a class="navbar-brand text-primary" href="">Urievent</a>
@@ -49,7 +52,7 @@
                         <input class="form-control me-2" input type="hidden" placeholder="Search" aria-label="Search">
                         <!-- logic : if 'button = submit' set input type="search" bisa pake js-->
                         <!-- bahan belajar : https://mdbootstrap.com/docs/standard/forms/search/ -->
-                        <button class="btn btn-outline" type="submit">Search <img src="public\searchIcon.svg" alt="searchIcon"></button>
+                        <button class="btn btn-outline" type="submit">Search <img src="/icon/search.png" alt="searchIcon"></button>
                     </form>
                 </ul>
 

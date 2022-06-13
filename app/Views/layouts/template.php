@@ -1,80 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
-    <link rel="shortcut icon" type="image/png" href="/img/brandUE.svg" height="10px" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css" />
-
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/pages">Urievent</a>
-
-            <!-- buat togle menu bar -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- end of buat togle menu bar -->
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/pages/about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Advertise With Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Program</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li> -->
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" input type="hidden" placeholder="Search" aria-label="Search">
-                        logic : if 'button = submit' set input type="search" bisa pake js
-                        <!-- bahan belajar : https://mdbootstrap.com/docs/standard/forms/search/ -->
-                        <button class="btn btn-outline" type="submit">Search <img src="\searchIcon.svg" alt="searchIcon"></button>
-                    </form>
-                </ul>
-
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">chat</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">pofile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">upload</a>
-                    </li>
-                </ul>
+    <header>
+        <div class="header">
+            <div class="nav-left">
+                <div class="urievent">
+                    <a href="/pages" class="clicked-urievent">UriEvent</a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="/pages/about" class="nav-link">About Us</a></li>
+                        <li><a href="#" class="nav-link">Advertise With Us</a></li>
+                        <li><a href="#" class="nav-link">Program</a></li>
+                        <li>
+                            <a href="#" class="search-box">
+                                <div class="search">
+                                    <div class="text-search">Search</div>
+                                    <div class="img-search"><img src="/icon/search.png" alt="Search" class="icon-search"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="icon-messages" id="margin-nav-right">
+                    <div class="urichat">
+                        <li><a href="#">UriChat</a></li>
+                    </div>
+                    <img src="/icon/message.png" alt="message" class="icon-message">
+                </div>
+                <div class="upload-service">
+                    <li><a href="#">Upload Service</a></li>
+                </div>
+                <a href="signin.html">
+                    <div class="profile-picture" id="margin-nav-right"></div>
+                </a>
+                <div class="profile">
+                    <li><a href="#">Username</a></li>
+                </div>
+                <div class="upload-button" id="margin-nav-right">
+                    <p>Upload ▼</p>
+                </div>
             </div>
         </div>
-    </nav>
+    </header>
 
     <?= $this->renderSection('content') ?>
-    <footer class="p-3 text-white d-flex justify-content-center" style="background-color: #161625;">
-        Copyright © 2022 UriEvent. All Rights Reserved
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <div class="footer">
+        <div class="nav-bottom">
+            <div class="nav-bottom-box">
+                <h5>Categories</h5>
+                <a href="medpart.php">
+                    <p class="nav-bottom-link">Media Partner</p>
+                </a>
+                <a href="sponsor.php">
+                    <p class="nav-bottom-link">Sponsorship</p>
+                </a>
+                <a href="vendor.php">
+                    <p class="nav-bottom-link">Vendor</p>
+                </a>
+                <a href="venue.php">
+                    <p class="nav-bottom-link">Venue</p>
+                </a>
+            </div>
+            <div class="nav-bottom-box">
+                <h5>UriEvent</h5>
+                <a href="#">
+                    <p class="nav-bottom-link">About Us</p>
+                </a>
+                <a href="#">
+                    <p class="nav-bottom-link">Advertise With Us</p>
+                </a>
+                <a href="#">
+                    <p class="nav-bottom-link">Career</p>
+                </a>
+                <a href="#">
+                    <p class="nav-bottom-link">Program</p>
+                </a>
+                <a href="#">
+                    <p class="nav-bottom-link">Privacy Policy</p>
+                </a>
+                <a href="#">
+                    <p>Terms & Conditions</p>
+                </a>
+            </div>
+            <div class="nav-bottom-box">
+                <h5>Contact Us</h5>
+                <a href="https://wa.me/6282228544074">
+                    <div class="contact-box">`
+                        <div class="icon-contact">
+                            <img src="/icon/whatsapp.png" alt="Whatsapp">
+                        </div>
+                        <div class="text-contact">
+                            <p>+62 822-2854-4074</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://instagram.com/urievent.id">
+                    <div class="contact-box">
+                        <div class="icon-contact">
+                            <img src="/icon/instagram.png" alt="Instagram">
+                        </div>
+                        <div class="text-contact">
+                            <p>@urievent.id</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://arsyaamalia1@gmail.com">
+                    <div class="contact-box">
+                        <div class="icon-contact">
+                            <img src="/icon/email.png" alt="Email">
+                        </div>
+                        <div class="text-contact">
+                            <p>halo@urievent.id</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://urievent.medium.com">
+                    <div class="contact-box">
+                        <div class="icon-contact">
+                            <img src="/icon/medium.png" alt="Medium">
+                        </div>
+                        <div class="text-contact">
+                            <p>UriEvent</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-bottom-box">
+                <h5>Office</h5>
+                <p class="nav-bottom-link">Fakultas Ilmu Komputer</p>
+                <p class="nav-bottom-link">UPN "Veteran" Jawa Timur</p>
+                <p>Jl. Rungkut Madya No.1, Gn. Anyar, Kec. Gn. Anyar, Kota SBY, Jawa Timur 60294</p>
+            </div>
+        </div>
+        <div class="credit">
+            <h5>Copyright © 2022 UriEvent. All Rights Reserved</h5>
+        </div>
+    </div>
 </body>
 
 </html>
