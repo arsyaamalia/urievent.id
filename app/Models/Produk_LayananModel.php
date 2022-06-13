@@ -11,14 +11,13 @@ class produk_layananModel extends Model
     protected $primaryKey = 'id_layanan';
     protected $useAutoIncrement = false;
     protected $useTimestamps = true;
-    protected $ReturnType = "object";
 
-    public function getAllPaket()
-    {
-    }
+    // public function getAllPaket()
+    // {
+    // }
 
-    public function getHargaPaketMin($id)
-    {
-        return $this->db->get_where('produk_layanan', ['id' => $id])->row_array();
-    }
+    // public function getHargaPaketMin($id)
+    // {
+    //     return $this->db->get_where('produk_layanan', ['id' => $id])->row_array();
+    // }
 }

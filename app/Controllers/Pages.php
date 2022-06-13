@@ -18,15 +18,32 @@ class Pages extends BaseController
     public function index()
     // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
     {
-        $recom_layanan = $this->produk_layanan->findAll();
-        $paket_layanan = $this->paket_layanan->findAll();
+
+        $dataProduk = $this->produk_layanan->findAll();
+        $dataPaket = $this->paket_layanan->findAll();
+        $daftar_produk = array_map(function ($produk) use ($dataPaket) {
+            $daftar_paket = array_filter($dataPaket, function ($paket) use ($produk) {
+                return $paket['id_layanan'] == $produk['id_layanan'];
+            });
+            $produk['paket'] = $daftar_paket;
+            $daftar_harga = array_column($daftar_paket, 'harga_paket');
+
+            if (!empty($daftar_harga)) {
+                $produk['harga_max'] = max($daftar_harga);
+                $produk['harga_min'] = min($daftar_harga);
+            } else {
+                $produk['harga_max'] = '0';
+                $produk['harga_min'] = '0';
+            }
+            return $produk;
+        }, $dataProduk);
 
 
         $dataPage = [
             'title' => "Urievent | Homepage",
-            'recom_layanan' => $recom_layanan,
-            // 'harga_min' => $id_layanan
+            'daftar_produk' => $daftar_produk,
         ];
+
         return view('pages/home', $dataPage);
         // return view('pages/home');
     }

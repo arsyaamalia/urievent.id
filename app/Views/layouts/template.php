@@ -8,6 +8,8 @@
     <title><?= $title ?></title>
     <link rel="shortcut icon" type="image/png" href="/img/brandUE.svg" height="10px" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" />
+
 </head>
 
 <body>
@@ -47,7 +49,7 @@
                     </li> -->
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" input type="hidden" placeholder="Search" aria-label="Search">
-                        <!-- logic : if 'button = submit' set input type="search" bisa pake js-->
+                        logic : if 'button = submit' set input type="search" bisa pake js
                         <!-- bahan belajar : https://mdbootstrap.com/docs/standard/forms/search/ -->
                         <button class="btn btn-outline" type="submit">Search <img src="\searchIcon.svg" alt="searchIcon"></button>
                     </form>

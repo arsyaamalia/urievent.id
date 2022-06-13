@@ -54,12 +54,12 @@
     <div class="col d-flex flex-wrap">
 
         <?php
-        foreach ($recom_layanan as $layanan) : ?>
+        foreach ($daftar_produk as $produk) : ?>
             <div class="row-3 m-4 p-1 border border-dark">
-                <div><?= $layanan['id_layanan'] ?></div>
-                <div><img src="/img/<?= $layanan['picture_poster'] ?>" alt=""></div>
-                <h4><?= $layanan['nama_layanan'] ?></h4>
-                <h6>hargamin-hargamax</h6>
+                <div><?= $produk['id_layanan'] ?></div>
+                <div><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
+                <h4><?= $produk['nama_layanan'] ?></h4>
+                <h6><?= $produk['harga_min'] ?> - <?= $produk['harga_max'] ?></h6>
             </div>
         <?php endforeach; ?>
     </div>
