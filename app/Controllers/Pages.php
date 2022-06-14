@@ -45,7 +45,6 @@ class Pages extends BaseController
         ];
 
         return view('pages/home', $dataPage);
-        // return view('pages/home');
     }
 
     public function about()

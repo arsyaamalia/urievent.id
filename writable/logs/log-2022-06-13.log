@@ -20,3 +20,225 @@ in APPPATH\Views\pages\about.php on line 73.
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:42:29 --> Invalid file: pages/resetPass.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/resetPass.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/resetPass', [], true)
+ 3 APPPATH\Controllers\Pages.php(84): view('pages/resetPass', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Pages->resetPass()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:42:50 --> Invalid file: pages/resetPass.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/resetPass.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/resetPass', [], true)
+ 3 APPPATH\Controllers\Pages.php(84): view('pages/resetPass', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Pages->resetPass()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:42:53 --> Invalid file: pages/resetPass.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/resetPass.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/resetPass', [], true)
+ 3 APPPATH\Controllers\Pages.php(84): view('pages/resetPass', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Pages->resetPass()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:48:32 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(14): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:50:15 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(14): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:54:24 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(14): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:54:35 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(14): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:56:51 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(13): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:56:55 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(13): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:57:05 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(13): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:58:13 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(13): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:58:14 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(13): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 20:58:29 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(22): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->signIn()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 21:02:03 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(13): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->index('signIn')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 21:02:10 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(13): view('sign/signIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 21:05:25 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(9): view('sign/signIn')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 21:05:51 --> Invalid file: sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(9): view('sign/signIn')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 21:06:28 --> Invalid file: /sign/signIn.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/sign/signIn.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('/sign/signIn', [], true)
+ 3 APPPATH\Controllers\Sign.php(10): view('/sign/signIn')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 21:07:21 --> Invalid file: sign/resetPass.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/resetPass.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/resetPass', [], true)
+ 3 APPPATH\Controllers\Sign.php(40): view('sign/resetPass', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->resetPass()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 21:10:51 --> Invalid file: sign/resetPass.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/resetPass.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/resetPass', [], true)
+ 3 APPPATH\Controllers\Sign.php(41): view('sign/resetPass', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->resetPass()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 21:11:57 --> Invalid file: sign/resetPass.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign/resetPass.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/resetPass', [], true)
+ 3 APPPATH\Controllers\Sign.php(41): view('sign/resetPass')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->resetPass()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-13 21:12:44 --> Undefined variable $title
+in APPPATH\Views\sign\resetPass.php on line 8.
+ 1 APPPATH\Views\sign\resetPass.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'APPPATH\\Views\\sign\\resetPass.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\sign\\resetPass.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('sign/resetPass', [], true)
+ 5 APPPATH\Controllers\Sign.php(41): view('sign/resetPass')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Sign->resetPass()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sign))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

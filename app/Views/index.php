@@ -58,10 +58,10 @@
 
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign In</a>
+                        <a class="nav-link" href="/sign/signIn">Sign In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Upload</a>
+                        <a class="nav-link" href="/sign/signIn">Upload</a>
                     </li>
                 </ul>
             </div>
