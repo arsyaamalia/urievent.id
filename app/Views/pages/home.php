@@ -1,6 +1,7 @@
 <?= $this->extend('layouts/template') ?>
 
 <?= $this->section('content'); ?>
+
 <div class="ads-container">
     <div class="ads-box">
         <div class="big-ads" id="ads">
@@ -20,7 +21,7 @@
 <div class="batas-body">
     <div class="body-urievent">
         <div class="categories-container">
-            <h2>Hello User! Choose a Category below!</h2>
+            <h2>Hello User! Choose a Category below! - zabinatry</h2>
             <div class="categories-box">
                 <div class="hover">
                     <a href="medpart.html">
