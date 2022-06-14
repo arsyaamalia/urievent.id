@@ -100,6 +100,7 @@ header {
 }
 
 .upload-button {
+<<<<<<< HEAD
     color: #fff;
     line-height: 40px;
     text-align: center;
@@ -107,6 +108,15 @@ header {
     height: 40px;
     width: 110px;
     border-radius: 15px;
+=======
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  background-color: #e94560;
+  height: 40px;
+  border-radius: 15px;
+  padding: 0 20px;
+>>>>>>> 099cd4c55cb9bfa20d4cbfec502c289c63ef7277
 }
 
 #margin-nav-right {
@@ -778,4 +788,31 @@ a.privacy {
     background-color: #E94560;
     border-radius: 10px;
     border: none;
+<<<<<<< HEAD
+=======
+}
+
+.intro-container{
+  background-color: #f4f5f5;
+  height: 530px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 100px;
+  color: #0f3460;
+}
+
+h1{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.intro-text p{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.img3d{
+  width: 600px;
+>>>>>>> 099cd4c55cb9bfa20d4cbfec502c289c63ef7277
 }
