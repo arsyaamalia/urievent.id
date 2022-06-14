@@ -4,9 +4,9 @@
 
     <div class="container">
         <div class="sub-one">
-            <h2>Lorem, ipsum dolor.</h2>
-            <h2>Lorem, ipsum dolor.</h2>
-            <h2>Lorem, ipsum dolor.</h2>
+            <h2>Lorem, ipsum.</h2>
+            <h2>Lorem, ipsum.</h2>
+            <h2>Lorem, ipsum.</h2>
             <div class="box">
 
             </div>
@@ -17,6 +17,16 @@
             </div>
         </div>
         <div class="sub-three">
+            <div class="box">
+
+            </div>
+        </div>
+        <div class="sub-four">
+            <div class="box">
+
+            </div>
+        </div>
+        <div class="sub-five">
             <div class="box">
 
             </div>
