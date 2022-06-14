@@ -21,7 +21,7 @@
 <div class="batas-body">
     <div class="body-urievent">
         <div class="categories-container">
-            <h2>Hello User! Choose a Category below! - zabinatry</h2>
+            <h2>Hello User! Choose a Category below!</h2>
             <div class="categories-box">
                 <div class="hover">
                     <a href="medpart.html">
@@ -39,7 +39,7 @@
                             <div class="category-circle">
                                 <img src="../ICON/sponsorship.png" alt="sponsorship">
                             </div>
-                            <h4>Sponsorship by arsya</h4>
+                            <h4>Sponsorship</h4>
                         </div>
                     </a>
                 </div>
@@ -75,8 +75,10 @@
                     <div class="recom-hover">
                         <a href="recom-button">
                             <div class="recom-item">
-                                <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
-                                <h4><?= $produk['nama_layanan'] ?></h4>
+                                <div class="recom-grup">
+                                    <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
+                                    <h4><?= $produk['nama_layanan'] ?></h4>
+                                </div>
                                 <h3>Rp <?= $produk['harga_min'] ?></h3>
                             </div>
                         </a>

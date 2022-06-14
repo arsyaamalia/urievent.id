@@ -45,7 +45,7 @@
                 <div class="upload-service">
                     <li><a href="#">Upload Service</a></li>
                 </div>
-                <a href="signin.html">
+                <a href="/sign">
                     <div class="profile-picture" id="margin-nav-right"></div>
                 </a>
                 <div class="profile">
