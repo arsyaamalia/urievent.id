@@ -38,7 +38,7 @@
                             <div class="category-circle">
                                 <img src="ICON/sponsorship.png" alt="sponsorship">
                             </div>
-                            <h4>Sponsorship</h4>
+                            <h4>Sponsorship by arsya</h4>
                         </div>
                     </a>
                 </div>
