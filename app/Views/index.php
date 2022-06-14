@@ -43,13 +43,13 @@
                 <div class="upload-service">
                     <li><a href="#">Upload Service</a></li>
                 </div>
-                <div class="sign-in">
+                <div class="sign-in" id="margin-nav-right">
                     <li><a href="/sign" class="sign-in">Sign In</a></li>
                 </div>
                 <div class="profile">
                     <li><a href="#">Username</a></li>
                 </div>
-                <div class="upload-button" id="margin-nav-right">
+                <div class="upload-button-nav" id="margin-nav-right">
                     <p>Upload</p>
                 </div>
             </div>
