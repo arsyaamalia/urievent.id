@@ -21,7 +21,7 @@
 <div class="batas-body">
     <div class="body-urievent">
         <div class="categories-container">
-            <h2>Hello User! Choose a Category below! - zabinatry</h2>
+            <h2>Hello User! Choose a Category below!</h2>
             <div class="categories-box">
                 <div class="hover">
                     <a href="medpart.html">
@@ -39,7 +39,7 @@
                             <div class="category-circle">
                                 <img src="../ICON/sponsorship.png" alt="sponsorship">
                             </div>
-                            <h4>Sponsorship by arsya</h4>
+                            <h4>Sponsorship</h4>
                         </div>
                     </a>
                 </div>
@@ -75,143 +75,15 @@
                     <div class="recom-hover">
                         <a href="recom-button">
                             <div class="recom-item">
-                                <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
-                                <h4><?= $produk['nama_layanan'] ?></h4>
+                                <div class="recom-grup">
+                                    <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
+                                    <h4><?= $produk['nama_instansi'] ?></h4>
+                                </div>
                                 <h3>Rp <?= $produk['harga_min'] ?></h3>
                             </div>
                         </a>
                     </div>
                 <?php endforeach; ?>
-                <!-- <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>Dibimbing</h4>
-                            <h3>Rp0</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>HariSenin.com</h4>
-                            <h3>Rp10.000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>Aksel Official</h4>
-                            <h3>Rp15.000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>Revo U</h4>
-                            <h3>Rp15.000</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="recommendation-box">
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>MagangUpdate</h4>
-                            <h3>Rp25.000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>Dibimbing</h4>
-                            <h3>Rp0</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>HariSenin.com</h4>
-                            <h3>Rp10.000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>Aksel Official</h4>
-                            <h3>Rp15.000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>Revo U</h4>
-                            <h3>Rp15.000</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="recommendation-box">
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>MagangUpdate</h4>
-                            <h3>Rp25.000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>Dibimbing</h4>
-                            <h3>Rp0</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>HariSenin.com</h4>
-                            <h3>Rp10.000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>Aksel Official</h4>
-                            <h3>Rp15.000</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="recom-hover">
-                    <a href="recom-button">
-                        <div class="recom-item">
-                            <div class="item-circle"></div>
-                            <h4>Revo U</h4>
-                            <h3>Rp15.000</h3>
-                        </div>
-                    </a>
-                </div> -->
             </div>
             <div class="seeall-button">
                 <a href="see-more-recom">
