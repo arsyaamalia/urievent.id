@@ -101,7 +101,7 @@
             <div class="nav-bottom-box">
                 <h5>Contact Us</h5>
                 <a href="https://wa.me/6282228544074">
-                    <div class="contact-box">`
+                    <div class="contact-box">
                         <div class="icon-contact">
                             <img src="/icon/whatsapp.png" alt="Whatsapp">
                         </div>
