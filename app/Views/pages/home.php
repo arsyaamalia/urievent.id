@@ -27,7 +27,7 @@
                     <a href="medpart.html">
                         <div class="categories-item">
                             <div class="category-circle">
-                                <img src="ICON/medpart.png" alt="medpart">
+                                <img src="../ICON/medpart.png" alt="medpart">
                             </div>
                             <h4>Media Partner</h4>
                         </div>
@@ -37,7 +37,7 @@
                     <a href="sponsor.html">
                         <div class="categories-item">
                             <div class="category-circle">
-                                <img src="ICON/sponsorship.png" alt="sponsorship">
+                                <img src="../ICON/sponsorship.png" alt="sponsorship">
                             </div>
                             <h4>Sponsorship by arsya</h4>
                         </div>
@@ -47,7 +47,7 @@
                     <a href="vendor.html">
                         <div class="categories-item">
                             <div class="category-circle">
-                                <img src="ICON/vendor.png" alt="vendor">
+                                <img src="../ICON/vendor.png" alt="vendor">
                             </div>
                             <h4>Vendor</h4>
                         </div>
@@ -57,7 +57,7 @@
                     <a href="venue.html">
                         <div class="categories-item">
                             <div class="category-circle">
-                                <img src="ICON/venue.png" alt="venue">
+                                <img src="../ICON/venue.png" alt="venue">
                             </div>
                             <h4>Venue</h4>
                         </div>
