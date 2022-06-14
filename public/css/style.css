@@ -105,8 +105,8 @@ header {
   text-align: center;
   background-color: #e94560;
   height: 40px;
-  width: 110px;
   border-radius: 15px;
+  padding: 0 20px;
 }
 
 #margin-nav-right {
@@ -794,3 +794,26 @@ a.privacy {
     border: none;
 }
 
+.intro-container{
+  background-color: #f4f5f5;
+  height: 530px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 100px;
+  color: #0f3460;
+}
+
+h1{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.intro-text p{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.img3d{
+  width: 600px;
+}
