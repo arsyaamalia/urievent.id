@@ -99,6 +99,16 @@ header {
   border-radius: 100%;
 }
 
+.upload-button-nav {
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  background-color: #e94560;
+  height: 40px;
+  border-radius: 15px;
+  padding: 0 20px;
+}
+
 #margin-nav-right {
   margin-left: 20px;
 }
