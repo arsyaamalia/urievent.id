@@ -22,7 +22,7 @@
                 <div class="nav">
                     <ul>
                         <li><a href="/pages/about" class="nav-link">About Us</a></li>
-                        <li><a href="/pages/advertise.php" class="nav-link">Advertise With Us</a></li>
+                        <li><a href="/pages/advertise" class="nav-link">Advertise With Us</a></li>
                         <li><a href="#" class="nav-link">Program</a></li>
                         <li>
                             <a href="#" class="search-box">

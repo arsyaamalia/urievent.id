@@ -55,4 +55,16 @@ class Pages extends BaseController
         ];
         return view('pages/about', $dataPage);
     }
+
+
+public function advertise()
+
+    {
+
+        $dataPage = [
+            'title' => "Urievent | Advertise With Us",
+            'tes' => ['satu', 'dua', 'tiga']
+        ];
+        return view('pages/advertise', $dataPage);
+    }
 }
