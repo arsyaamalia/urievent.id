@@ -77,7 +77,7 @@
                             <div class="recom-item">
                                 <div class="recom-grup">
                                     <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
-                                    <h4><?= $produk['nama_layanan'] ?></h4>
+                                    <h4><?= $produk['nama_instansi'] ?></h4>
                                 </div>
                                 <h3>Rp <?= $produk['harga_min'] ?></h3>
                             </div>
