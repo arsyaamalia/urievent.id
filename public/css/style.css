@@ -155,7 +155,13 @@ header {
         display: block;
     }
     .upload-button {
-        display: none;
+      color: #fff;
+      line-height: 40px;
+      text-align: center;
+      background-color: #e94560;
+      height: 40px;
+      border-radius: 15px;
+      padding: 0 20px;
     }
     .profile-picture {
         height: 0px;
