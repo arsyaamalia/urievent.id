@@ -15,15 +15,15 @@
         <div class="header">
             <div class="nav-left">
                 <div class="urievent">
-                    <a href="/pages" class="clicked-urievent">UriEvent</a>
+                    <a href="/sign" class="clicked-urievent">UriEvent</a>
                 </div>
                 <div class="nav">
                     <ul>
-                        <li><a href="/pages/about" class="nav-link">About Us</a></li>
-                        <li><a href="/pages/advertise" class="nav-link">Advertise With Us</a></li>
-                        <li><a href="#" class="nav-link">Program</a></li>
+                        <li><a href="/sign" class="nav-link">About Us</a></li>
+                        <li><a href="/sign" class="nav-link">Advertise With Us</a></li>
+                        <li><a href="/sign" class="nav-link">Program</a></li>
                         <li>
-                            <a href="#" class="search-box">
+                            <a href="/sign" class="search-box">
                                 <div class="search">
                                     <div class="text-search">Search</div>
                                     <div class="img-search"><img src="/icon/search.png" alt="Search" class="icon-search"></div>
@@ -36,18 +36,18 @@
             <div class="nav-right">
                 <div class="icon-messages" id="margin-nav-right">
                     <div class="urichat">
-                        <li><a href="#">UriChat</a></li>
+                        <li><a href="/sign">UriChat</a></li>
                     </div>
                     <img src="/icon/message.png" alt="message" class="icon-message">
                 </div>
                 <div class="upload-service">
-                    <li><a href="#">Upload Service</a></li>
+                    <li><a href="/sign">Upload Service</a></li>
                 </div>
                 <div class="sign-in" id="margin-nav-right">
                     <li><a href="/sign" class="sign-in">Sign In</a></li>
                 </div>
                 <div class="profile">
-                    <li><a href="#">Username</a></li>
+                    <li><a href="/sign">Username</a></li>
                 </div>
                 <div class="upload-button-nav" id="margin-nav-right">
                     <p>Upload</p>
@@ -77,37 +77,37 @@
         <div class="nav-bottom">
             <div class="nav-bottom-box">
                 <h5>Categories</h5>
-                <a href="medpart.php">
+                <a href="/sign">
                     <p class="nav-bottom-link">Media Partner</p>
                 </a>
-                <a href="sponsor.php">
+                <a href="/sign">
                     <p class="nav-bottom-link">Sponsorship</p>
                 </a>
-                <a href="vendor.php">
+                <a href="/sign">
                     <p class="nav-bottom-link">Vendor</p>
                 </a>
-                <a href="venue.php">
+                <a href="/sign">
                     <p class="nav-bottom-link">Venue</p>
                 </a>
             </div>
             <div class="nav-bottom-box">
                 <h5>UriEvent</h5>
-                <a href="#">
+                <a href="/sign">
                     <p class="nav-bottom-link">About Us</p>
                 </a>
-                <a href="#">
+                <a href="/sign">
                     <p class="nav-bottom-link">Advertise With Us</p>
                 </a>
-                <a href="#">
+                <a href="/sign">
                     <p class="nav-bottom-link">Career</p>
                 </a>
-                <a href="#">
+                <a href="/sign">
                     <p class="nav-bottom-link">Program</p>
                 </a>
-                <a href="#">
+                <a href="/sign">
                     <p class="nav-bottom-link">Privacy Policy</p>
                 </a>
-                <a href="#">
+                <a href="/sign">
                     <p>Terms & Conditions</p>
                 </a>
             </div>
