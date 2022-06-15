@@ -40,7 +40,7 @@ class Pages extends BaseController
         }, $dataProduk);
 
         $dataPage = [
-            'title' => "Urievent | Homepage",
+            'title' => "UriEvent | Homepage",
             'daftar_produk' => $daftar_produk,
         ];
 
@@ -50,7 +50,7 @@ class Pages extends BaseController
     public function about()
     {
         $dataPage = [
-            'title' => "Urievent | About Us",
+            'title' => "UriEvent | About Us",
             'tes' => ['satu', 'dua', 'tiga']
         ];
         return view('pages/about', $dataPage);
@@ -62,7 +62,7 @@ public function advertise()
     {
 
         $dataPage = [
-            'title' => "Urievent | Advertise With Us",
+            'title' => "UriEvent | Advertise With Us",
             'tes' => ['satu', 'dua', 'tiga']
         ];
         return view('pages/advertise', $dataPage);
