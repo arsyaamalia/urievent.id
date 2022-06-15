@@ -24,7 +24,7 @@ class Pages extends BaseController
         $dataPaket = $this->paket_layanan->findAll();
         $daftar_produk = array_map(function ($produk) use ($dataPaket) {
             $daftar_paket = array_filter($dataPaket, function ($paket) use ($produk) {
-                return $paket['id_layanan'] == $produk['id_layanan'];
+                return $paket['ID_LAYANAN'] == $produk['ID_LAYANAN'];
             });
             $produk['paket'] = $daftar_paket;
             $daftar_harga = array_column($daftar_paket, 'harga_paket');
