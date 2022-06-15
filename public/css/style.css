@@ -99,7 +99,7 @@ header {
   border-radius: 100%;
 }
 
-.upload-button {
+.upload-button-nav {
   color: #fff;
   line-height: 40px;
   text-align: center;
@@ -143,9 +143,6 @@ header {
   .urichat,
   .upload-service {
     display: block;
-  }
-  .upload-button {
-    display: none;
   }
   .profile-picture {
     height: 0px;
@@ -664,32 +661,18 @@ a.privacy {
 }
 
 .container {
-<<<<<<< HEAD
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.container div {
-    height: 200px;
-    background-image: radial-gradient(#DBE2EF, #FFFFFF);
-=======
-  background-image: radial-gradient(#dbe2ef, #ffffff);
   height: auto;
   display: flex;
   flex-direction: column;
 }
 
 .container div {
+  background-image: radial-gradient(#dbe2ef, #ffffff);
   height: 200px;
->>>>>>> e342d938cfa6634b7bb8a3d3d0b5bac8c4d9a40f
 }
 
 .container .sub-two {
   background: #fff;
-}
-
-.container .sub-three {
 }
 
 .container .sub-four {
@@ -726,75 +709,74 @@ a.privacy {
 }
 
 .container .sub-four .box {
-<<<<<<< HEAD
-    float: left;
+  float: left;
 }
 
 .advertise-container {
-    background: radial-gradient(#DBE2EF, #FFFFFF);
-    margin: 0%;
+  background: radial-gradient(#dbe2ef, #ffffff);
+  margin: 0%;
 }
 
 .advertise-container .advertise-head {
-    padding-left: 10%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  padding-left: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .advertise-form {
-    width: 80%;
-    margin: auto;
-    height: 550px;
-    background: white;
-    border-radius: 10px;
-    padding-bottom: 100px;
+  width: 80%;
+  margin: auto;
+  height: 550px;
+  background: white;
+  border-radius: 10px;
+  padding-bottom: 100px;
 }
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    margin: 30px 30px;
-    padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 30px;
+  padding-top: 30px;
 }
 
 .input-form,
 .input2-form {
-    border: none;
-    background-color: #f4f5f5;
-    height: 40px;
-    border-radius: 15px;
-    padding: 0 20px;
-    margin-bottom: 15px;
+  border: none;
+  background-color: #f4f5f5;
+  height: 40px;
+  border-radius: 15px;
+  padding: 0 20px;
+  margin-bottom: 15px;
 }
 
 .column {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .input2-form {
-    width: 300px;
-    margin-bottom: 15px;
+  width: 300px;
+  margin-bottom: 15px;
 }
 
 .textarea-form {
-    height: 100px;
-    border-radius: 10px;
-    border: none;
-    background-color: #f4f5f5;
-    margin-bottom: 15px;
-    padding: 0 20px;
+  height: 100px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f4f5f5;
+  margin-bottom: 15px;
+  padding: 0 20px;
 }
 
 .form-container button {
-    height: 40px;
-    background-color: #E94560;
-    border-radius: 10px;
-    border: none;
+  height: 40px;
+  background-color: #e94560;
+  border-radius: 10px;
+  border: none;
 }
 
-.intro-container{
+.intro-container {
   background-color: #f4f5f5;
   height: 530px;
   display: flex;
@@ -804,16 +786,16 @@ a.privacy {
   color: #0f3460;
 }
 
-h1{
+h1 {
   font-size: 30px;
   margin-bottom: 10px;
 }
 
-.intro-text p{
+.intro-text p {
   font-weight: 500;
   font-size: 20px;
 }
 
-.img3d{
+.img3d {
   width: 600px;
 }
