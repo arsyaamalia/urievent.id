@@ -25,7 +25,7 @@
                         <li><a href="/pages/advertise" class="nav-link">Advertise With Us</a></li>
                         <li><a href="#" class="nav-link">Program</a></li>
                         <li>
-                            <a href="#" class="search-box">
+                            <a href="/pages/search" class="search-box">
                                 <div class="search">
                                     <div class="text-search">Search</div>
                                     <div class="img-search"><img src="/icon/search.png" alt="Search" class="icon-search"></div>

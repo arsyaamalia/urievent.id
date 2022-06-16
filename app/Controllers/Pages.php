@@ -67,4 +67,15 @@ class Pages extends BaseController
         ];
         return view('pages/advertise', $dataPage);
     }
+
+    public function search()
+
+    {
+
+        $dataPage = [
+            'title' => "UriEvent | Search",
+            'tes' => ['satu', 'dua', 'tiga']
+        ];
+        return view('pages/advertise', $dataPage);
+    }
 }
