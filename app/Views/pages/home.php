@@ -76,8 +76,8 @@
                         <a href="recom-button">
                             <div class="recom-item">
                                 <div class="recom-grup">
-                                    <div class="item-circle"><img src="/img/<?= $produk['PICTURE_POSTER'] ?>" alt=""></div>
-                                    <h4><?= $produk['NAMA_INSTANSI'] ?></h4>
+                                    <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
+                                    <h4><?= $produk['nama_instansi'] ?></h4>
                                 </div>
                                 <h3>Rp <?= $produk['harga_min'] ?></h3>
                             </div>
