@@ -252,9 +252,21 @@ h5 {
     margin: 30px 0;
 }
 
+.search-container {
+    margin-left: 200px;
+}
+
 .categories-box,
 .recommendation-box {
     margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    /* zeb edit */
+    flex-wrap: wrap;
+    /* max-width: 35rem; */
+}
+
+.search-box {
     display: flex;
     justify-content: space-between;
     /* zeb edit */
@@ -269,7 +281,8 @@ h5 {
     height: 180px;
 }
 
-.recom-hover {
+.recom-hover,
+.search-hover {
     transition: 0.2s;
     border-radius: 15px 15px 15px 0;
     width: 150px;
@@ -278,6 +291,10 @@ h5 {
 
 .hover:hover,
 .recom-hover:hover {
+    background-color: #0f3460;
+}
+
+.search-hover:hover {
     background-color: #0f3460;
 }
 
@@ -293,12 +310,19 @@ h5 {
 }
 
 .categories-item,
-.recom-item {
+.recom-item,
+.search-item {
     transition: 0.4s;
 }
 
 .categories-item:hover,
 .recom-item:hover {
+    position: relative;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.search-item:hover {
     position: relative;
     margin-top: 6px;
     margin-left: 6px;
@@ -320,14 +344,16 @@ h5 {
     width: 60px;
 }
 
-.recom-grup {
+.recom-grup,
+.search-grup {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.recom-item {
+.recom-item,
+.search-item {
     width: 150px;
     height: 220px;
     margin-bottom: 30px;
@@ -340,11 +366,13 @@ h5 {
     align-items: center;
 }
 
-.recom-hover {
+.recom-hover,
+.search-hover {
     margin-bottom: 30px;
 }
 
-.item-circle {
+.item-circle,
+.search-circle {
     background-color: #0f3460;
     height: 100px;
     width: 100px;
@@ -354,6 +382,19 @@ h5 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.search-form {
+    margin-top: 30px;
+    margin-left: 300px;
+}
+
+.search-form input {
+    width: 300px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 5px 2px #aaaaaa;
 }
 
 .seeall-button {
