@@ -7,7 +7,6 @@
         <h2>Lorem, ipsum.</h2>
         <h2>Lorem, ipsum.</h2>
         <h2>Lorem, ipsum.</h2>
-        <h2>lorem by zeb</h2>
         <div class="box">
 
         </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2022 at 06:20 AM
+-- Generation Time: Jun 16, 2022 at 06:38 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.14
 
@@ -183,6 +183,7 @@ CREATE TABLE `paket_layanan` (
   `id_paket` varchar(8) NOT NULL,
   `id_layanan` varchar(8) DEFAULT NULL,
   `nama_paket` varchar(50) DEFAULT NULL,
+  `deskripsi_paket` varchar(100) NOT NULL,
   `harga_paket` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -190,11 +191,11 @@ CREATE TABLE `paket_layanan` (
 -- Dumping data for table `paket_layanan`
 --
 
-INSERT INTO `paket_layanan` (`id_paket`, `id_layanan`, `nama_paket`, `harga_paket`) VALUES
-('P001', 'LAY002', 'Bronze', 25000),
-('P002', 'LAY002', 'Silver', 50000),
-('P003', 'LAY002', 'Gold', 75000),
-('P004', 'LAY002', 'Diamond', 100000);
+INSERT INTO `paket_layanan` (`id_paket`, `id_layanan`, `nama_paket`, `deskripsi_paket`, `harga_paket`) VALUES
+('P001', 'LAY002', 'Bronze', '0', 25000),
+('P002', 'LAY002', 'Silver', '0', 50000),
+('P003', 'LAY002', 'Gold', '0', 75000),
+('P004', 'LAY002', 'Diamond', '0', 100000);
 
 -- --------------------------------------------------------
 
@@ -207,7 +208,6 @@ CREATE TABLE `produk_layanan` (
   `id_kategori` varchar(8) DEFAULT NULL,
   `id_subkategori` varchar(8) DEFAULT NULL,
   `id_user` varchar(8) DEFAULT NULL,
-  `nama_layanan` varchar(50) DEFAULT NULL,
   `nama_instansi` varchar(50) DEFAULT NULL,
   `email_instansi` varchar(50) DEFAULT NULL,
   `whatsapp` varchar(50) DEFAULT NULL,
@@ -225,22 +225,22 @@ CREATE TABLE `produk_layanan` (
 -- Dumping data for table `produk_layanan`
 --
 
-INSERT INTO `produk_layanan` (`id_layanan`, `id_kategori`, `id_subkategori`, `id_user`, `nama_layanan`, `nama_instansi`, `email_instansi`, `whatsapp`, `instagram`, `picture_poster`, `deskripsi`, `step_before`, `step_after`, `other`, `value`, `status_layanan`) VALUES
-('LAY001', 'CAT001', 'SCAT001', 'U001', 'Medpart Kilat', 'PT. Medpart Indonesia', 'medpartindo@gmail.com', '08123123123', 'medpartindo', NULL, 'Lorem ipsum dolor sit amet.', NULL, NULL, NULL, NULL, NULL),
-('LAY002', 'CAT001', 'SCAT002', 'U002', 'Medpart Trusted', 'Magang Update', 'magangupdate@gmail.com', '08123123123', 'magangupdate', NULL, 'Lorem ipsum dolor sit amet.', NULL, NULL, NULL, NULL, NULL),
-('LAY003', 'CAT001', 'SCAT007', 'U003', 'Medpart Cepats', 'Event Surabaya', 'eventsub@gmail.com', 'eventsurabaya@gmail.com', 'eventsurabaya', NULL, 'Lorem ipsum dolor sit amet.', NULL, NULL, NULL, NULL, NULL),
-('LAY004', 'CAT004', 'SCAT001', 'U001', 'Arsya Shop', 'arsyashop@gmail.com', '82223456789', 'arsyashop', 'arsyashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY005', 'CAT001', 'SCAT001', 'U002', 'Ocha Shop', 'ochashop@gmail.com', '82223456789', 'ochashop', 'ochashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY006', 'CAT002', 'SCAT001', 'U003', 'Zab shop', 'zabshop@gmail.com', '82223456789', 'zabshop', 'zabshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY007', 'CAT003', 'SCAT001', 'U001', 'Adam shop', 'adamshop@gmail.com', '82223456789', 'adamshop', 'adamshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY008', 'CAT004', 'SCAT001', 'U002', 'Hakim shop', 'hakimshop@gmail.com', '82223456789', 'hakimshop', 'hakimshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY009', 'CAT001', 'SCAT001', 'U003', 'Irvan shop', 'irvanshop@gmail.com', '82223456789', 'irvanshop', 'irvanshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY010', 'CAT002', 'SCAT001', 'U001', 'bulan shop', 'bulanshop@gmail.com', '82223456789', 'bulanshop', 'bulanshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY011', 'CAT003', 'SCAT001', 'U002', 'puput shop', 'puputshop@gmail.com', '82223456789', 'puputshop', 'puputshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY012', 'CAT004', 'SCAT001', 'U003', 'cia shop', 'ciashop@gmail.com', '82223456789', 'ciashop', 'ciashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY013', 'CAT001', 'SCAT001', 'U001', 'della shop', 'dellashop@gmail.com', '82223456789', 'dellashop', 'dellashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY014', 'CAT002', 'SCAT001', 'U002', 'randy shop', 'randyshop@gmail.com', '82223456789', 'randyshop', 'randyshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL),
-('LAY015', 'CAT003', 'SCAT001', 'U003', 'abi shop', 'abishop@gmail.com', '82223456789', 'abishop', 'abishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL, NULL);
+INSERT INTO `produk_layanan` (`id_layanan`, `id_kategori`, `id_subkategori`, `id_user`, `nama_instansi`, `email_instansi`, `whatsapp`, `instagram`, `picture_poster`, `deskripsi`, `step_before`, `step_after`, `other`, `value`, `status_layanan`) VALUES
+('LAY013', 'CAT001', 'SCAT001', 'U001', 'della shop', 'dellashop@gmail.com', '82223456789', 'dellashop', 'dellashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY012', 'CAT004', 'SCAT001', 'U003', 'cia shop', 'ciashop@gmail.com', '82223456789', 'ciashop', 'ciashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY011', 'CAT003', 'SCAT001', 'U002', 'puput shop', 'puputshop@gmail.com', '82223456789', 'puputshop', 'puputshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY010', 'CAT002', 'SCAT001', 'U001', 'bulan shop', 'bulanshop@gmail.com', '82223456789', 'bulanshop', 'bulanshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY009', 'CAT001', 'SCAT001', 'U003', 'Irvan shop', 'irvanshop@gmail.com', '82223456789', 'irvanshop', 'irvanshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY008', 'CAT004', 'SCAT001', 'U002', 'Hakim shop', 'hakimshop@gmail.com', '82223456789', 'hakimshop', 'hakimshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY007', 'CAT003', 'SCAT001', 'U001', 'Adam shop', 'adamshop@gmail.com', '82223456789', 'adamshop', 'adamshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY006', 'CAT002', 'SCAT001', 'U003', 'Zab shop', 'zabshop@gmail.com', '82223456789', 'zabshop', 'zabshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY005', 'CAT001', 'SCAT001', 'U002', 'Ocha Shop', 'ochashop@gmail.com', '82223456789', 'ochashop', 'ochashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY004', 'CAT004', 'SCAT001', 'U001', 'Arsya Shop', 'arsyashop@gmail.com', '82223456789', 'arsyashop', 'arsyashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY003', 'CAT001', 'SCAT007', 'U003', 'Event Surabaya', 'eventsub@gmail.com', 'eventsurabaya@gmail.com', 'eventsurabaya', NULL, 'Lorem ipsum dolor sit amet.', NULL, NULL, NULL, NULL, NULL),
+('LAY001', 'CAT001', 'SCAT001', 'U001', 'PT. Medpart Indonesia', 'medpartindo@gmail.com', '8123123123', 'medpartindo', NULL, 'Lorem ipsum dolor sit amet.', NULL, NULL, NULL, NULL, NULL),
+('LAY002', 'CAT001', 'SCAT002', 'U002', 'Magang Update', 'magangupdate@gmail.com', '8123123123', 'magangupdate', NULL, 'Lorem ipsum dolor sit amet.', NULL, NULL, NULL, NULL, NULL),
+('LAY014', 'CAT002', 'SCAT001', 'U002', 'randy shop', 'randyshop@gmail.com', '82223456789', 'randyshop', 'randyshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY015', 'CAT003', 'SCAT001', 'U003', 'abi shop', 'abishop@gmail.com', '82223456789', 'abishop', 'abishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL);
 
 -- --------------------------------------------------------
 

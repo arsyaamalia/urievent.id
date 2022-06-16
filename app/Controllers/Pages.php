@@ -76,6 +76,6 @@ public function advertise()
             'title' => "UriEvent | Search",
             'tes' => ['satu', 'dua', 'tiga']
         ];
-        return view('pages/advertise', $dataPage);
+        return view('pages/search', $dataPage);
     }
 }

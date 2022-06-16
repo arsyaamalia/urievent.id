@@ -253,8 +253,7 @@ h5 {
 }
 
 .categories-box,
-.recommendation-box,
-.search-box {
+.recommendation-box {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
@@ -270,8 +269,7 @@ h5 {
     height: 180px;
 }
 
-.recom-hover,
-.search-hover {
+.recom-hover {
     transition: 0.2s;
     border-radius: 15px 15px 15px 0;
     width: 150px;
@@ -279,8 +277,7 @@ h5 {
 }
 
 .hover:hover,
-.recom-hover:hover,
-.search-hover:hover {
+.recom-hover:hover {
     background-color: #0f3460;
 }
 
@@ -296,13 +293,12 @@ h5 {
 }
 
 .categories-item,
-.recom-item,
-.search-item {
+.recom-item {
     transition: 0.4s;
 }
 
 .categories-item:hover,
-.recom-item:hover .search-item:hover {
+.recom-item:hover {
     position: relative;
     margin-top: 6px;
     margin-left: 6px;
@@ -324,20 +320,14 @@ h5 {
     width: 60px;
 }
 
-.search-box img {
-    width: 60px;
-}
-
-.recom-grup,
-.search-grup {
+.recom-grup {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.recom-item,
-.search-item {
+.recom-item {
     width: 150px;
     height: 220px;
     margin-bottom: 30px;
@@ -350,13 +340,11 @@ h5 {
     align-items: center;
 }
 
-.recom-hover,
-.search-hover {
+.recom-hover {
     margin-bottom: 30px;
 }
 
-.item-circle,
-.search-circle {
+.item-circle {
     background-color: #0f3460;
     height: 100px;
     width: 100px;
