@@ -57,7 +57,7 @@ class Pages extends BaseController
     }
 
 
-public function advertise()
+    public function advertise()
 
     {
 
