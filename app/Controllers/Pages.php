@@ -20,6 +20,7 @@ class Pages extends BaseController
     // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
     {
 
+        // $dataProduk = $this->produk_layanan->paginate(10);
         $dataProduk = $this->produk_layanan->findAll();
         $dataPaket = $this->paket_layanan->findAll();
         $daftar_produk = array_map(function ($produk) use ($dataPaket) {
@@ -42,6 +43,7 @@ class Pages extends BaseController
         $dataPage = [
             'title' => "UriEvent | Homepage",
             'daftar_produk' => $daftar_produk,
+            'pager' => $this->produk_layanan->pager
         ];
 
         return view('pages/home', $dataPage);
