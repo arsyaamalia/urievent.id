@@ -70,28 +70,52 @@
             <h2>Recommendations</h2>
 
             <div class="recommendation-box">
-                <?php
-                foreach ($daftar_produk as $produk) : ?>
-                    <div class="recom-hover">
-                        <a href="recom-button">
-                            <div class="recom-item">
-                                <div class="recom-grup">
-                                    <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
-                                    <h4><?= $produk['nama_instansi'] ?></h4>
+                <?php if (!isset($_GET["see-more"])) : ?>
+                    <?php $i = 0 ?>
+                    <?php for ($i = 0; $i < 15; $i++) :
+                    ?>
+
+                        <div class="recom-hover">
+                            <a href="/detail/detail">
+                                <div class="recom-item">
+                                    <div class="recom-grup">
+                                        <div class="item-circle"><img src="/img/<?= $daftar_produk[$i]['picture_poster'] ?>" alt=""></div>
+                                        <h4><?= $daftar_produk[$i]['nama_instansi'] ?></h4>
+                                    </div>
+                                    <h3>Rp <?= $daftar_produk[$i]['harga_min'] ?></h3>
                                 </div>
-                                <h3>Rp <?= $produk['harga_min'] ?></h3>
-                            </div>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
+                            </a>
+                        </div>
+                    <?php endfor; ?>
+                <?php endif; ?>
+
+                <?php if (isset($_GET["see-more"])) : ?>
+                    <?php foreach ($daftar_produk as $produk) : ?>
+                        <div class="recom-hover">
+                            <a href="/detail/detail">
+                                <div class="recom-item">
+                                    <div class="recom-grup">
+                                        <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
+                                        <h4><?= $produk['nama_instansi'] ?></h4>
+                                    </div>
+                                    <h3>Rp <?= $produk['harga_min'] ?></h3>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
             </div>
-            <div class="seeall-button">
-                <a href="see-more-recom">
-                    <div class="see-all">
-                        <h4>See More</h4>
-                    </div>
-                </a>
-            </div>
+            <form action="">
+                <div class="seeall-button">
+                    <button name="see-more">
+                        <div class="see-all">
+                            <h4>See More</h4>
+                        </div>
+                    </button>
+                </div>
+            </form>
+
         </div>
     </div>
 </div>

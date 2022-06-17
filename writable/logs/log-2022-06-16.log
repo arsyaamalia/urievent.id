@@ -1,0 +1,13 @@
+CRITICAL - 2022-06-16 01:06:02 --> Undefined variable $title
+in APPPATH\Views\layouts\template.php on line 8.
+ 1 APPPATH\Views\layouts\template.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'APPPATH\\Views\\layouts\\template.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\template.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/template', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('/detail/detail', [], true)
+ 6 APPPATH\Controllers\Detail.php(10): view('/detail/detail')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Detail->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Detail))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

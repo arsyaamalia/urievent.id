@@ -11,9 +11,4 @@ class paket_layananModel extends Model
     protected $primaryKey = 'id_paket';
     protected $useAutoIncrement = false;
     protected $useTimestamps = true;
-
-    // public function getHargaMin($id)
-    // {
-    //     return $this->db->get_where('paket_layanan', ['id' => $id])->row_array();
-    // }
 }

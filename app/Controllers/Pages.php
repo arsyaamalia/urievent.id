@@ -69,7 +69,6 @@ class Pages extends BaseController
     }
 
     public function search()
-
     {
 
         $dataPage = [
