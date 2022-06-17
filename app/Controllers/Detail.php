@@ -18,13 +18,13 @@ class Detail extends BaseController
         $this->subkategori_layanan = new subkategori_layananModel();
     }
 
+    public function setdata()
+    {
+    }
     public function index($id_layanan)
 
     {
-        $dataProduk = $this->produk_layanan->findAll();
-        $dataPaket = $this->paket_layanan->findAll();
-        $dataSubCat = $this->subkategori_layanan->findAll();
-
+        echo ($id_layanan);
 
         $dataPage = [
             'title' => "UriEvent | Detail",

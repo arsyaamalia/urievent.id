@@ -20,8 +20,8 @@ class Pages extends BaseController
     // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
     {
 
-        // $dataProduk = $this->produk_layanan->paginate(10);
-        $dataProduk = $this->produk_layanan->findAll();
+        $dataProduk = $this->produk_layanan->paginate(15);
+        // $dataProduk = $this->produk_layanan->findAll();
         $dataPaket = $this->paket_layanan->findAll();
         $daftar_produk = array_map(function ($produk) use ($dataPaket) {
             $daftar_paket = array_filter($dataPaket, function ($paket) use ($produk) {

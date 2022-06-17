@@ -86,7 +86,8 @@
                 <?php endforeach; ?>
             </div>
 
-
+            <div> <?= $pager->links(); ?>
+            </div>
 
             <div class="seeall-button">
                 <a href="see-more-recom">
