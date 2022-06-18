@@ -73,11 +73,15 @@
                 <?php
                 foreach ($daftar_produk as $produk) : ?>
                     <div class="recom-hover">
+<<<<<<< HEAD
                         <a href="/pages/detail">
+=======
+                        <a href="/detail/index/<?= $produk['id_layanan']; ?>/<?= $produk['id_kategori']; ?>/<?= $produk['id_subkategori']; ?>">
+>>>>>>> 6fd45393550b6f599f2c615120b5c859f549f353
                             <div class="recom-item">
                                 <div class="recom-grup">
-                                    <div class="item-circle"><img src="/img/<?= $produk['PICTURE_POSTER'] ?>" alt=""></div>
-                                    <h4><?= $produk['NAMA_INSTANSI'] ?></h4>
+                                    <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
+                                    <h4><?= $produk['nama_instansi'] ?></h4>
                                 </div>
                                 <h3>Rp <?= $produk['harga_min'] ?></h3>
                             </div>
@@ -85,6 +89,10 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+
+            <div> <?= $pager->links('daftar_produk', 'urievent_pagination'); ?>
+            </div>
+
             <div class="seeall-button">
                 <a href="see-more-recom">
                     <div class="see-all">

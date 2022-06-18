@@ -12,12 +12,12 @@ class produk_layananModel extends Model
     protected $useAutoIncrement = false;
     protected $useTimestamps = true;
 
-    // public function getAllPaket()
-    // {
-    // }
+    public function getDetail($id_layanan = false)
+    {
+        if ($id_layanan == false) {
+            return $this->findAll();
+        }
 
-    // public function getHargaPaketMin($id)
-    // {
-    //     return $this->db->get_where('produk_layanan', ['id' => $id])->row_array();
-    // }
+        return $this->where(['id_layanan' => $id_layanan])->first();
+    }
 }

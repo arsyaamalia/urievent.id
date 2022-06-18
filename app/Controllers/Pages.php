@@ -20,15 +20,17 @@ class Pages extends BaseController
     // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
     {
 
-        $dataProduk = $this->produk_layanan->findAll();
+        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        // $dataProduk = $this->produk_layanan->findAll();
         $dataPaket = $this->paket_layanan->findAll();
         $daftar_produk = array_map(function ($produk) use ($dataPaket) {
             $daftar_paket = array_filter($dataPaket, function ($paket) use ($produk) {
-                return $paket['ID_LAYANAN'] == $produk['ID_LAYANAN'];
+                return $paket['id_layanan'] == $produk['id_layanan'];
             });
+
+
             $produk['paket'] = $daftar_paket;
             $daftar_harga = array_column($daftar_paket, 'harga_paket');
-
             if (!empty($daftar_harga)) {
                 $produk['harga_max'] = max($daftar_harga);
                 $produk['harga_min'] = min($daftar_harga);
@@ -38,10 +40,12 @@ class Pages extends BaseController
             }
             return $produk;
         }, $dataProduk);
+        // dd($daftar_produk);
 
         $dataPage = [
             'title' => "UriEvent | Homepage",
             'daftar_produk' => $daftar_produk,
+            'pager' => $this->produk_layanan->pager
         ];
 
         return view('pages/home', $dataPage);
@@ -57,7 +61,7 @@ class Pages extends BaseController
     }
 
 
-public function advertise()
+    public function advertise()
 
     {
 
@@ -68,6 +72,7 @@ public function advertise()
         return view('pages/advertise', $dataPage);
     }
 
+<<<<<<< HEAD
     public function detail()
     {
         $dataPage = [
@@ -75,5 +80,15 @@ public function advertise()
             'tes' => ['satu', 'dua', 'tiga']
         ];
         return view('pages/detail', $dataPage);
+=======
+    public function search()
+    {
+
+        $dataPage = [
+            'title' => "UriEvent | Search",
+            'tes' => ['satu', 'dua', 'tiga']
+        ];
+        return view('pages/search', $dataPage);
+>>>>>>> 6fd45393550b6f599f2c615120b5c859f549f353
     }
 }
