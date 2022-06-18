@@ -11,4 +11,13 @@ class produk_layananModel extends Model
     protected $primaryKey = 'id_layanan';
     protected $useAutoIncrement = false;
     protected $useTimestamps = true;
+
+    public function getDetail($id_layanan = false)
+    {
+        if ($id_layanan == false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['id_layanan' => $id_layanan])->first();
+    }
 }
