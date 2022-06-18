@@ -86,7 +86,7 @@
                 <?php endforeach; ?>
             </div>
 
-            <div> <?= $pager->links(); ?>
+            <div> <?= $pager->links('daftar_produk', 'urievent_pagination'); ?>
             </div>
 
             <div class="seeall-button">
