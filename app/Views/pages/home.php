@@ -73,7 +73,7 @@
                 <?php
                 foreach ($daftar_produk as $produk) : ?>
                     <div class="recom-hover">
-                        <a href="recom-button">
+                        <a href="/pages/detail">
                             <div class="recom-item">
                                 <div class="recom-grup">
                                     <div class="item-circle"><img src="/img/<?= $produk['PICTURE_POSTER'] ?>" alt=""></div>

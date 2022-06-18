@@ -67,4 +67,13 @@ public function advertise()
         ];
         return view('pages/advertise', $dataPage);
     }
+
+    public function detail()
+    {
+        $dataPage = [
+            'title' => "UriEvent | Nama Instansi",
+            'tes' => ['satu', 'dua', 'tiga']
+        ];
+        return view('pages/detail', $dataPage);
+    }
 }
