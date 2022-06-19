@@ -178,7 +178,7 @@
             <div class="package-quantitiy">
               <div class="number-input">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
-                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                <input class="quantity" min="0" name="quantity" value="1" type="number" readonly>
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
               </div>
             </div>
@@ -201,7 +201,7 @@
             <div class="package-quantitiy">
               <div class="number-input">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
-                <input class="quantity" min="0" name="quantity" value="0" type="number">
+                <input class="quantity" min="0" name="quantity" value="0" type="number" readonly>
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
               </div>
             </div>
@@ -224,7 +224,7 @@
             <div class="package-quantitiy">
               <div class="number-input">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
-                <input class="quantity" min="0" name="quantity" value="0" type="number">
+                <input class="quantity" min="0" name="quantity" value="0" type="number" readonly>
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
               </div>
             </div>
@@ -234,52 +234,62 @@
     </div>
     <div class="similar-container">
       <h2>Similar <?= $dataKategori['nama_kategori'] ?></h2>
-      <div class="recommendation-box">
-        <a href="recom-button">
-          <div class="recom-item">
-            <div class="grup-item">
-              <div class="item-circle"></div>
-              <h4>Magang Update</h4>
+      <div class="similar-box">
+        <div class="similar-hover">
+          <a href="similar-button">
+            <div class="similar-item">
+              <div class="similar-grup">
+                <div class="item-circle"></div>
+                <h4>Magang Update</h4>
+              </div>
+              <h3>Rp25.000</h3>
             </div>
-            <h3>Rp25.000</h3>
-          </div>
-        </a>
-        <a href="recom-button">
-          <div class="recom-item">
-            <div class="grup-item">
-              <div class="item-circle"></div>
-              <h4>Dibimbing dibimbing</h4>
+          </a>
+        </div>
+        <div class="similar-hover">
+          <a href="similar-button">
+            <div class="similar-item">
+              <div class="similar-grup">
+                <div class="item-circle"></div>
+                <h4>Magang Update</h4>
+              </div>
+              <h3>Rp25.000</h3>
             </div>
-            <h3>Rp0</h3>
-          </div>
-        </a>
-        <a href="recom-button">
-          <div class="recom-item">
-            <div class="grup-item">
-              <div class="item-circle"></div>
-              <h4>HariSenin.com</h4>
+          </a>
+        </div>
+        <div class="similar-hover">
+          <a href="similar-button">
+            <div class="similar-item">
+              <div class="similar-grup">
+                <div class="item-circle"></div>
+                <h4>Magang Update</h4>
+              </div>
+              <h3>Rp25.000</h3>
             </div>
-            <h3>Rp10.000</h3>
-          </div>
-        </a>
-        <a href="recom-button">
-          <div class="recom-item">
-            <div class="grup-item">
-              <div class="item-circle"></div>
-              <h4>Aksel Official</h4>
+          </a>
+        </div>
+        <div class="similar-hover">
+          <a href="similar-button">
+            <div class="similar-item">
+              <div class="similar-grup">
+                <div class="item-circle"></div>
+                <h4>Magang Update</h4>
+              </div>
+              <h3>Rp25.000</h3>
             </div>
-            <h3>Rp15.000</h3>
-          </div>
-        </a>
-        <a href="recom-button">
-          <div class="recom-item">
-            <div class="grup-item">
-              <div class="item-circle"></div>
-              <h4>Revo U</h4>
+          </a>
+        </div>
+        <div class="similar-hover">
+          <a href="similar-button">
+            <div class="similar-item">
+              <div class="similar-grup">
+                <div class="item-circle"></div>
+                <h4>Magang Update</h4>
+              </div>
+              <h3>Rp25.000</h3>
             </div>
-            <h3>Rp15.000</h3>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
   </div>
