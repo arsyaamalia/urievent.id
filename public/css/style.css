@@ -1041,6 +1041,10 @@ img.img-logo {
   display: block;
 }
 
+.keterangan-line-box {
+  margin: 20px 0;
+}
+
 hr.keterangan-line {
   border: none;
   background-color: #eeeeee;
@@ -1079,7 +1083,7 @@ hr.keterangan-line {
 }
 
 .keterangan-list {
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 .package-box {
