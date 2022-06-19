@@ -42,6 +42,7 @@ class Detail extends BaseController
         $daftar_harga = array_column($dataPaket, 'harga_paket');
 
 
+
         if (!empty($daftar_harga)) {
             $detail_produk['harga_max'] = max($daftar_harga);
             $detail_produk['harga_min'] = min($daftar_harga);

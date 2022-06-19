@@ -257,7 +257,8 @@ h5 {
 }
 
 .categories-box,
-.recommendation-box {
+.recommendation-box,
+.recommendation-box-detail {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -842,7 +843,6 @@ h1 {
   width: 600px;
 }
 
-<<<<<<< HEAD
 .detail-box {
   height: 245px;
   width: 100%;
@@ -1001,7 +1001,8 @@ img.img-logo {
 .choose-package p {
   font-size: 14px;
   font-weight: 500;
-=======
+}
+
 .page-item {
   width: 80px;
   border-radius: 8px;
@@ -1018,5 +1019,4 @@ img.img-logo {
 .page-link {
   color: #f4f5f5;
   padding: 5px 5px;
->>>>>>> 6fd45393550b6f599f2c615120b5c859f549f353
 }
