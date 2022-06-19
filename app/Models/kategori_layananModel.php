@@ -14,6 +14,6 @@ class kategori_layananModel extends Model
 
     public function getKategori($id_kategori = false)
     {
-        return $this->where(['id_kategori' => $id_kategori])->findAll();
+        return $this->where(['id_kategori' => $id_kategori])->first();
     }
 }

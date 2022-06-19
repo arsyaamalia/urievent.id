@@ -46,8 +46,8 @@ class Detail extends BaseController
             $detail_produk['harga_max'] = max($daftar_harga);
             $detail_produk['harga_min'] = min($daftar_harga);
         } else {
-            $produk['harga_max'] = '0';
-            $produk['harga_min'] = '0';
+            $detail_produk['harga_max'] = '0';
+            $detail_produk['harga_min'] = '0';
         }
 
         // $detail_produk['namaKatergori'] = $namaKategori;
