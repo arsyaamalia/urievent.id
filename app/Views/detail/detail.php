@@ -71,6 +71,8 @@
 
                   <!-- BELUM ADA HALAMAN FORM -->
                   <p>Choose Package</p>
+                  <!-- edited by zeb -->
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugit voluptate quis molestiae laudantium nulla ipsa amet vero ex iste.</p>
                 </div>
               </a>
             </div>
