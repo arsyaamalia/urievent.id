@@ -99,7 +99,7 @@
     <div class="detail-keterangan">
       <div class="keterangan-container">
         <h4><?= $dataKategori['nama_kategori'] ?> Detail</h4>
-        
+
         <div class="about">
           <div class="keterangan-list">
             <h6>About</h6>
@@ -110,7 +110,7 @@
           </div>
         </div>
 
-        <div class="stepbefore">
+        <div class="step-before">
           <div class="keterangan-list">
             <h6>Steps to Purchase</h6>
             <ul>
@@ -126,7 +126,7 @@
           </div>
         </div>
 
-        <div class="stepafter">
+        <div class="step-after">
           <div class="keterangan-list">
             <h6>Steps after Purchase</h6>
             <ul>
@@ -177,7 +177,7 @@
             </div>
             <div class="package-quantitiy">
               <div class="number-input">
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
                 <input class="quantity" min="0" name="quantity" value="1" type="number">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
               </div>
@@ -200,7 +200,7 @@
             </div>
             <div class="package-quantitiy">
               <div class="number-input">
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
                 <input class="quantity" min="0" name="quantity" value="0" type="number">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
               </div>
@@ -223,7 +223,7 @@
             </div>
             <div class="package-quantitiy">
               <div class="number-input">
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
                 <input class="quantity" min="0" name="quantity" value="0" type="number">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
               </div>

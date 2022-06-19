@@ -18,8 +18,6 @@ class Sign extends BaseController
         $userModel = new UserModel();
         $user_email = $this->request->getVar('user_email');
         $password = $this->request->getVar('password');
-
-
         $data = $userModel->where('email_user', $user_email)->orWhere('username_user', $user_email)->first();
 
         if ($data) {

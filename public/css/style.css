@@ -1078,8 +1078,14 @@ hr.keterangan-line {
   text-align: justify;
 }
 
-.keterangan-list {
+.step-after,
+.step-before,
+.value {
   margin: 20px 0;
+}
+
+.keterangan-line {
+  margin-top: 20px;
 }
 
 .package-box {
