@@ -72,6 +72,15 @@ class Pages extends BaseController
         return view('pages/advertise', $dataPage);
     }
 
+<<<<<<< HEAD
+    public function detail()
+    {
+        $dataPage = [
+            'title' => "UriEvent | Nama Instansi",
+            'tes' => ['satu', 'dua', 'tiga']
+        ];
+        return view('pages/detail', $dataPage);
+=======
     public function search()
     {
 
@@ -80,5 +89,6 @@ class Pages extends BaseController
             'tes' => ['satu', 'dua', 'tiga']
         ];
         return view('pages/search', $dataPage);
+>>>>>>> 6fd45393550b6f599f2c615120b5c859f549f353
     }
 }

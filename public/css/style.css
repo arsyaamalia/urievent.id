@@ -842,6 +842,166 @@ h1 {
   width: 600px;
 }
 
+<<<<<<< HEAD
+.detail-box {
+  height: 245px;
+  width: 100%;
+  background-color: #f4f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 300px;
+}
+
+.detail-container {
+  width: 70%;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgb(22, 22, 37, 0.15);
+  border-radius: 15px;
+  position: relative;
+  top: 40px;
+  padding: 35px 50px 45px;
+}
+
+.detail-container h2 {
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+img.img-logo {
+  border-radius: 100%;
+  margin-right: 50px;
+  width: 250px;
+}
+
+.detail-data {
+  width: 100%;
+}
+
+.detail-jenis,
+.detail-contact,
+.contact-socmed,
+.detail-action {
+  display: flex;
+}
+
+.detail-jenis {
+  margin-bottom: 15px;
+}
+
+.detail-jenis h6 {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.kategori,
+.subkategori {
+  height: 24px;
+  padding: 0 15px;
+  border-radius: 15px;
+}
+
+.kategori {
+  color: #fff;
+  background-color: #0f3460;
+  margin-right: 10px;
+}
+
+.subkategori {
+  color: #161625;
+  background-color: #f4f5f5;
+}
+
+.subkategori h6 {
+  font-weight: 500;
+}
+
+.submit-box,
+.checkout-box {
+  display: none;
+}
+
+.detail-nama {
+  margin-bottom: 5px;
+}
+
+.detail-nama h4,
+.detail-harga h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.detail-harga h3 {
+  line-height: 60px;
+}
+
+.detail-harga {
+  width: 100%;
+  height: 60px;
+  background-color: #f4f5f5;
+  border-radius: 15px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.detail-contact {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-email h6 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact-socmed img {
+  height: 25px;
+  margin-left: 8px;
+}
+
+.detail-action {
+  display: flex;
+  align-items: center;
+}
+
+#bg-action-logo {
+  background-color: #0f3460;
+  width: 42px;
+  height: 42px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.detail-action img {
+  height: 25px;
+}
+
+.choose-package {
+  height: 42px;
+  border-radius: 15px;
+  background-color: #e94560;
+  padding: 0 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.choose-package p {
+  font-size: 14px;
+  font-weight: 500;
+=======
 .page-item {
   width: 80px;
   border-radius: 8px;
@@ -858,4 +1018,5 @@ h1 {
 .page-link {
   color: #f4f5f5;
   padding: 5px 5px;
+>>>>>>> 6fd45393550b6f599f2c615120b5c859f549f353
 }
