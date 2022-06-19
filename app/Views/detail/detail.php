@@ -74,6 +74,7 @@
                 </div>
               </a>
             </div>
+            <!-- if id_kategori = 001  -->
             <div class="submit-box">
               <a href="form.php">
                 <div class="submit">
@@ -81,6 +82,7 @@
                 </div>
               </a>
             </div>
+            <!-- else if id_kategori = 003 -->
             <div class="checkout-box">
               <a href="form.php">
                 <div class="checkout">
