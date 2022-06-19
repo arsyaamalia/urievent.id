@@ -97,17 +97,19 @@
 <div class="batas-body">
   <div class="body-urievent">
     <div class="detail-keterangan">
-      <div class="swicth-button">
-        <div class="switch-background">
-          <div class="switch-detail">
-            <h5><?= $dataKategori['nama_kategori'] ?> Detail</h5>
+      <div class="keterangan-container">
+        <h4><?= $dataKategori['nama_kategori'] ?> Detail</h4>
+        
+        <div class="about">
+          <div class="keterangan-list">
+            <h6>About</h6>
+            <p><?= $detail_produk['deskripsi'] ?></p>
           </div>
-          <div class="switch-purchase">
-            <h5>Packages</h5>
+          <div class="keterangan-line-box">
+            <hr class="keterangan-line" />
           </div>
         </div>
-      </div>
-      <div class="keterangan-container">
+
         <div class="stepbefore">
           <div class="keterangan-list">
             <h6>Steps to Purchase</h6>
@@ -123,6 +125,7 @@
           <hr class="keterangan-line" />
           </div>
         </div>
+
         <div class="stepafter">
           <div class="keterangan-list">
             <h6>Steps after Purchase</h6>
@@ -136,16 +139,6 @@
           <div class="keterangan-line-box">
           <?php endforeach; ?>
           <hr class="keterangan-line" />
-          </div>
-        </div>
-
-        <div class="about">
-          <div class="keterangan-list">
-            <h6>About</h6>
-            <p><?= $detail_produk['deskripsi'] ?></p>
-          </div>
-          <div class="keterangan-line-box">
-            <hr class="keterangan-line" />
           </div>
         </div>
 
@@ -167,55 +160,73 @@
       </div>
 
       <div class="package-container">
-        <h6>Available Packages</h6>
+        <h4>Available Packages</h4>
         <div class="package-box">
-          <div class="package-box-left"></div>
+          <div class="package-box-left">
+            <hr>
+          </div>
           <div class="package-box-right">
             <div class="package-name">
               <h6>Paket "Nama Paket Disini"</h6>
             </div>
             <div class="package-description">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo dolorsit.</p>
             </div>
             <div class="package-prize">
               <h6>Rp15.000</h6>
             </div>
             <div class="package-quantitiy">
-              <input type="number" min="1" max="9" step="1" value="1">
+              <div class="number-input">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+              </div>
             </div>
           </div>
         </div>
         <div class="package-box">
-          <div class="package-box-left"></div>
+          <div class="package-box-left">
+            <hr>
+          </div>
           <div class="package-box-right">
             <div class="package-name">
               <h6>Paket "Nama Paket Disini"</h6>
             </div>
             <div class="package-description">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo dolorsit.</p>
             </div>
             <div class="package-prize">
               <h6>Rp15.000</h6>
             </div>
             <div class="package-quantitiy">
-              <input type="number" min="1" max="9" step="1" value="1">
+              <div class="number-input">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <input class="quantity" min="0" name="quantity" value="0" type="number">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+              </div>
             </div>
           </div>
         </div>
         <div class="package-box">
-          <div class="package-box-left"></div>
+          <div class="package-box-left">
+            <hr>
+          </div>
           <div class="package-box-right">
             <div class="package-name">
               <h6>Paket "Nama Paket Disini"</h6>
             </div>
             <div class="package-description">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo dolorsit.</p>
             </div>
             <div class="package-prize">
               <h6>Rp15.000</h6>
             </div>
             <div class="package-quantitiy">
-              <input type="number" min="1" max="9" step="1" value="1">
+              <div class="number-input">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <input class="quantity" min="0" name="quantity" value="0" type="number">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+              </div>
             </div>
           </div>
         </div>
