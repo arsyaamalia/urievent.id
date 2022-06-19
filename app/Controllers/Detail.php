@@ -45,8 +45,6 @@ class Detail extends BaseController
         // dd($dataProduk['value']);
 
         // dd($step_after);
-
-
         // $namaKategori = array_column($dataKategori, 'nama_kategori');
         // $namaSubKategori = array_column($dataSubKategori, 'nama_subkategori');
 
@@ -63,12 +61,14 @@ class Detail extends BaseController
             $detail_produk['harga_max'] = '0';
             $detail_produk['harga_min'] = '0';
         }
-        // dd($detail_produk);
+
+        // dd($dataPaket);
         $dataPage = [
             'title' => "UriEvent | Detail",
             'detail_produk' => $detail_produk,
             'dataKategori' => $dataKategori,
-            'dataSubKategori' => $dataSubKategori
+            'dataSubKategori' => $dataSubKategori,
+            'dataPaket' => $dataPaket
 
 
         ];

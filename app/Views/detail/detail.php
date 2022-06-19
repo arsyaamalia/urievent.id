@@ -159,8 +159,37 @@
         </div>
       </div>
 
+
       <div class="package-container">
         <h4>Available Packages</h4>
+        <?php foreach ($dataPaket as $paket) : ?>
+          <div class="package-box">
+            <div class="package-box-left">
+              <hr>
+            </div>
+            <div class="package-box-right">
+              <div class="package-name">
+                <h6>Paket "<?= $paket['nama_paket'] ?>"</h6>
+              </div>
+              <div class="package-description">
+                <p><?= $paket['deskripsi_paket'] ?></p>
+              </div>
+              <div class="package-prize">
+                <h6><?= $paket['harga_paket'] ?></h6>
+              </div>
+              <div class="package-quantitiy">
+                <div class="number-input">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                  <input class="quantity" min="0" name="quantity" value="1" type="number">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <?php endforeach; ?>
+        <!-- 
+
+
         <div class="package-box">
           <div class="package-box-left">
             <hr>
@@ -178,7 +207,7 @@
             <div class="package-quantitiy">
               <div class="number-input">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
-                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                <input class="quantity" min="0" name="quantity" value="0" type="number">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
               </div>
             </div>
@@ -206,30 +235,7 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="package-box">
-          <div class="package-box-left">
-            <hr>
-          </div>
-          <div class="package-box-right">
-            <div class="package-name">
-              <h6>Paket "Nama Paket Disini"</h6>
-            </div>
-            <div class="package-description">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo dolorsit.</p>
-            </div>
-            <div class="package-prize">
-              <h6>Rp15.000</h6>
-            </div>
-            <div class="package-quantitiy">
-              <div class="number-input">
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
-                <input class="quantity" min="0" name="quantity" value="0" type="number">
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-              </div>
-            </div>
-          </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="similar-container">
