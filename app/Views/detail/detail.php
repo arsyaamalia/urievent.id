@@ -202,6 +202,60 @@
           </div>
         </div>
       </div>
+      <div class="package-container">
+            <h6>Available Packages</h6>
+            <div class="package-box">
+              <div class="package-box-left"></div>
+              <div class="package-box-right">
+                <div class="package-name">
+                  <h6>Paket "Nama Paket Disini"</h6>
+                </div>
+                <div class="package-description">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
+                </div>
+                <div class="package-prize">
+                  <h6>Rp15.000</h6>
+                </div>
+                <div class="package-quantitiy">
+                  <input type="number" min="1" max="9" step="1" value="1">
+                </div>
+              </div>
+            </div>
+            <div class="package-box">
+              <div class="package-box-left"></div>
+              <div class="package-box-right">
+                <div class="package-name">
+                  <h6>Paket "Nama Paket Disini"</h6>
+                </div>
+                <div class="package-description">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
+                </div>
+                <div class="package-prize">
+                  <h6>Rp15.000</h6>
+                </div>
+                <div class="package-quantitiy">
+                  <input type="number" min="1" max="9" step="1" value="1">
+                </div>
+              </div>
+            </div>
+            <div class="package-box">
+              <div class="package-box-left"></div>
+              <div class="package-box-right">
+                <div class="package-name">
+                  <h6>Paket "Nama Paket Disini"</h6>
+                </div>
+                <div class="package-description">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
+                </div>
+                <div class="package-prize">
+                  <h6>Rp15.000</h6>
+                </div>
+                <div class="package-quantitiy">
+                  <input type="number" min="1" max="9" step="1" value="1">
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
     <div class="similar-container">
       <h2>Similar <?= $dataKategori['nama_kategori'] ?></h2>
