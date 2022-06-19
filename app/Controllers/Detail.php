@@ -34,14 +34,27 @@ class Detail extends BaseController
         $dataKategori = $this->kategori_layanan->getKategori($id_kategori);
         $dataSubKategori = $this->subkategori_layanan->getSubKategori($id_subkategori);
 
-        $detail_produk = $dataProduk;
+
+
+        $dataProduk['step_before'] = explode(',', $dataProduk['step_before']);
+        $dataProduk['step_after'] = explode(',', $dataProduk['step_after']);
+        // dd($dataProduk['value']);
+        if (!empty($dataProduk['value'])) {
+            $dataProduk['value'] = explode(',', $dataProduk['value']);
+        }
+        // dd($dataProduk['value']);
+
+        // dd($step_after);
+
 
         // $namaKategori = array_column($dataKategori, 'nama_kategori');
         // $namaSubKategori = array_column($dataSubKategori, 'nama_subkategori');
 
+        // $step_before = array_column($dataProduk, 'step_before');
+        // dd($step_before);
+
+        $detail_produk = $dataProduk;
         $daftar_harga = array_column($dataPaket, 'harga_paket');
-
-
 
         if (!empty($daftar_harga)) {
             $detail_produk['harga_max'] = max($daftar_harga);
@@ -50,11 +63,7 @@ class Detail extends BaseController
             $detail_produk['harga_max'] = '0';
             $detail_produk['harga_min'] = '0';
         }
-
-        // $detail_produk['namaKatergori'] = $namaKategori;
-        // $detail_produk['namaSubKatergori'] = $namaSubKategori;
-
-        // dd($dataKategori, $dataSubKategori);
+        // dd($detail_produk);
         $dataPage = [
             'title' => "UriEvent | Detail",
             'detail_produk' => $detail_produk,

@@ -67,12 +67,7 @@
             <div class="choose-package-box">
               <a href="div-purchase-display-public">
                 <div class="choose-package">
-                  <!-- SAMPE SINI -->
-
-                  <!-- BELUM ADA HALAMAN FORM -->
                   <p>Choose Package</p>
-                  <!-- edited by zeb -->
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugit voluptate quis molestiae laudantium nulla ipsa amet vero ex iste.</p>
                 </div>
               </a>
             </div>
@@ -105,7 +100,7 @@
       <div class="swicth-button">
         <div class="switch-background">
           <div class="switch-detail">
-            <h5>Nama Kategori Detail</h5>
+            <h5><?= $dataKategori['nama_kategori'] ?> Detail</h5>
           </div>
           <div class="switch-purchase">
             <h5>Packages</h5>
@@ -117,145 +112,114 @@
           <div class="keterangan-list">
             <h6>Steps to Purchase</h6>
             <ul>
-              <li>
-                <p>Upload poster event yang sudah berlogo company kami</p>
-              </li>
-              <li>
-                <p>Isi caption atau tambahan lainnya untuk keperluan upload</p>
-              </li>
-              <li>
-                <p>Kirim bukti transfer</p>
-              </li>
-              <li>
-                <p>Insert other step here</p>
-              </li>
-              <li>
-                <p>Insert other step here</p>
-              </li>
+              <?php foreach ($detail_produk['step_before'] as $step_before) : ?>
+                <li>
+                  <p><?= $step_before ?></p>
+                </li>
             </ul>
           </div>
           <div class="keterangan-line-box">
-            <hr class="keterangan-line" />
+          <?php endforeach; ?>
+          <hr class="keterangan-line" />
           </div>
         </div>
         <div class="stepafter">
           <div class="keterangan-list">
             <h6>Steps after Purchase</h6>
             <ul>
-              <li>
-                <p>Join WhatsApp group</p>
-              </li>
-              <li>
-                <p>Pilih jadwal upload poster saat mengisi formulir</p>
-              </li>
-              <li>
-                <p>Wait your poster to be uploaded</p>
-              </li>
-              <li>
-                <p>Insert other step here</p>
-              </li>
-              <li>
-                <p>Insert other step here</p>
-              </li>
+              <?php foreach ($detail_produk['step_after'] as $step_after) : ?>
+                <li>
+                  <p><?= $step_after ?></p>
+                </li>
             </ul>
           </div>
           <div class="keterangan-line-box">
-            <hr class="keterangan-line" />
+          <?php endforeach; ?>
+          <hr class="keterangan-line" />
           </div>
         </div>
+
         <div class="about">
           <div class="keterangan-list">
             <h6>About</h6>
-            <p>
-              Describe your company here (field, type, niche market, etc)<br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quisquam! Voluptate, temporibus quidem! Pariatur rem qui quo minima debitis. Ab suscipit
-              exercitationem iusto, facilis officiis quia tenetur veritatis, esse provident voluptatibus id temporibus nesciunt omnis soluta. Necessitatibus cumque magni repellendus ipsam molestias enim mollitia odio ipsum omnis
-              corrupti. Corporis sunt nam aut alias rem suscipit atque velit consequatur, molestiae voluptatem similique, quod doloribus aspernatur nostrum? Odio rem dolorum delectus soluta sunt impedit
-            </p>
+            <p><?= $detail_produk['deskripsi'] ?></p>
           </div>
           <div class="keterangan-line-box">
             <hr class="keterangan-line" />
           </div>
         </div>
+
         <div class="value">
           <div class="keterangan-list">
             <h6>Eligibility</h6>
             <ul>
-              <li>
-                <p>Original followers</p>
-              </li>
-              <li>
-                <p>32.000++ active accounts</p>
-              </li>
-              <li>
-                <p>Have been trusted media partner for 5 years</p>
-              </li>
-              <li>
-                <p>Insert other value here</p>
-              </li>
-              <li>
-                <p>Insert other value here</p>
-              </li>
+              <?php foreach ($detail_produk['value'] as $value) : ?>
+                <li>
+                  <p><?= $value ?></p>
+                </li>
             </ul>
           </div>
           <div class="keterangan-line-box">
-            <hr class="keterangan-line" />
+          <?php endforeach; ?>
+          <hr class="keterangan-line" />
           </div>
         </div>
       </div>
+
       <div class="package-container">
-            <h6>Available Packages</h6>
-            <div class="package-box">
-              <div class="package-box-left"></div>
-              <div class="package-box-right">
-                <div class="package-name">
-                  <h6>Paket "Nama Paket Disini"</h6>
-                </div>
-                <div class="package-description">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
-                </div>
-                <div class="package-prize">
-                  <h6>Rp15.000</h6>
-                </div>
-                <div class="package-quantitiy">
-                  <input type="number" min="1" max="9" step="1" value="1">
-                </div>
-              </div>
+        <h6>Available Packages</h6>
+        <div class="package-box">
+          <div class="package-box-left"></div>
+          <div class="package-box-right">
+            <div class="package-name">
+              <h6>Paket "Nama Paket Disini"</h6>
             </div>
-            <div class="package-box">
-              <div class="package-box-left"></div>
-              <div class="package-box-right">
-                <div class="package-name">
-                  <h6>Paket "Nama Paket Disini"</h6>
-                </div>
-                <div class="package-description">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
-                </div>
-                <div class="package-prize">
-                  <h6>Rp15.000</h6>
-                </div>
-                <div class="package-quantitiy">
-                  <input type="number" min="1" max="9" step="1" value="1">
-                </div>
-              </div>
+            <div class="package-description">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
             </div>
-            <div class="package-box">
-              <div class="package-box-left"></div>
-              <div class="package-box-right">
-                <div class="package-name">
-                  <h6>Paket "Nama Paket Disini"</h6>
-                </div>
-                <div class="package-description">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
-                </div>
-                <div class="package-prize">
-                  <h6>Rp15.000</h6>
-                </div>
-                <div class="package-quantitiy">
-                  <input type="number" min="1" max="9" step="1" value="1">
-                </div>
-              </div>
+            <div class="package-prize">
+              <h6>Rp15.000</h6>
+            </div>
+            <div class="package-quantitiy">
+              <input type="number" min="1" max="9" step="1" value="1">
             </div>
           </div>
+        </div>
+        <div class="package-box">
+          <div class="package-box-left"></div>
+          <div class="package-box-right">
+            <div class="package-name">
+              <h6>Paket "Nama Paket Disini"</h6>
+            </div>
+            <div class="package-description">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
+            </div>
+            <div class="package-prize">
+              <h6>Rp15.000</h6>
+            </div>
+            <div class="package-quantitiy">
+              <input type="number" min="1" max="9" step="1" value="1">
+            </div>
+          </div>
+        </div>
+        <div class="package-box">
+          <div class="package-box-left"></div>
+          <div class="package-box-right">
+            <div class="package-name">
+              <h6>Paket "Nama Paket Disini"</h6>
+            </div>
+            <div class="package-description">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia est dolores accusantium eligendi fugit illum illo delectus, perspiciatis explicabo voluptatibus autem nobis, tenetur, beatae quae consequatur soluta obcaecati consectetur.</p>
+            </div>
+            <div class="package-prize">
+              <h6>Rp15.000</h6>
+            </div>
+            <div class="package-quantitiy">
+              <input type="number" min="1" max="9" step="1" value="1">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="similar-container">
       <h2>Similar <?= $dataKategori['nama_kategori'] ?></h2>
