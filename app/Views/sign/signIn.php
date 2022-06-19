@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title ?></title>
+    <title>Urievent | Sign In</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,11 +37,16 @@
                     <hr class="divider">
                     </hr>
                     <div class="auth-form">
-                        <form action="/pages/index" method="POST">
+                        <?php if(session()->getFlashdata('msg')):?>
+                            <div class="alert alert-warning">
+                                <?= session()->getFlashdata('msg') ?>
+                            </div>
+                        <?php endif;?>
+                        <form action="/sign/signIn" method="POST">
                             <div class="form-fields">
                                 <fieldset>
                                     <label for="username-email" class="text-label">Username or Email Address</label>
-                                    <input type="text" name="login" id="username-email" class="text-input" tabindex="1" autocapitalize="off" required>
+                                    <input type="text" name="user_email" id="username-email" class="text-input" tabindex="1" autocapitalize="off" required>
                                 </fieldset>
                                 <fieldset>
                                     <label for="password" class="text-label">
