@@ -33,6 +33,7 @@ class Detail extends BaseController
         $dataPaket = $this->paket_layanan->getDetail($id_layanan);
         $dataKategori = $this->kategori_layanan->getKategori($id_kategori);
         $dataSubKategori = $this->subkategori_layanan->getSubKategori($id_subkategori);
+        $similiar = $this->produk_layanan->getSimiliar($id_kategori);
 
 
 
@@ -68,7 +69,8 @@ class Detail extends BaseController
             'detail_produk' => $detail_produk,
             'dataKategori' => $dataKategori,
             'dataSubKategori' => $dataSubKategori,
-            'dataPaket' => $dataPaket
+            'dataPaket' => $dataPaket,
+            'similiar' => $similiar
 
 
         ];

@@ -20,4 +20,9 @@ class produk_layananModel extends Model
 
         return $this->where(['id_layanan' => $id_layanan])->first();
     }
+
+    public function getSimiliar($id_kategori)
+    {
+        return $this->where(['id_kategori' => $id_kategori])->findAll();
+    }
 }

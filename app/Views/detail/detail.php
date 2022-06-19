@@ -175,7 +175,7 @@
                 <p><?= $paket['deskripsi_paket'] ?></p>
               </div>
               <div class="package-prize">
-                <h6><?= $paket['harga_paket'] ?></h6>
+                <h6>Rp <?= $paket['harga_paket'] ?></h6>
               </div>
               <div class="package-quantitiy">
                 <div class="number-input">
@@ -240,7 +240,23 @@
     <div class="similar-container">
       <h2>Similar <?= $dataKategori['nama_kategori'] ?></h2>
       <div class="similar-box">
-        <div class="similar-hover">
+
+        <?php for ($i = 0; $i < 5; $i++) : ?>
+          <div class="similar-hover">
+            <a href="similar-button">
+              <div class="similar-item">
+                <div class="similar-grup">
+                  <div class="item-circle"></div>
+
+                  </form>
+                  <h4><?= $similiar[$i]['nama_instansi']; ?></h4>
+                </div>
+                <h3>Rp25.000</h3>
+              </div>
+            </a>
+          </div>
+        <?php endfor; ?>
+        <!-- <div class="similar-hover">
           <a href="similar-button">
             <div class="similar-item">
               <div class="similar-grup">
@@ -283,18 +299,7 @@
               <h3>Rp25.000</h3>
             </div>
           </a>
-        </div>
-        <div class="similar-hover">
-          <a href="similar-button">
-            <div class="similar-item">
-              <div class="similar-grup">
-                <div class="item-circle"></div>
-                <h4>Magang Update</h4>
-              </div>
-              <h3>Rp25.000</h3>
-            </div>
-          </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
