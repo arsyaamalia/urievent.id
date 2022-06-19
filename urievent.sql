@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Jun 18, 2022 at 11:28 AM
+=======
+-- Generation Time: Jun 19, 2022 at 06:54 AM
+>>>>>>> ee12c4784347a30bf648455daef9435a75845a13
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.14
 
@@ -258,6 +262,7 @@ INSERT INTO `produk_layanan` (`id_layanan`, `id_kategori`, `id_subkategori`, `id
 ('LAY014', 'CAT002', 'SCAT001', 'U002', 'randy shop', 'randyshop@gmail.com', '82223456789', 'randyshop', 'randyshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
 ('LAY015', 'CAT003', 'SCAT001', 'U003', 'abi shop', 'abishop@gmail.com', '82223456789', 'abishop', 'abishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
 ('LAY016', 'CAT004', 'SCAT002', 'U004', 'anang shop', 'anang@gmail.com', '82223456790', 'anang shop', 'anagshop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+<<<<<<< HEAD
 ('LAY017', 'CAT005', 'SCAT003', 'U003', 'bisma shop', 'bismahop@gmail.com', '82223456791', 'bisma shop', 'bismashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
 ('LAY018', 'CAT006', 'SCAT004', 'U001', 'cuyi shop', 'cuyishop@gmail.com', '82223456792', 'cuyishop', 'cuyishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
 ('LAY019', 'CAT007', 'SCAT005', 'U002', 'dani shop', 'danishop@gmail.com', '82223456793', 'danishop', 'danishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
@@ -267,6 +272,17 @@ INSERT INTO `produk_layanan` (`id_layanan`, `id_kategori`, `id_subkategori`, `id
 ('LAY023', 'CAT011', 'SCAT009', 'U002', 'hari shop', 'harishop@gmail.com', '82223456797', 'harishop', 'harishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
 ('LAY024', 'CAT012', 'SCAT010', 'U004', 'ika shop', 'ikashop@gmail.com', '82223456798', 'ikashop', 'ikashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
 ('LAY025', 'CAT013', 'SCAT011', 'U003', 'jeni shop', 'jenishop@gmail.com', '82223456799', 'jenishop', 'jenishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL);
+=======
+('LAY017', 'CAT004', 'SCAT003', 'U003', 'bisma shop', 'bismahop@gmail.com', '82223456791', 'bisma shop', 'bismashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY018', 'CAT003', 'SCAT004', 'U001', 'cuyi shop', 'cuyishop@gmail.com', '82223456792', 'cuyishop', 'cuyishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY019', 'CAT002', 'SCAT005', 'U002', 'dani shop', 'danishop@gmail.com', '82223456793', 'danishop', 'danishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY020', 'CAT004', 'SCAT006', 'U004', 'edi shop', 'edishop@gmail.com', '82223456794', 'edishop', 'edishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY021', 'CAT001', 'SCAT007', 'U003', 'fafa shop', 'fafashop@gmail.com', '82223456795', 'fafashop', 'fafashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY022', 'CAT001', 'SCAT008', 'U001', 'gani shop', 'ganishop@gmail.com', '82223456796', 'ganishop', 'ganishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY023', 'CAT003', 'SCAT009', 'U002', 'hari shop', 'harishop@gmail.com', '82223456797', 'harishop', 'harishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY024', 'CAT004', 'SCAT010', 'U004', 'ika shop', 'ikashop@gmail.com', '82223456798', 'ikashop', 'ikashop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL),
+('LAY025', 'CAT002', 'SCAT011', 'U003', 'jeni shop', 'jenishop@gmail.com', '82223456799', 'jenishop', 'jenishop.jpg', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', 'lorem ipsum bla bla bla', NULL);
+>>>>>>> ee12c4784347a30bf648455daef9435a75845a13
 
 -- --------------------------------------------------------
 

@@ -27,9 +27,10 @@ class Pages extends BaseController
             $daftar_paket = array_filter($dataPaket, function ($paket) use ($produk) {
                 return $paket['id_layanan'] == $produk['id_layanan'];
             });
+
+
             $produk['paket'] = $daftar_paket;
             $daftar_harga = array_column($daftar_paket, 'harga_paket');
-
             if (!empty($daftar_harga)) {
                 $produk['harga_max'] = max($daftar_harga);
                 $produk['harga_min'] = min($daftar_harga);
@@ -39,6 +40,7 @@ class Pages extends BaseController
             }
             return $produk;
         }, $dataProduk);
+        // dd($daftar_produk);
 
         $dataPage = [
             'title' => "UriEvent | Homepage",
@@ -69,6 +71,15 @@ class Pages extends BaseController
         ];
         return view('pages/advertise', $dataPage);
     }
+
+
+    // public function detail()
+    // {
+    //     $dataPage = [
+    //         'title' => "UriEvent | Nama Instansi",
+    //         'tes' => ['satu', 'dua', 'tiga']
+    //     ];
+    //     return view('pages/detail', $dataPage);
 
     public function search()
     {
