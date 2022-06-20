@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\produk_layananModel;
 use App\Models\paket_layananModel;
-
+use CodeIgniter\Database\Database;
 
 class Pages extends BaseController
 {
@@ -16,24 +16,8 @@ class Pages extends BaseController
         $this->paket_layanan = new paket_layananModel();
     }
 
-    public function index()
-    // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
+    public function mapingProdukPaket($dataProduk, $dataPaket)
     {
-
-        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
-        $dataPaket = $this->paket_layanan->findAll();
-
-        // buat insert array input id layanan
-        // // coba sortir array
-        // $dataProduk = $this->produk_layanan->findAll();
-        // $id_produk = array_column($dataProduk, 'id_layanan');
-
-        // sort($id_produk, SORT_NATURAL | SORT_FLAG_CASE);
-        // // get array paling akhir
-        // echo end($id_produk);      
-
-
-
         $daftar_produk = array_map(function ($produk) use ($dataPaket) {
             $daftar_paket = array_filter($dataPaket, function ($paket) use ($produk) {
                 // dd($paket, $produk);
@@ -52,8 +36,17 @@ class Pages extends BaseController
             return $produk;
         }, $dataProduk);
 
+        return $daftar_produk;
+    }
 
+    public function index()
+    // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
+    {
 
+        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataPaket = $this->paket_layanan->findAll();
+
+        $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
         $dataPage = [
             'title' => "UriEvent | Homepage",
             'daftar_produk' => $daftar_produk,
@@ -95,11 +88,19 @@ class Pages extends BaseController
 
     public function search()
     {
+        $cari = $this->request->getVar('cari');
+
+        $dataProduk = $this->produk_layanan->search($cari);
+        $dataPaket = $this->paket_layanan->findAll();
+        $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
+
+
 
         $dataPage = [
-            'title' => "UriEvent | Search",
-            'tes' => ['satu', 'dua', 'tiga']
+            'title' => "Urievent | Search Page",
+            'daftar_produk' => $daftar_produk,
+            'cari' => $cari
         ];
-        return view('pages/search', $dataPage);
+        return view('/pages/search', $dataPage);
     }
 }

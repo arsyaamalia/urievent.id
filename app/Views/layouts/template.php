@@ -27,10 +27,18 @@
                         <li><a href="#" class="nav-link">Program</a></li>
                         <li>
                             <div class="search-box-2">
-                                <input type="text" placeholder="Mau cari apa?" style="color: black;">
-                                <div class="search-icon">
-                                    <i class="fas fa-search"></i>
-                                </div>
+                                <form action="/pages/search">
+                                    <input type="text" placeholder="Mau cari apa?" name="cari" style="color: black;">
+                                    <div class="search-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <button class="search-button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+
+
+                                </form>
+
                                 <div class="cancel-icon">
                                     <i class="fas fa-times"></i>
                                 </div>

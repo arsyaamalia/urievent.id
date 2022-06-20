@@ -25,4 +25,11 @@ class produk_layananModel extends Model
     {
         return $this->where(['id_kategori' => $id_kategori])->findAll();
     }
+
+    public function search($cari)
+    {
+        return $this->table('produk_layanan')->like('nama_instansi', $cari)->findAll();
+
+        // ->orLike('nama_instansi',$cari)
+    }
 }
