@@ -90,7 +90,7 @@ class Pages extends BaseController
     {
         $cari = $this->request->getVar('cari');
 
-        $dataProduk = $this->produk_layanan->search($cari);
+        $dataProduk = $this->produk_layanan->search($cari)->paginate(5, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
 
@@ -99,7 +99,8 @@ class Pages extends BaseController
         $dataPage = [
             'title' => "Urievent | Search Page",
             'daftar_produk' => $daftar_produk,
-            'cari' => $cari
+            'cari' => $cari,
+            'pager' => $this->produk_layanan->pager
         ];
         return view('/pages/search', $dataPage);
     }

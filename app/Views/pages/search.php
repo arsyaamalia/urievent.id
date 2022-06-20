@@ -13,7 +13,7 @@
         <?php foreach ($daftar_produk as $produk) :
         ?>
             <div class="search-hover">
-                <a href="search-button">
+                <a href="/detail/index/<?= $produk['id_layanan']; ?>/<?= $produk['id_kategori']; ?>/<?= $produk['id_subkategori']; ?>">
                     <div class="search-item">
                         <div class="search-grup">
                             <div class="search-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
@@ -25,6 +25,8 @@
             </div>
 
         <?php endforeach; ?>
+    </div>
+    <div> <?= $pager->links('daftar_produk', 'urievent_pagination'); ?>
     </div>
 </div>
 

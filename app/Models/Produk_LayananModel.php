@@ -28,7 +28,7 @@ class produk_layananModel extends Model
 
     public function search($cari)
     {
-        return $this->table('produk_layanan')->like('nama_instansi', $cari)->findAll();
+        return $this->table('produk_layanan')->like('nama_instansi', $cari);
 
         // ->orLike('nama_instansi',$cari)
     }
