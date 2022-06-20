@@ -65,29 +65,28 @@
             <img src="/icon/save.png" class="img-save" />
           </div>
           <div class="action-button">
-            <div class="choose-package-box">
-              <a href="div-purchase-display-public">
-                <div class="choose-package">
-                  <p>Choose Package</p>
-                </div>
-              </a>
-            </div>
+
+            <?php if ($detail_produk['id_kategori'] == "CAT002") : ?>
+              <div class="submit-box">
+                <a href="form.php">
+                  <div class="submit">
+                    <button type="button" class="button-submit">Submit</button>
+                  </div>
+                </a>
+              </div>
+            <?php else : ?>
+              <div class="choose-package-box">
+                <a href="div-purchase-display-public">
+                  <div class="choose-package">
+                    <p>Check Out</p>
+                  </div>
+                </a>
+              </div>
+            <?php endif; ?>
+
             <!-- if id_kategori = 001  -->
-            <div class="submit-box">
-              <a href="form.php">
-                <div class="submit">
-                  <button type="button" class="button-submit">Submit</button>
-                </div>
-              </a>
-            </div>
             <!-- else if id_kategori = 003 -->
-            <div class="checkout-box">
-              <a href="form.php">
-                <div class="checkout">
-                  <button type="button" class="button-checkout">Check Out</button>
-                </div>
-              </a>
-            </div>
+
           </div>
         </div>
       </div>
@@ -116,6 +115,7 @@
             <h6>Steps to Purchase</h6>
             <ul>
               <?php foreach ($detail_produk['step_before'] as $step_before) : ?>
+
                 <li>
                   <p><?= $step_before ?></p>
                 </li>

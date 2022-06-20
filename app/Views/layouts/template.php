@@ -26,31 +26,16 @@
                         <li><a href="/pages/advertise" class="nav-link">Advertise With Us</a></li>
                         <li><a href="#" class="nav-link">Program</a></li>
                         <li>
-                        <div class="search-box-2">
-                            <input type="text" placeholder="Mau cari apa?"  style="color: black;">
-                            <div class="search-icon">
-                                <i class="fas fa-search"></i>
+                            <div class="search-box-2">
+                                <input type="text" placeholder="Mau cari apa?" style="color: black;">
+                                <div class="search-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="cancel-icon">
+                                    <i class="fas fa-times"></i>
+                                </div>
                             </div>
-                            <div class="cancel-icon">
-                                <i class="fas fa-times"></i>
-                            </div>
-                        </div>
-                        <script>
-                            const searchBox = document.querySelector(".search-box-2");
-                            const searchBtn = document.querySelector(".search-icon");
-                            const cancelBtn = document.querySelector(".cancel-icon");
-                            searchBtn.onclick = () => {
-                                searchBox.classList.add("active");
-                                searchBtn.classList.add("active");
-                                cancelBtn.classList.add("active");
-                            }
-                            cancelBtn.onclick = () => {
-                                searchBox.classList.remove("active");
-                                searchBtn.classList.remove("active");
-                                cancelBtn.classList.remove("active");
-                            }
-                        </script>
-                        
+
                         </li>
                     </ul>
                 </div>
@@ -172,6 +157,23 @@
             <h5>Copyright © 2022 UriEvent. All Rights Reserved</h5>
         </div>
     </div>
+
+
+    <script>
+        const searchBox = document.querySelector(".search-box-2");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        searchBtn.onclick = () => {
+            searchBox.classList.add("active");
+            searchBtn.classList.add("active");
+            cancelBtn.classList.add("active");
+        }
+        cancelBtn.onclick = () => {
+            searchBox.classList.remove("active");
+            searchBtn.classList.remove("active");
+            cancelBtn.classList.remove("active");
+        }
+    </script>
 </body>
 
 </html>
