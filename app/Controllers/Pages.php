@@ -21,13 +21,24 @@ class Pages extends BaseController
     {
 
         $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
-        // $dataProduk = $this->produk_layanan->findAll();
         $dataPaket = $this->paket_layanan->findAll();
+
+        // buat insert array input id layanan
+        // // coba sortir array
+        // $dataProduk = $this->produk_layanan->findAll();
+        // $id_produk = array_column($dataProduk, 'id_layanan');
+
+        // sort($id_produk, SORT_NATURAL | SORT_FLAG_CASE);
+        // // get array paling akhir
+        // echo end($id_produk);      
+
+
+
         $daftar_produk = array_map(function ($produk) use ($dataPaket) {
             $daftar_paket = array_filter($dataPaket, function ($paket) use ($produk) {
+                // dd($paket, $produk);
                 return $paket['id_layanan'] == $produk['id_layanan'];
             });
-
 
             $produk['paket'] = $daftar_paket;
             $daftar_harga = array_column($daftar_paket, 'harga_paket');
@@ -40,7 +51,8 @@ class Pages extends BaseController
             }
             return $produk;
         }, $dataProduk);
-        // dd($daftar_produk);
+
+
 
         $dataPage = [
             'title' => "UriEvent | Homepage",

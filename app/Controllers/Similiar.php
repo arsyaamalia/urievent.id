@@ -8,7 +8,7 @@ use App\Models\paket_layananModel;
 use App\Models\subkategori_layananModel;
 
 
-class Detail extends BaseController
+class Similiar extends BaseController
 {
     protected $produk_layanan;
     protected $id_layanan;
@@ -24,7 +24,7 @@ class Detail extends BaseController
     }
 
 
-    public function index($id_layanan, $id_kategori, $id_subkategori)
+    public function detail($id_layanan, $id_kategori, $id_subkategori)
 
 
     {

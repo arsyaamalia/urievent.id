@@ -9,6 +9,7 @@
       <div class="detail-picture">
         <img src="/img/logomagangupdate.png" class="img-logo" />
       </div>
+
       <div class="detail-data">
         <div class="detail-jenis">
           <div class="kategori">
@@ -243,7 +244,9 @@
 
         <?php for ($i = 0; $i < 5; $i++) : ?>
           <div class="similar-hover">
-            <a href="similar-button">
+
+
+            <a href="/similiar/detail/<?= $daftar_similiar[$i]['id_layanan']; ?>/<?= $similiar[$i]['id_kategori']; ?>/<?= $similiar[$i]['id_subkategori']; ?>">
               <div class="similar-item">
                 <div class="similar-grup">
                   <div class="item-circle"></div>
@@ -251,7 +254,8 @@
                   </form>
                   <h4><?= $similiar[$i]['nama_instansi']; ?></h4>
                 </div>
-                <h3>Rp25.000</h3>
+
+                <h3>Rp <?= $daftar_similiar[$i]['harga_min'] ?></h3>
               </div>
             </a>
           </div>
