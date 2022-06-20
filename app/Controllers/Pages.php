@@ -40,13 +40,13 @@ class Pages extends BaseController
     }
 
     public function index()
-    // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
     {
 
         $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
 
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
+
         $dataPage = [
             'title' => "UriEvent | Homepage",
             'daftar_produk' => $daftar_produk,
@@ -67,7 +67,6 @@ class Pages extends BaseController
 
 
     public function advertise()
-
     {
 
         $dataPage = [
@@ -77,15 +76,6 @@ class Pages extends BaseController
         return view('pages/advertise', $dataPage);
     }
 
-
-    // public function detail()
-    // {
-    //     $dataPage = [
-    //         'title' => "UriEvent | Nama Instansi",
-    //         'tes' => ['satu', 'dua', 'tiga']
-    //     ];
-    //     return view('pages/detail', $dataPage);
-
     public function search()
     {
         $cari = $this->request->getVar('cari');
@@ -93,8 +83,6 @@ class Pages extends BaseController
         $dataProduk = $this->produk_layanan->search($cari)->paginate(5, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
-
-
 
         $dataPage = [
             'title' => "Urievent | Search Page",

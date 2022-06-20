@@ -23,31 +23,16 @@ class Detail extends BaseController
         $this->subkategori_layanan = new subkategori_layananModel();
     }
 
-
-    public function index($id_layanan, $id_kategori, $id_subkategori)
-
-
+    public function mapingProdukPaket($dataProduk, $dataPaket)
     {
-
-        $dataPaket1 = $this->paket_layanan->findAll();
-        $dataProduk1 = $this->paket_layanan->findAll();
-        $dataProduk = $this->produk_layanan->getDetail($id_layanan);
-        $dataPaket = $this->paket_layanan->getDetail($id_layanan);
-        $dataKategori = $this->kategori_layanan->getKategori($id_kategori);
-        $dataSubKategori = $this->subkategori_layanan->getSubKategori($id_subkategori);
-        $similiar = $this->produk_layanan->getSimiliar($id_kategori);
-
-
-        $daftar_similiar = array_map(function ($produk) use ($dataPaket1) {
-            $daftar_paket = array_filter($dataPaket1, function ($paket) use ($produk) {
+        $daftar_produk = array_map(function ($produk) use ($dataPaket) {
+            $daftar_paket = array_filter($dataPaket, function ($paket) use ($produk) {
                 // dd($paket, $produk);
                 return $paket['id_layanan'] == $produk['id_layanan'];
             });
+
             $produk['paket'] = $daftar_paket;
-            // dd($produk);
-
             $daftar_harga = array_column($daftar_paket, 'harga_paket');
-
             if (!empty($daftar_harga)) {
                 $produk['harga_max'] = max($daftar_harga);
                 $produk['harga_min'] = min($daftar_harga);
@@ -55,26 +40,37 @@ class Detail extends BaseController
                 $produk['harga_max'] = '0';
                 $produk['harga_min'] = '0';
             }
-
             return $produk;
-        }, $dataProduk1);
+        }, $dataProduk);
+
+        return $daftar_produk;
+    }
 
 
+    public function index($id_layanan, $id_kategori, $id_subkategori)
+
+
+    {
+
+        $dataPaket1 = $this->paket_layanan->findAll();
+        $dataProduk = $this->produk_layanan->getDetail($id_layanan);
+        $dataPaket = $this->paket_layanan->getDetail($id_layanan);
+        $dataKategori = $this->kategori_layanan->getKategori($id_kategori);
+        $dataSubKategori = $this->subkategori_layanan->getSubKategori($id_subkategori);
+        $similiar = $this->produk_layanan->getSimiliar($id_kategori);
+
+
+
+        $daftarSimiliar = $this->mapingProdukPaket($similiar, $dataPaket1);
+        // dd($daftar_similiar);
 
 
         $dataProduk['step_before'] = explode(',', $dataProduk['step_before']);
         $dataProduk['step_after'] = explode(',', $dataProduk['step_after']);
-        // dd($dataProduk['value']);
+
         if (!empty($dataProduk['value'])) {
             $dataProduk['value'] = explode(',', $dataProduk['value']);
         }
-        // dd($dataProduk['value']);
-        // dd($step_after);
-        // $namaKategori = array_column($dataKategori, 'nama_kategori');
-        // $namaSubKategori = array_column($dataSubKategori, 'nama_subkategori');
-
-        // $step_before = array_column($dataProduk, 'step_before');
-        // dd($step_before);
 
         $detail_produk = $dataProduk;
         $daftar_harga = array_column($dataPaket1, 'harga_paket');
@@ -93,8 +89,7 @@ class Detail extends BaseController
             'dataKategori' => $dataKategori,
             'dataSubKategori' => $dataSubKategori,
             'dataPaket' => $dataPaket,
-            'similiar' => $similiar,
-            'daftar_similiar' => $daftar_similiar
+            'daftarSimiliar' => $daftarSimiliar
         ];
         return view('/detail/detail', $dataPage);
     }
