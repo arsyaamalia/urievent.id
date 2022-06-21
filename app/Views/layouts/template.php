@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -64,9 +66,11 @@
                 <div class="profile">
                     <li><a href="#">Username</a></li>
                 </div>
-                <div class="upload-button-nav" id="margin-nav-right">
-                    <p>Upload</p>
-                </div>
+                <a href="/pages/upload">
+                    <div class="upload-button-nav" id="margin-nav-right">
+                        <p>Upload</p>
+                    </div>
+                </a>
             </div>
         </div>
     </header>

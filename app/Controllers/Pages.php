@@ -113,4 +113,13 @@ class Pages extends BaseController
         }
         dd($new_id);
     }
+
+    public function upload()
+    {
+        $dataPage = [
+            'title' => "UriEvent | Upload Service",
+            'tes' => ['satu', 'dua', 'tiga']
+        ];
+        return view('pages/upload', $dataPage);
+    }
 }
