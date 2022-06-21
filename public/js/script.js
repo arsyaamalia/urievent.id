@@ -1,4 +1,4 @@
-const general = document.getElementsByClassName(".form-general");
+const general = document.querySelectorAll(".form-general");
 const details = document.querySelectorAll(".form-details");
 const additional = document.querySelectorAll(".form-additional");
 const checkout = document.querySelectorAll(".form-checkout");
