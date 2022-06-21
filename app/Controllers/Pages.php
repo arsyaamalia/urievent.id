@@ -92,4 +92,24 @@ class Pages extends BaseController
         ];
         return view('/pages/search', $dataPage);
     }
+
+    public function newID()
+    {
+        $dataProduk = $this->produk_layanan->orderBy('id_layanan', 'desc')->first();
+        // explode
+        $id_layanan_string =  explode('Y', $dataProduk['id_layanan']);
+        // string to int
+        $id_layanan_terakhir = intval(end($id_layanan_string));
+        // nambah id+1 buat id baru
+        $new_id_layanan =  $id_layanan_terakhir + 1;
+        // balikin jadi string buat id baru
+        $new_str_id_layanan = (string) $new_id_layanan;
+        // cek lenght string dan validasi sekalian bikin 
+        if (strlen($new_str_id_layanan) == 2) {
+            $new_id = 'LAY0' . $new_str_id_layanan;
+        } else {
+            $new_id = 'LAY' . $new_str_id_layanan;
+        }
+        dd($new_id);
+    }
 }

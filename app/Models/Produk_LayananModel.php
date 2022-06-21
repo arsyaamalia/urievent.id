@@ -12,6 +12,7 @@ class produk_layananModel extends Model
     protected $useAutoIncrement = false;
     protected $useTimestamps = true;
 
+
     public function getDetail($id_layanan = false)
     {
         if ($id_layanan == false) {
