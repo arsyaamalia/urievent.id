@@ -12,8 +12,14 @@ class Sign extends BaseController
         echo view('sign/signIn');
     }
 
+    public function __construct()
+    {
+        $this->UserModel = new UserModel();
+    }
+
     public function signIn()
     {
+
         $session = session();
         $userModel = new UserModel();
         $user_email = $this->request->getVar('user_email');
@@ -25,6 +31,8 @@ class Sign extends BaseController
             // $authenticatePassword = password_verify($password, $pass);
             // dd($password, $pass);
             // dd($authenticatePassword);
+
+
 
             if ($password == $pass) {
                 $ses_data = [
@@ -48,11 +56,66 @@ class Sign extends BaseController
 
     public function signUp()
     {
+
         $dataPage = [
             'title' => "Urievent | Sign Up",
             'tes' => ['satu', 'dua', 'tiga']
         ];
         return view('sign/signUp', $dataPage);
+    }
+
+    //validasi sign up
+    public function save()
+    {
+
+        $session = session();
+        $userModel = new UserModel();
+        $new_username = $this->request->getVar('username');
+
+
+        //cek username unik
+        $data = $userModel->where('username_user', $new_username)->first();
+
+        if (!$data) {
+            // aman
+
+            $temp = $this->UserModel->orderBy('id_user', 'desc')->first();
+            // dd($temp);
+            $id_user_str = explode('u', $temp['id_user']);
+            // dd($id_user_str);
+            $new_id_user = intval(end($id_user_str));
+            // dd($new_id_user);
+            $new_id_user = $new_id_user + 1;
+            // dd($new_id_user);
+            $new_id_user_str = (string) $new_id_user;
+            // dd($new_id_user_str);
+
+            //cek length string
+            if (strlen($new_id_user_str) == 1) {
+                $new_id_user_str = 'u00' . $new_id_user_str;
+            } else if (strlen($new_id_user_str == 2)) {
+                //puluhan
+                $new_id_user_str = 'u0' . $new_id_user_str;
+            } else {
+                //ratusan
+                $new_id_user_str = 'u' . $new_id_user_str;
+            }
+            // dd($new_id_user_str);
+
+            $this->UserModel->save([
+                // 'id_user' => $this->request->getVar($new_id_user_str),
+                'id_user' => $new_id_user_str,
+
+                'nama_user' => $this->request->getVar('nama'),
+                'email_user' => $this->request->getVar('email'),
+                'password_user' => $this->request->getVar('password'),
+                'username_user' => $this->request->getVar('username')
+            ]);
+        } else {
+            // gak aman
+
+        }
+        return redirect()->to('/sign');
     }
 
     public function resetPass()
