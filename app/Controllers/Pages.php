@@ -4,11 +4,8 @@ namespace App\Controllers;
 
 use App\Models\produk_layananModel;
 use App\Models\paket_layananModel;
-<<<<<<< HEAD
 use App\Models\UserModel;
-=======
 use CodeIgniter\Database\Database;
->>>>>>> dae25898d27763a2438266a9f86955a649623e67
 
 class Pages extends BaseController
 {
