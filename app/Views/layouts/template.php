@@ -24,7 +24,7 @@
                     <ul>
                         <li><a href="/pages/about" class="nav-link">About Us</a></li>
                         <li><a href="/pages/advertise" class="nav-link">Advertise With Us</a></li>
-                        <li><a href="#" class="nav-link">Program</a></li>
+                        <li><a href="/pages/medpart_name" class="nav-link">Program</a></li>
                         <li>
                         <div class="search-box-2">
                             <input type="text" placeholder="Mau cari apa?"  style="color: black;">

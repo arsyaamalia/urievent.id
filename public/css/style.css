@@ -1297,3 +1297,137 @@ input[type="number"]::-webkit-outer-spin-button {
     transform: translateY(-50%) rotate(360deg);
     color: #0f3460;
 }
+
+.medpart-name-container {
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.medpart-name-contentbox {
+    width: 95%;
+    height: auto;
+    background: white;
+    box-shadow: 0 0 0 3px #f4f5f5;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.medpart-name-pict {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    padding-top: 150px;
+    margin-bottom: 20px;
+}
+
+.pict {
+    background: #f4f5f5;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.medpart-name-content {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.medpart_name-content-left {
+    width: 400px;
+    background: #ffffff;
+    margin-right: 50px;
+}
+
+.medpart_name-content-right {
+    width: 400px;
+    height: auto;
+    background: #f4f5f5;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.left1,
+.left2,
+.left3,
+.left4,
+.left5,
+.left6 {
+    width: 350px;
+    height: auto;
+    margin-bottom: 30px;
+    background: #f4f5f5;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.left1 h2,
+.left2 h2,
+.left3 h2,
+.left4 h2,
+.left5 h2,
+.left6 h2 {
+    margin-bottom: 5px;
+}
+
+.left1 li,
+.left2 li,
+.left3 li,
+.left4 li,
+.left5 li,
+.left6 li {
+    display: block;
+    list-style: square;
+}
+
+.right1 {
+    width: 350px;
+    height: auto;
+    margin-bottom: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.right1 h2 {
+    margin-bottom: 5px;
+}
+
+.right-btn .input {
+    box-sizing: border-box;
+    height: 35px;
+    border-radius: 50px;
+    width: 100px;
+    padding-left: 45px;
+}
+
+.right-btn .btn-1 {
+    height: 35px;
+    border-radius: 50px 0 0 50px;
+    width: 30px;
+    background-color: #e94560;
+    position: relative;
+    right: 105px;
+    top: 13px;
+}
+
+.right-btn .btn-2 {
+    height: 35px;
+    border-radius: 0 50px 50px 0;
+    width: 30px;
+    background-color: #e94560;
+    position: relative;
+    right: 65px;
+    top: 13px;
+}
