@@ -68,10 +68,46 @@
         <div class="body-urievent">
           <div class="upload-second-field">
             <div class="upload-tahapan">
-              <div class="tahapan-general"></div>
-              <div class="tahapan-details"></div>
-              <div class="tahapan-additional"></div>
-              <div class="tahapan-checkout"></div>
+              <div class="tahapan-general">
+                <button type="button" onclick="overlayGeneral()">
+                  <div class="tahapan-nomor">
+                    <h3>1</h3>
+                  </div>
+                  <div class="tahapan-nama">
+                    <h3>General</h3>
+                  </div>
+                </button>
+              </div>
+              <div class="tahapan-details">
+                <button type="button" onclick="overlayDetails()">
+                  <div class="tahapan-nomor">
+                    <h3>2</h3>
+                  </div>
+                  <div class="tahapan-nama">
+                    <h3>Details</h3>
+                  </div>
+                </button>
+              </div>
+              <div class="tahapan-additional">
+                <button type="button" onclick="overlayAdditional()">
+                  <div class="tahapan-nomor">
+                    <h3>3</h3>
+                  </div>
+                  <div class="tahapan-nama">
+                    <h3>Additional</h3>
+                  </div>
+                </button>
+              </div>
+              <div class="tahapan-checkout">
+                <button type="button" onclick="overlayCheckout()">
+                  <div class="tahapan-nomor">
+                    <h3>4</h3>
+                  </div>
+                  <div class="tahapan-nama">
+                    <h3>Checkout</h3>
+                  </div>
+                </button>
+              </div>
             </div>
             <div class="upload-form">
               <div class="form-general">
@@ -203,7 +239,7 @@
                     <textarea name="package-desc" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea>
                     <br>
                     <label for="package-prize" class="upload-label">Package Prize (Rp)</label>
-                    <input type="number" name="package-prize" id="package-prize" placeholder="25000" required>
+                    <input type="number" name="package-prize" id="package-prize" placeholder="25000" min="0.00" max="10000.00" step="0.01" required>
                     <br>
                     <div id="newRowPackage"></div>
                     <button id="addRowPackage" type="button" class="btn btn-info">+ ADD PACKAGE CATEGORY</button>
