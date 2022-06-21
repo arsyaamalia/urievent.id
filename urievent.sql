@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2022 at 04:25 PM
+-- Generation Time: Jun 19, 2022 at 07:34 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.14
 
@@ -192,23 +192,41 @@ CREATE TABLE `paket_layanan` (
 --
 
 INSERT INTO `paket_layanan` (`id_paket`, `id_layanan`, `nama_paket`, `deskripsi_paket`, `harga_paket`) VALUES
-('P001', 'LAY002', 'Bronze', 'lorem ipsum dolor', 25000),
-('P002', 'LAY002', 'Silver', 'lorem ipsum dolor', 50000),
-('P003', 'LAY002', 'Gold', 'lorem ipsum dolor', 75000),
-('P004', 'LAY002', 'Diamond', 'lorem ipsum dolor', 100000),
-('P005', 'LAY001', 'Bronze', 'lorem ipsum dolor', 25000),
-('P006', 'LAY001', 'Silver', 'lorem ipsum dolor', 50000),
-('P007', 'LAY001', 'Gold', 'lorem ipsum dolor', 75000),
-('P008', 'LAY001', 'Diamond', 'lorem ipsum dolor', 10000),
-('P009', 'LAY003', 'Gold', 'lorem ipsum dolor', 75000),
-('P010', 'LAY003', 'Diamond', 'lorem ipsum dolor', 10000),
-('P011', 'LAY004', 'Gold', 'lorem ipsum dolor', 25000),
-('P012', 'LAY004', 'Diamond', 'lorem ipsum dolor', 75000),
-('P013', 'LAY005', 'Silver', 'lorem ipsum dolor', 50000),
-('P014', 'LAY005', 'Gold', 'lorem ipsum dolor', 75000),
-('P018', 'LAY007', 'Bronze', 'lorem ipsum dolor', 30000),
-('P019', 'LAY007', 'Silver', 'lorem ipsum dolor', 50000),
-('P020', 'LAY007', 'Gold', 'lorem ipsum dolor', 75000);
+('P001', 'LAY002', 'Bronze', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ', 25000),
+('P002', 'LAY002', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ', 50000),
+('P003', 'LAY002', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ', 75000),
+('P004', 'LAY002', 'Diamond', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ', 100000),
+('P005', 'LAY001', 'Bronze', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 25000),
+('P006', 'LAY001', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 50000),
+('P007', 'LAY001', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 75000),
+('P008', 'LAY001', 'Diamond', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 10000),
+('P009', 'LAY003', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 75000),
+('P010', 'LAY003', 'Diamond', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 10000),
+('P011', 'LAY004', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 25000000),
+('P012', 'LAY004', 'Diamond', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 75000000),
+('P013', 'LAY007', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 50000),
+('P014', 'LAY007', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 75000),
+('P018', 'LAY008', 'Bronze', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 30000000),
+('P019', 'LAY008', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 50000000),
+('P020', 'LAY008', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 75000000),
+('P021', 'LAY009', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 50000),
+('P022', 'LAY009', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 10000),
+('P023', 'LAY010', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 10000),
+('P024', 'LAY010', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 25000),
+('P025', 'LAY011', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 25000),
+('P026', 'LAY011', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 50000),
+('P027', 'LAY012', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 25000),
+('P028', 'LAY012', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 30000),
+('P029', 'LAY013', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 50000),
+('P030', 'LAY013', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 75000),
+('P031', 'LAY015', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 10000),
+('P032', 'LAY015', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 30000),
+('P033', 'LAY016', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 25000),
+('P034', 'LAY016', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 30000),
+('P035', 'LAY017', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 50000),
+('P036', 'LAY017', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 75000),
+('P037', 'LAY018', 'Silver', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 10000),
+('P038', 'LAY018', 'Gold', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus deserunt quae.', 30000);
 
 -- --------------------------------------------------------
 
@@ -254,7 +272,7 @@ INSERT INTO `produk_layanan` (`id_layanan`, `id_kategori`, `id_subkategori`, `id
 ('LAY007', 'CAT003', 'SCAT001', 'u002', 'Adam vendor', 'adamshop@gmail.com', '82223456789', 'adamrchmn', 'Adamvendor.jpg', 'This is deskripsi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sint minima fugiat odio animi ab beatae nesciunt soluta doloremque praesentium.', 'step, before, lorem ipum, lorem dolor, lorem', 'lorem ipsum bla bla blastep, after, Lorem ipsum, dolor sit, amet consectetur, adipisicing elit', 'This is other Lorem ipsum dolor sit amet consectet', 'this value other Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'verifed'),
 ('LAY008', 'CAT004', 'SCAT001', 'u003', 'Hakim venue', 'hakimshop@gmail.com', '82223456789', 'hakimshop', 'Hakimvenue.jpg', 'This is deskripsi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sint minima fugiat odio animi ab beatae nesciunt soluta doloremque praesentium.', 'step, before, lorem ipum, lorem dolor, lorem', 'lorem ipsum bla bla blastep, after, Lorem ipsum, dolor sit, amet consectetur, adipisicing elit', 'This is other Lorem ipsum dolor sit amet consectet', 'this value other Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'verifed'),
 ('LAY009', 'CAT001', 'SCAT001', 'u004', 'Irvan medpart', 'irvanshop@gmail.com', '82223456789', 'irvanshop', 'Irvanmedpart.jpg', 'This is deskripsi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sint minima fugiat odio animi ab beatae nesciunt soluta doloremque praesentium.', 'Upload poster event yang sudah berlogo company kami,Isi caption atau tambahan lainnya untuk keperluan upload,Kirim bukti transfer', 'Join WhatsApp group,Pilih jadwal upload poster saat mengisi formulir,Wait your poster to be uploaded', 'This is other Lorem ipsum dolor sit amet consectet', '32.000++ active accounts,Have been trusted media partner for 5 years', 'verifed'),
-('LAY010', 'CAT002', 'SCAT001', 'u005', 'bulan medpart', 'bulanshop@gmail.com', '82223456789', 'bulanshop', 'bulanmedpart.jpg', 'This is deskripsi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sint minima fugiat odio animi ab beatae nesciunt soluta doloremque praesentium.', 'step, before, lorem ipum, lorem dolor, lorem', 'lorem ipsum bla bla blastep, after, Lorem ipsum, dolor sit, amet consectetur, adipisicing elit', 'This is other Lorem ipsum dolor sit amet consectet', '32.000++ active accounts,Have been trusted media partner for 5 years', 'verifed'),
+('LAY010', 'CAT001', 'SCAT001', 'u005', 'bulan medpart', 'bulanshop@gmail.com', '82223456789', 'bulanshop', 'bulanmedpart.jpg', 'This is deskripsi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sint minima fugiat odio animi ab beatae nesciunt soluta doloremque praesentium.', 'step, before, lorem ipum, lorem dolor, lorem', 'lorem ipsum bla bla blastep, after, Lorem ipsum, dolor sit, amet consectetur, adipisicing elit', 'This is other Lorem ipsum dolor sit amet consectet', '32.000++ active accounts,Have been trusted media partner for 5 years', 'verifed'),
 ('LAY011', 'CAT003', 'SCAT001', 'u011', 'puput vendor', 'puputshop@gmail.com', '82223456789', 'puputshop', 'puputvendor.jpg', 'This is deskripsi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sint minima fugiat odio animi ab beatae nesciunt soluta doloremque praesentium.', 'step, before, lorem ipum, lorem dolor, lorem', 'lorem ipsum bla bla blastep, after, Lorem ipsum, dolor sit, amet consectetur, adipisicing elit', 'This is other Lorem ipsum dolor sit amet consectet', 'this value other Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'verifed'),
 ('LAY012', 'CAT004', 'SCAT001', 'u012', 'cia venue', 'ciashop@gmail.com', '82223456789', 'ciashop', 'ciavenue.jpg', 'This is deskripsi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sint minima fugiat odio animi ab beatae nesciunt soluta doloremque praesentium.', 'step, before, lorem ipum, lorem dolor, lorem', 'lorem ipsum bla bla blastep, after, Lorem ipsum, dolor sit, amet consectetur, adipisicing elit', 'This is other Lorem ipsum dolor sit amet consectet', 'this value other Lorem ipsum dolor sit amet consectetur adipisicing elit.', 'verifed'),
 ('LAY005', 'CAT002', 'SCAT001', 'u006', 'Ocha sponsor', 'ochashop@gmail.com', '82223456789', 'ochashop', 'Ochasponsor.jpg', 'This is deskripsi.Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quisquam! Voluptate, temporibus quidem! Pariatur rem qui quo minima debitis. Ab suscipit exercitationem iusto, facilis', 'Upload poster event yang sudah berlogo company kami,Isi caption atau tambahan lainnya untuk keperluan upload,Kirim bukti transfer', 'Join WhatsApp group,Pilih jadwal upload poster saat mengisi formulir,Wait your poster to be uploaded', 'This is other Lorem ipsum dolor sit amet consectet', '32.000++ active accounts,Have been trusted media partner for 5 years', 'verifed'),

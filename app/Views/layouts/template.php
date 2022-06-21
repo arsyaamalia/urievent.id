@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <body>
@@ -25,12 +26,24 @@
                         <li><a href="/pages/advertise" class="nav-link">Advertise With Us</a></li>
                         <li><a href="#" class="nav-link">Program</a></li>
                         <li>
-                            <a href="/pages/search" class="search-box">
-                                <div class="search">
-                                    <div class="text-search">Search</div>
-                                    <div class="img-search"><img src="/icon/search.png" alt="Search" class="icon-search"></div>
+                            <div class="search-box-2">
+                                <form action="/pages/search">
+                                    <input type="text" placeholder="Mau cari apa?" name="cari" style="color: black;">
+                                    <div class="search-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <button class="search-button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+
+
+                                </form>
+
+                                <div class="cancel-icon">
+                                    <i class="fas fa-times"></i>
                                 </div>
-                            </a>
+                            </div>
+
                         </li>
                     </ul>
                 </div>
@@ -152,6 +165,23 @@
             <h5>Copyright © 2022 UriEvent. All Rights Reserved</h5>
         </div>
     </div>
+
+
+    <script>
+        const searchBox = document.querySelector(".search-box-2");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        searchBtn.onclick = () => {
+            searchBox.classList.add("active");
+            searchBtn.classList.add("active");
+            cancelBtn.classList.add("active");
+        }
+        cancelBtn.onclick = () => {
+            searchBox.classList.remove("active");
+            searchBtn.classList.remove("active");
+            cancelBtn.classList.remove("active");
+        }
+    </script>
 </body>
 
 </html>

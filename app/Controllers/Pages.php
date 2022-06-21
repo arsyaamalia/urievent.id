@@ -4,7 +4,11 @@ namespace App\Controllers;
 
 use App\Models\produk_layananModel;
 use App\Models\paket_layananModel;
+<<<<<<< HEAD
 use App\Models\UserModel;
+=======
+use CodeIgniter\Database\Database;
+>>>>>>> dae25898d27763a2438266a9f86955a649623e67
 
 class Pages extends BaseController
 {
@@ -16,24 +20,8 @@ class Pages extends BaseController
         $this->paket_layanan = new paket_layananModel();
     }
 
-    public function index()
-    // if isset!login paakai return view index, if isset=login = true, return view footer,header, <<homepage>>
+    public function mapingProdukPaket($dataProduk, $dataPaket)
     {
-
-        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
-        $dataPaket = $this->paket_layanan->findAll();
-
-        // buat insert array input id layanan
-        // // coba sortir array
-        // $dataProduk = $this->produk_layanan->findAll();
-        // $id_produk = array_column($dataProduk, 'id_layanan');
-
-        // sort($id_produk, SORT_NATURAL | SORT_FLAG_CASE);
-        // // get array paling akhir
-        // echo end($id_produk);      
-
-
-
         $daftar_produk = array_map(function ($produk) use ($dataPaket) {
             $daftar_paket = array_filter($dataPaket, function ($paket) use ($produk) {
                 // dd($paket, $produk);
@@ -52,7 +40,16 @@ class Pages extends BaseController
             return $produk;
         }, $dataProduk);
 
+        return $daftar_produk;
+    }
 
+    public function index()
+    {
+
+        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataPaket = $this->paket_layanan->findAll();
+
+        $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
 
         $dataPage = [
             'title' => "UriEvent | Homepage",
@@ -74,7 +71,6 @@ class Pages extends BaseController
 
 
     public function advertise()
-
     {
 
         $dataPage = [
@@ -84,22 +80,40 @@ class Pages extends BaseController
         return view('pages/advertise', $dataPage);
     }
 
-
-    // public function detail()
-    // {
-    //     $dataPage = [
-    //         'title' => "UriEvent | Nama Instansi",
-    //         'tes' => ['satu', 'dua', 'tiga']
-    //     ];
-    //     return view('pages/detail', $dataPage);
-
     public function search()
     {
+        $cari = $this->request->getVar('cari');
+
+        $dataProduk = $this->produk_layanan->search($cari)->paginate(5, 'daftar_produk');
+        $dataPaket = $this->paket_layanan->findAll();
+        $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
 
         $dataPage = [
-            'title' => "UriEvent | Search",
-            'tes' => ['satu', 'dua', 'tiga']
+            'title' => "Urievent | Search Page",
+            'daftar_produk' => $daftar_produk,
+            'cari' => $cari,
+            'pager' => $this->produk_layanan->pager
         ];
-        return view('pages/search', $dataPage);
+        return view('/pages/search', $dataPage);
+    }
+
+    public function newID()
+    {
+        $dataProduk = $this->produk_layanan->orderBy('id_layanan', 'desc')->first();
+        // explode
+        $id_layanan_string =  explode('Y', $dataProduk['id_layanan']);
+        // string to int
+        $id_layanan_terakhir = intval(end($id_layanan_string));
+        // nambah id+1 buat id baru
+        $new_id_layanan =  $id_layanan_terakhir + 1;
+        // balikin jadi string buat id baru
+        $new_str_id_layanan = (string) $new_id_layanan;
+        // cek lenght string dan validasi sekalian bikin 
+        if (strlen($new_str_id_layanan) == 2) {
+            $new_id = 'LAY0' . $new_str_id_layanan;
+        } else {
+            $new_id = 'LAY' . $new_str_id_layanan;
+        }
+        dd($new_id);
     }
 }

@@ -65,29 +65,28 @@
             <img src="/icon/save.png" class="img-save" />
           </div>
           <div class="action-button">
-            <div class="choose-package-box">
-              <a href="div-purchase-display-public">
-                <div class="choose-package">
-                  <p>Choose Package</p>
-                </div>
-              </a>
-            </div>
+
+            <?php if ($detail_produk['id_kategori'] == "CAT002") : ?>
+              <div class="submit-box">
+                <a href="form.php">
+                  <div class="submit">
+                    <button type="button" class="button-submit">Submit</button>
+                  </div>
+                </a>
+              </div>
+            <?php else : ?>
+              <div class="choose-package-box">
+                <a href="div-purchase-display-public">
+                  <div class="choose-package">
+                    <p>Check Out</p>
+                  </div>
+                </a>
+              </div>
+            <?php endif; ?>
+
             <!-- if id_kategori = 001  -->
-            <div class="submit-box">
-              <a href="form.php">
-                <div class="submit">
-                  <button type="button" class="button-submit">Submit</button>
-                </div>
-              </a>
-            </div>
             <!-- else if id_kategori = 003 -->
-            <div class="checkout-box">
-              <a href="form.php">
-                <div class="checkout">
-                  <button type="button" class="button-checkout">Check Out</button>
-                </div>
-              </a>
-            </div>
+
           </div>
         </div>
       </div>
@@ -116,6 +115,7 @@
             <h6>Steps to Purchase</h6>
             <ul>
               <?php foreach ($detail_produk['step_before'] as $step_before) : ?>
+
                 <li>
                   <p><?= $step_before ?></p>
                 </li>
@@ -242,68 +242,22 @@
       <h2>Similar <?= $dataKategori['nama_kategori'] ?></h2>
       <div class="similar-box">
 
-        <?php for ($i = 0; $i < 5; $i++) : ?>
+        <?php foreach ($daftarSimiliar as $similiar) : ?>
+
           <div class="similar-hover">
-
-
-            <a href="/similiar/detail/<?= $daftar_similiar[$i]['id_layanan']; ?>/<?= $similiar[$i]['id_kategori']; ?>/<?= $similiar[$i]['id_subkategori']; ?>">
+            <a href="/detail/index/<?= $similiar['id_layanan']; ?>/<?= $similiar['id_kategori']; ?>/<?= $similiar['id_subkategori']; ?>">
               <div class="similar-item">
                 <div class="similar-grup">
                   <div class="item-circle"></div>
 
                   </form>
-                  <h4><?= $similiar[$i]['nama_instansi']; ?></h4>
+                  <h4><?= $similiar['nama_instansi']; ?></h4>
                 </div>
-
-                <h3>Rp <?= $daftar_similiar[$i]['harga_min'] ?></h3>
+                <h3>Rp <?= $similiar['harga_min']; ?></h3>
               </div>
             </a>
           </div>
-        <?php endfor; ?>
-        <!-- <div class="similar-hover">
-          <a href="similar-button">
-            <div class="similar-item">
-              <div class="similar-grup">
-                <div class="item-circle"></div>
-                <h4>Magang Update</h4>
-              </div>
-              <h3>Rp25.000</h3>
-            </div>
-          </a>
-        </div>
-        <div class="similar-hover">
-          <a href="similar-button">
-            <div class="similar-item">
-              <div class="similar-grup">
-                <div class="item-circle"></div>
-                <h4>Magang Update</h4>
-              </div>
-              <h3>Rp25.000</h3>
-            </div>
-          </a>
-        </div>
-        <div class="similar-hover">
-          <a href="similar-button">
-            <div class="similar-item">
-              <div class="similar-grup">
-                <div class="item-circle"></div>
-                <h4>Magang Update</h4>
-              </div>
-              <h3>Rp25.000</h3>
-            </div>
-          </a>
-        </div>
-        <div class="similar-hover">
-          <a href="similar-button">
-            <div class="similar-item">
-              <div class="similar-grup">
-                <div class="item-circle"></div>
-                <h4>Magang Update</h4>
-              </div>
-              <h3>Rp25.000</h3>
-            </div>
-          </a>
-        </div> -->
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
