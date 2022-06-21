@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,31 +28,24 @@
                         <li><a href="/pages/advertise" class="nav-link">Advertise With Us</a></li>
                         <li><a href="/pages/medpart_name" class="nav-link">Program</a></li>
                         <li>
-                        <div class="search-box-2">
-                            <input type="text" placeholder="Mau cari apa?"  style="color: black;">
-                            <div class="search-icon">
-                                <i class="fas fa-search"></i>
+                            <div class="search-box-2">
+                                <form action="/pages/search">
+                                    <input type="text" placeholder="Mau cari apa?" name="cari" style="color: black;">
+                                    <div class="search-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <button class="search-button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+
+
+                                </form>
+
+                                <div class="cancel-icon">
+                                    <i class="fas fa-times"></i>
+                                </div>
                             </div>
-                            <div class="cancel-icon">
-                                <i class="fas fa-times"></i>
-                            </div>
-                        </div>
-                        <script>
-                            const searchBox = document.querySelector(".search-box-2");
-                            const searchBtn = document.querySelector(".search-icon");
-                            const cancelBtn = document.querySelector(".cancel-icon");
-                            searchBtn.onclick = () => {
-                                searchBox.classList.add("active");
-                                searchBtn.classList.add("active");
-                                cancelBtn.classList.add("active");
-                            }
-                            cancelBtn.onclick = () => {
-                                searchBox.classList.remove("active");
-                                searchBtn.classList.remove("active");
-                                cancelBtn.classList.remove("active");
-                            }
-                        </script>
-                        
+
                         </li>
                     </ul>
                 </div>
@@ -71,9 +66,11 @@
                 <div class="profile">
                     <li><a href="#">Username</a></li>
                 </div>
-                <div class="upload-button-nav" id="margin-nav-right">
-                    <p>Upload</p>
-                </div>
+                <a href="/pages/upload">
+                    <div class="upload-button-nav" id="margin-nav-right">
+                        <p>Upload</p>
+                    </div>
+                </a>
             </div>
         </div>
     </header>
@@ -172,6 +169,23 @@
             <h5>Copyright © 2022 UriEvent. All Rights Reserved</h5>
         </div>
     </div>
+
+
+    <script>
+        const searchBox = document.querySelector(".search-box-2");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        searchBtn.onclick = () => {
+            searchBox.classList.add("active");
+            searchBtn.classList.add("active");
+            cancelBtn.classList.add("active");
+        }
+        cancelBtn.onclick = () => {
+            searchBox.classList.remove("active");
+            searchBtn.classList.remove("active");
+            cancelBtn.classList.remove("active");
+        }
+    </script>
 </body>
 
 </html>

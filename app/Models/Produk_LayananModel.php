@@ -12,6 +12,7 @@ class produk_layananModel extends Model
     protected $useAutoIncrement = false;
     protected $useTimestamps = true;
 
+
     public function getDetail($id_layanan = false)
     {
         if ($id_layanan == false) {
@@ -24,5 +25,12 @@ class produk_layananModel extends Model
     public function getSimiliar($id_kategori)
     {
         return $this->where(['id_kategori' => $id_kategori])->findAll();
+    }
+
+    public function search($cari)
+    {
+        return $this->table('produk_layanan')->like('nama_instansi', $cari);
+
+        // ->orLike('nama_instansi',$cari)
     }
 }

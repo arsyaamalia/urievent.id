@@ -4,7 +4,7 @@
 
 <section class="advertise-container">
     <div class="advertise-head">
-        <h1 >Lorem, ipsum. <br> Lorem, ipsum</h1>
+        <h1>Lorem, ipsum. <br> Lorem, ipsum</h1>
     </div>
 
     <div class="advertise-form">

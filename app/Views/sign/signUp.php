@@ -37,12 +37,12 @@
                     <hr class="divider">
                     </hr>
                     <div class="auth-form">
-                        <form action="/sign">
+                        <form action="/sign/save" method="POST">
                             <div class="form-fields">
                                 <fieldset class="group-fieldset">
                                     <div class="grup1">
                                         <label for="nama" class="text-label" id="nama">Name</label>
-                                        <input type="text" name="nama" id="nama" tabindex="1" class="text-input" required>
+                                        <input type="text" name="nama" id="nama" tabindex="1" class="text-input" required autofocus>
                                     </div>
                                     <div class="grup2">
                                         <label for="username" class="text-label" id="username">Username</label>
