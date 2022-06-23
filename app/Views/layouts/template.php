@@ -64,14 +64,6 @@
                         </div>
                     </a>
                 </div>
-<<<<<<< HEAD
-=======
-                <a href="/upload">
-                    <div class="upload-button-nav" id="margin-nav-right">
-                        <p>Upload</p>
-                    </div>
-                </a>
->>>>>>> f9a2c9b29b8004d1308d9f5c1b4f3519067adc39
             </div>
         </div>
     </header>
