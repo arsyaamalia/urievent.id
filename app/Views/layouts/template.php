@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() . '/css/style.css' ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -58,12 +58,13 @@
                     </a>
                 </div>
                 <div class="nav-right-item">
-                    <a href="/pages/upload">
+                    <a href="/upload">
                         <div class="upload-button">
                             <p>Upload</p>
                         </div>
                     </a>
                 </div>
+
             </div>
         </div>
     </header>
@@ -233,17 +234,17 @@
     </div>
     </div>
 
-    
+
     <script>
         const hoverprofile = document.getElementById('buathover');
 
-        function mouseOver(){
-        console.log("berhasil masuk hover profile");
-        hoverprofile.style.display = "block";
+        function mouseOver() {
+            console.log("berhasil masuk hover profile");
+            hoverprofile.style.display = "block";
         }
 
-        function mouseOut(){
-        hoverprofile.style.display = "none";
+        function mouseOut() {
+            hoverprofile.style.display = "none";
         }
 
         const searchBox = document.querySelector(".search-box-2");
@@ -420,11 +421,9 @@
         });
         });
     </script>
-<<<<<<< HEAD
-=======
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script src="/js/script.js"></script>
->>>>>>> f9a2c9b29b8004d1308d9f5c1b4f3519067adc39
+
+    <script src="<?= base_url() . '/js/jquery-3.6.0.min.js' ?>"></script>
+    <script src="<?= base_url() . '/js/script.js' ?>"></script>
 </body>
 
 </html>

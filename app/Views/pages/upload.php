@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<form action="#">
+<form action="/upload/save">
   <div class="upload-box">
     <div class="upload-container">
       <h2><a href="/pages">＜ Upload Service</a></h2>
@@ -13,6 +13,8 @@
             <img src="../icon/picture.png" class="picture-icon" />
           </div>
           <div class="picture-desc">
+            <input type="file" id="custom-file">
+            <label for="custom-file"></label>
             <p>Drag and drop an image or browse</p>
           </div>
         </div>
@@ -24,11 +26,11 @@
                 <label for="category" class="upload-label">Category</label>
                 <select id="category" name="category" required tabindex="1">
                   <option selected disabled>Select one</option>
-                  <!-- foreach tabel kategori as kategori -->
-                  <option value="medpart">Media Partner</option>
-                  <option value="sponsor">Sponsorship</option>
-                  <option value="vendor">Vendor</option>
-                  <option value="venue">Venue</option>
+                  <?php foreach ($dataKategori as $kategori) : ?>
+                    <!-- foreach tabel kategori as kategori -->
+                    <option value="<?= $kategori['nama_kategori'] ?>"><?= $kategori['nama_kategori'] ?></option>
+                  <?php endforeach; ?>
+
                 </select>
                 <div class="batas-body">
                   <div class="body-urievent">
@@ -187,7 +189,7 @@
                           <textarea name="package-desc" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea>
                           <br>
                           <label for="package-prize" class="upload-label">Package Prize (Rp)</label>
-                          <input type="number" name="package-prize" id="package-prize" placeholder="25000" min="0.00" max="10000.00" step="0.01" required>
+                          <input type="number" name="package-prize" id="package-prize" placeholder="25000" min="0.00" step="0.01" required>
                           <br>
                           <div id="newRowPackage"></div>
                           <button id="addRowPackage" type="button" class="btn btn-info">+ ADD PACKAGE CATEGORY</button>
@@ -335,6 +337,7 @@
       </div>
     </div>
   </div>
+  <button>upload</button>
 </form>
 
 <?= $this->endsection(); ?>
