@@ -79,7 +79,7 @@
                                     <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
                                     <h4><?= $produk['nama_instansi'] ?></h4>
                                 </div>
-                                <h3>Rp <?= $produk['harga_min'] ?></h3>
+                                <h3>Rp <?= number_format($produk['harga_min'], '0', '', '.'); ?></h3>
                             </div>
                         </a>
                     </div>

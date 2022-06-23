@@ -26,8 +26,8 @@
 
         <?php endforeach; ?>
     </div>
-    <div> <?= $pager->links('daftar_produk', 'urievent_pagination'); ?>
-    </div>
+    <!-- <div>  //$pager->links('daftar_produk', 'urievent_pagination'); ?> -->
+</div>
 </div>
 
 <?= $this->endsection(); ?>

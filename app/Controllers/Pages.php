@@ -71,8 +71,7 @@ class Pages extends BaseController
     {
 
         $dataPage = [
-            'title' => "UriEvent | Advertise With Us",
-            'tes' => ['satu', 'dua', 'tiga']
+            'title' => "UriEvent | Advertise With Us"
         ];
         return view('pages/advertise', $dataPage);
     }
@@ -81,7 +80,9 @@ class Pages extends BaseController
     {
         $cari = $this->request->getVar('cari');
 
-        $dataProduk = $this->produk_layanan->search($cari)->paginate(5, 'daftar_produk');
+        // $dataProduk = $this->produk_layanan->search($cari)->paginate(5, 'daftar_produk');
+        $dataProduk = $this->produk_layanan->search($cari)->findAll();
+
         $dataPaket = $this->paket_layanan->findAll();
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
 
@@ -114,14 +115,7 @@ class Pages extends BaseController
         dd($new_id);
     }
 
-    public function upload()
-    {
-        $dataPage = [
-            'title' => "UriEvent | Upload Service",
-            'tes' => ['satu', 'dua', 'tiga']
-        ];
-        return view('pages/upload', $dataPage);
-    }
+
 
     public function medpart_name()
     {

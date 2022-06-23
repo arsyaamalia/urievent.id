@@ -64,6 +64,14 @@
                         </div>
                     </a>
                 </div>
+<<<<<<< HEAD
+=======
+                <a href="/upload">
+                    <div class="upload-button-nav" id="margin-nav-right">
+                        <p>Upload</p>
+                    </div>
+                </a>
+>>>>>>> f9a2c9b29b8004d1308d9f5c1b4f3519067adc39
             </div>
         </div>
     </header>
@@ -132,21 +140,41 @@
             <div class="nav-bottom-box">
                 <h5>Categories</h5>
                 <div class="nav-container-link">
-                    <a href="#"><p class="nav-bottom-link">Media Partner</p></a>
-                    <a href="#"><p class="nav-bottom-link">Sponsorship</p></a>
-                    <a href="#"><p class="nav-bottom-link">Vendor</p></a>
-                    <a href="#"><p class="nav-bottom-link">Venue</p></a>
+                    <a href="#">
+                        <p class="nav-bottom-link">Media Partner</p>
+                    </a>
+                    <a href="#">
+                        <p class="nav-bottom-link">Sponsorship</p>
+                    </a>
+                    <a href="#">
+                        <p class="nav-bottom-link">Vendor</p>
+                    </a>
+                    <a href="#">
+                        <p class="nav-bottom-link">Venue</p>
+                    </a>
                 </div>
             </div>
             <div class="nav-bottom-box">
                 <h5>UriEvent</h5>
                 <div class="nav-container-link">
-                    <a href="/pages/about"><p class="nav-bottom-link">About Us</p></a>
-                    <a href="/pages/advertise"><p class="nav-bottom-link">Advertise With Us</p></a>
-                    <a href="#"><p class="nav-bottom-link">Career</p></a>
-                    <a href="/pages/program"><p class="nav-bottom-link">Program</p></a>
-                    <a href="/privacy"><p class="nav-bottom-link">Privacy Policy</p></a>
-                    <a href="/terms"><p>Terms & Conditions</p></a>
+                    <a href="/pages/about">
+                        <p class="nav-bottom-link">About Us</p>
+                    </a>
+                    <a href="/pages/advertise">
+                        <p class="nav-bottom-link">Advertise With Us</p>
+                    </a>
+                    <a href="#">
+                        <p class="nav-bottom-link">Career</p>
+                    </a>
+                    <a href="/pages/program">
+                        <p class="nav-bottom-link">Program</p>
+                    </a>
+                    <a href="/privacy">
+                        <p class="nav-bottom-link">Privacy Policy</p>
+                    </a>
+                    <a href="/terms">
+                        <p>Terms & Conditions</p>
+                    </a>
                 </div>
             </div>
             <div class="nav-bottom-box">
@@ -240,6 +268,11 @@
             cancelBtn.classList.remove("active");
         }
     </script>
+<<<<<<< HEAD
+=======
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/script.js"></script>
+>>>>>>> f9a2c9b29b8004d1308d9f5c1b4f3519067adc39
 </body>
 
 </html>
