@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() . '/css/style.css' ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -64,14 +64,7 @@
                         </div>
                     </a>
                 </div>
-<<<<<<< HEAD
-                <a href="/upload">
-                    <div class="upload-button-nav" id="margin-nav-right">
-                        <p>Upload</p>
-                    </div>
-                </a>
-=======
->>>>>>> c347e03d25576cff4ea2d58c7dee6e83a8037b6a
+
             </div>
         </div>
     </header>
@@ -268,8 +261,9 @@
             cancelBtn.classList.remove("active");
         }
     </script>
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script src="/js/script.js"></script>
+
+    <script src="<?= base_url() . '/js/jquery-3.6.0.min.js' ?>"></script>
+    <script src="<?= base_url() . '/js/script.js' ?>"></script>
 </body>
 
 </html>

@@ -13,7 +13,8 @@
             <img src="../icon/picture.png" class="picture-icon" />
           </div>
           <div class="picture-desc">
-
+            <input type="file" id="custom-file">
+            <label for="custom-file"></label>
             <p>Drag and drop an image or browse</p>
           </div>
         </div>
