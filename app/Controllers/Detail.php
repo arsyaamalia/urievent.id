@@ -66,21 +66,6 @@ class Detail extends BaseController
         $detail['value'] = explode(',', $detail['value']);
 
         $daftarSimiliar = $this->mapingProdukPaket($similiar, $dataPaket1);
-        // if (!empty($dataProduk['value'])) {
-        //     $dataProduk['value'] = explode(',', $dataProduk['value']);
-        // }
-
-        // $detail_produk = $dataProduk;
-        // // $daftar_harga = array_column($dataPaket1, 'harga_paket');
-
-        // if (!empty($daftar_harga)) {
-        //     $detail_produk['harga_max'] = max($daftar_harga);
-        //     $detail_produk['harga_min'] = min($daftar_harga);
-        // } else {
-        //     $detail_produk['harga_max'] = '0';
-        //     $detail_produk['harga_min'] = '0';
-        // }
-
 
         $dataPage = [
             'title' => "UriEvent | Detail",

@@ -5,7 +5,7 @@
 <form action="#">
   <div class="upload-box">
     <div class="upload-container">
-      <h2><a href="/index">＜ Upload Service</a></h2>
+      <h2><a href="/pages">＜ Upload Service</a></h2>
 
       <div class="upload-first-field">
         <div class="upload-picture">
@@ -136,15 +136,15 @@
                 <label for="company-email" class="upload-label">Company's Email</label>
                 <input type="email" name="company-email" id="company-email" placeholder="Input email here" tabindex="4" required />
               </div>
-              <<<<<<< HEAD <div class="upload-confirmemail">
+              <div class="upload-confirmemail">
                 <label for="company-conemail" class="upload-label">Confirm Email</label>
                 <input type="email" name="company-conemail" id="company-conemail" placeholder="Retype email here" tabindex="5" required />
+              </div>
+            </fieldset>
           </div>
-          </fieldset>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
   <div class="batas-body">
@@ -175,7 +175,6 @@
                       <label for="instagram-check" class="upload-label">Instagram</label>
                     </div>
                     <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
-                    =======
                     <div class="form-checkout">
                       <div class="package-category-container">
                         <h5>Package Category</h5>
@@ -203,7 +202,6 @@
                           </fieldset>
                           <input type="button" value="Preview form" class="add" id="preview" />
                           <input type="button" value="Add a field" class="add" id="add" />
-                          >>>>>>> e7205e254a917ae08c7cb5fc4e9d0554528abe2c
                         </div>
                       </div>
                       <div class="contact-input">

@@ -35,8 +35,6 @@
                                     <button class="search-button">
                                         <i class="fas fa-search"></i>
                                     </button>
-
-
                                 </form>
 
                                 <div class="cancel-icon">
@@ -64,7 +62,7 @@
                 <div class="profile">
                     <li><a href="#">Username</a></li>
                 </div>
-                <a href="/pages/upload">
+                <a href="/upload">
                     <div class="upload-button-nav" id="margin-nav-right">
                         <p>Upload</p>
                     </div>
