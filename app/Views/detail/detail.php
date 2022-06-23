@@ -4,7 +4,7 @@
 
 <div class="detail-box">
   <div class="detail-container">
-    <h2><a href="/pages">＜<?= $detail_produk['nama_instansi']; ?></a></h2>
+    <h2><a href="/pages">＜<?= $detail['nama_instansi']; ?></a></h2>
     <div class="detail-item">
       <div class="detail-picture">
         <img src="/img/logomagangupdate.png" class="img-logo" />
@@ -20,25 +20,26 @@
           </div>
         </div>
         <div class="detail-nama">
-          <h4><?= $detail_produk['nama_instansi']; ?></h4>
+          <h4><?= $detail['nama_instansi']; ?></h4>
         </div>
         <div class="detail-harga">
-          <h3>Rp <?= $detail_produk['harga_min'] ?> - Rp <?= $detail_produk['harga_max'] ?></h3>
+
+          <h3>Rp <?= number_format($detail['harga_min'], '0', '', '.'); ?> - Rp <?= number_format($detail['harga_max'], '0', '', '.') ?></h3>
         </div>
         <div class="detail-contact">
           <div class="contact-email">
-            <h6><?= $detail_produk['email_instansi']; ?></h6>
+            <h6><?= $detail['email_instansi']; ?></h6>
           </div>
           <div class="contact-socmed">
             <div class="socmed-wa-box">
-              <a href="https://wa.me/62<?= $detail_produk['whatsapp']; ?>">
+              <a href="https://wa.me/62<?= $detail['whatsapp']; ?>">
                 <div class="socmed-wa">
                   <img src="/icon/whatsapp.png" class="img-wa" />
                 </div>
               </a>
             </div>
             <div class="socmed-ig-box">
-              <a href="https://instagram.com/<?= $detail_produk['instagram']; ?>">
+              <a href="https://instagram.com/<?= $detail['instagram']; ?>">
                 <div class="socmed-ig">
                   <img src="/icon/instagram.png" class="img-ig" />
                 </div>
@@ -66,7 +67,7 @@
           </div>
           <div class="action-button">
 
-            <?php if ($detail_produk['id_kategori'] == "CAT002") : ?>
+            <?php if ($detail['id_kategori'] == "CAT002") : ?>
               <div class="submit-box">
                 <a href="form.php">
                   <div class="submit">
@@ -103,7 +104,7 @@
         <div class="about">
           <div class="keterangan-list">
             <h6>About</h6>
-            <p><?= $detail_produk['deskripsi'] ?></p>
+            <p><?= $detail['deskripsi'] ?></p>
           </div>
           <div class="keterangan-line-box">
             <hr class="keterangan-line" />
@@ -114,7 +115,7 @@
           <div class="keterangan-list">
             <h6>Steps to Purchase</h6>
             <ul>
-              <?php foreach ($detail_produk['step_before'] as $step_before) : ?>
+              <?php foreach ($detail['step_before'] as $step_before) : ?>
 
                 <li>
                   <p><?= $step_before ?></p>
@@ -131,7 +132,7 @@
           <div class="keterangan-list">
             <h6>Steps after Purchase</h6>
             <ul>
-              <?php foreach ($detail_produk['step_after'] as $step_after) : ?>
+              <?php foreach ($detail['step_after'] as $step_after) : ?>
                 <li>
                   <p><?= $step_after ?></p>
                 </li>
@@ -147,7 +148,7 @@
           <div class="keterangan-list">
             <h6>Eligibility</h6>
             <ul>
-              <?php foreach ($detail_produk['value'] as $value) : ?>
+              <?php foreach ($detail['value'] as $value) : ?>
                 <li>
                   <p><?= $value ?></p>
                 </li>
@@ -176,7 +177,7 @@
                 <p><?= $paket['deskripsi_paket'] ?></p>
               </div>
               <div class="package-prize">
-                <h6>Rp <?= $paket['harga_paket'] ?></h6>
+                <h6>Rp <?= number_format($paket['harga_paket'], '0', '', '.'); ?></h6>
               </div>
               <div class="package-quantitiy">
                 <div class="number-input">
@@ -242,22 +243,21 @@
       <h2>Similar <?= $dataKategori['nama_kategori'] ?></h2>
       <div class="similar-box">
 
-        <?php foreach ($daftarSimiliar as $similiar) : ?>
-
+        <?php for ($i = 0; $i < 5; $i++) : ?>
           <div class="similar-hover">
-            <a href="/detail/index/<?= $similiar['id_layanan']; ?>/<?= $similiar['id_kategori']; ?>/<?= $similiar['id_subkategori']; ?>">
+            <a href="/detail/index/<?= $daftarSimiliar[$i]['id_layanan']; ?>/<?= $daftarSimiliar[$i]['id_kategori']; ?>/<?= $daftarSimiliar[$i]['id_subkategori']; ?>">
               <div class="similar-item">
                 <div class="similar-grup">
                   <div class="item-circle"></div>
-
                   </form>
-                  <h4><?= $similiar['nama_instansi']; ?></h4>
+                  <h4><?= $daftarSimiliar[$i]['nama_instansi']; ?></h4>
                 </div>
-                <h3>Rp <?= $similiar['harga_min']; ?></h3>
+                <h3>Rp <?= number_format($daftarSimiliar[$i]['harga_min'], '0', '', '.');; ?></h3>
               </div>
             </a>
           </div>
-        <?php endforeach; ?>
+
+        <?php endfor; ?>
       </div>
     </div>
   </div>

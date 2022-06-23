@@ -59,37 +59,36 @@ class Detail extends BaseController
         $dataSubKategori = $this->subkategori_layanan->getSubKategori($id_subkategori);
         $similiar = $this->produk_layanan->getSimiliar($id_kategori);
 
-
+        $detailProduk =  $this->mapingProdukPaket($dataProduk, $dataPaket);
+        $detail = array_shift($detailProduk);
+        $detail['step_before'] = explode(',', $detail['step_before']);
+        $detail['step_after'] = explode(',', $detail['step_after']);
+        $detail['value'] = explode(',', $detail['value']);
 
         $daftarSimiliar = $this->mapingProdukPaket($similiar, $dataPaket1);
-        // dd($daftar_similiar);
+        // if (!empty($dataProduk['value'])) {
+        //     $dataProduk['value'] = explode(',', $dataProduk['value']);
+        // }
 
+        // $detail_produk = $dataProduk;
+        // // $daftar_harga = array_column($dataPaket1, 'harga_paket');
 
-        $dataProduk['step_before'] = explode(',', $dataProduk['step_before']);
-        $dataProduk['step_after'] = explode(',', $dataProduk['step_after']);
+        // if (!empty($daftar_harga)) {
+        //     $detail_produk['harga_max'] = max($daftar_harga);
+        //     $detail_produk['harga_min'] = min($daftar_harga);
+        // } else {
+        //     $detail_produk['harga_max'] = '0';
+        //     $detail_produk['harga_min'] = '0';
+        // }
 
-        if (!empty($dataProduk['value'])) {
-            $dataProduk['value'] = explode(',', $dataProduk['value']);
-        }
-
-        $detail_produk = $dataProduk;
-        $daftar_harga = array_column($dataPaket1, 'harga_paket');
-
-        if (!empty($daftar_harga)) {
-            $detail_produk['harga_max'] = max($daftar_harga);
-            $detail_produk['harga_min'] = min($daftar_harga);
-        } else {
-            $detail_produk['harga_max'] = '0';
-            $detail_produk['harga_min'] = '0';
-        }
 
         $dataPage = [
             'title' => "UriEvent | Detail",
-            'detail_produk' => $detail_produk,
             'dataKategori' => $dataKategori,
             'dataSubKategori' => $dataSubKategori,
+            'daftarSimiliar' => $daftarSimiliar,
             'dataPaket' => $dataPaket,
-            'daftarSimiliar' => $daftarSimiliar
+            'detail' => $detail
         ];
         return view('/detail/detail', $dataPage);
     }
