@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script src="/js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -37,43 +35,95 @@
                                     <button class="search-button">
                                         <i class="fas fa-search"></i>
                                     </button>
-
-
                                 </form>
-
                                 <div class="cancel-icon">
                                     <i class="fas fa-times"></i>
                                 </div>
                             </div>
-
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="nav-right">
-                <div class="icon-messages" id="margin-nav-right">
-                    <div class="urichat">
-                        <li><a href="#">UriChat</a></li>
+            <div class="header-nav-right">
+                <div class="nav-right-item" id="addheight" onmouseover="mouseOver()" onmouseout="mouseOut()">
+                    <div class="profile-link">
+                        <img src="/img/foto-arsya.jpg" class="nav-right-icon" id="message">
                     </div>
-                    <img src="/icon/message.png" alt="message" class="icon-message">
                 </div>
-                <div class="upload-service">
-                    <li><a href="#">Upload Service</a></li>
+                <div class="nav-right-item">
+                    <a href="/pages/urichat">
+                        <div class="urichat-icon">
+                            <img src="/icon/message.png" class="nav-right-icon">
+                        </div>
+                    </a>
                 </div>
-                <a href="/sign">
-                    <div class="profile-picture" id="margin-nav-right"></div>
-                </a>
-                <div class="profile">
-                    <li><a href="#">Username</a></li>
+                <div class="nav-right-item">
+                    <a href="/pages/upload">
+                        <div class="upload-button">
+                            <p>Upload</p>
+                        </div>
+                    </a>
                 </div>
-                <a href="/pages/upload">
-                    <div class="upload-button-nav" id="margin-nav-right">
-                        <p>Upload</p>
-                    </div>
-                </a>
             </div>
         </div>
     </header>
+    <div class="profile-hover" id="buathover" onmouseover="mouseOver()" onmouseout="mouseOut()">
+        <div class="profil-hover-wrap">
+            <a href="/pages/edit-profile">
+                <div class="profile-hover-item">
+                    <h3>Edit Profile</h3>
+                </div>
+            </a>
+        </div>
+        <div class="profile-hover-line">
+            <hr>
+        </div>
+        <div class="profil-hover-wrap">
+            <a href="/pages/coin">
+                <div class="profile-hover-item">
+                    <h3>UriCoin</h3>
+                </div>
+            </a>
+        </div>
+        <div class="profil-hover-wrap">
+            <a href="/pages/list">
+                <div class="profile-hover-item">
+                    <h3>UriList</h3>
+                </div>
+            </a>
+        </div>
+        <div class="profil-hover-wrap">
+            <a href="/pages/service">
+                <div class="profile-hover-item">
+                    <h3>UriService</h3>
+                </div>
+            </a>
+        </div>
+        <div class="profil-hover-wrap">
+            <a href="/pages/premium">
+                <div class="profile-hover-item">
+                    <h3>UriPremium</h3>
+                </div>
+            </a>
+        </div>
+        <div class="profile-hover-line">
+            <hr>
+        </div>
+        <div class="profil-hover-wrap">
+            <a href="/pages/setting">
+                <div class="profile-hover-item">
+                    <h3>Account Settings</h3>
+                </div>
+            </a>
+        </div>
+        <div class="profil-hover-wrap">
+            <a href="/sign">
+                <div class="profile-hover-item">
+                    <h3>Sign Out</h3>
+                </div>
+            </a>
+        </div>
+    </div>
 
     <?= $this->renderSection('content') ?>
 
@@ -163,8 +213,19 @@
     </div>
     </div>
 
-
+    
     <script>
+        const hoverprofile = document.getElementById('buathover');
+
+        function mouseOver(){
+        console.log("berhasil masuk hover profile");
+        hoverprofile.style.display = "block";
+        }
+
+        function mouseOut(){
+        hoverprofile.style.display = "none";
+        }
+
         const searchBox = document.querySelector(".search-box-2");
         const searchBtn = document.querySelector(".search-icon");
         const cancelBtn = document.querySelector(".cancel-icon");
@@ -179,9 +240,6 @@
             cancelBtn.classList.remove("active");
         }
     </script>
-    
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script src="/js/script.js"></script>
 </body>
 
 </html>

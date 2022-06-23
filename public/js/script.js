@@ -2,6 +2,16 @@ const general = document.querySelectorAll(".form-general");
 const details = document.querySelectorAll(".form-details");
 const additional = document.querySelectorAll(".form-additional");
 const checkout = document.querySelectorAll(".form-checkout");
+const hoverprofile = document.querySelectorAll("#message");
+
+function mouseOver(){
+  console.log("berhasil masuk hover profile");
+  hoverprofile.style.display = "block";
+}
+
+function mouseOut(){
+  hoverprofile.style.display = "none";
+}
 
 function overlayGeneral() {
   general.style.display = "block";

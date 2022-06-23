@@ -27,7 +27,7 @@ header {
 
 .header {
   height: 80px;
-  width: 1280px;
+  width: 100%;
   display: flex;
   font-size: 14px;
   font-weight: 600;
@@ -75,31 +75,37 @@ header {
   top: 2px;
 }
 
-.nav-right {
+.header-nav-right {
   display: flex;
   align-items: center;
 }
 
-.icon-message {
-  height: 28px;
-  position: relative;
-  top: 3px;
+#addheight{
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.urichat,
-.upload-service,
-.profile {
-  display: none;
+.nav-right-item {
+  margin-left: 20px;
 }
 
-.profile-picture {
-  background-color: #161625;
-  height: 30px;
+.urichat-icon, .profile-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-right-icon {
   width: 30px;
+}
+
+img#message{
   border-radius: 100%;
 }
 
-.upload-button-nav {
+.upload-button {
   color: #fff;
   line-height: 40px;
   text-align: center;
@@ -109,55 +115,39 @@ header {
   padding: 0 20px;
 }
 
-#margin-nav-right {
-  margin-left: 20px;
+.profile-hover{
+  width: 180px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 50px 0 rgb(22, 22, 37, 0.15);
+  position: absolute;
+  top: 70px;
+  right: 65px;
+  font-size: 14px;
+  padding: 20px 0;
+  display: none;
 }
 
-@media screen and (max-width: 900px) {
-  .header,
-  .nav-left,
-  .nav,
-  .nav-right,
-  a,
-  li {
-    display: block;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-  }
-  #margin-nav-right {
-    margin: 0;
-    padding: 0;
-  }
-  .header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .search {
-    margin: auto;
-  }
-  .icon-message {
-    display: none;
-  }
-  .urichat,
-  .upload-service {
-    display: block;
-  }
-  .profile-picture {
-    height: 0px;
-    width: 0px;
-  }
-  .profile {
-    display: block;
-  }
-  .urievent {
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
-  li {
-    margin-bottom: 15px;
-  }
+.profile-hover h3{
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(22, 22, 37, 0.7);
+}
+
+.profile-hover-item{
+  padding: 8px 20px;
+  transition: .2s;
+}
+
+.profile-hover-item:hover{
+  background-color: #f4f5f5;
+}
+
+.profile-hover-line hr{
+  margin: 5px 20px;
+  border: none;
+  height: 1.5px;
+  background-color: rgb(22, 22, 37, 0.7);
 }
 
 .ads-container {
@@ -222,7 +212,7 @@ header {
 }
 
 .body-urievent {
-  width: 880px;
+  width: 70%;
   font-size: 14px;
 }
 
