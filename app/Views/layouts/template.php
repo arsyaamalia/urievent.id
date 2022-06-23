@@ -24,7 +24,7 @@
                     <ul>
                         <li><a href="/pages/about" class="nav-link">About Us</a></li>
                         <li><a href="/pages/advertise" class="nav-link">Advertise With Us</a></li>
-                        <li><a href="#" class="nav-link">Program</a></li>
+                        <li><a href="/pages/medpart_name" class="nav-link">Program</a></li>
                         <li>
                             <div class="search-box-2">
                                 <form action="/pages/search">
@@ -79,82 +79,94 @@
         <div class="nav-bottom">
             <div class="nav-bottom-box">
                 <h5>Categories</h5>
-                <a href="medpart.php">
-                    <p class="nav-bottom-link">Media Partner</p>
-                </a>
-                <a href="sponsor.php">
-                    <p class="nav-bottom-link">Sponsorship</p>
-                </a>
-                <a href="vendor.php">
-                    <p class="nav-bottom-link">Vendor</p>
-                </a>
-                <a href="venue.php">
-                    <p class="nav-bottom-link">Venue</p>
-                </a>
+                <div class="nav-container-link">
+                    <a href="#">
+                        <p class="nav-bottom-link">Media Partner</p>
+                    </a>
+                    <a href="#">
+                        <p class="nav-bottom-link">Sponsorship</p>
+                    </a>
+                    <a href="#">
+                        <p class="nav-bottom-link">Vendor</p>
+                    </a>
+                    <a href="#">
+                        <p class="nav-bottom-link">Venue</p>
+                    </a>
+                </div>
             </div>
             <div class="nav-bottom-box">
                 <h5>UriEvent</h5>
-                <a href="#">
-                    <p class="nav-bottom-link">About Us</p>
-                </a>
-                <a href="#">
-                    <p class="nav-bottom-link">Advertise With Us</p>
-                </a>
-                <a href="#">
-                    <p class="nav-bottom-link">Career</p>
-                </a>
-                <a href="#">
-                    <p class="nav-bottom-link">Program</p>
-                </a>
-                <a href="#">
-                    <p class="nav-bottom-link">Privacy Policy</p>
-                </a>
-                <a href="#">
-                    <p>Terms & Conditions</p>
-                </a>
+                <div class="nav-container-link">
+                    <a href="/pages/about">
+                        <p class="nav-bottom-link">About Us</p>
+                    </a>
+                    <a href="/pages/advertise">
+                        <p class="nav-bottom-link">Advertise With Us</p>
+                    </a>
+                    <a href="#">
+                        <p class="nav-bottom-link">Career</p>
+                    </a>
+                    <a href="/pages/program">
+                        <p class="nav-bottom-link">Program</p>
+                    </a>
+                    <a href="/privacy">
+                        <p class="nav-bottom-link">Privacy Policy</p>
+                    </a>
+                    <a href="/terms">
+                        <p>Terms & Conditions</p>
+                    </a>
+                </div>
             </div>
             <div class="nav-bottom-box">
                 <h5>Contact Us</h5>
-                <a href="https://wa.me/6282228544074">
-                    <div class="contact-box">
-                        <div class="icon-contact">
-                            <img src="/icon/whatsapp.png" alt="Whatsapp">
+                <div class="nav-container-link">
+                    <a href="https://wa.me/6282228544074">
+                        <div class="contact-box">
+                            <div class="icon-contact">
+                                <img src="/icon/whatsapp.png" alt="Whatsapp">
+                            </div>
+                            <div class="text-contact">
+                                <p>+62 822-2854-4074</p>
+                            </div>
                         </div>
-                        <div class="text-contact">
-                            <p>+62 822-2854-4074</p>
+                    </a>
+                </div>
+                <div class="nav-container-link">
+                    <a href="https://instagram.com/urievent.id">
+                        <div class="contact-box">
+                            <div class="icon-contact">
+                                <img src="/icon/instagram.png" alt="Instagram">
+                            </div>
+                            <div class="text-contact">
+                                <p>@urievent.id</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="https://instagram.com/urievent.id">
-                    <div class="contact-box">
-                        <div class="icon-contact">
-                            <img src="/icon/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+                <div class="nav-container-link">
+                    <a href="https://arsyaamalia1@gmail.com">
+                        <div class="contact-box">
+                            <div class="icon-contact">
+                                <img src="/icon/email.png" alt="Email">
+                            </div>
+                            <div class="text-contact">
+                                <p>halo@urievent.id</p>
+                            </div>
                         </div>
-                        <div class="text-contact">
-                            <p>@urievent.id</p>
+                    </a>
+                </div>
+                <div class="nav-container-link">
+                    <a href="https://urievent.medium.com">
+                        <div class="contact-box">
+                            <div class="icon-contact">
+                                <img src="/icon/medium.png" alt="Medium">
+                            </div>
+                            <div class="text-contact">
+                                <p>UriEvent</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="https://arsyaamalia1@gmail.com">
-                    <div class="contact-box">
-                        <div class="icon-contact">
-                            <img src="/icon/email.png" alt="Email">
-                        </div>
-                        <div class="text-contact">
-                            <p>halo@urievent.id</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://urievent.medium.com">
-                    <div class="contact-box">
-                        <div class="icon-contact">
-                            <img src="/icon/medium.png" alt="Medium">
-                        </div>
-                        <div class="text-contact">
-                            <p>UriEvent</p>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
             <div class="nav-bottom-box">
                 <h5>Office</h5>
@@ -166,6 +178,7 @@
         <div class="credit">
             <h5>Copyright © 2022 UriEvent. All Rights Reserved</h5>
         </div>
+    </div>
     </div>
 
 

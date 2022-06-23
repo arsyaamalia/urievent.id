@@ -1,3 +1,37 @@
+const general = document.querySelectorAll(".form-general");
+const details = document.querySelectorAll(".form-details");
+const additional = document.querySelectorAll(".form-additional");
+const checkout = document.querySelectorAll(".form-checkout");
+
+function overlayGeneral() {
+  general.style.display = "block";
+  details.style.display = "none";
+  additional.style.display = "none";
+  checkout.style.display = "none";
+  console.log("berhasil masuk overlayGeneral");
+}
+
+function overlayDetails() {
+  general.style.display = "none";
+  details.style.display = "block";
+  additional.style.display = "none";
+  checkout.style.display = "none";
+}
+
+function overlayAdditional() {
+  general.style.display = "none";
+  details.style.display = "none";
+  additional.style.display = "block";
+  checkout.style.display = "none";
+}
+
+function overlayCheckout() {
+  general.style.display = "none";
+  details.style.display = "none";
+  additional.style.display = "none";
+  checkout.style.display = "block";
+}
+
 $(document).ready(function () {
   // INI ADD FIELD BUAT STEP BEFORE
   // add row
@@ -69,7 +103,7 @@ $(document).ready(function () {
     html += '<label for="package-desc" class="upload-label">Package Category Description</label><br>';
     html += '<textarea name="package-desc" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea><br>';
     html += '<label for="package-prize" class="upload-label">Package Prize (Rp)</label><br>';
-    html += '<input type="number" name="package-prize" id="package-prize" placeholder="25000" required><br>';
+    html += '<input type="number" name="package-prize" id="package-prize" placeholder="25000" min="0.00" max="10000.00" step="0.01" required><br>';
     html += '<div class="input-group-append">';
     html += '<button id="removeRowPackage" type="button" class="btn btn-danger">Remove</button>';
     html += "</div>";

@@ -30,20 +30,98 @@
                   <option value="vendor">Vendor</option>
                   <option value="venue">Venue</option>
                 </select>
-              </div>
-              <div class="upload-subcategory">
-                <label for="subcategory" class="upload-label">Subcategory</label>
-                <select id="subcategory" name="subcategory" required tabindex="2">
-                  <option selected disabled>Select one</option>
-                  <!-- foreach sub where id kategori=xxx -->
+                <div class="batas-body">
+                  <div class="body-urievent">
+                    <div class="upload-second-field">
+                      <div class="upload-tahapan">
+                        <div class="tahapan-general">
+                          <button type="button" onclick="overlayGeneral()">
+                            <div class="tahapan-nomor">
+                              <h3>1</h3>
+                            </div>
+                            <div class="tahapan-nama">
+                              <h3>General</h3>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="tahapan-details">
+                          <button type="button" onclick="overlayDetails()">
+                            <div class="tahapan-nomor">
+                              <h3>2</h3>
+                            </div>
+                            <div class="tahapan-nama">
+                              <h3>Details</h3>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="tahapan-additional">
+                          <button type="button" onclick="overlayAdditional()">
+                            <div class="tahapan-nomor">
+                              <h3>3</h3>
+                            </div>
+                            <div class="tahapan-nama">
+                              <h3>Additional</h3>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="tahapan-checkout">
+                          <button type="button" onclick="overlayCheckout()">
+                            <div class="tahapan-nomor">
+                              <h3>4</h3>
+                            </div>
+                            <div class="tahapan-nama">
+                              <h3>Checkout</h3>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="upload-form">
+                        <div class="form-general">
+                          <div class="contact-container">
+                            <h5>Company's Contact</h5>
+                            <fieldset>
+                              <div class="contact-check">
+                                <div class="whatsapp-box">
+                                  <div class="grup-icon-label">
+                                    <img src="../icon/whatsapp.png" class="contact-check-img">
+                                    <label for="whatsapp-check" class="upload-label">Whatsapp</label>
+                                  </div>
+                                  <input type="checkbox" id="whatsapp-check" name="whatsapp-check" value="whatsapp" required>
+                                </div>
+                                <div class="instagram-box">
+                                  <div class="grup-icon-label">
+                                    <img src="../icon/instagram.png" class="contact-check-img">
+                                    <label for="instagram-check" class="upload-label">Instagram</label>
+                                  </div>
+                                  <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
+                                </div>
+                              </div>
+                              <div class="contact-input">
+                                <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
+                                <label data-number="+62">
+                                  <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
+                                  <label>
+                              </div>
+                              <div class="contact-input">
+                                <label for="instagram-input" class="upload-label">Instagram Username</label>
+                                <input type="text" name="instagram-input" id="instagram-input" placeholder="Example: urievent.id" />
+                              </div>
+                            </fieldset>
+                          </div>
+                        </div>
+                        <div class="upload-subcategory">
+                          <label for="subcategory" class="upload-label">Subcategory</label>
+                          <select id="subcategory" name="subcategory" required tabindex="2">
+                            <option selected disabled>Select one</option>
+                            <!-- foreach sub where id kategori=xxx -->
 
-                  <option value="database1">Database1</option>
-                  <!-- end foreach -->
-                  <option value="database2">Database2</option>
-                  <option value="database3">Database3</option>
-                  <option value="database4">Database4</option>
-                </select>
-              </div>
+                            <option value="database1">Database1</option>
+                            <!-- end foreach -->
+                            <option value="database2">Database2</option>
+                            <option value="database3">Database3</option>
+                            <option value="database4">Database4</option>
+                          </select>
+                        </div>
             </fieldset>
           </div>
           <div class="upload-name">
@@ -58,15 +136,15 @@
                 <label for="company-email" class="upload-label">Company's Email</label>
                 <input type="email" name="company-email" id="company-email" placeholder="Input email here" tabindex="4" required />
               </div>
-              <div class="upload-confirmemail">
+              <<<<<<< HEAD <div class="upload-confirmemail">
                 <label for="company-conemail" class="upload-label">Confirm Email</label>
                 <input type="email" name="company-conemail" id="company-conemail" placeholder="Retype email here" tabindex="5" required />
-              </div>
-            </fieldset>
           </div>
+          </fieldset>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <div class="batas-body">
@@ -97,18 +175,47 @@
                       <label for="instagram-check" class="upload-label">Instagram</label>
                     </div>
                     <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
-                  </div>
-                </div>
-                <div class="contact-input">
-                  <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
-                  <label data-number="+62">
-                    <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
-                    <label>
-                </div>
-                <div class="contact-input">
-                  <label for="instagram-input" class="upload-label">Instagram Username</label>
-                  <input type="text" name="instagram-input" id="instagram-input" placeholder="Example: urievent.id" />
-                </div>
+                    =======
+                    <div class="form-checkout">
+                      <div class="package-category-container">
+                        <h5>Package Category</h5>
+                        <fieldset>
+                          <p>e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
+                          <label for="package-name" class="upload-label">Package Category Name</label>
+                          <input type="text" name="package-name" id="package-name" placeholder="Input package category name here (ex: Bronze, Silver, Gold)" required />
+                          <br>
+                          <label for="package-desc" class="upload-label">Package Category Description</label>
+                          <textarea name="package-desc" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea>
+                          <br>
+                          <label for="package-prize" class="upload-label">Package Prize (Rp)</label>
+                          <input type="number" name="package-prize" id="package-prize" placeholder="25000" min="0.00" max="10000.00" step="0.01" required>
+                          <br>
+                          <div id="newRowPackage"></div>
+                          <button id="addRowPackage" type="button" class="btn btn-info">+ ADD PACKAGE CATEGORY</button>
+                        </fieldset>
+                      </div>
+                      <div class="checkout-form-container">
+                        <h5>Checkout Form</h5>
+                        <div class="fieldset-form">
+                          <p>Your clients are required to give Name, Email and Phone Number. You can ask customized questions for general in this part</p>
+                          <fieldset id="buildyourform">
+                            <legend>Build your own form!</legend>
+                          </fieldset>
+                          <input type="button" value="Preview form" class="add" id="preview" />
+                          <input type="button" value="Add a field" class="add" id="add" />
+                          >>>>>>> e7205e254a917ae08c7cb5fc4e9d0554528abe2c
+                        </div>
+                      </div>
+                      <div class="contact-input">
+                        <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
+                        <label data-number="+62">
+                          <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
+                          <label>
+                      </div>
+                      <div class="contact-input">
+                        <label for="instagram-input" class="upload-label">Instagram Username</label>
+                        <input type="text" name="instagram-input" id="instagram-input" placeholder="Example: urievent.id" />
+                      </div>
               </fieldset>
             </div>
           </div>

@@ -122,4 +122,14 @@ class Pages extends BaseController
         ];
         return view('pages/upload', $dataPage);
     }
+
+    public function medpart_name()
+    {
+
+        $dataPage = [
+            'title' => "UriEvent | medpart_name",
+            'tes' => ['satu', 'dua', 'tiga']
+        ];
+        return view('pages/medpart_name', $dataPage);
+    }
 }
