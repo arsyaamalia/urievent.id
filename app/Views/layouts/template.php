@@ -58,20 +58,17 @@
                     </a>
                 </div>
                 <div class="nav-right-item">
-                    <a href="/pages/upload">
+                    <a href="/upload">
                         <div class="upload-button">
                             <p>Upload</p>
                         </div>
                     </a>
                 </div>
-<<<<<<< HEAD
-=======
                 <a href="/upload">
                     <div class="upload-button-nav" id="margin-nav-right">
                         <p>Upload</p>
                     </div>
                 </a>
->>>>>>> f9a2c9b29b8004d1308d9f5c1b4f3519067adc39
             </div>
         </div>
     </header>
@@ -241,17 +238,17 @@
     </div>
     </div>
 
-    
+
     <script>
         const hoverprofile = document.getElementById('buathover');
 
-        function mouseOver(){
-        console.log("berhasil masuk hover profile");
-        hoverprofile.style.display = "block";
+        function mouseOver() {
+            console.log("berhasil masuk hover profile");
+            hoverprofile.style.display = "block";
         }
 
-        function mouseOut(){
-        hoverprofile.style.display = "none";
+        function mouseOut() {
+            hoverprofile.style.display = "none";
         }
 
         const searchBox = document.querySelector(".search-box-2");
@@ -268,11 +265,8 @@
             cancelBtn.classList.remove("active");
         }
     </script>
-<<<<<<< HEAD
-=======
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/script.js"></script>
->>>>>>> f9a2c9b29b8004d1308d9f5c1b4f3519067adc39
 </body>
 
 </html>
