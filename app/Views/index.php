@@ -35,24 +35,23 @@
                     </ul>
                 </div>
             </div>
-            <div class="nav-right">
-                <div class="icon-messages" id="margin-nav-right">
-                    <div class="urichat">
-                        <li><a href="/sign">UriChat</a></li>
-                    </div>
-                    <img src="/icon/message.png" alt="message" class="icon-message">
-                </div>
-                <div class="upload-service">
-                    <li><a href="/sign">Upload Service</a></li>
-                </div>
+            <div class="header-nav-right">
                 <div class="sign-in" id="margin-nav-right">
                     <li><a href="/sign" class="sign-in">Sign In</a></li>
                 </div>
-                <div class="profile">
-                    <li><a href="/sign">Username</a></li>
+                <div class="nav-right-item">
+                    <a href="/sign">
+                        <div class="urichat-icon">
+                            <img src="/icon/message.png" class="nav-right-icon">
+                        </div>
+                    </a>
                 </div>
-                <div class="upload-button-nav" id="margin-nav-right">
-                    <p>Upload</p>
+                <div class="nav-right-item">
+                    <a href="/sign">
+                        <div class="upload-button">
+                            <p>Upload</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
