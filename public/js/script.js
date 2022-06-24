@@ -1,7 +1,7 @@
-const general = document.getElementByClassName(".form-general");
-const details = document.getElementByClassName(".form-details");
-const additional = document.getElementByClassName(".form-additional");
-const checkout = document.getElementByClassName(".form-checkout");
+const general = document.getElementById("form-general");
+const details = document.getElementById("form-details");
+const additional = document.getElementById("form-additional");
+const checkout = document.getElementById("form-checkout");
 
 function overlayGeneral() {
   general.style.display = "block";
