@@ -24,6 +24,7 @@
           <div class="review-form-item-text">
             <h4>General</h4>
             <p>Service type, logo, category, company details</p>
+<<<<<<< HEAD
           </div>
           <div class="review-form-item-edit">
             <img src="/icon/edit.png" class="edit-icon">
@@ -347,8 +348,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
 <script src="<?= base_url('/js/script.js') ?>"></script>
-
-
 <script>
   //selecting all required elements
   const dropArea = document.querySelector(".drag-area"),
@@ -411,16 +410,20 @@
   $(document).ready(function() {
     $('#category').change(function() {
       var id_kategori = $(this).val();
+      // console.log(id_kategori)
       $.ajax({
-        type: "POST",
-        url: "<?= base_url('upload/getDataSubKategori') ?>",
-        data: {
-          id_kategori: id_kategori
-        },
+        type: "get",
+        url: "<?= base_url('upload/getDataSubKategori') ?>/" + id_kategori,
         dataType: "JSON",
         success: function(response) {
-          console.log(response);
+          $.each(response, function(i, item) {
+            $('#subcategory').append($('<option>', {
+              value: item.id_subkategori,
+              text: item.nama_subkategori
+            }));
+          });
         }
+
       })
       // end ajax
     });
