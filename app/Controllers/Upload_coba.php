@@ -7,7 +7,7 @@ use App\Models\produk_layananModel;
 use App\Models\paket_layananModel;
 use App\Models\subkategori_layananModel;
 
-class Upload extends BaseController
+class Upload_coba extends BaseController
 {
     public function __construct()
     {
@@ -26,7 +26,7 @@ class Upload extends BaseController
             'title' => "UriEvent | Upload Service",
             'dataKategori' => $dataKategori
         ];
-        return view('pages/upload', $dataPage);
+        return view('pages/upload1', $dataPage);
     }
 
     public function getDataSubKategori($id_kategori)
