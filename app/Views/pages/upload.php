@@ -116,7 +116,7 @@
             </button>
           </div>
         </div>
-        <<<<<<< HEAD <div class="upload-form">
+        <div class="upload-form">
           <div class="form-general">
             <div class="contact-container">
               <h5>Company's Contact</h5>
@@ -164,27 +164,27 @@
             </select>
           </div>
           </fieldset>
-      </div>
-      <div class="upload-name">
-        <fieldset>
-          <label for="company-name" class="upload-label">Company's Name</label>
-          <input type="text" name="company-name" id="company-name" placeholder="Input name here" tabindex="3" required />
-        </fieldset>
-      </div>
-      <div class="upload-your-email">
-        <fieldset>
-          <div class="upload-email">
-            <label for="company-email" class="upload-label">Company's Email</label>
-            <input type="email" name="company-email" id="company-email" placeholder="Input email here" tabindex="4" required />
-          </div>
-          <div class="upload-confirmemail">
-            <label for="company-conemail" class="upload-label">Confirm Email</label>
-            <input type="email" name="company-conemail" id="company-conemail" placeholder="Retype email here" tabindex="5" required />
-          </div>
-        </fieldset>
+        </div>
+        <div class="upload-name">
+          <fieldset>
+            <label for="company-name" class="upload-label">Company's Name</label>
+            <input type="text" name="company-name" id="company-name" placeholder="Input name here" tabindex="3" required />
+          </fieldset>
+        </div>
+        <div class="upload-your-email">
+          <fieldset>
+            <div class="upload-email">
+              <label for="company-email" class="upload-label">Company's Email</label>
+              <input type="email" name="company-email" id="company-email" placeholder="Input email here" tabindex="4" required />
+            </div>
+            <div class="upload-confirmemail">
+              <label for="company-conemail" class="upload-label">Confirm Email</label>
+              <input type="email" name="company-conemail" id="company-conemail" placeholder="Retype email here" tabindex="5" required />
+            </div>
+          </fieldset>
+        </div>
       </div>
     </div>
-  </div>
   </div>
   </div>
 
@@ -364,7 +364,7 @@
       var id_kategori = $(this).val();
       $.ajax({
         type: "POST",
-        url: "<?= base_url('/upload/getDataSubKategori') ?>",
+        url: "<?= base_url('upload/getDataSubKategori') ?>",
         data: {
           id_kategori: id_kategori
         },
