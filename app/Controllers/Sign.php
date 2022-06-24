@@ -32,6 +32,8 @@ class Sign extends BaseController
             // dd($password, $pass);
             // dd($authenticatePassword);
 
+
+
             if ($password == $pass) {
                 $ses_data = [
                     'id_user' => $data['id_user'],
@@ -76,6 +78,7 @@ class Sign extends BaseController
 
         if (!$data) {
             // aman
+
             $temp = $this->UserModel->orderBy('id_user', 'desc')->first();
             // dd($temp);
             $id_user_str = explode('u', $temp['id_user']);
@@ -102,6 +105,7 @@ class Sign extends BaseController
             $this->UserModel->save([
                 // 'id_user' => $this->request->getVar($new_id_user_str),
                 'id_user' => $new_id_user_str,
+
                 'nama_user' => $this->request->getVar('nama'),
                 'email_user' => $this->request->getVar('email'),
                 'password_user' => $this->request->getVar('password'),
