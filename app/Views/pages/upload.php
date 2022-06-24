@@ -17,12 +17,44 @@
             <p>No logo yet</p>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
       <div class="review-form">
         <div class="review-form-item">
           <div class="review-form-item-text">
             <h4>General</h4>
             <p>Service type, logo, category, company details</p>
+=======
+        <div class="upload-input">
+          <h5>Basic Information</h5>
+
+          <div class="upload-jenis">
+            <fieldset>
+              <div class="upload-category">
+                <label for="category" class="upload-label">Category</label>
+                <select id="category" name="category" required tabindex="1" name="category">
+                  <option selected disabled>Select one</option>
+                  <?php foreach ($dataKategori as $kategori) : ?>
+                    <!-- foreach tabel kategori as kategori -->
+                    <option value="<?= $kategori['id_kategori'] ?>"><?= $kategori['nama_kategori'] ?></option>
+                  <?php endforeach; ?>
+                </select>
+                <div class="batas-body">
+                  <div class="upload-subcategory">
+                    <label for="subcategory" class="upload-label">Subcategory</label>
+                    <select id="subcategory" name="subcategory" required tabindex="2">
+                      <option selected disabled>Select one</option>
+                      <!-- foreach sub where id kategori=xxx -->
+
+                      <option value="database1">Database1</option>
+                      <!-- end foreach -->
+                      <option value="database2">Database2</option>
+                      <option value="database3">Database3</option>
+                      <option value="database4">Database4</option>
+                    </select>
+                  </div>
+            </fieldset>
+>>>>>>> ba3ea4907fc906d756b6a30fc6a025063868f05e
           </div>
           <div class="review-form-item-edit">
             <img src="/icon/edit.png" class="edit-icon">
@@ -183,7 +215,94 @@
                   <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
                   <label data-number="+62">
                     <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
+<<<<<<< HEAD
                   <label>
+=======
+                    <label>
+                </div>
+                <div class="contact-input">
+                  <label for="instagram-input" class="upload-label">Instagram Username</label>
+                  <input type="text" name="instagram-input" id="instagram-input" placeholder="Example: urievent.id" />
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="upload-subcategory">
+            <label for="subcategory" class="upload-label">Subcategory</label>
+            <select id="subcategory" name="subcategory" required tabindex="2">
+              <option value="">Select one</option>
+              <!-- foreach sub where id kategori=xxx -->
+              <!-- 
+                            <option value="database1">Database1</option> -->
+              <!-- end foreach -->
+              <!-- <option value="database2">Database2</option>
+                            <option value="database3">Database3</option>
+                            <option value="database4">Database4</option> -->
+            </select>
+          </div>
+          </fieldset>
+        </div>
+        <div class="upload-name">
+          <fieldset>
+            <label for="company-name" class="upload-label">Company's Name</label>
+            <input type="text" name="company-name" id="company-name" placeholder="Input name here" tabindex="3" required />
+          </fieldset>
+        </div>
+        <div class="upload-your-email">
+          <fieldset>
+            <div class="upload-email">
+              <label for="company-email" class="upload-label">Company's Email</label>
+              <input type="email" name="company-email" id="company-email" placeholder="Input email here" tabindex="4" required />
+            </div>
+            <div class="upload-confirmemail">
+              <label for="company-conemail" class="upload-label">Confirm Email</label>
+              <input type="email" name="company-conemail" id="company-conemail" placeholder="Retype email here" tabindex="5" required />
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="batas-body">
+    <div class="body-urievent">
+      <div class="upload-second-field">
+        <div class="upload-tahapan">
+          <div class="tahapan-general"></div>
+          <div class="tahapan-details"></div>
+          <div class="tahapan-additional"></div>
+          <div class="tahapan-checkout"></div>
+        </div>
+        =======
+        >>>>>>> 2dde42b744005c79db193ca36ceda00221ada1b2
+        <div class="upload-form">
+          <div class="form-general">
+            <div class="contact-container">
+              <h5>Company's Contact</h5>
+              <fieldset>
+                <div class="contact-check">
+                  <div class="whatsapp-box">
+                    <div class="grup-icon-label">
+                      <img src="../icon/whatsapp.png" class="contact-check-img">
+                      <label for="whatsapp-check" class="upload-label">Whatsapp</label>
+                    </div>
+                    <input type="checkbox" id="whatsapp-check" name="whatsapp-check" value="whatsapp" required>
+                  </div>
+                  <div class="instagram-box">
+                    <div class="grup-icon-label">
+                      <img src="../icon/instagram.png" class="contact-check-img">
+                      <label for="instagram-check" class="upload-label">Instagram</label>
+                    </div>
+                    <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
+                  </div>
+                </div>
+                <div class="contact-input">
+                  <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
+                  <label data-number="+62">
+                    <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
+                    <label>
+>>>>>>> ba3ea4907fc906d756b6a30fc6a025063868f05e
                 </div>
                 <div class="contact-input">
                   <label for="instagram-input" class="upload-label">Instagram Username</label>
@@ -312,5 +431,28 @@
   </div>
   <button type="submit">Submit</button>
 </form>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
+<script src="<?= base_url('/js/script.js') ?>"></script>
 
+
+<script>
+  $(document).ready(function() {
+    $('#category').change(function() {
+      var id_kategori = $(this).val();
+      $.ajax({
+        type: "POST",
+        url: "<?= base_url('upload/getDataSubKategori') ?>",
+        data: {
+          id_kategori: id_kategori
+        },
+        dataType: "JSON",
+        success: function(response) {
+          console.log(response);
+        }
+      })
+      // end ajax
+    });
+  });
+</script>
 <?= $this->endsection(); ?>

@@ -29,11 +29,19 @@ class Upload extends BaseController
         return view('pages/upload', $dataPage);
     }
 
+    public function getDataSubKategori()
+    {
+        $id_kategori = $this->input->post('id_kategori');
+        $dataSubKategori = $this->subkategori_layanan->getDataSubKategori('id_kategori');
+        $this->output->set_content_type('application/json')->set_output(json_encode($dataSubKategori));
+    }
+
     public function save()
     {
         $dataProduk = $this->request->getVar('company-name');
+        $dataKategori = $this->request->getOption('kategori');
+
         $dataPaket = $this->paket_layanan->findAll();
-        $dataKategori = $this->kategori_layanan->findAll();
         $dataSubKategori = $this->subkategori_layanan->findAll();
     }
 }
