@@ -20,18 +20,20 @@
         </div>
         <div class="upload-input">
           <h5>Basic Information</h5>
+
           <div class="upload-jenis">
             <fieldset>
               <div class="upload-category">
                 <label for="category" class="upload-label">Category</label>
-                <select id="category" name="category" required tabindex="1">
+                <select id="category" name="category" required tabindex="1" name="category">
                   <option selected disabled>Select one</option>
                   <?php foreach ($dataKategori as $kategori) : ?>
                     <!-- foreach tabel kategori as kategori -->
-                    <option value="<?= $kategori['nama_kategori'] ?>"><?= $kategori['nama_kategori'] ?></option>
+                    <option value="<?= $kategori['id_kategori'] ?>"><?= $kategori['nama_kategori'] ?></option>
                   <?php endforeach; ?>
-
                 </select>
+
+
                 <div class="batas-body">
                   <div class="body-urievent">
                     <div class="upload-second-field">
@@ -114,14 +116,14 @@
                         <div class="upload-subcategory">
                           <label for="subcategory" class="upload-label">Subcategory</label>
                           <select id="subcategory" name="subcategory" required tabindex="2">
-                            <option selected disabled>Select one</option>
+                            <option value="">Select one</option>
                             <!-- foreach sub where id kategori=xxx -->
-
-                            <option value="database1">Database1</option>
+                            <!-- 
+                            <option value="database1">Database1</option> -->
                             <!-- end foreach -->
-                            <option value="database2">Database2</option>
+                            <!-- <option value="database2">Database2</option>
                             <option value="database3">Database3</option>
-                            <option value="database4">Database4</option>
+                            <option value="database4">Database4</option> -->
                           </select>
                         </div>
             </fieldset>
@@ -339,5 +341,28 @@
   </div>
   <button>upload</button>
 </form>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
+<script src="<?= base_url('/js/script.js') ?>"></script>
 
+
+<script>
+  $(document).ready(function() {
+    $('#category').change(function() {
+      var id_kategori = $(this).val();
+      $.ajax({
+        type: "POST",
+        url: "<?= base_url('/upload/getDataSubKategori') ?>",
+        data: {
+          id_kategori: id_kategori
+        },
+        dataType: "JSON",
+        success: function(response) {
+          console.log(response);
+        }
+      })
+      // end ajax
+    });
+  });
+</script>
 <?= $this->endsection(); ?>

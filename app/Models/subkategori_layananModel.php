@@ -16,4 +16,9 @@ class subkategori_layananModel extends Model
     {
         return $this->where(['id_subkategori' => $id_subkategori])->first();
     }
+
+    public function getDataSubKategori($id_kategori)
+    {
+        return $this->where(['id_kategori' => $id_kategori])->result();
+    }
 }
