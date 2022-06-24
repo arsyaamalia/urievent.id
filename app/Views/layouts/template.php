@@ -261,6 +261,7 @@
             cancelBtn.classList.remove("active");
         }
 
+<<<<<<< HEAD
         // const general = document.querySelectorAll(".form-general");
         // const details = document.querySelectorAll(".form-details");
         // const additional = document.querySelectorAll(".form-additional");
@@ -420,6 +421,20 @@
         //     $("body").append(fieldSet);
         // });
         // });
+=======
+        const general = document.getElementByClassName(".form-general");
+const details = document.getElementByClassName(".form-details");
+const additional = document.getElementByClassName(".form-additional");
+const checkout = document.getElementByClassName(".form-checkout");
+
+function overlayGeneral() {
+  general.style.display = "block";
+  details.style.display = "none";
+  additional.style.display = "none";
+  checkout.style.display = "none";
+  console.log("berhasil masuk overlayGeneral");
+}
+>>>>>>> 2dde42b744005c79db193ca36ceda00221ada1b2
     </script>
 </body>
 
