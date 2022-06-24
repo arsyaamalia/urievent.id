@@ -1114,7 +1114,7 @@ img.img-logo {
 .contact-socmed img {
   height: 25px;
   margin-left: 8px;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .detail-action {
@@ -1564,23 +1564,30 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .upload-form fieldset{
-  display: block;
   margin: 0;
-  border: 2px solid #0f3460;
 }
 
 .upload-box{
   width: 100%;
   height: 227.5px;
   background-color: #f4f5f5;
-  padding-top: 40px;
-  margin-bottom: 224px;
+  position: absolute;
+  margin-top: -40px;
+  z-index: -1;
+}
+
+.upload-container{
+  margin: 40px auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .review-container{
   background-color: #fff;
+  width: 100%;
   border-radius: 15px;
-  width: 70%;
   padding: 40px 50px;
   box-shadow: 0 0 10px 0 rgb(22, 22, 37, 0.15);
   margin: 0 auto;
@@ -1651,9 +1658,273 @@ img.edit-icon{
 }
 
 .upload-second-field{
-  display: flex;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 2.5fr 7.5fr;
+  grid-gap: 30px;
 }
 
-.upload-tahapan{
-  background-color: #4281ce;
+.upload-tahapan button{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  height: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.upload-tahapan button:hover{
+  background-color: #f4f5f5;
+}
+
+.tahapan-nomor{
+  background-color: #ddd;
+  border-radius: 100%;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tahapan-nomor h3, .tahapan-nama h3{
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: rgb(143, 143, 143);
+}
+
+.upload-form{
+  background-color: #ffffff;
+  border: 2px solid #eeeeee;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.upload-form h5{
+  margin: 0;
+  color: #0f3460;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.basic-container, .contact-container, .desc-container, .before-container, .after-container, .value-container, .other-container, .package-category-container{
+  margin-bottom: 30px
+}
+
+.basic-box{
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  column-gap: 30px;
+}
+
+.drag-area{
+  border: 2px dashed rgb(143, 143, 143);;
+  height: 180px;
+  width: 180px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f4f5f5;
+}
+.drag-area.active{
+  border: 2px solid #e94560;
+}
+
+.drag-area img.picture-icon{
+  width: 50px;
+}
+
+.drag-area header{
+  font-size: 11px;
+  font-weight: 500;
+  color: rgb(143, 143, 143);
+  text-align: center;
+  margin: 0 15px;
+}
+.drag-area span{
+  font-size: 11px;
+  font-weight: 500;
+  color: rgb(143, 143, 143);
+}
+.drag-area button{
+  padding: 0px 20px;
+  margin-top:7px;
+  height: 33px;
+  font-size: 11px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  background: #e94560;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+.drag-area img{
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+label.upload-label{
+  font-size: 11px;
+  font-weight: 500;
+  color: #161625;
+  cursor: pointer;
+}
+
+label.upload-label-thin{
+  cursor: pointer;
+}
+
+.basic-right-input input, .basic-right-input select, .contact-input input, .location-input input, .notes-input input, input.add-input, .package-category-container input{
+  background-color: #f4f5f5;
+  border: none;
+  border-radius: 15px;
+  height: 33px;
+  width: 100%;
+  font-size: 11px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  padding: 0 15px;
+  margin-top: 3px;
+  outline: none;
+  display: block;
+}
+
+.basic-right-input select{
+  padding: 0 10px;
+}
+
+.jenis-input, .company-name-input, .contact-check, .location-input input, .package-category-container input{
+  margin-bottom: 10px;
+}
+
+#contact-input-ig{
+  margin-top: 10px;
+}
+
+.jenis-input, .company-email-input{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  column-gap: 15px;
+}
+
+.upload-line hr{
+  border: none;
+  background-color: #eee;
+  height: 2px;
+  margin-bottom: 30px;
+}
+
+.contact-check{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+.whatsapp-box, .instagram-box{
+  background-color: #f4f5f5;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  align-items: center;
+  height: 33px;
+}
+
+.whatsapp-check:checked{
+  background-color: #e94560;
+}
+
+.grup-icon-label{
+  display: flex;
+  align-items: center;
+}
+
+img.contact-check-img{
+  width: 16px;
+  opacity: 0.6;
+  margin-right: 10px;
+}
+
+.desc-input textarea, .other-container textarea, .package-category-container textarea{
+  background-color: #f4f5f5;
+  border: none;
+  border-radius: 15px;
+  height: 100px;
+  width: 100%;
+  font-size: 11px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 15px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  outline: none;
+  display: block;
+}
+
+.other-container textarea{
+  margin: 0;
+  margin-top: 3px;
+}
+
+.check-item{
+  font-size: 11px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.check-item input{
+  margin-right: 10px;
+}
+
+p.upload-label{
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+button.btn-info, input.add{
+  background-color: #e94560;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  height: 33px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  margin-top: 10px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.checkout-form-button, .upload-form-button{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+}
+
+.upload-form-button{
+  margin-top: 30px;
+  width: 100%;
+  column-gap: 40px;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
 }

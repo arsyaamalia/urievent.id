@@ -39,7 +39,7 @@ $(document).ready(function () {
     var html = "";
     html += '<div id="inputFormRow">';
     html += '<div class="input-group mb-3">';
-    html += '<input type="text" name="title[]" class="form-control m-input" placeholder="Insert Other Step here" autocomplete="off">';
+    html += '<input type="text" name="title[]" class="add-input" placeholder="Insert Other Step here" autocomplete="off">';
     html += '<div class="input-group-append">';
     html += '<button id="removeRow" type="button" class="btn btn-danger">Remove</button>';
     html += "</div>";
@@ -59,7 +59,7 @@ $(document).ready(function () {
     var htmlafter = "";
     htmlafter += '<div id="inputFormRowAfter">';
     htmlafter += '<div class="input-group mb-3">';
-    htmlafter += '<input type="text" name="title[]" class="form-control m-input" placeholder="Insert Other Step here" autocomplete="off">';
+    htmlafter += '<input type="text" name="title[]" class="fadd-input" placeholder="Insert Other Step here" autocomplete="off">';
     htmlafter += '<div class="input-group-append">';
     htmlafter += '<button id="removeRowAfter" type="button" class="btn btn-danger">Remove</button>';
     htmlafter += "</div>";
@@ -79,7 +79,7 @@ $(document).ready(function () {
     var html = "";
     html += '<div id="inputFormRowValue">';
     html += '<div class="input-group mb-3">';
-    html += '<input type="text" name="title[]" class="form-control m-input" placeholder="Insert Other Value here" autocomplete="off">';
+    html += '<input type="text" name="title[]" class="add-input" placeholder="Insert Other Value here" autocomplete="off">';
     html += '<div class="input-group-append">';
     html += '<button id="removeRowValue" type="button" class="btn btn-danger">Remove</button>';
     html += "</div>";
