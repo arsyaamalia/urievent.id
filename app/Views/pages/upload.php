@@ -24,7 +24,6 @@
           <div class="review-form-item-text">
             <h4>General</h4>
             <p>Service type, logo, category, company details</p>
-<<<<<<< HEAD
           </div>
           <div class="review-form-item-edit">
             <img src="/icon/edit.png" class="edit-icon">
@@ -60,46 +59,45 @@
       </div>
     </div>
     <div class="batas-body">
-      
         <div class="upload-second-field">
           <div class="upload-tahapan">
             <div class="tahapan-general">
-              <button type="button" onclick="overlayGeneral()">
-                <div class="tahapan-nomor">
-                  <h3>1</h3>
+              <button type="button" id="tahapan-general-aktif" onclick="overlayGeneral()">
+                <div class="tahapan-nomor" id="back-number-change-general">
+                  <h3 id="number-change-general">1</h3>
                 </div>
                 <div class="tahapan-nama">
-                  <h3>General</h3>
+                  <h3 id="title-change-general">General</h3>
                 </div>
               </button>
             </div>
             <div class="tahapan-details">
-              <button type="button" onclick="overlayDetails()">
-                <div class="tahapan-nomor">
-                  <h3>2</h3>
+              <button type="button" id="tahapan-details-aktif" onclick="overlayDetails()">
+                <div class="tahapan-nomor" id="back-number-change-details">
+                  <h3 id="number-change-details">2</h3>
                 </div>
                 <div class="tahapan-nama">
-                  <h3>Details</h3>
+                  <h3 id="title-change-details">Details</h3>
                 </div>
               </button>
             </div>
             <div class="tahapan-additional">
-              <button type="button" onclick="overlayAdditional()">
-                <div class="tahapan-nomor">
-                  <h3>3</h3>
+              <button type="button" id="tahapan-additional-aktif" onclick="overlayAdditional()">
+                <div class="tahapan-nomor" id="back-number-change-additional">
+                  <h3 id="number-change-additional">3</h3>
                 </div>
                 <div class="tahapan-nama">
-                  <h3>Additional</h3>
+                  <h3 id="title-change-additional">Additional</h3>
                 </div>
               </button>
             </div>
             <div class="tahapan-checkout">
-              <button type="button" onclick="overlayCheckout()">
-                <div class="tahapan-nomor">
-                  <h3>4</h3>
+              <button type="button" id="tahapan-checkout-aktif" onclick="overlayCheckout()">
+                <div class="tahapan-nomor" id="back-number-change-checkout">
+                  <h3 id="number-change-checkout">4</h3>
                 </div>
                 <div class="tahapan-nama">
-                  <h3>Checkout</h3>
+                  <h3 id="title-change-checkout">Checkout</h3>
                 </div>
               </button>
             </div>
@@ -171,37 +169,36 @@
               <div class="contact-container">
                 <h5>Company's Contact</h5>
                 <fieldset>
-                  <div class="contact-check">
-                    <div class="whatsapp-box">
-                      <div class="grup-icon-label">
-                        <img src="../icon/whatsapp.png" class="contact-check-img">
-                        <label for="whatsapp-check" class="upload-label">Whatsapp</label>
+                  <div class="bungkus">
+                    <div class="contact-check">
+                      <div class="whatsapp-box">
+                        <div class="grup-icon-label">
+                          <img src="../icon/whatsapp.png" class="contact-check-img">
+                          <label for="whatsapp-check" class="upload-label">Whatsapp</label>
+                        </div>
+                        <input type="checkbox" id="whatsapp-check" name="whatsapp-check" value="whatsapp" required>
                       </div>
-                      <input type="checkbox" id="whatsapp-check" name="whatsapp-check" value="whatsapp" required>
-                    </div>
-                    <div class="instagram-box">
-                      <div class="grup-icon-label">
-                        <img src="../icon/instagram.png" class="contact-check-img">
-                        <label for="instagram-check" class="upload-label">Instagram</label>
+                      <div class="instagram-box">
+                        <div class="grup-icon-label">
+                          <img src="../icon/instagram.png" class="contact-check-img">
+                          <label for="instagram-check" class="upload-label">Instagram</label>
+                        </div>
+                        <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
                       </div>
-                      <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
                     </div>
-                  </div>
-                  <div class="contact-input">
-                    <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
-                    <label data-number="+62">
-                      <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
-                    <label>
-                  </div>
-                  <div class="contact-input" id="contact-input-ig">
-                    <label for="instagram-input" class="upload-label">Instagram Username</label>
-                    <input type="text" name="instagram-input" id="instagram-input" placeholder="Example: urievent.id" />
+                    <div class="contact-input">
+                      <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
+                      <label data-number="+62">
+                        <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
+                      <label>
+                    </div>
+                    <div class="contact-input" id="contact-input-ig">
+                      <label for="instagram-input" class="upload-label">Instagram Username</label>
+                      <input type="text" name="instagram-input" id="instagram-input" placeholder="Example: urievent.id" />
+                    </div>
                   </div>
                 </fieldset>
               </div>
-            </div>
-            <div class="upload-line">
-              <hr>
             </div>
             <div class="form-details">
               <div class="desc-container">
@@ -244,9 +241,6 @@
                   <button id="addRow" type="button" class="btn-info">+ ADD OTHER STEPS</button>
                 </fieldset>
               </div>
-            </div>
-            <div class="upload-line">
-              <hr>
             </div>
             <div class="form-additional">
               <div class="after-container">
@@ -303,9 +297,6 @@
                 </fieldset>
               </div>
             </div>
-            <div class="upload-line">
-              <hr>
-            </div>
             <div class="form-checkout">
               <div class="package-category-container">
                 <h5>Package Category</h5>
@@ -349,6 +340,234 @@
 <script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
 <script src="<?= base_url('/js/script.js') ?>"></script>
 <script>
+const general = document.querySelector(".form-general");
+const details = document.querySelector(".form-details");
+const additional = document.querySelector(".form-additional");
+const checkout = document.querySelector(".form-checkout");
+
+function overlayGeneral() {
+  console.log("berhasil masuk overlayGeneral");
+  general.style.display = "block";
+  details.style.display = "none";
+  additional.style.display = "none";
+  checkout.style.display = "none";
+  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#0f3460"
+  document.getElementById("back-number-change-general").style.backgroundColor = "#fff"
+  document.getElementById("number-change-general").style.color = "#0f3460";
+  document.getElementById("title-change-general").style.color = "#fff";
+  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-details").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-details").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-details").style.color = "rgb(143, 143, 143)";
+  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-additional").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-additional").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-additional").style.color = "rgb(143, 143, 143)";
+  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-checkout").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-checkout").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-checkout").style.color = "rgb(143, 143, 143)";
+}
+
+function overlayDetails() {
+  console.log("berhasil masuk overlayDetails");
+  general.style.display = "none";
+  details.style.display = "block";
+  additional.style.display = "none";
+  checkout.style.display = "none";
+  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#0f3460"
+  document.getElementById("back-number-change-details").style.backgroundColor = "#fff"
+  document.getElementById("number-change-details").style.color = "#0f3460";
+  document.getElementById("title-change-details").style.color = "#fff";
+  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-general").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-general").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-general").style.color = "rgb(143, 143, 143)";
+  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-additional").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-additional").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-additional").style.color = "rgb(143, 143, 143)";
+  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-checkout").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-checkout").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-checkout").style.color = "rgb(143, 143, 143)";
+}
+
+function overlayAdditional() {
+  console.log("berhasil masuk overlayAdditional");
+  general.style.display = "none";
+  details.style.display = "none";
+  additional.style.display = "block";
+  checkout.style.display = "none";
+  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#0f3460"
+  document.getElementById("back-number-change-additional").style.backgroundColor = "#fff"
+  document.getElementById("number-change-additional").style.color = "#0f3460";
+  document.getElementById("title-change-additional").style.color = "#fff";
+  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-general").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-general").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-general").style.color = "rgb(143, 143, 143)";
+  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-details").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-details").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-details").style.color = "rgb(143, 143, 143)";
+  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-checkout").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-checkout").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-checkout").style.color = "rgb(143, 143, 143)";
+}
+
+function overlayCheckout() {
+  console.log("berhasil masuk overlayCheckout");
+  general.style.display = "none";
+  details.style.display = "none";
+  additional.style.display = "none";
+  checkout.style.display = "block";
+  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#0f3460"
+  document.getElementById("back-number-change-checkout").style.backgroundColor = "#fff"
+  document.getElementById("number-change-checkout").style.color = "#0f3460";
+  document.getElementById("title-change-checkout").style.color = "#fff";
+  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-general").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-general").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-general").style.color = "rgb(143, 143, 143)";
+  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-details").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-details").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-details").style.color = "rgb(143, 143, 143)";
+  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#fff"
+  document.getElementById("back-number-change-additional").style.backgroundColor = "#ddd"
+  document.getElementById("number-change-additional").style.color = "rgb(143, 143, 143)";
+  document.getElementById("title-change-additional").style.color = "rgb(143, 143, 143)";
+}
+
+$(document).ready(function () {
+  // INI ADD FIELD BUAT STEP BEFORE
+  // add row
+  $("#addRow").click(function () {
+    var html = "";
+    html += '<div id="inputFormRow">';
+    html += '<div class="input-group mb-3">';
+    html += '<input type="text" name="title[]" class="add-input" placeholder="Insert Other Step here" autocomplete="off">';
+    html += '<div class="input-group-append">';
+    html += '<button id="removeRow" type="button" class="btn btn-danger">Remove</button>';
+    html += "</div>";
+    html += "</div>";
+
+    $("#newRow").append(html);
+  });
+
+  // remove row
+  $(document).on("click", "#removeRow", function () {
+    $(this).closest("#inputFormRow").remove();
+  });
+
+  // INI ADD FIELD BUAT STEP AFTER
+  // add row
+  $("#addRowAfter").click(function () {
+    var htmlafter = "";
+    htmlafter += '<div id="inputFormRowAfter">';
+    htmlafter += '<div class="input-group mb-3">';
+    htmlafter += '<input type="text" name="title[]" class="fadd-input" placeholder="Insert Other Step here" autocomplete="off">';
+    htmlafter += '<div class="input-group-append">';
+    htmlafter += '<button id="removeRowAfter" type="button" class="btn btn-danger">Remove</button>';
+    htmlafter += "</div>";
+    htmlafter += "</div>";
+
+    $("#newRowAfter").append(htmlafter);
+  });
+
+  // remove row
+  $(document).on("click", "#removeRowAfter", function () {
+    $(this).closest("#inputFormRowAfter").remove();
+  });
+
+  // INI ADD FIELD BUAT VALUE
+  // add row
+  $("#addRowValue").click(function () {
+    var html = "";
+    html += '<div id="inputFormRowValue">';
+    html += '<div class="input-group mb-3">';
+    html += '<input type="text" name="title[]" class="add-input" placeholder="Insert Other Value here" autocomplete="off">';
+    html += '<div class="input-group-append">';
+    html += '<button id="removeRowValue" type="button" class="btn btn-danger">Remove</button>';
+    html += "</div>";
+    html += "</div>";
+    $("#newRowValue").append(html);
+  });
+
+  // remove row
+  $(document).on("click", "#removeRowValue", function () {
+    $(this).closest("#inputFormRowValue").remove();
+  });
+
+  // INI ADD FIELD BUAT PACKAGE
+  // add row
+  $("#addRowPackage").click(function () {
+    var html = "";
+    html += '<div id="inputFormRowPackage">';
+    html += '<div class="input-group mb-3">';
+    html += '<label for="package-name" class="upload-label">Package Category Name</label><br>';
+    html += '<input type="text" name="package-name" id="package-name" placeholder="Input package category name here" required /><br>';
+    html += '<label for="package-desc" class="upload-label">Package Category Description</label><br>';
+    html += '<textarea name="package-desc" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea><br>';
+    html += '<label for="package-prize" class="upload-label">Package Prize (Rp)</label><br>';
+    html += '<input type="number" name="package-prize" id="package-prize" placeholder="25000" min="0.00" max="10000.00" step="0.01" required><br>';
+    html += '<div class="input-group-append">';
+    html += '<button id="removeRowPackage" type="button" class="btn btn-danger">Remove</button>';
+    html += "</div>";
+    html += "</div>";
+    $("#newRowPackage").append(html);
+  });
+
+  // remove row
+  $(document).on("click", "#removeRowPackage", function () {
+    $(this).closest("#inputFormRowPackage").remove();
+  });
+
+  //INI ADD QUESTION FORM
+  $("#add").click(function () {
+    var lastField = $("#buildyourform div:last");
+    var intId = (lastField && lastField.length && lastField.data("idx") + 1) || 1;
+    var fieldWrapper = $('<div class="fieldwrapper" id="field' + intId + '"/>');
+    fieldWrapper.data("idx", intId);
+    var fName = $('<input type="text" class="fieldname" />');
+    var fType = $('<select class="fieldtype"><option value="checkbox">Checked</option><option value="textbox">Text</option><option value="textarea">Paragraph</option></select>');
+    var removeButton = $('<input type="button" class="remove" value="-" />');
+    removeButton.click(function () {
+      $(this).parent().remove();
+    });
+    fieldWrapper.append(fName);
+    fieldWrapper.append(fType);
+    fieldWrapper.append(removeButton);
+    $("#buildyourform").append(fieldWrapper);
+  });
+  $("#preview").click(function () {
+    $("#yourform").remove();
+    var fieldSet = $('<fieldset id="yourform"><legend>Your Form</legend></fieldset>');
+    $("#buildyourform div").each(function () {
+      var id = "input" + $(this).attr("id").replace("field", "");
+      var label = $('<label for="' + id + '">' + $(this).find("input.fieldname").first().val() + "</label>");
+      var input;
+      switch ($(this).find("select.fieldtype").first().val()) {
+        case "checkbox":
+          input = $('<input type="checkbox" id="' + id + '" name="' + id + '" />');
+          break;
+        case "textbox":
+          input = $('<input type="text" id="' + id + '" name="' + id + '" />');
+          break;
+        case "textarea":
+          input = $('<textarea id="' + id + '" name="' + id + '" ></textarea>');
+          break;
+      }
+      fieldSet.append(label);
+      fieldSet.append(input);
+    });
+    $("body").append(fieldSet);
+  });
+});
+
+
   //selecting all required elements
   const dropArea = document.querySelector(".drag-area"),
   dragText = dropArea.querySelector("header"),
