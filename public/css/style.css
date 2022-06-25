@@ -1424,7 +1424,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .search-box-2 .cancel-icon.active {
-
     right: -40px;
     transform: translateY(-50%) rotate(360deg);
     color: #0f3460;

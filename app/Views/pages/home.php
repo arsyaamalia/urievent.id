@@ -24,7 +24,7 @@
             <h2>Hello User! Choose a Category below!</h2>
             <div class="categories-box">
                 <div class="hover">
-                    <a href="medpart.html">
+                    <a href="/pages/medpart">
                         <div class="categories-item">
                             <div class="category-circle">
                                 <img src="../ICON/medpart.png" alt="medpart">
@@ -34,7 +34,7 @@
                     </a>
                 </div>
                 <div class="hover">
-                    <a href="sponsor.html">
+                    <a href="/pages/sponsorship">
                         <div class="categories-item">
                             <div class="category-circle">
                                 <img src="../ICON/sponsorship.png" alt="sponsorship">
