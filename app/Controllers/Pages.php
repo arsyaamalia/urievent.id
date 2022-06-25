@@ -126,4 +126,37 @@ class Pages extends BaseController
         ];
         return view('pages/medpart_name', $dataPage);
     }
+
+
+    public function sponsorship()
+    {
+        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataPaket = $this->paket_layanan->findAll();
+
+        $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
+
+        $dataPage = [
+            'title' => "UriEvent | Sponsorship",
+            'daftar_produk' => $daftar_produk,
+            'pager' => $this->produk_layanan->pager
+        ];
+
+        return view('pages/sponsorship', $dataPage);
+    }
+
+    public function medpart()
+    {
+        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataPaket = $this->paket_layanan->findAll();
+
+        $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
+
+        $dataPage = [
+            'title' => "UriEvent | medpart",
+            'daftar_produk' => $daftar_produk,
+            'pager' => $this->produk_layanan->pager
+        ];
+
+        return view('pages/medpart', $dataPage);
+    }
 }
