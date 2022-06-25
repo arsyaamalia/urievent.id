@@ -38,8 +38,9 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/pages/detail/(:segment)/(:segment)/(:segment)', '/Detail::index/$1/$2/$3');
 // $routes->get('upload/getDataSubKategori(:segment)', '/DataSubKategori/$1');
-$routes->get('/Upload_coba/save/(:segment)', '/Upload::save/$1/$2/$3');
+// $routes->get('/Upload_coba/save/(:segment)', '/Upload::save/$1/$2/$3');
 
+// $routes->get('/Upload/save/(:segment)', '/Upload::save/$1');
 
 $routes->get('/sign/signIn', 'Sign::index');
 // $routes->get('/pages/detail/(:segment)', '/Detail::index/$i');

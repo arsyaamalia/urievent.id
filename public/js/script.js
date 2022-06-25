@@ -106,7 +106,7 @@ $(document).ready(function () {
     var html = "";
     html += '<div id="inputFormRow">';
     html += '<div class="input-group mb-3">';
-    html += '<input type="text" name="title[]" class="add-input" placeholder="Insert Other Step here" autocomplete="off">';
+    html += '<input type="text" name="stepBefore[]" class="add-input" placeholder="Insert Other Step here" autocomplete="off">';
     html += '<img src="../icon/trash.png" id="removeRow">';
     html += "</div>";
     html += "</div>";
@@ -125,7 +125,7 @@ $(document).ready(function () {
     var htmlafter = "";
     htmlafter += '<div id="inputFormRowAfter">';
     htmlafter += '<div class="input-group mb-3">';
-    htmlafter += '<input type="text" name="title[]" class="fadd-input" placeholder="Insert Other Step here" autocomplete="off">';
+    htmlafter += '<input type="text" name="stepAfter[]" class="fadd-input" placeholder="Insert Other Step here" autocomplete="off">';
     htmlafter += '<div class="input-group-append">';
     htmlafter += '<button id="removeRowAfter" type="button" class="btn btn-danger">Remove</button>';
     htmlafter += "</div>";
@@ -145,7 +145,7 @@ $(document).ready(function () {
     var html = "";
     html += '<div id="inputFormRowValue">';
     html += '<div class="input-group mb-3">';
-    html += '<input type="text" name="title[]" class="add-input" placeholder="Insert Other Value here" autocomplete="off">';
+    html += '<input type="text" name="value[]" class="add-input" placeholder="Insert Other Value here" autocomplete="off">';
     html += '<div class="input-group-append">';
     html += '<button id="removeRowValue" type="button" class="btn btn-danger">Remove</button>';
     html += "</div>";
@@ -160,16 +160,21 @@ $(document).ready(function () {
 
   // INI ADD FIELD BUAT PACKAGE
   // add row
+  var ipackage = 0;
+  console.log(ipackage);
   $("#addRowPackage").click(function () {
+    ipackage++;
+    console.log(ipackage);
+
     var html = "";
     html += '<div id="inputFormRowPackage">';
     html += '<div class="input-group mb-3">';
     html += '<label for="package-name" class="upload-label">Package Category Name</label><br>';
-    html += '<input type="text" name="package-name" id="package-name" placeholder="Input package category name here" required /><br>';
+    html += '<input type="text" name="package[i][name]" id="package-name" placeholder="Input package category name here" required /><br>';
     html += '<label for="package-desc" class="upload-label">Package Category Description</label><br>';
-    html += '<textarea name="package-desc" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea><br>';
+    html += '<textarea name="package[i][desc]" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea><br>';
     html += '<label for="package-prize" class="upload-label">Package Prize (Rp)</label><br>';
-    html += '<input type="number" name="package-prize" id="package-prize" placeholder="25000" min="0.00" max="10000.00" step="0.01" required><br>';
+    html += '<input type="number" name="package[i][prize]e" id="package-prize" placeholder="25000" min="0.00"  step="0.01" required><br>';
     html += '<div class="input-group-append">';
     html += '<button id="removeRowPackage" type="button" class="btn btn-danger">Remove</button>';
     html += "</div>";

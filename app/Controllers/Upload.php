@@ -28,7 +28,6 @@ class Upload extends BaseController
         ];
         return view('pages/upload', $dataPage);
     }
-
     public function getDataSubKategori($id_kategori)
     {
         // $id_kategori = $this->input->post('id_kategori');
@@ -48,9 +47,7 @@ class Upload extends BaseController
 
     public function save()
     {
-        $dataProduk = $this->request->getVar('company-name');
-        $dataKategori = $this->request->getOption('kategori');
-        $dataPaket = $this->paket_layanan->findAll();
-        $dataSubKategori = $this->subkategori_layanan->findAll();
+        $dataProduk = $this->request->getVar();
+        dd($dataProduk);
     }
 }
