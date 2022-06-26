@@ -4,7 +4,7 @@
 
 <body onload="overlayGeneral()">
 
-  <form action="/upload/save" method="get" enctype="multipart/form-data">
+  <form action="/upload/save" method="POST" enctype="multipart/form-data">
     <div class="upload-box"></div>
     <div class="upload-container">
       <div class="review-container">
@@ -119,11 +119,11 @@
                       </div>
                       <header>Drag and drop an image</header>
                       <span>or</span>
-                      <input type="file" hidden id="layanan-img" name="layanan-img">
                       <!-- <label for="layanan-img">Browse</label> -->
                       <button>Browse</button>
 
                     </div>
+                    <input type="file" hidden id="layanan-img" name="layanan-img">
                   </div>
                   <div class="basic-right-input">
                     <div class="jenis-input">

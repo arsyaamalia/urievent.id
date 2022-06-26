@@ -76,7 +76,10 @@
                         <a href="/detail/index/<?= $produk['id_layanan']; ?>/<?= $produk['id_kategori']; ?>/<?= $produk['id_subkategori']; ?>">
                             <div class="recom-item">
                                 <div class="recom-grup">
-                                    <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
+                                    <!-- <div class="item-circle" style="background-size: cover; background-image: url('/img/picture_poster_layanan/$produk['picture_poster'] ') ;"> -->
+                                    <div class="item-circle" style="overflow: hidden;">
+                                        <img src="/img/picture_poster_layanan/<?= $produk['picture_poster'] ?>" alt="" style="object-fit: cover; width: auto; height: 100%;">
+                                    </div>
                                     <h4><?= $produk['nama_instansi'] ?></h4>
                                 </div>
                                 <h3>Rp <?= number_format($produk['harga_min'], '0', '', '.'); ?></h3>
