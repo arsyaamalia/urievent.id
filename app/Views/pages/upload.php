@@ -4,7 +4,7 @@
 
 <body onload="overlayGeneral()">
 
-  <form action="/upload/save" method="POST" enctype="multipart/form-data">
+  <form action="/upload/save" method="get" enctype="multipart/form-data">
     <div class="upload-box"></div>
     <div class="upload-container">
       <div class="review-container">

@@ -46,7 +46,13 @@ class Upload extends BaseController
 
     public function save()
     {
+        // array to string 
+        $step_before = join(',', $this->request->getVar('stepBefore'));
+        $step_after = join(',', $this->request->getVar('stepAfter'));
+        $value = join(',', $this->request->getVar('value'));
         $dataProduk = $this->request->getVar();
+
+
         dd($dataProduk);
     }
 }
