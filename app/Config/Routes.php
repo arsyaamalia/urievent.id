@@ -36,13 +36,15 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/pages/detail/(:segment)/(:segment)/(:segment)', '/Detail::index/$1/$2/$3');
+$routes->get('/pages', 'Pages::index', ['filter' => 'auth']);
+$routes->get('/detail/(:segment)/(:segment)/(:segment)', '/Detail::index/$1/$2/$3');
 $routes->get('upload/getDataSubKategori(:segment)', '/DataSubKategori/$1');
 // $routes->get('/Upload_coba/save/(:segment)', '/Upload::save/$1');
 
 // $routes->get('/Upload/save/(:segment)', '/Upload::save/$1');
 
-$routes->get('/sign/signIn', 'Sign::index');
+$routes->get('/sign', 'Sign::index', ['filter' => 'signback']);
+$routes->get('/signOut', 'Sign::signOut');
 // $routes->get('/pages/detail/(:segment)', '/Detail::index/$i');
 
 /*
