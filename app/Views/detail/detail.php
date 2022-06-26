@@ -7,7 +7,7 @@
     <h2><a href="/pages">＜<?= $detail['nama_instansi']; ?></a></h2>
     <div class="detail-item">
       <div class="detail-picture">
-        <img src="/img/logomagangupdate.png" class="img-logo" />
+        <img src="/img/picture_poster_layanan/<?= $detail['picture_poster'] ?>" class="img-logo" />
       </div>
 
       <div class="detail-data">

@@ -127,4 +127,10 @@ class Sign extends BaseController
         ];
         return view('sign/resetPass', $dataPage);
     }
+
+    public function signOut()
+    {
+        session()->destroy();
+        return redirect()->to('/sign');
+    }
 }

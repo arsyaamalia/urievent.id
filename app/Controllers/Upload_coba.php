@@ -48,9 +48,7 @@ class Upload_coba extends BaseController
 
     public function save()
     {
-        $dataProduk = $this->request->getVar('company-name');
-        $dataKategori = $this->request->getOption('kategori');
-        $dataPaket = $this->paket_layanan->findAll();
-        $dataSubKategori = $this->subkategori_layanan->findAll();
+        $dataProduk = $this->request->getVar();
+        dd($dataProduk);
     }
 }
