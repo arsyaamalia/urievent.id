@@ -386,44 +386,27 @@
 <script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
 <script src="<?= base_url('/js/script.js') ?>"></script>
 <script>
-
-  function showFile() {
-    let fileType = file.type; //getting selected file type
-    let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
-    if (validExtensions.includes(fileType)) {
-      //if user selected file is an image file
-      let fileReader = new FileReader(); //creating new FileReader object
-      fileReader.onload = () => {
-        let fileURL = fileReader.result; //passing user file source in fileURL variable
-        // UNCOMMENT THIS BELOW LINE. I GOT AN ERROR WHILE UPLOADING THIS POST SO I COMMENTED IT
-        let imgTag = `<img src="${fileURL}" alt="image" style="border-radius: 100%">`; //creating an img tag and passing user selected file source inside src attribute
-        dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
-      };
-      fileReader.readAsDataURL(file);
-    } else {
-      alert("This is not an Image File!");
-      dropArea.classList.remove("active");
-      dragText.textContent = "Drag and drop an image";
-    }
-  }
-
+  
   $(document).ready(function() {
     $('#category').change(function() {
       var id_kategori = $(this).val();
       // console.log(id_kategori)
       $.ajax({
-        type: "get",
+        type: "post",
         url: "<?= base_url('upload/getDataSubKategori') ?>/" + id_kategori,
         dataType: "JSON",
         success: function(response) {
+          $('#subcategory').empty()
+          $('#subcategory').append('<option selected disabled>Select one</option>');
+
           $.each(response, function(i, item) {
             $('#subcategory').append($('<option>', {
               value: item.id_subkategori,
               text: item.nama_subkategori
             }));
+            console.log(response);
           });
         }
-
       })
       // end ajax
     });
