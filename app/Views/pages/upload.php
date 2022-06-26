@@ -354,6 +354,9 @@
           url: "<?= base_url('upload/getDataSubKategori') ?>/" + id_kategori,
           dataType: "JSON",
           success: function(response) {
+            $('#subcategory').empty()
+            $('#subcategory').append('<option selected disabled>Select one</option>');
+
             $.each(response, function(i, item) {
               $('#subcategory').append($('<option>', {
                 value: item.id_subkategori,

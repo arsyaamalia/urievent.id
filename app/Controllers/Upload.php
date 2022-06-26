@@ -50,8 +50,8 @@ class Upload extends BaseController
         $step_before = join(',', $this->request->getVar('stepBefore'));
         $step_after = join(',', $this->request->getVar('stepAfter'));
         $value = join(',', $this->request->getVar('value'));
-        $dataProduk = $this->request->getVar();
 
+        $dataProduk = $this->request->getVar();
 
         dd($dataProduk);
     }
