@@ -1153,7 +1153,7 @@ img.img-logo {
   height: 25px;
 }
 
-.choose-package {
+.choose-package, .edit-service, .delete-service {
   height: 42px;
   border-radius: 15px;
   background-color: #e94560;
@@ -1161,9 +1161,10 @@ img.img-logo {
   color: #fff;
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
-.choose-package p {
+.choose-package p, .edit-service p, .delete-service p {
   font-size: 14px;
   font-weight: 500;
 }
@@ -2117,11 +2118,12 @@ hr.hr-service{
 }
 
 .detail-pribadi-back{
-  height: 300px;
+  height: 227.5px;
   background-color: #f4f5f5;
   width: 100%;
   position: absolute;
   z-index: -1;
+  margin-top: -40px;
 }
 
 .detail-pribadi-grup{
@@ -2135,4 +2137,10 @@ hr.hr-service{
   border-radius: 15px;
   padding: 35px 50px 45px;
   margin-bottom: 40px;
+}
+
+.action-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

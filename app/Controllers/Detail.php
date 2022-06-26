@@ -77,4 +77,12 @@ class Detail extends BaseController
         ];
         return view('/detail/detail', $dataPage);
     }
+
+    public function detailpribadi(){
+
+        $dataPage = [
+            'title' => "UriEvent | Detail"
+        ];
+        return view('/detail/detailpribadi', $dataPage);
+    }
 }
