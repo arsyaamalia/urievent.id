@@ -10,7 +10,9 @@ class produk_layananModel extends Model
     protected $table = 'produk_layanan';
     // protected $primaryKey = 'id_layanan';
     protected $useAutoIncrement = false;
-    protected $useTimestamps = true;
+    // protected $useTimestamps = true;
+    protected $allowedFields = ['id_layanan', 'id_kategori', 'id_subkategori', 'nama_instansi', 'email_instansi', 'whatsapp', 'instagram', 'picture_poster', 'deskripsi', 'step_before', 'step_after', 'other', 'value', 'status_layanan'];
+
 
 
     public function getDetail($id_layanan = false)

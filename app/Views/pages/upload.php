@@ -4,7 +4,7 @@
 
 <body onload="overlayGeneral()">
 
-  <form action="/upload/save" method="POST">
+  <form action="/upload/save" method="POST" enctype="multipart/form-data">
     <div class="upload-box"></div>
     <div class="upload-container">
       <div class="review-container">
@@ -119,8 +119,10 @@
                       </div>
                       <header>Drag and drop an image</header>
                       <span>or</span>
+                      <input type="file" hidden id="layanan-img" name="layanan-img">
+                      <!-- <label for="layanan-img">Browse</label> -->
                       <button>Browse</button>
-                      <input type="file" hidden>
+
                     </div>
                   </div>
                   <div class="basic-right-input">
@@ -332,7 +334,8 @@
         </div>
       </div>
       <div class="upload-form-button">
-        <button class="btn-info" type="submit">Save as draft</button>
+        <a href="<?= base_url('upload/saveDraft') ?>"> <button class="btn-info" type="submit">Save as draft</button>
+        </a>
         <a href="<?= base_url('upload/save') ?>"><button class="btn-info" type="submit">Submit</button></a>
 
       </div>
@@ -356,10 +359,12 @@
                 value: item.id_subkategori,
                 text: item.nama_subkategori
               }));
+              console.log(response);
             });
           }
-
         })
+
+
         // end ajax
       });
     });

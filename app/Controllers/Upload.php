@@ -32,7 +32,6 @@ class Upload extends BaseController
     {
         // $id_kategori = $this->input->post('id_kategori');
         $dataSubKategori = $this->subkategori_layanan->getDataSubKategori($id_kategori);
-        // dd($id_kategori);
         // $this->output->set_content_type('application/json')->set_output(json_encode($dataSubKategori));
         // echo json_encode($dataSubKategori);
         $data = json_encode($dataSubKategori);

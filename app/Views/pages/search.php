@@ -4,8 +4,8 @@
 <div class="search-container">
 
     <div class="search-form">
-        <form action="">
-            <input type="search" value="<?= $cari ?>">
+        <form action="search" method="GET">
+            <input name="cari" type="search" value="<?= $cari ?>">
         </form>
     </div>
 
