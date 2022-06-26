@@ -159,4 +159,12 @@ class Pages extends BaseController
 
         return view('pages/medpart', $dataPage);
     }
+
+    public function uriservice()
+    {
+        $dataPage = [
+            'title' => "UriEvent | UriService"
+        ];
+        return view('pages/uriservice', $dataPage);
+    }
 }

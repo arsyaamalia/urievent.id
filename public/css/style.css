@@ -289,9 +289,9 @@ h5 {
 .recommendation-box-detail,
 .similar-box {
   margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
 }
 
 .search-box {
@@ -2029,4 +2029,20 @@ input.add {
 
 input[type="checkbox"] {
   cursor: pointer;
+}
+
+.service-container{
+  width: 70%;
+  margin: 50px auto;
+}
+
+.service-slide, .service-menu{
+  width: 100%;
+}
+
+.slide-background{
+  background-color: #f4f5f5;
+  height: 55px;
+  width: 100%;
+  border-radius: 15px;
 }

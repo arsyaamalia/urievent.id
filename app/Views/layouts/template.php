@@ -96,7 +96,7 @@
             </a>
         </div>
         <div class="profil-hover-wrap">
-            <a href="/pages/service">
+            <a href="/pages/uriservice">
                 <div class="profile-hover-item">
                     <h3>UriService</h3>
                 </div>
