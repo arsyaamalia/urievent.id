@@ -176,21 +176,14 @@
                         <option selected disabled>Select one</option>
                         <?php foreach ($dataKategori as $kategori) : ?>
                           <!-- foreach tabel kategori as kategori -->
-                          <option value="<?= $kategori['nama_kategori'] ?>"><?= $kategori['nama_kategori'] ?></option>
+                          <option value="<?= $kategori['id_kategori'] ?>"><?= $kategori['nama_kategori'] ?></option>
                         <?php endforeach; ?>
                       </select>
                     </div>
-                    <div class="subcategory-input">
+                    <div class="subcategory-input" style="display: none;">
                       <label for="subcategory" class="upload-label">Subcategory</label>
                       <select id="subcategory" name="subcategory" required tabindex="2">
                         <option selected disabled>Select one</option>
-                        <!-- foreach sub where id kategori=xxx -->
-
-                        <option value="database1">Database1</option>
-                        <!-- end foreach -->
-                        <option value="database2">Database2</option>
-                        <option value="database3">Database3</option>
-                        <option value="database4">Database4</option>
                       </select>
                     </div>
                   </div>
@@ -393,6 +386,26 @@
 <script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
 <script src="<?= base_url('/js/script.js') ?>"></script>
 <script>
+
+  function showFile() {
+    let fileType = file.type; //getting selected file type
+    let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+    if (validExtensions.includes(fileType)) {
+      //if user selected file is an image file
+      let fileReader = new FileReader(); //creating new FileReader object
+      fileReader.onload = () => {
+        let fileURL = fileReader.result; //passing user file source in fileURL variable
+        // UNCOMMENT THIS BELOW LINE. I GOT AN ERROR WHILE UPLOADING THIS POST SO I COMMENTED IT
+        let imgTag = `<img src="${fileURL}" alt="image" style="border-radius: 100%">`; //creating an img tag and passing user selected file source inside src attribute
+        dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
+      };
+      fileReader.readAsDataURL(file);
+    } else {
+      alert("This is not an Image File!");
+      dropArea.classList.remove("active");
+      dragText.textContent = "Drag and drop an image";
+    }
+  }
 
   $(document).ready(function() {
     $('#category').change(function() {

@@ -221,9 +221,9 @@ $(document).ready(function () {
 
 //selecting all required elements
 const dropArea = document.querySelector(".drag-area"),
-  dragText = dropArea.querySelector("header"),
-  button = dropArea.querySelector("button"),
-  input = document.querySelector("#layanan-img");
+dragText = dropArea.querySelector("header"),
+button = dropArea.querySelector("button"),
+input = dropArea.querySelector("input");
 let file; //this is a global variable and we'll use it inside multiple functions
 
 button.onclick = (e) => {
@@ -278,3 +278,14 @@ function showFile() {
     dragText.textContent = "Drag and drop an image";
   }
 }
+
+// const subcategory = document.querySelector(".subcategory");
+
+// function callSubcategory() {
+//   if(document.getElementById("category").value = "Media Partner"){
+//     subcategory.style.display = "block";
+//   }
+//   else{
+//     subcategory.style.display = "none";
+//   }
+// }
