@@ -2115,3 +2115,24 @@ hr.hr-service{
 .slide-active button.active1:hover{
   background-color: #ddd;
 }
+
+.detail-pribadi-back{
+  height: 300px;
+  background-color: #f4f5f5;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.detail-pribadi-grup{
+  width: 70%;
+  margin: 40px auto;
+}
+
+.detail-pribadi-box {
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgb(22, 22, 37, 0.15);
+  border-radius: 15px;
+  padding: 35px 50px 45px;
+  margin-bottom: 40px;
+}
