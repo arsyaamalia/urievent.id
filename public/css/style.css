@@ -1899,14 +1899,9 @@ input.add-input,
 
 .jenis-input,
 .company-name-input,
-.contact-check,
 .location-input input,
 .package-category-container input {
   margin-bottom: 10px;
-}
-
-#contact-input-ig {
-  margin-top: 10px;
 }
 
 .jenis-input,
@@ -1928,6 +1923,11 @@ input.add-input,
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
+}
+
+.contact-input{
+  display: none;
+  margin-top: 10px;
 }
 
 .whatsapp-box,

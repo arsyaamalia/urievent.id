@@ -281,11 +281,29 @@ function showFile() {
 
 // const subcategory = document.querySelector(".subcategory");
 
-// function callSubcategory() {
-//   if(document.getElementById("category").value = "Media Partner"){
-//     subcategory.style.display = "block";
-//   }
-//   else{
-//     subcategory.style.display = "none";
-//   }
+// if(document.getElementById("category").value = "coba"){
+//   console.log("coba ini");
+//   subcategory.style.display = "none";
 // }
+// else{
+//   subcategory.style.display = "block";
+// }
+
+const inputwa = document.getElementById('contact-input-wa');
+const inputig = document.getElementById('contact-input-ig');
+
+checkBox = document.getElementById('whatsapp-check').addEventListener('click', event => {
+	if(event.target.checked) {
+		inputwa.style.display = "block";
+	}else{
+    inputwa.style.display = "none";
+  }
+});
+
+checkBox2 = document.getElementById('instagram-check').addEventListener('click', event => {
+	if(event.target.checked) {
+		inputig.style.display = "block";
+	}else{
+    inputig.style.display = "none";
+  }
+});

@@ -154,7 +154,7 @@
           <div class="basic-container">
             <h5>Basic Information</h5>
             <fieldset>
-              <p class="upload-label">Instruction: Standard image dimension is multiplication of 5x5 with maximum image size 3 MB. Supports JPEG, JPG, and PNG. Please attach your company's LOGO down here.</p>
+              <p class="upload-label" style="text-align: justify;">Instruction: Standard image dimension is multiplication of 5x5 with maximum image size 3 MB. Supports JPEG, JPG, and PNG. Please attach your company's LOGO down here.</p>
               <br>
               <div class="basic-box">
                 <div class="picture-input">
@@ -172,7 +172,7 @@
                   <div class="jenis-input">
                     <div class="category-input">
                       <label for="category" class="upload-label">Category</label>
-                      <select class="category" id="category" name="category" required tabindex="1">
+                      <select style="cursor: pointer;" class="category" id="category" name="category" required tabindex="1">
                         <option selected disabled>Select one</option>
                         <?php foreach ($dataKategori as $kategori) : ?>
                           <!-- foreach tabel kategori as kategori -->
@@ -180,9 +180,9 @@
                         <?php endforeach; ?>
                       </select>
                     </div>
-                    <div class="subcategory-input" style="display: none;">
+                    <div class="subcategory-input">
                       <label for="subcategory" class="upload-label">Subcategory</label>
-                      <select id="subcategory" name="subcategory" required tabindex="2">
+                      <select style="cursor: pointer;" id="subcategory" name="subcategory" required tabindex="2">
                         <option selected disabled>Select one</option>
                       </select>
                     </div>
@@ -213,7 +213,7 @@
             <fieldset>
               <p class="upload-label">Choose at least one of additional contact detail below</p>
               <div class="bungkus">
-                <div class="contact-check">
+                <div class="contact-check" style="margin: 0;">
                   <div class="whatsapp-box">
                     <div class="grup-icon-label">
                       <img src="../icon/whatsapp.png" class="contact-check-img">
@@ -229,7 +229,7 @@
                     <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
                   </div>
                 </div>
-                <div class="contact-input">
+                <div class="contact-input" id="contact-input-wa">
                   <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
                   <label data-number="+62">
                     <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
@@ -247,7 +247,7 @@
           <div class="desc-container">
             <h5>Company Details</h5>
             <fieldset>
-              <p class="upload-label">
+              <p class="upload-label" style ="text-align: justify;">
                 Describe your company here (e.g. field, type, amount of employee, company purposes, anything to attract more clients)
               </p>
               <div class="desc-input">
@@ -338,7 +338,7 @@
           <div class="other-container" style="margin: 0;">
             <h5>Other</h5>
             <fieldset>
-              <p class="upload-label">e.g. Venue Capacity (pax or Person), Venue Type (ballroom, exhibition), Venue Full Address (City, ZIP Code) or other information that your client have to know.</p>
+              <p class="upload-label" style="text-align: justify;">e.g. Venue Capacity (pax or Person), Venue Type (ballroom, exhibition), Venue Full Address (City, ZIP Code) or other information that your client have to know.</p>
               <label for="other-input" class="upload-label">Additional Description</label>
               <textarea name="other-input" id="other-input" cols="30" rows="6" placeholder="Insert your additional description here"></textarea>
             </fieldset>
@@ -348,7 +348,7 @@
           <div class="package-category-container">
             <h5>Package Category</h5>
             <fieldset>
-              <p class="upload-label">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
+              <p class="upload-label" style="text-align: justify;">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
               <label for="package-name" class="upload-label">Package Category Name</label>
               <input type="text" name="package-name" id="package-name" placeholder="Input package category name here (ex: Bronze, Silver, Gold)" required />
               <label for="package-desc" class="upload-label">Package Category Description</label>
@@ -365,7 +365,7 @@
           <div class="checkout-form-container">
             <h5>Checkout Form</h5>
             <div class="fieldset-form">
-              <p class="upload-label">Your clients are required to give Name, Email and Phone Number. You can ask customized questions for general in this part</p>
+              <p class="upload-label" style="text-align: justify;">Your clients are required to give Name, Email and Phone Number. You can ask customized questions for general in this part</p>
               <fieldset id="buildyourform"></fieldset>
               <div class="checkout-form-button">
                 <input type="button" value="Preview form" class="add" id="preview" />
