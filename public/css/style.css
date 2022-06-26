@@ -1670,7 +1670,7 @@ img.edit-icon {
   width: 100%;
 }
 
-.button-wrap{
+.button-wrap {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1732,13 +1732,13 @@ img.edit-icon {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  cursor:auto;
+  cursor: auto;
 }
 
 .tahapan-general button.general1,
 .tahapan-details button.details2,
 .tahapan-additional button.additional2,
-.tahapan-checkout button.checkout2{
+.tahapan-checkout button.checkout2 {
   display: none;
 }
 

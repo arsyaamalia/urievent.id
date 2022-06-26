@@ -3,100 +3,90 @@ const details = document.querySelector(".form-details");
 const additional = document.querySelector(".form-additional");
 const checkout = document.querySelector(".form-checkout");
 
+const general1 = document.querySelector(".general1");
+const details1 = document.querySelector(".details1");
+const additional1 = document.querySelector(".additional1");
+const checkout1 = document.querySelector(".checkout1");
+
+const general2 = document.querySelector(".general2");
+const details2 = document.querySelector(".details2");
+const additional2 = document.querySelector(".additional2");
+const checkout2 = document.querySelector(".checkout2");
+
 function overlayGeneral() {
+  console.log("berhasil masuk buttonGeneral");
+  general1.style.display = "none";
+  details1.style.display = "block";
+  additional1.style.display = "block";
+  checkout1.style.display = "block";
+
+  general2.style.display = "block";
+  details2.style.display = "none";
+  additional2.style.display = "none";
+  checkout2.style.display = "none";
+
   console.log("berhasil masuk overlayGeneral");
   general.style.display = "block";
   details.style.display = "none";
   additional.style.display = "none";
   checkout.style.display = "none";
-  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#0f3460";
-  document.getElementById("back-number-change-general").style.backgroundColor = "#fff";
-  document.getElementById("number-change-general").style.color = "#0f3460";
-  document.getElementById("title-change-general").style.color = "#fff";
-  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-details").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-additional").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-additional").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-additional").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-checkout").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-checkout").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-checkout").style.color = "rgb(143, 143, 143)";
 }
 
 function overlayDetails() {
+  console.log("berhasil masuk buttonDetails");
+  general1.style.display = "block";
+  details1.style.display = "none";
+  additional1.style.display = "block";
+  checkout1.style.display = "block";
+
+  general2.style.display = "none";
+  details2.style.display = "block";
+  additional2.style.display = "none";
+  checkout2.style.display = "none";
+
   console.log("berhasil masuk overlayDetails");
   general.style.display = "none";
   details.style.display = "block";
   additional.style.display = "none";
   checkout.style.display = "none";
-  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#0f3460";
-  document.getElementById("back-number-change-details").style.backgroundColor = "#fff";
-  document.getElementById("number-change-details").style.color = "#0f3460";
-  document.getElementById("title-change-details").style.color = "#fff";
-  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-general").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-additional").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-additional").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-additional").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-checkout").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-checkout").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-checkout").style.color = "rgb(143, 143, 143)";
 }
 
 function overlayAdditional() {
+  console.log("berhasil masuk buttonAdditional");
+  general1.style.display = "block";
+  details1.style.display = "block";
+  additional1.style.display = "none";
+  checkout1.style.display = "block";
+
+  general2.style.display = "none";
+  details2.style.display = "none";
+  additional2.style.display = "block";
+  checkout2.style.display = "none";
+
   console.log("berhasil masuk overlayAdditional");
   general.style.display = "none";
   details.style.display = "none";
   additional.style.display = "block";
   checkout.style.display = "none";
-  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#0f3460";
-  document.getElementById("back-number-change-additional").style.backgroundColor = "#fff";
-  document.getElementById("number-change-additional").style.color = "#0f3460";
-  document.getElementById("title-change-additional").style.color = "#fff";
-  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-general").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-details").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-checkout").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-checkout").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-checkout").style.color = "rgb(143, 143, 143)";
 }
 
 function overlayCheckout() {
+  console.log("berhasil masuk buttonCheckout");
+  general1.style.display = "block";
+  details1.style.display = "block";
+  additional1.style.display = "block";
+  checkout1.style.display = "none";
+
+  general2.style.display = "none";
+  details2.style.display = "none";
+  additional2.style.display = "none";
+  checkout2.style.display = "block";
+
   console.log("berhasil masuk overlayCheckout");
   general.style.display = "none";
   details.style.display = "none";
   additional.style.display = "none";
   checkout.style.display = "block";
-  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#0f3460";
-  document.getElementById("back-number-change-checkout").style.backgroundColor = "#fff";
-  document.getElementById("number-change-checkout").style.color = "#0f3460";
-  document.getElementById("title-change-checkout").style.color = "#fff";
-  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-general").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-details").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#fff";
-  document.getElementById("back-number-change-additional").style.backgroundColor = "#ddd";
-  document.getElementById("number-change-additional").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-additional").style.color = "rgb(143, 143, 143)";
 }
 
 $(document).ready(function () {
