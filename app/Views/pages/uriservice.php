@@ -2,25 +2,17 @@
 
 <?= $this->section('content'); ?>
 
-<hr>
+<hr class="hr-service">
 <div class="service-container">
     <div class="service-slide">
         <div class="slide-background">
             <div class="slide-draft">
-                <button class="draft1">
-                    <h3>Draft</h3>
-                </button>
-                <button class="draft2">
-                    <h3>Draft</h3>
-                </button>
+                <button class="draft1" onclick="overlayDraft()" style="display: none;">Draft</button>
+                <button class="draft2">Draft</button>
             </div>
             <div class="slide-active">
-                <button class="active1">
-                    <h3>Active</h3>
-                </button>
-                <button class="active2">
-                    <h3>Active</h3>
-                </button>
+                <button class="active1" onclick="overlayActive()">Active</button>
+                <button class="active2" style="display: none;">Active</button>
             </div>
         </div>
     </div>
@@ -92,5 +84,9 @@
         </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
+<script src="<?= base_url('/js/script.js') ?>"></script>
 
 <?= $this->endsection(); ?>

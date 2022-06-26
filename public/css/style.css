@@ -1925,7 +1925,7 @@ input.add-input,
   grid-gap: 15px;
 }
 
-.contact-input{
+.contact-input {
   display: none;
   margin-top: 10px;
 }
@@ -2031,18 +2031,73 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.service-container{
+hr.hr-service{
+  border: none;
+  background-color: #eee;
+  width: 100%;
+  height: 2px;
+}
+
+.service-container {
   width: 70%;
-  margin: 50px auto;
+  margin: 35px auto;
 }
 
-.service-slide, .service-menu{
+.service-slide,
+.service-menu {
   width: 100%;
 }
 
-.slide-background{
+.service-slide{
+  margin-bottom: 30px;
+}
+
+.slide-background {
   background-color: #f4f5f5;
-  height: 55px;
   width: 100%;
+  padding: 6px;
   border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+}
+
+.slide-draft, .slide-active{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-draft button.draft1,
+.slide-draft button.draft2,
+.slide-active button.active1,
+.slide-active button.active2 {
+  height: 42px;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.slide-draft button.draft1,
+.slide-active button.active1{
+  background-color: #f4f5f5;
+  font-weight: 600;
+  color: rgb(143, 143, 143);
+  cursor: pointer;
+}
+
+.slide-draft button.draft2,
+.slide-active button.active2 {
+  background-color: #0f3460;
+  font-weight: 500;
+  color: #fff;
+}
+
+.slide-draft button.draft1:hover,
+.slide-active button.active1:hover{
+  background-color: #ddd;
 }

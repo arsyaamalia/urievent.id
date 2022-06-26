@@ -307,3 +307,38 @@ checkBox2 = document.getElementById('instagram-check').addEventListener('click',
     inputig.style.display = "none";
   }
 });
+
+const draft = document.querySelector(".menu-draft");
+const active = document.querySelector(".menu-active");
+
+const draft1 = document.getElementById(".draft1");
+const active1 = document.querySelector(".active1");
+
+const draft2 = document.querySelector(".draft2");
+const active2 = document.querySelector(".active2");
+
+function overlayDraft() {
+  console.log("berhasil masuk buttonDraft");
+  draft1.style.display = "none";
+  active1.style.display = "block";
+
+  draft2.style.display = "block";
+  active2.style.display = "none";
+
+  console.log("berhasil masuk overlayDraft");
+  draft.style.display = "block";
+  active.style.display = "none";
+}
+
+function overlayActive() {
+  console.log("berhasil masuk buttonActive");
+  draft1.style.display = "block";
+  active1.style.display = "none";
+
+  draft2.style.display = "none";
+  active2.style.display = "block";
+
+  console.log("berhasil masuk overlayActive");
+  draft.style.display = "none";
+  active.style.display = "block";
+}
