@@ -61,42 +61,90 @@
     <div class="upload-second-field">
       <div class="upload-tahapan">
         <div class="tahapan-general">
-          <button type="button" id="tahapan-general-aktif" onclick="overlayGeneral()">
-            <div class="tahapan-nomor" id="back-number-change-general">
-              <h3 id="number-change-general">1</h3>
+          <button class="general1" type="button" onclick="overlayGeneral()">
+            <div class="button-wrap">
+              <div class="tahapan-nomor">
+                <h3>1</h3>
+              </div>
+              <div class="tahapan-nama">
+                <h3>General</h3>
+              </div>
             </div>
-            <div class="tahapan-nama">
-              <h3 id="title-change-general">General</h3>
+          </button>
+          <button class="general2" type="button">
+            <div class="button-wrap">
+              <div class="tahapan-nomor2">
+                <h3>1</h3>
+              </div>
+              <div class="tahapan-nama2">
+                <h3>General</h3>
+              </div>
             </div>
           </button>
         </div>
         <div class="tahapan-details">
-          <button type="button" id="tahapan-details-aktif" onclick="overlayDetails()">
-            <div class="tahapan-nomor" id="back-number-change-details">
-              <h3 id="number-change-details">2</h3>
+          <button class="details1" type="button" onclick="overlayDetails()">
+            <div class="button-wrap">
+              <div class="tahapan-nomor">
+                <h3>2</h3>
+              </div>
+              <div class="tahapan-nama">
+                <h3>Details</h3>
+              </div>
             </div>
-            <div class="tahapan-nama">
-              <h3 id="title-change-details">Details</h3>
+          </button>
+          <button class="details2" type="button">
+            <div class="button-wrap">
+              <div class="tahapan-nomor2">
+                <h3>2</h3>
+              </div>
+              <div class="tahapan-nama2">
+                <h3>Details</h3>
+              </div>
             </div>
           </button>
         </div>
         <div class="tahapan-additional">
-          <button type="button" id="tahapan-additional-aktif" onclick="overlayAdditional()">
-            <div class="tahapan-nomor" id="back-number-change-additional">
-              <h3 id="number-change-additional">3</h3>
+          <button class="additional1" type="button" onclick="overlayAdditional()">
+            <div class="button-wrap">
+              <div class="tahapan-nomor">
+                <h3>3</h3>
+              </div>
+              <div class="tahapan-nama">
+                <h3>Additional</h3>
+              </div>
             </div>
-            <div class="tahapan-nama">
-              <h3 id="title-change-additional">Additional</h3>
+          </button>
+          <button class="additional2" type="button">
+            <div class="button-wrap">
+              <div class="tahapan-nomor2">
+                <h3>3</h3>
+              </div>
+              <div class="tahapan-nama2">
+                <h3>Additional</h3>
+              </div>
             </div>
           </button>
         </div>
         <div class="tahapan-checkout">
-          <button type="button" id="tahapan-checkout-aktif" onclick="overlayCheckout()">
-            <div class="tahapan-nomor" id="back-number-change-checkout">
-              <h3 id="number-change-checkout">4</h3>
+          <button class="checkout1" type="button" onclick="overlayCheckout()">
+            <div class="button-wrap">
+              <div class="tahapan-nomor">
+                <h3>4</h3>
+              </div>
+              <div class="tahapan-nama">
+                <h3>Checkout</h3>
+              </div>
             </div>
-            <div class="tahapan-nama">
-              <h3 id="title-change-checkout">Checkout</h3>
+          </button>
+          <button class="checkout2" type="button">
+            <div class="button-wrap">
+              <div class="tahapan-nomor2">
+                <h3>4</h3>
+              </div>
+              <div class="tahapan-nama2">
+                <h3>Checkout</h3>
+              </div>
             </div>
           </button>
         </div>
@@ -167,7 +215,7 @@
           <div class="upload-line">
             <hr>
           </div>
-          <div class="contact-container">
+          <div class="contact-container" style="margin: 0;">
             <h5>Company's Contact</h5>
             <fieldset>
               <p class="upload-label">Choose at least one of additional contact detail below</p>
@@ -226,7 +274,7 @@
           <div class="upload-line">
             <hr>
           </div>
-          <div class="before-container">
+          <div class="before-container" style="margin: 0;">
             <h5>Steps to Checkout</h5>
             <fieldset>
               <p class="upload-label">Give information about what to prepare prior to your service checkout</p>
@@ -294,7 +342,7 @@
           <div class="upload-line">
             <hr>
           </div>
-          <div class="other-container">
+          <div class="other-container" style="margin: 0;">
             <h5>Other</h5>
             <fieldset>
               <p class="upload-label">e.g. Venue Capacity (pax or Person), Venue Type (ballroom, exhibition), Venue Full Address (City, ZIP Code) or other information that your client have to know.</p>
@@ -345,105 +393,96 @@
 <script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
 <script src="<?= base_url('/js/script.js') ?>"></script>
 <script>
+
 const general = document.querySelector(".form-general");
 const details = document.querySelector(".form-details");
 const additional = document.querySelector(".form-additional");
 const checkout = document.querySelector(".form-checkout");
 
+const general1 = document.querySelector(".general1");
+const details1 = document.querySelector(".details1");
+const additional1 = document.querySelector(".additional1");
+const checkout1 = document.querySelector(".checkout1");
+
+const general2 = document.querySelector(".general2");
+const details2 = document.querySelector(".details2");
+const additional2 = document.querySelector(".additional2");
+const checkout2 = document.querySelector(".checkout2");
+
 function overlayGeneral() {
   console.log("berhasil masuk overlayGeneral");
+
+  general1.style.display = "none";
+  details1.style.display = "block";
+  additional1.style.display = "block";
+  checkout1.style.display = "block";
+
+  general2.style.display = "block";
+  details2.style.display = "none";
+  additional2.style.display = "none";
+  checkout2.style.display = "none";
+
   general.style.display = "block";
   details.style.display = "none";
   additional.style.display = "none";
   checkout.style.display = "none";
-  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#0f3460"
-  document.getElementById("back-number-change-general").style.backgroundColor = "#fff"
-  document.getElementById("number-change-general").style.color = "#0f3460";
-  document.getElementById("title-change-general").style.color = "#fff";
-  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-details").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-additional").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-additional").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-additional").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-checkout").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-checkout").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-checkout").style.color = "rgb(143, 143, 143)";
 }
 
 function overlayDetails() {
   console.log("berhasil masuk overlayDetails");
+
+  general1.style.display = "block";
+  details1.style.display = "none";
+  additional1.style.display = "block";
+  checkout1.style.display = "block";
+
+  general2.style.display = "none";
+  details2.style.display = "block";
+  additional2.style.display = "none";
+  checkout2.style.display = "none";
+
   general.style.display = "none";
   details.style.display = "block";
   additional.style.display = "none";
   checkout.style.display = "none";
-  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#0f3460"
-  document.getElementById("back-number-change-details").style.backgroundColor = "#fff"
-  document.getElementById("number-change-details").style.color = "#0f3460";
-  document.getElementById("title-change-details").style.color = "#fff";
-  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-general").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-additional").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-additional").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-additional").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-checkout").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-checkout").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-checkout").style.color = "rgb(143, 143, 143)";
 }
 
 function overlayAdditional() {
   console.log("berhasil masuk overlayAdditional");
+
+  general1.style.display = "block";
+  details1.style.display = "block";
+  additional1.style.display = "none";
+  checkout1.style.display = "block";
+
+  general2.style.display = "none";
+  details2.style.display = "none";
+  additional2.style.display = "block";
+  checkout2.style.display = "none";
+
   general.style.display = "none";
   details.style.display = "none";
   additional.style.display = "block";
   checkout.style.display = "none";
-  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#0f3460"
-  document.getElementById("back-number-change-additional").style.backgroundColor = "#fff"
-  document.getElementById("number-change-additional").style.color = "#0f3460";
-  document.getElementById("title-change-additional").style.color = "#fff";
-  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-general").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-details").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-checkout").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-checkout").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-checkout").style.color = "rgb(143, 143, 143)";
 }
 
 function overlayCheckout() {
   console.log("berhasil masuk overlayCheckout");
+
+  general1.style.display = "block";
+  details1.style.display = "block";
+  additional1.style.display = "block";
+  checkout1.style.display = "none";
+
+  general2.style.display = "none";
+  details2.style.display = "none";
+  additional2.style.display = "none";
+  checkout2.style.display = "block";
+
   general.style.display = "none";
   details.style.display = "none";
   additional.style.display = "none";
   checkout.style.display = "block";
-  document.getElementById("tahapan-checkout-aktif").style.backgroundColor = "#0f3460"
-  document.getElementById("back-number-change-checkout").style.backgroundColor = "#fff"
-  document.getElementById("number-change-checkout").style.color = "#0f3460";
-  document.getElementById("title-change-checkout").style.color = "#fff";
-  document.getElementById("tahapan-general-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-general").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-general").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-details-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-details").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-details").style.color = "rgb(143, 143, 143)";
-  document.getElementById("tahapan-additional-aktif").style.backgroundColor = "#fff"
-  document.getElementById("back-number-change-additional").style.backgroundColor = "#ddd"
-  document.getElementById("number-change-additional").style.color = "rgb(143, 143, 143)";
-  document.getElementById("title-change-additional").style.color = "rgb(143, 143, 143)";
 }
 
 $(document).ready(function () {
