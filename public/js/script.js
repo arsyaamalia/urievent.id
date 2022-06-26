@@ -221,9 +221,9 @@ $(document).ready(function () {
 
 //selecting all required elements
 const dropArea = document.querySelector(".drag-area"),
-dragText = dropArea.querySelector("header"),
-button = dropArea.querySelector("button"),
-input = dropArea.querySelector("input");
+  dragText = dropArea.querySelector("header"),
+  button = dropArea.querySelector("button"),
+  input = document.querySelector("#layanan-img");
 let file; //this is a global variable and we'll use it inside multiple functions
 
 button.onclick = (e) => {
@@ -289,21 +289,21 @@ function showFile() {
 //   subcategory.style.display = "block";
 // }
 
-const inputwa = document.getElementById('contact-input-wa');
-const inputig = document.getElementById('contact-input-ig');
+const inputwa = document.getElementById("contact-input-wa");
+const inputig = document.getElementById("contact-input-ig");
 
-checkBox = document.getElementById('whatsapp-check').addEventListener('click', event => {
-	if(event.target.checked) {
-		inputwa.style.display = "block";
-	}else{
+checkBox = document.getElementById("whatsapp-check").addEventListener("click", (event) => {
+  if (event.target.checked) {
+    inputwa.style.display = "block";
+  } else {
     inputwa.style.display = "none";
   }
 });
 
-checkBox2 = document.getElementById('instagram-check').addEventListener('click', event => {
-	if(event.target.checked) {
-		inputig.style.display = "block";
-	}else{
+checkBox2 = document.getElementById("instagram-check").addEventListener("click", (event) => {
+  if (event.target.checked) {
+    inputig.style.display = "block";
+  } else {
     inputig.style.display = "none";
   }
 });
@@ -339,7 +339,7 @@ function overlayActive() {
 
   const draft2 = document.querySelector(".draft2");
   const active2 = document.querySelector(".active2");
-  
+
   console.log("berhasil masuk buttonActive");
   draft1.style.display = "block";
   active1.style.display = "none";
