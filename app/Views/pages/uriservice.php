@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div class="menu-active">
+        <div class="menu-active" style="display: none;">
             <h2>Active</h2>
             <div class="active-box"> 
             <!-- active box ini dalemnya buat looping service item yg active -->

@@ -287,7 +287,9 @@ h5 {
 
 .recommendation-box,
 .recommendation-box-detail,
-.similar-box {
+.similar-box,
+.draft-box,
+.active-box {
   margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -308,7 +310,9 @@ h5 {
 
 .recom-hover,
 .search-hover,
-.similar-hover {
+.similar-hover,
+.draft-hover,
+.active-hover {
   transition: 0.2s;
   border-radius: 15px 15px 15px 0;
   width: 150px;
@@ -317,7 +321,9 @@ h5 {
 
 .hover:hover,
 .recom-hover:hover,
-.similar-hover:hover {
+.similar-hover:hover,
+.draft-hover:hover,
+.active-hover:hover {
   background-color: #0f3460;
 }
 
@@ -328,13 +334,17 @@ h5 {
 .categories-item,
 .recom-item,
 .similar-item,
-.search-item {
+.search-item,
+.draft-item,
+.active-item {
   transition: 0.4s;
 }
 
 .categories-item:hover,
 .recom-item:hover,
-.similar-item:hover {
+.similar-item:hover,
+.draft-item:hover,
+.active-item:hover {
   position: relative;
   margin-top: 6px;
   margin-left: 6px;
@@ -348,7 +358,9 @@ h5 {
 
 .recom-grup,
 .search-grup,
-.similar-grup {
+.similar-grup,
+.draft-grup,
+.active-grup {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -357,7 +369,9 @@ h5 {
 
 .recom-item,
 .search-item,
-.similar-item {
+.similar-item,
+.draft-item,
+.active-item {
   width: 150px;
   height: 220px;
   margin-bottom: 30px;

@@ -308,16 +308,16 @@ checkBox2 = document.getElementById('instagram-check').addEventListener('click',
   }
 });
 
-const draft = document.querySelector(".menu-draft");
-const active = document.querySelector(".menu-active");
-
-const draft1 = document.getElementById(".draft1");
-const active1 = document.querySelector(".active1");
-
-const draft2 = document.querySelector(".draft2");
-const active2 = document.querySelector(".active2");
-
 function overlayDraft() {
+  const draft = document.querySelector(".menu-draft");
+  const active = document.querySelector(".menu-active");
+
+  const draft1 = document.querySelector(".draft1");
+  const active1 = document.querySelector(".active1");
+
+  const draft2 = document.querySelector(".draft2");
+  const active2 = document.querySelector(".active2");
+
   console.log("berhasil masuk buttonDraft");
   draft1.style.display = "none";
   active1.style.display = "block";
@@ -331,6 +331,15 @@ function overlayDraft() {
 }
 
 function overlayActive() {
+  const draft = document.querySelector(".menu-draft");
+  const active = document.querySelector(".menu-active");
+
+  const draft1 = document.querySelector(".draft1");
+  const active1 = document.querySelector(".active1");
+
+  const draft2 = document.querySelector(".draft2");
+  const active2 = document.querySelector(".active2");
+  
   console.log("berhasil masuk buttonActive");
   draft1.style.display = "block";
   active1.style.display = "none";
