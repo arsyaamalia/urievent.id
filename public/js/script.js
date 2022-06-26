@@ -236,7 +236,8 @@ const dropArea = document.querySelector(".drag-area"),
   input = dropArea.querySelector("input");
 let file; //this is a global variable and we'll use it inside multiple functions
 
-button.onclick = () => {
+button.onclick = (e) => {
+  e.preventDefault();
   input.click(); //if user click on the button then the input also clicked
 };
 
