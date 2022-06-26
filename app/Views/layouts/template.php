@@ -119,7 +119,7 @@
             </a>
         </div>
         <div class="profil-hover-wrap">
-            <a href="/sign">
+            <a href="/signOut">
                 <div class="profile-hover-item">
                     <h3>Sign Out</h3>
                 </div>
