@@ -43,6 +43,14 @@ class produk_layananModel extends Model
         return $this->where(['id_kategori' => 'CAT002']);
     }
 
+    public function showDraft($id_user)
+    {
+        return $this->where(['id_user' => $id_user, 'status_layanan' => 'draft']);
+    }
+    public function showActive($id_user)
+    {
+        return $this->where(['id_user' => $id_user, 'status_layanan' => 'uploaded']);
+    }
 
     public function search($cari)
     {

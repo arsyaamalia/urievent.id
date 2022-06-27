@@ -6,20 +6,19 @@
 
 <div class="uriprofile-container">
 
-    <!-- <div class="profile-container">
+    <div class="profile-container">
         <div class="profile-photo">
-            <img src="/img/foto-arsya.jpg" class="photo-user">
+            <img src="/img/foto_user/<?= session()->get('foto_user'); ?>" class=" photo-user">
         </div>
         <div class="name-edit">
             <div class="profile-name">
-                ini nama user
-                <h1>Arsya Amalia Ristias</h1>
+                <h1><?= session()->get('nama_user'); ?></h1>
             </div>
             <div class="edit-button">
                 <button type="button">Edit Profile</button>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div class="service-container">
         <div class="service-slide">
@@ -39,51 +38,47 @@
                 <h2>Draft</h2>
                 <div class="draft-box">
                     <!-- draft box ini dalemnya buat looping service item yg draft -->
-                    <div class="draft-hover">
-                        <a href="/detail/detailpribadi">
-                            <div class="draft-item">
-                                <div class="draft-grup">
-                                    <div class="item-circle" style="overflow: hidden;">
-                                        <img src="/img/mu.png" style="object-fit: cover; width: auto; height: 100%;">
+                    <?php foreach ($daftar_produk_draft as $produkDraft) : ?>
+
+                        <div class="draft-hover">
+                            <!-- link to detail-pribadi -->
+                            <a href="/detail/detailpribadi">
+                                <div class="draft-item">
+                                    <div class="draft-grup">
+                                        <div class="item-circle" style="overflow: hidden;">
+                                            <img src="/img/picture_poster_layanan/<?= $produkDraft['picture_poster'] ?>" style="object-fit: cover; width: auto; height: 100%;">
+                                        </div>
+                                        <h4><?= $produkDraft['nama_instansi'] ?></h4>
                                     </div>
-                                    <h4>Company's Name</h4>
+                                    <h3><?= $produkDraft['harga_min'] ?></h3>
                                 </div>
-                                <h3>Rp25000</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="draft-hover">
-                        <a href="/detail/detailpribadi">
-                            <div class="draft-item">
-                                <div class="draft-grup">
-                                    <div class="item-circle" style="overflow: hidden;">
-                                        <img src="/img/mu.png" style="object-fit: cover; width: auto; height: 100%;">
-                                    </div>
-                                    <h4>Company's Name</h4>
-                                </div>
-                                <h3>Rp25000</h3>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+
                 </div>
             </div>
+
+
             <div class="menu-active" style="display: none;">
                 <h2>Active</h2>
                 <div class="active-box">
-                    <!-- active box ini dalemnya buat looping service item yg active -->
-                    <div class="active-hover">
-                        <a href="/detail/detailpribadi">
-                            <div class="active-item">
-                                <div class="active-grup">
-                                    <div class="item-circle" style="overflow: hidden;">
-                                        <img src="/img/logomagangupdate.png" style="object-fit: cover; width: auto; height: 100%;">
+                    <?php foreach ($daftar_produk_active as $produkActive) : ?>
+                        <div class="draft-hover">
+                            <a href="/detail/detailpribadi">
+                                <div class="draft-item">
+                                    <div class="draft-grup">
+                                        <div class="item-circle" style="overflow: hidden;">
+                                            <img src="/img/picture_poster_layanan/<?= $produkActive['picture_poster'] ?>" style="object-fit: cover; width: auto; height: 100%;">
+                                        </div>
+                                        <h4><?= $produkActive['nama_instansi'] ?></h4>
                                     </div>
-                                    <h4>Company's Name</h4>
+                                    <h3><?= $produkActive['harga_min'] ?></h3>
                                 </div>
-                                <h3>Rp25000</h3>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                    <!-- active box ini dalemnya buat looping service item yg active -->
                     <div class="active-hover">
                         <a href="/detail/detailpribadi">
                             <div class="active-item">

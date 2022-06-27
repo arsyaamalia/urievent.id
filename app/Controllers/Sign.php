@@ -30,6 +30,7 @@ class Sign extends BaseController
             if ($password == $pass) {
                 $ses_data = [
                     'id_user' => $data['id_user'],
+                    'nama_user' => $data['nama_user'],
                     'username_user' => $data['username_user'],
                     'email_user' => $data['email_user'],
                     'password_user' => $data['password_user'],
