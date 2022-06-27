@@ -96,7 +96,7 @@
             </a>
         </div>
         <div class="profil-hover-wrap">
-            <a href="/pages/uriservice">
+            <a href="/pages/service">
                 <div class="profile-hover-item">
                     <h3>UriService</h3>
                 </div>
@@ -120,7 +120,7 @@
             </a>
         </div>
         <div class="profil-hover-wrap">
-            <a href="/sign/signOut">
+            <a href="/signOut">
                 <div class="profile-hover-item">
                     <h3>Sign Out</h3>
                 </div>

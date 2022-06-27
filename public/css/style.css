@@ -2046,6 +2046,31 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+.profile-container{
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-photo img{
+  margin-right: 30px;
+  width: 120px;
+  border-radius: 100%;
+}
+
+.edit-button button{
+  background-color: #e94560;
+  border-radius: 15px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  border: none;
+  height: 42px;
+}
+
 hr.hr-service{
   border: none;
   background-color: #eee;
@@ -2054,8 +2079,8 @@ hr.hr-service{
 }
 
 .service-container {
+  margin: 40px auto;
   width: 70%;
-  margin: 35px auto;
 }
 
 .service-slide,

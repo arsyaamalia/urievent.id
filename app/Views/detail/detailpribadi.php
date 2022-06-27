@@ -4,9 +4,9 @@
 
 <div class="detail-pribadi-container">
     <div class="detail-pribadi-back"></div>
-    <div class="detail-pribadi-grup">
+        <div class="detail-pribadi-grup">
             <div class="detail-pribadi-box">
-                <h2><a href="#" onclick="overlayClose()">＜ Magang Update</a></h2>
+                <h2><a href="/pages/uriservice">＜ Magang Update</a></h2>
                 <div class="detail-item">
                     <div class="detail-picture">
                         <img src="/img/mu.png" class="img-logo" />
