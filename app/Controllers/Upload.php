@@ -116,9 +116,9 @@ class Upload extends BaseController
 
         $daftarPaket = $this->request->getVar('package');
         // array to string 
-        $step_before = join(',', $this->request->getVar('stepBefore'));
-        $step_after = join(',', $this->request->getVar('stepAfter'));
-        $value = join(',', $this->request->getVar('value'));
+        $step_before = join('__', $this->request->getVar('stepBefore'));
+        $step_after = join('__', $this->request->getVar('stepAfter'));
+        $value = join('__', $this->request->getVar('value'));
 
         $fileGambar = $this->request->getFile('layanan-img');
 
