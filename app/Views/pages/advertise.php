@@ -20,7 +20,7 @@
                     <input type="text" class="input2-form" placeholder="Nama Institusi">
                     <input type="text" class="input2-form" placeholder="Nama Institusi">
                 </div>
-                <button type="submit" class="advertise.button">Submit</button>
+                <button type="submit" class="button-red">Submit</button>
             </div>
         </form>
 

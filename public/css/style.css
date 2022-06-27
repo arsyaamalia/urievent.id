@@ -159,8 +159,6 @@ img#message {
 }
 
 .ads-box {
-  /* margin-top: 30px; */
-  position: absolute;
   width: 880px;
   display: flex;
   align-items: center;
@@ -2284,11 +2282,13 @@ button.button-red, button.button-grey{
   border: none;
   height: 36px;
   margin: 20px 0;
+  cursor: pointer;
 }
 
 button.button-grey{
   background-color: #f4f5f5;
-  color: #161625;
+  color: #0f3460;
+  cursor: pointer;
 }
 
 .edit-picture{
