@@ -2226,6 +2226,7 @@ hr.hr-service {
 .uriprofile-container {
   margin: 40px auto;
   width: 70%;
+  margin-top: 30px;
 }
 
 .edit-profile-field {

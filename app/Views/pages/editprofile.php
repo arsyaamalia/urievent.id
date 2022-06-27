@@ -5,6 +5,7 @@
 <hr class="hr-service">
 
 <div class="uriprofile-container">
+<h2>Edit Profile</h2>
 
 <div class="edit-profile-field">
       <div class="edit-profile-nav">
