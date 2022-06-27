@@ -167,4 +167,12 @@ class Pages extends BaseController
         ];
         return view('pages/uriservice', $dataPage);
     }
+
+    public function editprofile()
+    {
+        $dataPage = [
+            'title' => "UriEvent | Edit Profile"
+        ];
+        return view('pages/editprofile', $dataPage);
+    }
 }
