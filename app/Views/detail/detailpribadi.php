@@ -58,7 +58,7 @@
                         <div class="detail-action">
                             <div class="action-button">
                                 <div class="edit-box">
-                                    <a href="#">
+                                    <a href="/editlayanan/index">
                                         <div class="edit-service">
                                             <p>Edit</p>
                                         </div>

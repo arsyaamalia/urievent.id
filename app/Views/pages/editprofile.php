@@ -99,7 +99,8 @@
       </div>
       <div class="upload-form">
         <div class="form-gene">
-          general
+          <div class="h3">Email</div>
+          
         </div>
         <div class="form-edit-profile">
           edit
