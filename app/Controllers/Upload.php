@@ -102,6 +102,14 @@ class Upload extends BaseController
 
     public function save()
     {
+        // $button_save = $this->input->post('button_save');
+        $button_save = $this->request->getVar('button_save');
+        if ($button_save == 'save_draft') {
+            $status_layanan = 'draft';
+        } else if ($button_save == 'save') {
+            $status_layanan = 'draft';
+        };
+
         $dataProduk = $this->request->getVar();
         $dataProduk;
         $id_layanan = $this->generateIDLayanan();
@@ -111,7 +119,6 @@ class Upload extends BaseController
         $step_before = join(',', $this->request->getVar('stepBefore'));
         $step_after = join(',', $this->request->getVar('stepAfter'));
         $value = join(',', $this->request->getVar('value'));
-
 
         $fileGambar = $this->request->getFile('layanan-img');
 
@@ -130,7 +137,7 @@ class Upload extends BaseController
             'step_after' => $step_after,
             'other' => $this->request->getVar('other-input'),
             'value' => $value,
-            'status_layanan' => 'uploaded'
+            'status_layanan' => $status_layanan
         ];
 
         $this->produk_layanan->save($dataProduk);
@@ -146,6 +153,58 @@ class Upload extends BaseController
 
             $this->paket_layanan->save($dataPaket);
         }
-        return redirect()->to('/pages');
+
+        return redirect()->to('/pages/uriservice');
     }
+
+
+    // public function saveDraft()
+    // {
+    //     $dataProduk = $this->request->getVar();
+    //     $dataProduk;
+    //     $id_layanan = $this->generateIDLayanan();
+
+    //     $daftarPaket = $this->request->getVar('package');
+    //     // array to string 
+    //     $step_before = join(',', $this->request->getVar('stepBefore'));
+    //     $step_after = join(',', $this->request->getVar('stepAfter'));
+    //     $value = join(',', $this->request->getVar('value'));
+
+
+    //     $fileGambar = $this->request->getFile('layanan-img');
+
+    //     $dataProduk = [
+    //         'id_layanan' => $id_layanan,
+    //         'id_kategori' => $this->request->getVar('category'),
+    //         'id_subkategori' => $this->request->getVar('subcategory'),
+    //         'id_user' => 'u002',
+    //         'nama_instansi' => $this->request->getVar('company-name'),
+    //         'email_instansi' => $this->request->getVar('company-email'),
+    //         'whatsapp' => $this->request->getVar('whatsapp-input'),
+    //         'instagram' => $this->request->getVar('instagram-input'),
+    //         'picture_poster' => $this->getImageLayanan($fileGambar),
+    //         'deskripsi' => $this->request->getVar('desc-input'),
+    //         'step_before' => $step_before,
+    //         'step_after' => $step_after,
+    //         'other' => $this->request->getVar('other-input'),
+    //         'value' => $value,
+    //         'status_layanan' => 'draft'
+    //     ];
+
+    //     $this->produk_layanan->save($dataProduk);
+    //     foreach ($daftarPaket as $paket) {
+    //         $id_paket = $this->generateIDPaket();
+    //         $dataPaket = [
+    //             'id_paket' => $id_paket,
+    //             'id_layanan' => $id_layanan,
+    //             'nama_paket' => $paket['name'],
+    //             'deskripsi_paket' => $paket['desc'],
+    //             'harga_paket' => $paket['prize']
+    //         ];
+
+    //         $this->paket_layanan->save($dataPaket);
+    //     }
+    //     dd($dataProduk);
+    //     return redirect()->to('/pages/uriservice');
+    // }
 }

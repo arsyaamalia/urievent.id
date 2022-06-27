@@ -43,8 +43,11 @@ class Pages extends BaseController
     public function index()
     {
         $session = session();
+        // $dataProduk = $this->produk_layanan->showUploaded();
+        // dd($dataProduk);
         $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
+
 
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
 
