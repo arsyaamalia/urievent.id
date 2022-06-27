@@ -40,15 +40,18 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="seeall-button">
-                <a href="see-more-recom">
-                    <div class="see-all">
-                        <h4>See More</h4>
-                    </div>
-                </a>
-            </div>
+
+            <?= $pager->links('daftar_produk', 'urievent_pagination'); ?>
+            <!-- <div>
+                <div class="seeall-button">
+                    <a href="see-more-recom">
+                        <div class="see-all">
+                            <h4>See More</h4>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
         </div>
     </div>
-</div>
 
-<?= $this->endsection(); ?>
+    <?= $this->endsection(); ?>

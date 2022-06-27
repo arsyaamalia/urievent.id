@@ -1,7 +1,9 @@
 <?= $this->extend('layouts/template') ?>
 
-<?= $this->section('content'); ?>
 
+<?= $this->section('content'); ?>
+<hr style="color: grey;">
+<!-- 
 <div class="ads-container">
     <div class="ads-box">
         <div class="big-ads" id="ads">
@@ -16,7 +18,7 @@
         </div>
         <div class="small-ads" id="ads"></div>
     </div>
-</div>
+</div> -->
 
 <div class="batas-body">
     <div class="body-urievent">
@@ -92,13 +94,13 @@
             <div> <?= $pager->links('daftar_produk', 'urievent_pagination'); ?>
             </div>
 
-            <div class="seeall-button">
+            <!-- <div class="seeall-button">
                 <a href="see-more-recom">
                     <div class="see-all">
                         <h4>See More</h4>
                     </div>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

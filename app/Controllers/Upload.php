@@ -103,12 +103,12 @@ class Upload extends BaseController
     public function save()
     {
         // $button_save = $this->input->post('button_save');
-        $button_save = $this->request->getVar('button_save');
-        if ($button_save == 'save_draft') {
-            $status_layanan = 'draft';
-        } else if ($button_save == 'save') {
-            $status_layanan = 'draft';
-        };
+        // $button_save = $this->request->getVar('button_save');
+        // if ($button_save == 'save_draft') {
+        //     $status_layanan = 'draft';
+        // } else if ($button_save == 'save') {
+        //     $status_layanan = 'uploaded';
+        // };
 
         $dataProduk = $this->request->getVar();
         $dataProduk;
@@ -137,7 +137,7 @@ class Upload extends BaseController
             'step_after' => $step_after,
             'other' => $this->request->getVar('other-input'),
             'value' => $value,
-            'status_layanan' => $status_layanan
+            'status_layanan' => 'uploaded'
         ];
 
         $this->produk_layanan->save($dataProduk);
@@ -154,7 +154,7 @@ class Upload extends BaseController
             $this->paket_layanan->save($dataPaket);
         }
 
-        return redirect()->to('/pages/uriservice');
+        return redirect()->to('/pages');
     }
 
 

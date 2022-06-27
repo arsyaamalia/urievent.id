@@ -6,20 +6,20 @@
 
 <div class="uriprofile-container">
 
-<div class="profile-container">
+    <!-- <div class="profile-container">
         <div class="profile-photo">
             <img src="/img/foto-arsya.jpg" class="photo-user">
         </div>
         <div class="name-edit">
             <div class="profile-name">
-                <!-- ini nama user -->
+                ini nama user
                 <h1>Arsya Amalia Ristias</h1>
             </div>
             <div class="edit-button">
                 <button type="button">Edit Profile</button>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="service-container">
         <div class="service-slide">
@@ -37,14 +37,14 @@
         <div class="service-menu">
             <div class="menu-draft">
                 <h2>Draft</h2>
-                <div class="draft-box"> 
-                <!-- draft box ini dalemnya buat looping service item yg draft -->
+                <div class="draft-box">
+                    <!-- draft box ini dalemnya buat looping service item yg draft -->
                     <div class="draft-hover">
                         <a href="/detail/detailpribadi">
                             <div class="draft-item">
                                 <div class="draft-grup">
                                     <div class="item-circle" style="overflow: hidden;">
-                                        <img src="/img/mu.png"style="object-fit: cover; width: auto; height: 100%;">
+                                        <img src="/img/mu.png" style="object-fit: cover; width: auto; height: 100%;">
                                     </div>
                                     <h4>Company's Name</h4>
                                 </div>
@@ -57,7 +57,7 @@
                             <div class="draft-item">
                                 <div class="draft-grup">
                                     <div class="item-circle" style="overflow: hidden;">
-                                        <img src="/img/mu.png"style="object-fit: cover; width: auto; height: 100%;">
+                                        <img src="/img/mu.png" style="object-fit: cover; width: auto; height: 100%;">
                                     </div>
                                     <h4>Company's Name</h4>
                                 </div>
@@ -69,14 +69,14 @@
             </div>
             <div class="menu-active" style="display: none;">
                 <h2>Active</h2>
-                <div class="active-box"> 
-                <!-- active box ini dalemnya buat looping service item yg active -->
+                <div class="active-box">
+                    <!-- active box ini dalemnya buat looping service item yg active -->
                     <div class="active-hover">
                         <a href="/detail/detailpribadi">
                             <div class="active-item">
                                 <div class="active-grup">
                                     <div class="item-circle" style="overflow: hidden;">
-                                        <img src="/img/logomagangupdate.png"style="object-fit: cover; width: auto; height: 100%;">
+                                        <img src="/img/logomagangupdate.png" style="object-fit: cover; width: auto; height: 100%;">
                                     </div>
                                     <h4>Company's Name</h4>
                                 </div>
@@ -89,7 +89,7 @@
                             <div class="active-item">
                                 <div class="active-grup">
                                     <div class="item-circle" style="overflow: hidden;">
-                                        <img src="/img/logomagangupdate.png"style="object-fit: cover; width: auto; height: 100%;">
+                                        <img src="/img/logomagangupdate.png" style="object-fit: cover; width: auto; height: 100%;">
                                     </div>
                                     <h4>Company's Name</h4>
                                 </div>

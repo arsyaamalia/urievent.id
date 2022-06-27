@@ -25,14 +25,24 @@ class produk_layananModel extends Model
 
     public function showUploaded()
     {
-        $result = $this->where(['status_layanan' => 'uploaded'])->findAll();
-        return $result;
+        return $this->where(['status_layanan' => 'uploaded']);
     }
 
     public function getSimiliar($id_kategori)
     {
         return $this->where(['id_kategori' => $id_kategori])->findAll();
     }
+
+    public function showMedpart()
+    {
+        return $this->where(['id_kategori' => 'CAT001']);
+    }
+
+    public function showSponsor()
+    {
+        return $this->where(['id_kategori' => 'CAT002']);
+    }
+
 
     public function search($cari)
     {

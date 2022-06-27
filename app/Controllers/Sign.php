@@ -28,12 +28,6 @@ class Sign extends BaseController
 
         if ($data) {
             $pass = $data['password_user'];
-            // $authenticatePassword = password_verify($password, $pass);
-            // dd($password, $pass);
-            // dd($authenticatePassword);
-
-
-
             if ($password == $pass) {
                 $ses_data = [
                     'id_user' => $data['id_user'],
@@ -56,7 +50,6 @@ class Sign extends BaseController
 
     public function signUp()
     {
-
         $dataPage = [
             'title' => "Urievent | Sign Up",
             'tes' => ['satu', 'dua', 'tiga']
@@ -67,18 +60,15 @@ class Sign extends BaseController
     //validasi sign up
     public function save()
     {
-
-        $session = session();
+        // $session = session();
         $userModel = new UserModel();
         $new_username = $this->request->getVar('username');
 
 
         //cek username unik
         $data = $userModel->where('username_user', $new_username)->first();
-
         if (!$data) {
             // aman
-
             $temp = $this->UserModel->orderBy('id_user', 'desc')->first();
             // dd($temp);
             $id_user_str = explode('u', $temp['id_user']);
@@ -131,6 +121,6 @@ class Sign extends BaseController
     public function signOut()
     {
         session()->destroy();
-        return redirect()->to('/sign');
+        return redirect()->to('/');
     }
 }

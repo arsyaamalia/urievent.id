@@ -43,9 +43,9 @@ class Pages extends BaseController
     public function index()
     {
         $session = session();
-        // $dataProduk = $this->produk_layanan->showUploaded();
+        $dataProduk = $this->produk_layanan->showUploaded()->paginate(15, 'daftar_produk');
         // dd($dataProduk);
-        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        // $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
 
 
@@ -133,7 +133,9 @@ class Pages extends BaseController
 
     public function sponsorship()
     {
-        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataProduk = $this->produk_layanan->showSponsor()->paginate(15, 'daftar_produk');
+
+        // $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
 
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
@@ -149,7 +151,7 @@ class Pages extends BaseController
 
     public function medpart()
     {
-        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataProduk = $this->produk_layanan->showMedpart()->paginate(15, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
 
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
