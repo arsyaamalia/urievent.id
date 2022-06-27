@@ -287,11 +287,13 @@ h5 {
 
 .recommendation-box,
 .recommendation-box-detail,
-.similar-box {
+.similar-box,
+.draft-box,
+.active-box {
   margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
 }
 
 .search-box {
@@ -308,7 +310,9 @@ h5 {
 
 .recom-hover,
 .search-hover,
-.similar-hover {
+.similar-hover,
+.draft-hover,
+.active-hover {
   transition: 0.2s;
   border-radius: 15px 15px 15px 0;
   width: 150px;
@@ -317,7 +321,9 @@ h5 {
 
 .hover:hover,
 .recom-hover:hover,
-.similar-hover:hover {
+.similar-hover:hover,
+.draft-hover:hover,
+.active-hover:hover {
   background-color: #0f3460;
 }
 
@@ -328,13 +334,17 @@ h5 {
 .categories-item,
 .recom-item,
 .similar-item,
-.search-item {
+.search-item,
+.draft-item,
+.active-item {
   transition: 0.4s;
 }
 
 .categories-item:hover,
 .recom-item:hover,
-.similar-item:hover {
+.similar-item:hover,
+.draft-item:hover,
+.active-item:hover {
   position: relative;
   margin-top: 6px;
   margin-left: 6px;
@@ -348,7 +358,9 @@ h5 {
 
 .recom-grup,
 .search-grup,
-.similar-grup {
+.similar-grup,
+.draft-grup,
+.active-grup {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -357,7 +369,9 @@ h5 {
 
 .recom-item,
 .search-item,
-.similar-item {
+.similar-item,
+.draft-item,
+.active-item {
   width: 150px;
   height: 220px;
   margin-bottom: 30px;
@@ -1139,7 +1153,7 @@ img.img-logo {
   height: 25px;
 }
 
-.choose-package {
+.choose-package, .edit-service, .delete-service {
   height: 42px;
   border-radius: 15px;
   background-color: #e94560;
@@ -1147,9 +1161,10 @@ img.img-logo {
   color: #fff;
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
-.choose-package p {
+.choose-package p, .edit-service p, .delete-service p {
   font-size: 14px;
   font-weight: 500;
 }
@@ -1899,14 +1914,9 @@ input.add-input,
 
 .jenis-input,
 .company-name-input,
-.contact-check,
 .location-input input,
 .package-category-container input {
   margin-bottom: 10px;
-}
-
-#contact-input-ig {
-  margin-top: 10px;
 }
 
 .jenis-input,
@@ -1928,6 +1938,11 @@ input.add-input,
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
+}
+
+.contact-input {
+  display: none;
+  margin-top: 10px;
 }
 
 .whatsapp-box,
@@ -2029,4 +2044,128 @@ input.add {
 
 input[type="checkbox"] {
   cursor: pointer;
+}
+
+.profile-container{
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-photo img{
+  margin-right: 30px;
+  width: 120px;
+  border-radius: 100%;
+}
+
+.edit-button button{
+  background-color: #e94560;
+  border-radius: 15px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  border: none;
+  height: 42px;
+}
+
+hr.hr-service{
+  border: none;
+  background-color: #eee;
+  width: 100%;
+  height: 2px;
+}
+
+.service-container {
+  margin: 40px auto;
+  width: 70%;
+}
+
+.service-slide,
+.service-menu {
+  width: 100%;
+}
+
+.service-slide{
+  margin-bottom: 30px;
+}
+
+.slide-background {
+  background-color: #f4f5f5;
+  width: 100%;
+  padding: 6px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+}
+
+.slide-draft, .slide-active{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-draft button.draft1,
+.slide-draft button.draft2,
+.slide-active button.active1,
+.slide-active button.active2 {
+  height: 42px;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.slide-draft button.draft1,
+.slide-active button.active1{
+  background-color: #f4f5f5;
+  font-weight: 600;
+  color: rgb(143, 143, 143);
+  cursor: pointer;
+}
+
+.slide-draft button.draft2,
+.slide-active button.active2 {
+  background-color: #0f3460;
+  font-weight: 500;
+  color: #fff;
+}
+
+.slide-draft button.draft1:hover,
+.slide-active button.active1:hover{
+  background-color: #ddd;
+}
+
+.detail-pribadi-back{
+  height: 227.5px;
+  background-color: #f4f5f5;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  margin-top: -40px;
+}
+
+.detail-pribadi-grup{
+  width: 70%;
+  margin: 40px auto;
+}
+
+.detail-pribadi-box {
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgb(22, 22, 37, 0.15);
+  border-radius: 15px;
+  padding: 35px 50px 45px;
+  margin-bottom: 40px;
+}
+
+.action-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

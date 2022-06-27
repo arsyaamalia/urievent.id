@@ -72,7 +72,7 @@
     </header>
     <div class="profile-hover" id="buathover" onmouseover="mouseOver()" onmouseout="mouseOut()">
         <div class="profil-hover-wrap">
-            <a href="/pages/edit-profile">
+            <a href="/pages/editprofile">
                 <div class="profile-hover-item">
                     <h3>Edit Profile</h3>
                 </div>
@@ -96,7 +96,7 @@
             </a>
         </div>
         <div class="profil-hover-wrap">
-            <a href="/pages/service">
+            <a href="/pages/uriservice">
                 <div class="profile-hover-item">
                     <h3>UriService</h3>
                 </div>
@@ -120,7 +120,11 @@
             </a>
         </div>
         <div class="profil-hover-wrap">
+<<<<<<< HEAD
             <a href="/signOut">
+=======
+            <a href="/sign/signOut">
+>>>>>>> f9834c04062287cfaacc32ef3fe59e968f62e164
                 <div class="profile-hover-item">
                     <h3>Sign Out</h3>
                 </div>

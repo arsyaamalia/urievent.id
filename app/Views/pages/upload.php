@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<form action="/upload/save">
+<form action="/upload/save" method="POST" enctype="multipart/form-data">
   <div class="upload-box"></div>
   <div class="upload-container">
     <div class="review-container">
@@ -154,7 +154,7 @@
           <div class="basic-container">
             <h5>Basic Information</h5>
             <fieldset>
-              <p class="upload-label">Instruction: Standard image dimension is multiplication of 5x5 with maximum image size 3 MB. Supports JPEG, JPG, and PNG. Please attach your company's LOGO down here.</p>
+              <p class="upload-label" style="text-align: justify;">Instruction: Standard image dimension is multiplication of 5x5 with maximum image size 3 MB. Supports JPEG, JPG, and PNG. Please attach your company's LOGO down here.</p>
               <br>
               <div class="basic-box">
                 <div class="picture-input">
@@ -165,14 +165,15 @@
                     <header>Drag and drop an image</header>
                     <span>or</span>
                     <button>Browse</button>
-                    <input type="file" hidden>
                   </div>
+                  <input type="file" hidden id="layanan-img" name="layanan-img">
+
                 </div>
                 <div class="basic-right-input">
                   <div class="jenis-input">
                     <div class="category-input">
                       <label for="category" class="upload-label">Category</label>
-                      <select class="category" id="category" name="category" required tabindex="1">
+                      <select style="cursor: pointer;" class="category" id="category" name="category" required tabindex="1">
                         <option selected disabled>Select one</option>
                         <?php foreach ($dataKategori as $kategori) : ?>
                           <!-- foreach tabel kategori as kategori -->
@@ -180,9 +181,9 @@
                         <?php endforeach; ?>
                       </select>
                     </div>
-                    <div class="subcategory-input" style="display: none;">
+                    <div class="subcategory-input">
                       <label for="subcategory" class="upload-label">Subcategory</label>
-                      <select id="subcategory" name="subcategory" required tabindex="2">
+                      <select style="cursor: pointer;" id="subcategory" name="subcategory" required tabindex="2">
                         <option selected disabled>Select one</option>
                       </select>
                     </div>
@@ -213,7 +214,7 @@
             <fieldset>
               <p class="upload-label">Choose at least one of additional contact detail below</p>
               <div class="bungkus">
-                <div class="contact-check">
+                <div class="contact-check" style="margin: 0;">
                   <div class="whatsapp-box">
                     <div class="grup-icon-label">
                       <img src="../icon/whatsapp.png" class="contact-check-img">
@@ -229,11 +230,11 @@
                     <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
                   </div>
                 </div>
-                <div class="contact-input">
+                <div class="contact-input" id="contact-input-wa">
                   <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
                   <label data-number="+62">
                     <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
-                  <label>
+                    <label>
                 </div>
                 <div class="contact-input" id="contact-input-ig">
                   <label for="instagram-input" class="upload-label">Instagram Username</label>
@@ -247,7 +248,7 @@
           <div class="desc-container">
             <h5>Company Details</h5>
             <fieldset>
-              <p class="upload-label">
+              <p class="upload-label" style="text-align: justify;">
                 Describe your company here (e.g. field, type, amount of employee, company purposes, anything to attract more clients)
               </p>
               <div class="desc-input">
@@ -272,15 +273,15 @@
             <fieldset>
               <p class="upload-label">Give information about what to prepare prior to your service checkout</p>
               <div class="check-item">
-                <input type="checkbox" id="step1before-check" name="step1before-check" value="Upload poster event yang sudah berlogo company kami">
+                <input type="checkbox" id="step1before-check" name="stepBefore[]" value="Upload poster event yang sudah berlogo company kami">
                 <label for="step1before-check" class="upload-label-thin">Upload poster event yang sudah berlogo company kami</label>
               </div>
               <div class="check-item">
-                <input type="checkbox" id="step2before-check" name="step2before-check" value="Isi caption atau tambahan lainnya untuk keperluan upload">
+                <input type="checkbox" id="step2before-check" name="stepBefore[]" value="Isi caption atau tambahan lainnya untuk keperluan upload">
                 <label for="step2before-check" class="upload-label-thin">Isi caption atau tambahan lainnya untuk keperluan upload</label>
               </div>
               <div class="check-item">
-                <input type="checkbox" id="step3before-check" name="step3before-check" value="Kirim bukti transfer">
+                <input type="checkbox" id="step3before-check" name="stepBefore[]" value="Kirim bukti transfer">
                 <label for="step3before-check" class="upload-label-thin">Kirim bukti transfer</label>
               </div>
               <div id="newRow"></div>
@@ -294,15 +295,15 @@
             <fieldset>
               <p class="upload-label">What should your clients do after checkout?</p>
               <div class="check-item">
-                <input type="checkbox" id="step1after-check" name="step1after-check" value="Join WhatsApp group">
+                <input type="checkbox" id="step1after-check" name="stepAfter[]" value="Join WhatsApp group">
                 <label for="step1after-check" class="upload-label-thin">Join WhatsApp group</label>
               </div>
               <div class="check-item">
-                <input type="checkbox" id="step2after-check" name="step2after-check" value="Pilih jadwal upload poster saat mengisi formulir">
+                <input type="checkbox" id="step2after-check" name="stepAfter[]" value="Pilih jadwal upload poster saat mengisi formulir">
                 <label for="step2after-check" class="upload-label-thin">Pilih jadwal upload poster saat mengisi formulir</label>
               </div>
               <div class="check-item">
-                <input type="checkbox" id="step3after-check" name="step3after-check" value="Wait your poster uploaded">
+                <input type="checkbox" id="step3after-check" name="stepAfter[]" value="Wait your poster uploaded">
                 <label for="step3after-check" class="upload-label-thin">Wait your poster uploaded</label>
               </div>
               <div id="newRowAfter"></div>
@@ -317,15 +318,15 @@
             <fieldset>
               <p class="upload-label">What is your company’s values to make client use your service?</p>
               <div class="check-item">
-                <input type="checkbox" id="value1-check" name="value1-check" value="Original followers">
+                <input type="checkbox" id="value1-check" name="value[]" value="Original followers">
                 <label for="value1-check" class="upload-label-thin">Original followers</label>
               </div>
               <div class="check-item">
-                <input type="checkbox" id="value2-check" name="value2-check" value="32.000++ active accounts">
+                <input type="checkbox" id="value2-check" name="value[]" value="32.000++ active accounts">
                 <label for="value2-check" class="upload-label-thin">32.000++ active accounts</label>
               </div>
               <div class="check-item">
-                <input type="checkbox" id="value3-check" name="value3-check" value="Have been a trusted media partner for 5 years">
+                <input type="checkbox" id="value3-check" name="value[]" value="Have been a trusted media partner for 5 years">
                 <label for="value3-check" class="upload-label-thin">Have been a trusted media partner for 5 years</label>
               </div>
               <div id="newRowValue"></div>
@@ -338,7 +339,7 @@
           <div class="other-container" style="margin: 0;">
             <h5>Other</h5>
             <fieldset>
-              <p class="upload-label">e.g. Venue Capacity (pax or Person), Venue Type (ballroom, exhibition), Venue Full Address (City, ZIP Code) or other information that your client have to know.</p>
+              <p class="upload-label" style="text-align: justify;">e.g. Venue Capacity (pax or Person), Venue Type (ballroom, exhibition), Venue Full Address (City, ZIP Code) or other information that your client have to know.</p>
               <label for="other-input" class="upload-label">Additional Description</label>
               <textarea name="other-input" id="other-input" cols="30" rows="6" placeholder="Insert your additional description here"></textarea>
             </fieldset>
@@ -348,13 +349,13 @@
           <div class="package-category-container">
             <h5>Package Category</h5>
             <fieldset>
-              <p class="upload-label">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
+              <p class="upload-label" style="text-align: justify;">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
               <label for="package-name" class="upload-label">Package Category Name</label>
-              <input type="text" name="package-name" id="package-name" placeholder="Input package category name here (ex: Bronze, Silver, Gold)" required />
+              <input type="text" name="package[0][name]" id="package-name" placeholder="Input package category name here (ex: Bronze, Silver, Gold)" required />
               <label for="package-desc" class="upload-label">Package Category Description</label>
-              <textarea name="package-desc" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea>
+              <textarea name="package[0][desc]" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea>
               <label for="package-prize" class="upload-label">Package Prize (Rp)</label>
-              <input type="number" name="package-prize" id="package-prize" placeholder="25000" required>
+              <input type="number" name="package[0][prize]" id=" package-prize" placeholder="25000" required>
               <div id="newRowPackage"></div>
               <button id="addRowPackage" type="button" class="btn-info">+ ADD PACKAGE CATEGORY</button>
             </fieldset>
@@ -365,7 +366,7 @@
           <div class="checkout-form-container">
             <h5>Checkout Form</h5>
             <div class="fieldset-form">
-              <p class="upload-label">Your clients are required to give Name, Email and Phone Number. You can ask customized questions for general in this part</p>
+              <p class="upload-label" style="text-align: justify;">Your clients are required to give Name, Email and Phone Number. You can ask customized questions for general in this part</p>
               <fieldset id="buildyourform"></fieldset>
               <div class="checkout-form-button">
                 <input type="button" value="Preview form" class="add" id="preview" />
@@ -386,44 +387,26 @@
 <script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
 <script src="<?= base_url('/js/script.js') ?>"></script>
 <script>
-
-  function showFile() {
-    let fileType = file.type; //getting selected file type
-    let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
-    if (validExtensions.includes(fileType)) {
-      //if user selected file is an image file
-      let fileReader = new FileReader(); //creating new FileReader object
-      fileReader.onload = () => {
-        let fileURL = fileReader.result; //passing user file source in fileURL variable
-        // UNCOMMENT THIS BELOW LINE. I GOT AN ERROR WHILE UPLOADING THIS POST SO I COMMENTED IT
-        let imgTag = `<img src="${fileURL}" alt="image" style="border-radius: 100%">`; //creating an img tag and passing user selected file source inside src attribute
-        dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
-      };
-      fileReader.readAsDataURL(file);
-    } else {
-      alert("This is not an Image File!");
-      dropArea.classList.remove("active");
-      dragText.textContent = "Drag and drop an image";
-    }
-  }
-
   $(document).ready(function() {
     $('#category').change(function() {
       var id_kategori = $(this).val();
       // console.log(id_kategori)
       $.ajax({
-        type: "get",
+        type: "post",
         url: "<?= base_url('upload/getDataSubKategori') ?>/" + id_kategori,
         dataType: "JSON",
         success: function(response) {
+          $('#subcategory').empty()
+          $('#subcategory').append('<option selected disabled>Select one</option>');
+
           $.each(response, function(i, item) {
             $('#subcategory').append($('<option>', {
               value: item.id_subkategori,
               text: item.nama_subkategori
             }));
+            console.log(response);
           });
         }
-
       })
       // end ajax
     });

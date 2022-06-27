@@ -221,9 +221,9 @@ $(document).ready(function () {
 
 //selecting all required elements
 const dropArea = document.querySelector(".drag-area"),
-dragText = dropArea.querySelector("header"),
-button = dropArea.querySelector("button"),
-input = dropArea.querySelector("input");
+  dragText = dropArea.querySelector("header"),
+  button = dropArea.querySelector("button"),
+  input = document.querySelector("#layanan-img");
 let file; //this is a global variable and we'll use it inside multiple functions
 
 button.onclick = (e) => {
@@ -268,7 +268,7 @@ function showFile() {
     fileReader.onload = () => {
       let fileURL = fileReader.result; //passing user file source in fileURL variable
       // UNCOMMENT THIS BELOW LINE. I GOT AN ERROR WHILE UPLOADING THIS POST SO I COMMENTED IT
-      let imgTag = `<img src="${fileURL}" alt="image">`; //creating an img tag and passing user selected file source inside src attribute
+      let imgTag = `<img src="${fileURL}" alt="image" style="border-radius: 100%">`; //creating an img tag and passing user selected file source inside src attribute
       dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
     };
     fileReader.readAsDataURL(file);
@@ -281,11 +281,73 @@ function showFile() {
 
 // const subcategory = document.querySelector(".subcategory");
 
-// function callSubcategory() {
-//   if(document.getElementById("category").value = "Media Partner"){
-//     subcategory.style.display = "block";
-//   }
-//   else{
-//     subcategory.style.display = "none";
-//   }
+// if(document.getElementById("category").value = "coba"){
+//   console.log("coba ini");
+//   subcategory.style.display = "none";
 // }
+// else{
+//   subcategory.style.display = "block";
+// }
+
+const inputwa = document.getElementById("contact-input-wa");
+const inputig = document.getElementById("contact-input-ig");
+
+checkBox = document.getElementById("whatsapp-check").addEventListener("click", (event) => {
+  if (event.target.checked) {
+    inputwa.style.display = "block";
+  } else {
+    inputwa.style.display = "none";
+  }
+});
+
+checkBox2 = document.getElementById("instagram-check").addEventListener("click", (event) => {
+  if (event.target.checked) {
+    inputig.style.display = "block";
+  } else {
+    inputig.style.display = "none";
+  }
+});
+
+function overlayDraft() {
+  const draft = document.querySelector(".menu-draft");
+  const active = document.querySelector(".menu-active");
+
+  const draft1 = document.querySelector(".draft1");
+  const active1 = document.querySelector(".active1");
+
+  const draft2 = document.querySelector(".draft2");
+  const active2 = document.querySelector(".active2");
+
+  console.log("berhasil masuk buttonDraft");
+  draft1.style.display = "none";
+  active1.style.display = "block";
+
+  draft2.style.display = "block";
+  active2.style.display = "none";
+
+  console.log("berhasil masuk overlayDraft");
+  draft.style.display = "block";
+  active.style.display = "none";
+}
+
+function overlayActive() {
+  const draft = document.querySelector(".menu-draft");
+  const active = document.querySelector(".menu-active");
+
+  const draft1 = document.querySelector(".draft1");
+  const active1 = document.querySelector(".active1");
+
+  const draft2 = document.querySelector(".draft2");
+  const active2 = document.querySelector(".active2");
+
+  console.log("berhasil masuk buttonActive");
+  draft1.style.display = "block";
+  active1.style.display = "none";
+
+  draft2.style.display = "none";
+  active2.style.display = "block";
+
+  console.log("berhasil masuk overlayActive");
+  draft.style.display = "none";
+  active.style.display = "block";
+}

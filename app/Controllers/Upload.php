@@ -102,6 +102,8 @@ class Upload extends BaseController
 
     public function save()
     {
+        $dataProduk = $this->request->getVar();
+        $dataProduk;
         $id_layanan = $this->generateIDLayanan();
 
         $daftarPaket = $this->request->getVar('package');
@@ -111,7 +113,6 @@ class Upload extends BaseController
         $value = join(',', $this->request->getVar('value'));
 
 
-        $dataProduk = $this->request->getVar();
         $fileGambar = $this->request->getFile('layanan-img');
 
         $dataProduk = [
