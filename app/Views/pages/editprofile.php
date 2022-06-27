@@ -130,7 +130,7 @@
             <button type="submit" class="button-red">Save Changes</button>
           </form>
         </div>
-        <div class="form-edit-profile">
+        <div class="form-edit-profile" style="display: none;">
           <form action="#">
             <div class="edit-picture">
               <!-- ini fotonya sudah keisi foto yg lama -->
@@ -164,7 +164,7 @@
             <button type="submit" class="button-red">Save Profile</button>
           </form>
         </div>
-        <div class="form-password">
+        <div class="form-password" style="display: none;">
           <form action="#">
             <div class="edit-oldpassword">
               <!-- ini inputnya kosong semua ya gada isinya-->
@@ -179,7 +179,7 @@
             <button type="submit" class="button-red">Change</button>
           </form>
         </div>
-        <div class="form-status">
+        <div class="form-status" style="display: none;">
           <form action="#">
             <div class="upload-ktp">
               <label for="user-ktp" class="edit-label">Upload KTP Picture</label>
@@ -200,7 +200,7 @@
             <button type="submit" class="button-red">Confirm</button>
           </form>
         </div>
-        <div class="form-delete">
+        <div class="form-delete" style="display: none;">
           <form action="#">
             <div class="delete-word">
               <h2>We’re sorry to see you go</h2>

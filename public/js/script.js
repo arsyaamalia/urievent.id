@@ -352,25 +352,43 @@ function overlayActive() {
   active.style.display = "block";
 }
 
-const gene = document.querySelector(".form-gene");
-const editprofile = document.querySelector(".form-edit-profile");
-const password = document.querySelector(".form-password");
-const ktp = document.querySelector(".form-status");
-const deleteacc = document.querySelector(".form-delete");
+// const gene = document.querySelector(".form-gene");
+// const editprofile = document.querySelector(".form-edit-profile");
+// const password = document.querySelector(".form-password");
+// const ktp = document.querySelector(".form-status");
+// const deleteacc = document.querySelector(".form-delete");
 
-const gene1 = document.querySelector(".gene1");
-const editprofile1 = document.querySelector(".editprofile1");
-const password1 = document.querySelector(".password1");
-const ktp1 = document.querySelector(".status1");
-const deleteacc1 = document.querySelector(".deleteacc1");
+// const gene1 = document.querySelector(".gene1");
+// const editprofile1 = document.querySelector(".edit1");
+// const password1 = document.querySelector(".pass1");
+// const ktp1 = document.querySelector(".status1");
+// const deleteacc1 = document.querySelector(".delete1");
 
-const gene2 = document.querySelector(".gene2");
-const editprofile2 = document.querySelector(".editprofile2");
-const password2 = document.querySelector(".password2");
-const ktp2 = document.querySelector(".status2");
-const deleteacc2 = document.querySelector(".deleteacc2");
+// const gene2 = document.querySelector(".gene2");
+// const editprofile2 = document.querySelector(".edit2");
+// const password2 = document.querySelector(".pass2");
+// const ktp2 = document.querySelector(".status2");
+// const deleteacc2 = document.querySelector(".delete2");
 
 function overlayGene() {
+  const gene = document.querySelector(".form-gene");
+  const editprofile = document.querySelector(".form-edit-profile");
+  const password = document.querySelector(".form-password");
+  const ktp = document.querySelector(".form-status");
+  const deleteacc = document.querySelector(".form-delete");
+
+  const gene1 = document.querySelector(".gene1");
+  const editprofile1 = document.querySelector(".edit1");
+  const password1 = document.querySelector(".pass1");
+  const ktp1 = document.querySelector(".status1");
+  const deleteacc1 = document.querySelector(".delete1");
+
+  const gene2 = document.querySelector(".gene2");
+  const editprofile2 = document.querySelector(".edit2");
+  const password2 = document.querySelector(".pass2");
+  const ktp2 = document.querySelector(".status2");
+  const deleteacc2 = document.querySelector(".delete2");
+
   console.log("berhasil masuk buttonGene");
   gene1.style.display = "none";
   editprofile1.style.display = "block";
@@ -393,6 +411,24 @@ function overlayGene() {
 }
 
 function overlayEdit() {
+  const gene = document.querySelector(".form-gene");
+  const editprofile = document.querySelector(".form-edit-profile");
+  const password = document.querySelector(".form-password");
+  const ktp = document.querySelector(".form-status");
+  const deleteacc = document.querySelector(".form-delete");
+
+  const gene1 = document.querySelector(".gene1");
+  const editprofile1 = document.querySelector(".edit1");
+  const password1 = document.querySelector(".pass1");
+  const ktp1 = document.querySelector(".status1");
+  const deleteacc1 = document.querySelector(".delete1");
+
+  const gene2 = document.querySelector(".gene2");
+  const editprofile2 = document.querySelector(".edit2");
+  const password2 = document.querySelector(".pass2");
+  const ktp2 = document.querySelector(".status2");
+  const deleteacc2 = document.querySelector(".delete2");
+
   console.log("berhasil masuk buttonEdit");
   gene1.style.display = "block";
   editprofile1.style.display = "none";
@@ -414,7 +450,25 @@ function overlayEdit() {
   deleteacc.style.display = "none";
 }
 
-function overlayPassword() {
+function overlayPass() {
+  const gene = document.querySelector(".form-gene");
+  const editprofile = document.querySelector(".form-edit-profile");
+  const password = document.querySelector(".form-password");
+  const ktp = document.querySelector(".form-status");
+  const deleteacc = document.querySelector(".form-delete");
+
+  const gene1 = document.querySelector(".gene1");
+  const editprofile1 = document.querySelector(".edit1");
+  const password1 = document.querySelector(".pass1");
+  const ktp1 = document.querySelector(".status1");
+  const deleteacc1 = document.querySelector(".delete1");
+
+  const gene2 = document.querySelector(".gene2");
+  const editprofile2 = document.querySelector(".edit2");
+  const password2 = document.querySelector(".pass2");
+  const ktp2 = document.querySelector(".status2");
+  const deleteacc2 = document.querySelector(".delete2");
+
   console.log("berhasil masuk buttonPassword");
   gene1.style.display = "block";
   editprofile1.style.display = "block";
@@ -437,6 +491,24 @@ function overlayPassword() {
 }
 
 function overlayStatus() {
+  const gene = document.querySelector(".form-gene");
+  const editprofile = document.querySelector(".form-edit-profile");
+  const password = document.querySelector(".form-password");
+  const ktp = document.querySelector(".form-status");
+  const deleteacc = document.querySelector(".form-delete");
+
+  const gene1 = document.querySelector(".gene1");
+  const editprofile1 = document.querySelector(".edit1");
+  const password1 = document.querySelector(".pass1");
+  const ktp1 = document.querySelector(".status1");
+  const deleteacc1 = document.querySelector(".delete1");
+
+  const gene2 = document.querySelector(".gene2");
+  const editprofile2 = document.querySelector(".edit2");
+  const password2 = document.querySelector(".pass2");
+  const ktp2 = document.querySelector(".status2");
+  const deleteacc2 = document.querySelector(".delete2");
+
   console.log("berhasil masuk buttonStatus");
   gene1.style.display = "block";
   editprofile1.style.display = "block";
@@ -459,6 +531,24 @@ function overlayStatus() {
 }
 
 function overlayDelete() {
+  const gene = document.querySelector(".form-gene");
+  const editprofile = document.querySelector(".form-edit-profile");
+  const password = document.querySelector(".form-password");
+  const ktp = document.querySelector(".form-status");
+  const deleteacc = document.querySelector(".form-delete");
+
+  const gene1 = document.querySelector(".gene1");
+  const editprofile1 = document.querySelector(".edit1");
+  const password1 = document.querySelector(".pass1");
+  const ktp1 = document.querySelector(".status1");
+  const deleteacc1 = document.querySelector(".delete1");
+
+  const gene2 = document.querySelector(".gene2");
+  const editprofile2 = document.querySelector(".edit2");
+  const password2 = document.querySelector(".pass2");
+  const ktp2 = document.querySelector(".status2");
+  const deleteacc2 = document.querySelector(".delete2");
+
   console.log("berhasil masuk buttonDelete");
   gene1.style.display = "block";
   editprofile1.style.display = "block";

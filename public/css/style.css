@@ -2244,3 +2244,53 @@ hr.hr-nav-edit {
   height: 2px;
   margin: 30px 0;
 }
+
+.edit-profile-form{
+  background-color: #ffffff;
+  border: 2px solid #eeeeee;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+label.edit-label{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.edit-profile-form input{
+  background-color: #f4f5f5;
+  border: none;
+  border-radius: 15px;
+  height: 36px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  padding: 0 15px;
+  margin-top: 3px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+button.button-red, button.button-grey{
+  background-color: #e94560;
+  border-radius: 15px;
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  border: none;
+  height: 36px;
+  margin: 20px 0;
+}
+
+button.button-grey{
+  background-color: #f4f5f5;
+  color: #161625;
+}
+
+.edit-picture{
+  display: flex;
+  align-items: center;
+}
