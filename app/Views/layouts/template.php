@@ -49,7 +49,7 @@
             <div class="header-nav-right">
                 <div class="nav-right-item" id="addheight" onmouseover="mouseOver()" onmouseout="mouseOut()">
                     <div class="profile-link">
-                        <img src="/img/picture.jpeg" class="nav-right-icon" id="message">
+                        <img src="img/foto_user/<?= session()->get('foto_user'); ?>" class="nav-right-icon" id="message">
                     </div>
                 </div>
                 <div class="nav-right-item">

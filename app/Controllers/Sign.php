@@ -19,7 +19,6 @@ class Sign extends BaseController
 
     public function signIn()
     {
-
         $session = session();
         $userModel = new UserModel();
         $user_email = $this->request->getVar('user_email');
@@ -34,9 +33,12 @@ class Sign extends BaseController
                     'username_user' => $data['username_user'],
                     'email_user' => $data['email_user'],
                     'password_user' => $data['password_user'],
+                    'foto_user' => $data['foto_user'],
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
+                // dd($user_username);
+                // $session->set('username', $ses_data['username_user']);
                 return redirect()->to('/pages');
             } else {
                 $session->setFlashdata('msg', 'Password is incorrect.');

@@ -159,6 +159,8 @@ img#message {
 }
 
 .ads-box {
+  /* margin-top: 30px; */
+  position: absolute;
   width: 880px;
   display: flex;
   align-items: center;
@@ -1153,7 +1155,9 @@ img.img-logo {
   height: 25px;
 }
 
-.choose-package, .edit-service, .delete-service {
+.choose-package,
+.edit-service,
+.delete-service {
   height: 42px;
   border-radius: 15px;
   background-color: #e94560;
@@ -1164,7 +1168,9 @@ img.img-logo {
   margin-right: 10px;
 }
 
-.choose-package p, .edit-service p, .delete-service p {
+.choose-package p,
+.edit-service p,
+.delete-service p {
   font-size: 14px;
   font-weight: 500;
 }
@@ -2046,20 +2052,20 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.profile-container{
+.profile-container {
   margin: 40px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.profile-photo img{
+.profile-photo img {
   margin-right: 30px;
   width: 120px;
   border-radius: 100%;
 }
 
-.edit-button button{
+.edit-button button {
   background-color: #e94560;
   border-radius: 15px;
   padding: 0 20px;
@@ -2071,7 +2077,7 @@ input[type="checkbox"] {
   height: 42px;
 }
 
-hr.hr-service{
+hr.hr-service {
   border: none;
   background-color: #eee;
   width: 100%;
@@ -2088,7 +2094,7 @@ hr.hr-service{
   width: 100%;
 }
 
-.service-slide{
+.service-slide {
   margin-bottom: 30px;
 }
 
@@ -2102,7 +2108,8 @@ hr.hr-service{
   column-gap: 5px;
 }
 
-.slide-draft, .slide-active{
+.slide-draft,
+.slide-active {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -2123,7 +2130,7 @@ hr.hr-service{
 }
 
 .slide-draft button.draft1,
-.slide-active button.active1{
+.slide-active button.active1 {
   background-color: #f4f5f5;
   font-weight: 600;
   color: rgb(143, 143, 143);
@@ -2138,11 +2145,11 @@ hr.hr-service{
 }
 
 .slide-draft button.draft1:hover,
-.slide-active button.active1:hover{
+.slide-active button.active1:hover {
   background-color: #ddd;
 }
 
-.detail-pribadi-back{
+.detail-pribadi-back {
   height: 227.5px;
   background-color: #f4f5f5;
   width: 100%;
@@ -2151,7 +2158,7 @@ hr.hr-service{
   margin-top: -40px;
 }
 
-.detail-pribadi-grup{
+.detail-pribadi-grup {
   width: 70%;
   margin: 40px auto;
 }
@@ -2164,7 +2171,7 @@ hr.hr-service{
   margin-bottom: 40px;
 }
 
-.action-button{
+.action-button {
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -2,8 +2,7 @@
 
 
 <?= $this->section('content'); ?>
-<hr style="color: grey;">
-<!-- 
+
 <div class="ads-container">
     <div class="ads-box">
         <div class="big-ads" id="ads">
@@ -18,12 +17,12 @@
         </div>
         <div class="small-ads" id="ads"></div>
     </div>
-</div> -->
+</div>
 
 <div class="batas-body">
     <div class="body-urievent">
         <div class="categories-container">
-            <h2>Hello User! Choose a Category below!</h2>
+            <h2>Hello <?= session()->get('username_user'); ?> Choose a Category below!</h2>
             <div class="categories-box">
                 <div class="hover">
                     <a href="/pages/medpart">

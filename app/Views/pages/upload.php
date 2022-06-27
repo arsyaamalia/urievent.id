@@ -379,7 +379,7 @@
     </div>
     <div class="upload-form-button">
       <button class="btn-info" type="submit" name="button_save" value="save_draft">Save as draft</button>
-      <button class="btn-info" type="submit" name="button_save" svalue="save">Submit</button>
+      <button class="btn-info" type="submit" name="button_save" value="save">Submit</button>
     </div>
   </div>
 </form>
