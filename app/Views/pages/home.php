@@ -46,7 +46,7 @@
                     </a>
                 </div>
                 <div class="hover">
-                    <a href="vendor.html">
+                    <a href="/pages/vendor">
                         <div class="categories-item">
                             <div class="category-circle">
                                 <img src="../ICON/vendor.png" alt="vendor">
@@ -56,7 +56,7 @@
                     </a>
                 </div>
                 <div class="hover">
-                    <a href="venue.html">
+                    <a href="/pages/venue">
                         <div class="categories-item">
                             <div class="category-circle">
                                 <img src="../ICON/venue.png" alt="venue">

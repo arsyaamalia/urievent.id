@@ -180,4 +180,38 @@ class Pages extends BaseController
         ];
         return view('pages/editprofile', $dataPage);
     }
+
+    public function vendor()
+    {
+        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataPaket = $this->paket_layanan->findAll();
+
+        $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
+
+        $dataPage = [
+            'title' => "UriEvent | vendor",
+            'daftar_produk' => $daftar_produk,
+            'pager' => $this->produk_layanan->pager
+        ];
+
+        return view('pages/vendor', $dataPage);
+    }
+
+
+
+    public function venue()
+    {
+        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataPaket = $this->paket_layanan->findAll();
+
+        $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
+
+        $dataPage = [
+            'title' => "UriEvent | medpart",
+            'daftar_produk' => $daftar_produk,
+            'pager' => $this->produk_layanan->pager
+        ];
+
+        return view('pages/venue', $dataPage);
+    }
 }
