@@ -133,10 +133,7 @@ class Pages extends BaseController
     public function sponsorship()
     {
         $dataProduk = $this->produk_layanan->showSponsor()->paginate(15, 'daftar_produk');
-
-        // $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
-
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
 
         $dataPage = [
@@ -152,26 +149,23 @@ class Pages extends BaseController
     {
         $dataProduk = $this->produk_layanan->showMedpart()->paginate(15, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
-
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
-
         $dataPage = [
             'title' => "UriEvent | medpart",
             'daftar_produk' => $daftar_produk,
             'pager' => $this->produk_layanan->pager
         ];
-
         return view('pages/medpart', $dataPage);
     }
 
     public function uriservice()
     {
+        // uriService draft
         $id_user = session()->get('id_user');
         $dataProduk_draft = $this->produk_layanan->showDraft($id_user)->findAll();
         $dataPaket_draft = $this->paket_layanan->findAll();
         $daftar_produk_draft = $this->mapingProdukPaket($dataProduk_draft, $dataPaket_draft);
-        // dd($daftar_produk_draft);
-
+        // uriservice uploaded
         $dataProduk_active = $this->produk_layanan->showActive($id_user)->findAll();
         $dataPaket_active = $this->paket_layanan->findAll();
         $daftar_produk_active = $this->mapingProdukPaket($dataProduk_active, $dataPaket_active);

@@ -42,7 +42,7 @@
 
                         <div class="draft-hover">
                             <!-- link to detail-pribadi -->
-                            <a href="/detail/detailpribadi">
+                            <a href="/detail/detailpribadi/<?= $produkDraft['id_layanan']; ?>/<?= $produkDraft['id_kategori']; ?>/<?= $produkDraft['id_subkategori']; ?>">
                                 <div class="draft-item">
                                     <div class="draft-grup">
                                         <div class="item-circle" style="overflow: hidden;">
@@ -65,7 +65,7 @@
                 <div class="active-box">
                     <?php foreach ($daftar_produk_active as $produkActive) : ?>
                         <div class="draft-hover">
-                            <a href="/detail/detailpribadi">
+                            <a href="/detail/detailpribadi/<?= $produkActive['id_layanan']; ?>/<?= $produkActive['id_kategori']; ?>/<?= $produkActive['id_subkategori']; ?>">
                                 <div class="draft-item">
                                     <div class="draft-grup">
                                         <div class="item-circle" style="overflow: hidden;">
@@ -79,19 +79,6 @@
                         </div>
                     <?php endforeach; ?>
                     <!-- active box ini dalemnya buat looping service item yg active -->
-                    <div class="active-hover">
-                        <a href="/detail/detailpribadi">
-                            <div class="active-item">
-                                <div class="active-grup">
-                                    <div class="item-circle" style="overflow: hidden;">
-                                        <img src="/img/logomagangupdate.png" style="object-fit: cover; width: auto; height: 100%;">
-                                    </div>
-                                    <h4>Company's Name</h4>
-                                </div>
-                                <h3>Rp25000</h3>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

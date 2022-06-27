@@ -126,7 +126,7 @@ class Upload extends BaseController
             'id_layanan' => $id_layanan,
             'id_kategori' => $this->request->getVar('category'),
             'id_subkategori' => $this->request->getVar('subcategory'),
-            'id_user' => 'u002',
+            'id_user' => session()->get('id_user'),
             'nama_instansi' => $this->request->getVar('company-name'),
             'email_instansi' => $this->request->getVar('company-email'),
             'whatsapp' => $this->request->getVar('whatsapp-input'),
