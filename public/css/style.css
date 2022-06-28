@@ -901,6 +901,15 @@ hr.hr-white{
   padding: 100px;
 }
 
+.program-box{
+  width: 70%;
+  margin: 0px auto;
+}
+
+.program-box h1{
+  font-size: 70px;
+}
+
 .intro-container {
   background-color: #f4f5f5;
   display: flex;
@@ -1661,15 +1670,12 @@ input[type="number"]::-webkit-outer-spin-button {
   z-index: -1;
 }
 
-.upload-container {
+#upload-container {
   margin: 40px auto;
   width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.review-container {
+/* .review-container {
   background-color: #fff;
   width: 100%;
   border-radius: 15px;
@@ -1740,7 +1746,9 @@ img.edit-icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
+
+
 
 .upload-second-field,
 .edit-profile-field {
@@ -2161,6 +2169,22 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+div#input-group{
+  display: flex;
+  align-items: center;
+}
+
+div.input-group{
+  width: 100%;
+}
+
+img#removeRow{
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
 .profile-container {
   margin: 40px 0;
   display: flex;
@@ -2192,6 +2216,14 @@ hr.hr-service {
   background-color: #eee;
   width: 100%;
   height: 2px;
+}
+
+hr.hr-addpackage{
+  border: none;
+  background-color: #eee;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
 }
 
 .service-container {

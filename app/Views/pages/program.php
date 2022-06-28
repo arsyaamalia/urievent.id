@@ -3,8 +3,9 @@
 <?= $this->section('content'); ?>
 
 <div class="program-container">
-    <h2>Lorem Ipsum</h2>
-    <h2>Lorem Ipsum</h2>
+    <div class="program-box">
+        <h1>Coming<br>Soon</h1>
+    </div>
 </div>
 
 <?= $this->endsection(); ?>

@@ -3,14 +3,11 @@
 <?= $this->section('content'); ?>
 
 <form action="/upload/save" method="POST" enctype="multipart/form-data">
-  <div class="upload-box"></div>
-  <div class="upload-container">
-    <div class="review-container">
+  <hr class="hr-service">
+  <div id="upload-container">
+    <!-- <div class="review-container">
       <div class="review-picture-box">
         <div class="review-picture">
-          <!-- <div class="review-picture-item">
-            <img src="/icon/edit.png" class="edit-icon">
-          </div> -->
           <div class="review-picture-item">
             <img src="/icon/picture2.png" class="picture-icon" />
           </div>
@@ -57,8 +54,9 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="upload-second-field">
+    </div> -->
+    <h2 id="upload-service-title" style="margin: 0; margin-bottom: 40px;">Upload Service</h2>
+    <div class="upload-second-field" style="margin: 0;">
       <div class="upload-tahapan">
         <div class="tahapan-general">
           <button class="general1" type="button" onclick="overlayGeneral()">
