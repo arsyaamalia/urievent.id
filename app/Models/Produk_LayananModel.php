@@ -23,9 +23,33 @@ class produk_layananModel extends Model
         return $this->where(['id_layanan' => $id_layanan])->findAll();
     }
 
+    public function showUploaded()
+    {
+        return $this->where(['status_layanan' => 'uploaded']);
+    }
+
     public function getSimiliar($id_kategori)
     {
         return $this->where(['id_kategori' => $id_kategori])->findAll();
+    }
+
+    public function showMedpart()
+    {
+        return $this->where(['id_kategori' => 'CAT001']);
+    }
+
+    public function showSponsor()
+    {
+        return $this->where(['id_kategori' => 'CAT002']);
+    }
+
+    public function showDraft($id_user)
+    {
+        return $this->where(['id_user' => $id_user, 'status_layanan' => 'draft']);
+    }
+    public function showActive($id_user)
+    {
+        return $this->where(['id_user' => $id_user, 'status_layanan' => 'uploaded']);
     }
 
     public function search($cari)

@@ -1,5 +1,6 @@
 <?= $this->extend('layouts/template') ?>
 
+
 <?= $this->section('content'); ?>
 
 <div class="ads-container">
@@ -21,7 +22,7 @@
 <div class="batas-body">
     <div class="body-urievent">
         <div class="categories-container">
-            <h2>Hello User! Choose a Category below!</h2>
+            <h2>Hello <?= session()->get('username_user'); ?>, Choose a Category below!</h2>
             <div class="categories-box">
                 <div class="hover">
                     <a href="/pages/medpart">
@@ -92,13 +93,13 @@
             <div> <?= $pager->links('daftar_produk', 'urievent_pagination'); ?>
             </div>
 
-            <div class="seeall-button">
+            <!-- <div class="seeall-button">
                 <a href="see-more-recom">
                     <div class="see-all">
                         <h4>See More</h4>
                     </div>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

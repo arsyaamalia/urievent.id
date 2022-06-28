@@ -85,9 +85,6 @@
               </div>
             <?php endif; ?>
 
-            <!-- if id_kategori = 001  -->
-            <!-- else if id_kategori = 003 -->
-
           </div>
         </div>
       </div>

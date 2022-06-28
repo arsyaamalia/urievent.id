@@ -7,7 +7,7 @@ use App\Models\produk_layananModel;
 use App\Models\paket_layananModel;
 use App\Models\subkategori_layananModel;
 
-class Upload extends BaseController
+class Editlayanan extends BaseController
 {
     public function __construct()
     {
@@ -79,7 +79,7 @@ class Upload extends BaseController
     {
         $dataKategori = $this->kategori_layanan->findAll();
         $dataPage = [
-            'title' => "UriEvent | Upload Service",
+            'title' => "UriEvent | Edit Service",
             'dataKategori' => $dataKategori
         ];
         return view('pages/upload', $dataPage);
@@ -126,7 +126,7 @@ class Upload extends BaseController
             'id_layanan' => $id_layanan,
             'id_kategori' => $this->request->getVar('category'),
             'id_subkategori' => $this->request->getVar('subcategory'),
-            'id_user' => session()->get('id_user'),
+            'id_user' => 'u002',
             'nama_instansi' => $this->request->getVar('company-name'),
             'email_instansi' => $this->request->getVar('company-email'),
             'whatsapp' => $this->request->getVar('whatsapp-input'),

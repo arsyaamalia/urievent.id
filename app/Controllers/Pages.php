@@ -40,12 +40,33 @@ class Pages extends BaseController
         return $daftar_produk;
     }
 
+
+    public function newID()
+    {
+        $dataProduk = $this->produk_layanan->orderBy('id_layanan', 'desc')->first();
+        // explode
+        $id_layanan_string =  explode('Y', $dataProduk['id_layanan']);
+        // string to int
+        $id_layanan_terakhir = intval(end($id_layanan_string));
+        // nambah id+1 buat id baru
+        $new_id_layanan =  $id_layanan_terakhir + 1;
+        // balikin jadi string buat id baru
+        $new_str_id_layanan = (string) $new_id_layanan;
+        // cek lenght string dan validasi sekalian bikin 
+        if (strlen($new_str_id_layanan) == 2) {
+            $new_id = 'LAY0' . $new_str_id_layanan;
+        } else {
+            $new_id = 'LAY' . $new_str_id_layanan;
+        }
+    }
+
     public function index()
     {
         $session = session();
-        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataProduk = $this->produk_layanan->showUploaded()->paginate(15, 'daftar_produk');
+        // dd($dataProduk);
+        // $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
-
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
 
         $dataPage = [
@@ -95,25 +116,6 @@ class Pages extends BaseController
         return view('/pages/search', $dataPage);
     }
 
-    public function newID()
-    {
-        $dataProduk = $this->produk_layanan->orderBy('id_layanan', 'desc')->first();
-        // explode
-        $id_layanan_string =  explode('Y', $dataProduk['id_layanan']);
-        // string to int
-        $id_layanan_terakhir = intval(end($id_layanan_string));
-        // nambah id+1 buat id baru
-        $new_id_layanan =  $id_layanan_terakhir + 1;
-        // balikin jadi string buat id baru
-        $new_str_id_layanan = (string) $new_id_layanan;
-        // cek lenght string dan validasi sekalian bikin 
-        if (strlen($new_str_id_layanan) == 2) {
-            $new_id = 'LAY0' . $new_str_id_layanan;
-        } else {
-            $new_id = 'LAY' . $new_str_id_layanan;
-        }
-        dd($new_id);
-    }
 
 
 
@@ -130,9 +132,8 @@ class Pages extends BaseController
 
     public function sponsorship()
     {
-        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataProduk = $this->produk_layanan->showSponsor()->paginate(15, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
-
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
 
         $dataPage = [
@@ -146,24 +147,34 @@ class Pages extends BaseController
 
     public function medpart()
     {
-        $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
+        $dataProduk = $this->produk_layanan->showMedpart()->paginate(15, 'daftar_produk');
         $dataPaket = $this->paket_layanan->findAll();
-
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
-
         $dataPage = [
             'title' => "UriEvent | medpart",
             'daftar_produk' => $daftar_produk,
             'pager' => $this->produk_layanan->pager
         ];
-
         return view('pages/medpart', $dataPage);
     }
 
     public function uriservice()
     {
+        // uriService draft
+        $id_user = session()->get('id_user');
+        $dataProduk_draft = $this->produk_layanan->showDraft($id_user)->findAll();
+        $dataPaket_draft = $this->paket_layanan->findAll();
+        $daftar_produk_draft = $this->mapingProdukPaket($dataProduk_draft, $dataPaket_draft);
+        // uriservice uploaded
+        $dataProduk_active = $this->produk_layanan->showActive($id_user)->findAll();
+        $dataPaket_active = $this->paket_layanan->findAll();
+        $daftar_produk_active = $this->mapingProdukPaket($dataProduk_active, $dataPaket_active);
+
+
         $dataPage = [
-            'title' => "UriEvent | UriService"
+            'title' => "UriEvent | UriService",
+            'daftar_produk_draft' => $daftar_produk_draft,
+            'daftar_produk_active' => $daftar_produk_active
         ];
         return view('pages/uriservice', $dataPage);
     }
@@ -209,4 +220,9 @@ class Pages extends BaseController
 
         return view('pages/venue', $dataPage);
     }
+
+    // public function serviceDraft()
+    // {
+
+    // }
 }

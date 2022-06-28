@@ -1153,7 +1153,9 @@ img.img-logo {
   height: 25px;
 }
 
-.choose-package, .edit-service, .delete-service {
+.choose-package,
+.edit-service,
+.delete-service {
   height: 42px;
   border-radius: 15px;
   background-color: #e94560;
@@ -1164,7 +1166,9 @@ img.img-logo {
   margin-right: 10px;
 }
 
-.choose-package p, .edit-service p, .delete-service p {
+.choose-package p,
+.edit-service p,
+.delete-service p {
   font-size: 14px;
   font-weight: 500;
 }
@@ -1672,7 +1676,8 @@ img.edit-icon {
   align-items: center;
 }
 
-.upload-second-field {
+.upload-second-field,
+.edit-profile-field {
   margin-top: 40px;
   width: 100%;
   display: grid;
@@ -1681,7 +1686,8 @@ img.edit-icon {
 }
 
 .upload-tahapan,
-.upload-form {
+.upload-form,
+.edit-profile-nav {
   width: 100%;
 }
 
@@ -1694,7 +1700,12 @@ img.edit-icon {
 .tahapan-general button.general1,
 .tahapan-details button.details1,
 .tahapan-additional button.additional1,
-.tahapan-checkout button.checkout1 {
+.tahapan-checkout button.checkout1,
+.nav-gene button.gene1,
+.nav-edit-profile button.edit1,
+.nav-password button.pass1,
+.nav-status button.status1,
+.nav-delete button.delete1 {
   width: 100%;
   background-color: #fff;
   border-radius: 15px;
@@ -1711,11 +1722,16 @@ img.edit-icon {
 .tahapan-general button.general1:hover,
 .tahapan-details button.details1:hover,
 .tahapan-additional button.additional1:hover,
-.tahapan-checkout button.checkout1:hover {
+.tahapan-checkout button.checkout1:hover,
+.nav-gene button.gene1:hover,
+.nav-edit-profile button.edit1:hover,
+.nav-password button.pass1:hover,
+.nav-status button.status1:hover,
+.nav-delete button.delete1:hover {
   background-color: #f4f5f5;
 }
 
-.tahapan-nomor {
+.tahapan-nomor, .nav-nomor {
   background-color: #ddd;
   border-radius: 100%;
   margin-right: 10px;
@@ -1728,17 +1744,28 @@ img.edit-icon {
 }
 
 .tahapan-nomor h3,
-.tahapan-nama h3 {
+.tahapan-nama h3,
+.nav-nomor h3,
+.nav-nama h3 {
   font-size: 14px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: rgb(143, 143, 143);
 }
 
+.nav-delete .nav-nama h3{
+  color: #e94560;
+}
+
 .tahapan-general button.general2,
 .tahapan-details button.details2,
 .tahapan-additional button.additional2,
-.tahapan-checkout button.checkout2 {
+.tahapan-checkout button.checkout2,
+.nav-gene button.gene2,
+.nav-edit-profile button.edit2,
+.nav-password button.pass2,
+.nav-status button.status2,
+.nav-delete button.delete2 {
   width: 100%;
   background-color: #0f3460;
   border-radius: 15px;
@@ -1750,10 +1777,19 @@ img.edit-icon {
   cursor: auto;
 }
 
+.nav-delete button.delete2 {
+  background-color: #e94560;
+}
+
 .tahapan-general button.general1,
 .tahapan-details button.details2,
 .tahapan-additional button.additional2,
-.tahapan-checkout button.checkout2 {
+.tahapan-checkout button.checkout2,
+.nav-gene button.gene1,
+.nav-edit-profile button.edit2,
+.nav-password button.pass2,
+.nav-status button.status2,
+.nav-delete button.delete2 {
   display: none;
 }
 
@@ -1767,7 +1803,11 @@ img.edit-icon {
 .tahapan-general .tahapan-nomor2,
 .tahapan-details .tahapan-nomor2,
 .tahapan-additional .tahapan-nomor2,
-.tahapan-checkout .tahapan-nomor2 {
+.tahapan-checkout .tahapan-nomor2,
+.nav-gene .nav-nomor2,
+.nav-edit-profile .nav-nomor2,
+.nav-password .nav-nomor2,
+.nav-status .nav-nomor2 {
   background-color: #fff;
   border-radius: 100%;
   margin-right: 10px;
@@ -1782,7 +1822,11 @@ img.edit-icon {
 .tahapan-general .tahapan-nomor2 h3,
 .tahapan-details .tahapan-nomor2 h3,
 .tahapan-additional .tahapan-nomor2 h3,
-.tahapan-checkout .tahapan-nomor2 h3 {
+.tahapan-checkout .tahapan-nomor2 h3,
+.nav-gene .nav-nomor2 h3,
+.nav-edit-profile .nav-nomor2 h3,
+.nav-password .nav-nomor2 h3,
+.nav-status .nav-nomor2 h3 {
   font-size: 14px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -1792,7 +1836,12 @@ img.edit-icon {
 .tahapan-general .tahapan-nama2 h3,
 .tahapan-details .tahapan-nama2 h3,
 .tahapan-additional .tahapan-nama2 h3,
-.tahapan-checkout .tahapan-nama2 h3 {
+.tahapan-checkout .tahapan-nama2 h3,
+.nav-gene .nav-nama2 h3,
+.nav-edit-profile .nav-nama2 h3,
+.nav-password .nav-nama2 h3,
+.nav-status .nav-nama2 h3,
+.nav-delete .nav-nama2 h3 {
   font-size: 14px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
@@ -2046,20 +2095,21 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.profile-container{
+.profile-container {
   margin: 40px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.profile-photo img{
+.profile-photo img,
+.edit-picture img {
   margin-right: 30px;
   width: 120px;
   border-radius: 100%;
 }
 
-.edit-button button{
+.edit-button button {
   background-color: #e94560;
   border-radius: 15px;
   padding: 0 20px;
@@ -2071,7 +2121,7 @@ input[type="checkbox"] {
   height: 42px;
 }
 
-hr.hr-service{
+hr.hr-service {
   border: none;
   background-color: #eee;
   width: 100%;
@@ -2088,7 +2138,7 @@ hr.hr-service{
   width: 100%;
 }
 
-.service-slide{
+.service-slide {
   margin-bottom: 30px;
 }
 
@@ -2102,7 +2152,8 @@ hr.hr-service{
   column-gap: 5px;
 }
 
-.slide-draft, .slide-active{
+.slide-draft,
+.slide-active {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -2123,7 +2174,7 @@ hr.hr-service{
 }
 
 .slide-draft button.draft1,
-.slide-active button.active1{
+.slide-active button.active1 {
   background-color: #f4f5f5;
   font-weight: 600;
   color: rgb(143, 143, 143);
@@ -2138,11 +2189,11 @@ hr.hr-service{
 }
 
 .slide-draft button.draft1:hover,
-.slide-active button.active1:hover{
+.slide-active button.active1:hover {
   background-color: #ddd;
 }
 
-.detail-pribadi-back{
+.detail-pribadi-back {
   height: 227.5px;
   background-color: #f4f5f5;
   width: 100%;
@@ -2151,7 +2202,7 @@ hr.hr-service{
   margin-top: -40px;
 }
 
-.detail-pribadi-grup{
+.detail-pribadi-grup {
   width: 70%;
   margin: 40px auto;
 }
@@ -2164,8 +2215,83 @@ hr.hr-service{
   margin-bottom: 40px;
 }
 
-.action-button{
+.action-button {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.uriprofile-container {
+  margin: 40px auto;
+  width: 70%;
+  margin-top: 30px;
+}
+
+.edit-profile-field {
+  margin: 0;
+}
+
+.nav-gene, .nav-edit-profile, .nav-password, .nav-status, .nav-delete{
+  display: flex;
+  flex-direction: column;
+}
+
+hr.hr-nav-edit {
+  border: none;
+  background-color: #eee;
+  width: 100%;
+  height: 2px;
+  margin: 30px 0;
+}
+
+.edit-profile-form{
+  background-color: #ffffff;
+  border: 2px solid #eeeeee;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+label.edit-label{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.edit-profile-form input{
+  background-color: #f4f5f5;
+  border: none;
+  border-radius: 15px;
+  height: 36px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  padding: 0 15px;
+  margin-top: 3px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+button.button-red, button.button-grey{
+  background-color: #e94560;
+  border-radius: 15px;
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  border: none;
+  height: 36px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+button.button-grey{
+  background-color: #f4f5f5;
+  color: #0f3460;
+  cursor: pointer;
+}
+
+.edit-picture{
+  display: flex;
   align-items: center;
 }

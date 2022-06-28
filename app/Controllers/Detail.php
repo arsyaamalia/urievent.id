@@ -13,6 +13,7 @@ class Detail extends BaseController
     protected $produk_layanan;
     protected $id_layanan;
     protected $id_subkategori;
+    protected $paket_layanan;
 
     public function __construct()
     {
@@ -49,9 +50,7 @@ class Detail extends BaseController
 
     public function index($id_layanan, $id_kategori, $id_subkategori)
 
-
     {
-
         $dataPaket1 = $this->paket_layanan->findAll();
         $dataProduk = $this->produk_layanan->getDetail($id_layanan);
         $dataPaket = $this->paket_layanan->getDetail($id_layanan);
@@ -61,9 +60,9 @@ class Detail extends BaseController
 
         $detailProduk =  $this->mapingProdukPaket($dataProduk, $dataPaket);
         $detail = array_shift($detailProduk);
-        $detail['step_before'] = explode(',', $detail['step_before']);
-        $detail['step_after'] = explode(',', $detail['step_after']);
-        $detail['value'] = explode(',', $detail['value']);
+        $detail['step_before'] = explode('__', $detail['step_before']);
+        $detail['step_after'] = explode('__', $detail['step_after']);
+        $detail['value'] = explode('__', $detail['value']);
 
         $daftarSimiliar = $this->mapingProdukPaket($similiar, $dataPaket1);
 
@@ -78,11 +77,39 @@ class Detail extends BaseController
         return view('/detail/detail', $dataPage);
     }
 
-    public function detailpribadi(){
+    public function detailpribadi($id_layanan, $id_kategori, $id_subkategori)
+    {
+        $dataProduk = $this->produk_layanan->getDetail($id_layanan);
+        $dataPaket = $this->paket_layanan->getDetail($id_layanan);
+        $dataKategori = $this->kategori_layanan->getKategori($id_kategori);
+        $dataSubKategori = $this->subkategori_layanan->getSubKategori($id_subkategori);
+
+        $detailProduk = $this->mapingProdukPaket($dataProduk, $dataPaket);
+
+        $detail = array_shift($detailProduk);
+        $detail['step_before'] = explode('__', $detail['step_before']);
+        $detail['step_after'] = explode('__', $detail['step_after']);
+        $detail['value'] = explode('__', $detail['value']);
 
         $dataPage = [
-            'title' => "UriEvent | Detail"
+            'title' => "UriEvent | Detail",
+            'detail' => $detail,
+            'dataKategori' => $dataKategori,
+            'dataSubKategori' => $dataSubKategori
         ];
         return view('/detail/detailpribadi', $dataPage);
+    }
+
+    // public function deletePaket($id_layanan)
+    // {
+    //     return 
+    // }
+
+    public function delete($id_layanan)
+    {
+        $this->produk_layanan->delete($id_layanan);
+        // $this->paket_layanan->delete($id_layanan);
+        // produk layanan udah kedelete tapi paketnya belum
+        return redirect()->to('/pages/uriservice');
     }
 }

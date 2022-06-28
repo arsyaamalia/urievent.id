@@ -26,7 +26,7 @@
                     <ul>
                         <li><a href="/pages/about" class="nav-link">About Us</a></li>
                         <li><a href="/pages/advertise" class="nav-link">Advertise With Us</a></li>
-                        <li><a href="/pages/medpart_name" class="nav-link">Program</a></li>
+                        <!-- <li><a href="/pages/medpart_name" class="nav-link">Program</a></li> -->
                         <li>
                             <div class="search-box-2">
                                 <form action="/pages/search">
@@ -49,7 +49,7 @@
             <div class="header-nav-right">
                 <div class="nav-right-item" id="addheight" onmouseover="mouseOver()" onmouseout="mouseOut()">
                     <div class="profile-link">
-                        <img src="/img/foto-arsya.jpg" class="nav-right-icon" id="message">
+                        <img src="/img/foto_user/<?= session()->get('foto_user'); ?>" class="nav-right-icon" id="message">
                     </div>
                 </div>
                 <div class="nav-right-item">
@@ -96,7 +96,7 @@
             </a>
         </div>
         <div class="profil-hover-wrap">
-            <a href="/pages/service">
+            <a href="/pages/uriservice">
                 <div class="profile-hover-item">
                     <h3>UriService</h3>
                 </div>
