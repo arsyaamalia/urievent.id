@@ -13,6 +13,7 @@ class Detail extends BaseController
     protected $produk_layanan;
     protected $id_layanan;
     protected $id_subkategori;
+    protected $paket_layanan;
 
     public function __construct()
     {
@@ -97,5 +98,18 @@ class Detail extends BaseController
             'dataSubKategori' => $dataSubKategori
         ];
         return view('/detail/detailpribadi', $dataPage);
+    }
+
+    // public function deletePaket($id_layanan)
+    // {
+    //     return 
+    // }
+
+    public function delete($id_layanan)
+    {
+        $this->produk_layanan->delete($id_layanan);
+        // $this->paket_layanan->delete($id_layanan);
+        // produk layanan udah kedelete tapi paketnya belum
+        return redirect()->to('/pages/uriservice');
     }
 }

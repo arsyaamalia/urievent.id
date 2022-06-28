@@ -65,7 +65,7 @@
                                 </a>
                             </div>
                             <div class="delete-box">
-                                <a href="#">
+                                <a href="/detail/delete/<?= $detail['id_layanan']; ?>" onclick="return confirm('Yakin Menghapus Layanan Ini?');">
                                     <div class="delete-service">
                                         <p>Delete</p>
                                     </div>
