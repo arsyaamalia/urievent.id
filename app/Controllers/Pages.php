@@ -119,14 +119,14 @@ class Pages extends BaseController
 
 
 
-    public function medpart_name()
+    public function program()
     {
 
         $dataPage = [
-            'title' => "UriEvent | medpart_name",
+            'title' => "UriEvent | Program",
             'tes' => ['satu', 'dua', 'tiga']
         ];
-        return view('pages/medpart_name', $dataPage);
+        return view('pages/program', $dataPage);
     }
 
 
@@ -151,7 +151,7 @@ class Pages extends BaseController
         $dataPaket = $this->paket_layanan->findAll();
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
         $dataPage = [
-            'title' => "UriEvent | medpart",
+            'title' => "UriEvent | Media Partner",
             'daftar_produk' => $daftar_produk,
             'pager' => $this->produk_layanan->pager
         ];
@@ -195,7 +195,7 @@ class Pages extends BaseController
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
 
         $dataPage = [
-            'title' => "UriEvent | vendor",
+            'title' => "UriEvent | Vendor",
             'daftar_produk' => $daftar_produk,
             'pager' => $this->produk_layanan->pager
         ];
@@ -213,7 +213,7 @@ class Pages extends BaseController
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
 
         $dataPage = [
-            'title' => "UriEvent | medpart",
+            'title' => "UriEvent | Venue",
             'daftar_produk' => $daftar_produk,
             'pager' => $this->produk_layanan->pager
         ];

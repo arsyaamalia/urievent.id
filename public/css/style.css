@@ -20,6 +20,10 @@ li {
   display: inline-block;
 }
 
+textarea{
+  resize: none;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -127,6 +131,7 @@ img#message {
   font-size: 14px;
   padding: 20px 0;
   display: none;
+  z-index: 10;
 }
 
 .profile-hover h3 {
@@ -771,68 +776,129 @@ a.privacy {
   float: left;
 }
 
-.advertise-container {
-  background: radial-gradient(#dbe2ef, #ffffff);
-  margin: 0%;
+.advertise-back{
+  background: radial-gradient(700px 600px at center, #d1e6ff, #f4f5f5);
 }
 
-.advertise-container .advertise-head {
-  padding-left: 10%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+#advertise-container {
+  width: 70%;
+  margin: 0px auto;
+  padding: 50px 0;
 }
 
-.advertise-form {
-  width: 80%;
-  margin: auto;
-  height: 550px;
-  background: white;
+#advertise-head{
+  margin-bottom: 50px;
+}
+
+#advertise-head h1{
+  font-size: 38px;
+}
+
+p#advertise-text{
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+#advertise-form {
+  height: 100%;
   border-radius: 15px;
-  padding-bottom: 100px;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  margin: 30px 30px;
-  padding-top: 30px;
-}
-
-.input-form,
-.input2-form {
-  border: none;
-  background-color: #f4f5f5;
-  height: 40px;
-  border-radius: 15px;
-  padding: 0 20px;
+  background-color: #fff;
+  padding: 30px 40px;
   margin-bottom: 15px;
 }
 
-.column {
+.ad-label{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.collabse-number{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  
 }
 
-.input2-form {
-  width: 300px;
-  margin-bottom: 15px;
-}
-
-.textarea-form {
-  height: 100px;
+#advertise-form input, #advertise-form textarea{
+  display: block;
+  width: 100%;
+  height: 42px;
   border-radius: 15px;
-  border: none;
-  background-color: #f4f5f5;
-  margin-bottom: 15px;
   padding: 0 20px;
+  background-color: #f4f5f5;
+  border: none;
+  outline: none;
+  margin-top: 3px;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
 }
 
-.form-container button {
-  height: 40px;
-  background-color: #e94560;
-  border-radius: 15px;
+.value62{
+  height: 42px;
+  border-radius: 15px 0 0 15px;
+  padding: 0 20px;
+  background-color: #f4f5f5;
   border: none;
+  outline: none;
+  margin: 3px 0 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+input#institut-nomor{
+  border-radius: 0 15px 15px 0;
+}
+
+.collabse-number hr{
+  width: 2px;
+  height: 42px;
+  border: none;
+  background-color: #ddd;
+  margin-top: 3px;
+}
+
+textarea#institut-desc{
+  height: 150px;
+  padding: 15px 20px;
+}
+
+input#institut-lampiran{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+button.submit-form-advertise{
+  background-color: #e94560;
+  height: 42px;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  margin: 25px 0 10px 0;
+}
+
+hr.hr-white{
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+  border: none;
+}
+
+.program-container{
+  width: 100%;
+  height: 1200px;
+  margin: 0px auto;
+  background: radial-gradient(700px 600px at center, #d1e6ff, #f4f5f5);
+  padding: 100px;
 }
 
 .intro-container {
