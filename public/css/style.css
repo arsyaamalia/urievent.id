@@ -2178,7 +2178,7 @@ div.input-group{
   width: 100%;
 }
 
-img#removeRow{
+#input-group img{
   width: 35px;
   height: auto;
   cursor: pointer;

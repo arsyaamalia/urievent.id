@@ -116,7 +116,7 @@ $(document).ready(function () {
     htmlafter += '<div id="inputFormRowAfter">';
     htmlafter += '<div id="input-group">';
     htmlafter += '<input type="text" name="stepAfter[]" class="add-input" placeholder="Insert Other Step here" autocomplete="off">';
-    htmlafter += '<img src="../icon/trash.png" id="removeRow">';
+    htmlafter += '<img src="../icon/trash.png" id="removeRowAfter">';
     htmlafter += "</div>";
     htmlafter += "</div>";
 
@@ -135,7 +135,7 @@ $(document).ready(function () {
     html += '<div id="inputFormRowValue">';
     html += '<div id="input-group">';
     html += '<input type="text" name="value[]" class="add-input" placeholder="Insert Other Value here" autocomplete="off">';
-    html += '<img src="../icon/trash.png" id="removeRow">';
+    html += '<img src="../icon/trash.png" id="removeRowValue">';
     html += "</div>";
     html += "</div>";
     $("#newRowValue").append(html);
