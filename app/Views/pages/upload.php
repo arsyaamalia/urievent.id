@@ -232,7 +232,12 @@
                   <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
                   <label data-number="+62">
                     <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
-                    <label>
+                  <label>
+                  <!-- <div class="collabse-number">
+                    <div class="value62">+62</div>
+                    <hr>
+                    <input type="number" name="whatsapp-input" id="whatsapp-input" class="phone-field" placeholder="Company's Whatsapp number" required />
+                  </div> -->
                 </div>
                 <div class="contact-input" id="contact-input-ig">
                   <label for="instagram-input" class="upload-label">Instagram Username</label>

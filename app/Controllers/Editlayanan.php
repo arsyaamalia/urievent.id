@@ -82,7 +82,7 @@ class Editlayanan extends BaseController
             'title' => "UriEvent | Edit Service",
             'dataKategori' => $dataKategori
         ];
-        return view('pages/upload', $dataPage);
+        return view('pages/editlayanan', $dataPage);
     }
     public function getDataSubKategori($id_kategori)
     {
