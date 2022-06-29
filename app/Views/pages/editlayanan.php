@@ -216,18 +216,29 @@
                 <div class="contact-check" style="margin: 0;">
                   <div class="whatsapp-box">
                     <div class="grup-icon-label">
-                      <img src="../icon/whatsapp.png" class="contact-check-img">
+                      <img src="/icon/whatsapp.png" class="contact-check-img">
                       <label for="whatsapp-check" class="upload-label">Whatsapp</label>
                     </div>
                     <input type="checkbox" id="whatsapp-check" name="whatsapp-check" value="whatsapp" required checked>
                   </div>
-                  <div class="instagram-box">
-                    <div class="grup-icon-label">
-                      <img src="../icon/instagram.png" class="contact-check-img">
-                      <label for="instagram-check" class="upload-label">Instagram</label>
+                  <?php if ($dataProduk['instagram'] !== "") : ?>
+                    <div class="instagram-box">
+                      <div class="grup-icon-label">
+                        <img src="/icon/instagram.png" class="contact-check-img">
+                        <label for="instagram-check" class="upload-label">Instagram</label>
+                      </div>
+                      <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram" checked>
                     </div>
-                    <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
-                  </div>
+                  <?php else : ?>
+                    <div class="instagram-box">
+                      <div class="grup-icon-label">
+                        <img src="/icon/instagram.png" class="contact-check-img">
+                        <label for="instagram-check" class="upload-label">Instagram</label>
+                      </div>
+                      <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
+                    </div>
+                  <?php endif; ?>
+
                 </div>
                 <div class="contact-input" id="contact-input-wa" style="display: block;">
                   <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
@@ -270,18 +281,21 @@
             <h5>Steps to Checkout</h5>
             <fieldset>
               <p class="upload-label">Give information about what to prepare prior to your service checkout</p>
-              <div class="check-item">
-                <input type="checkbox" id="step1before-check" name="stepBefore[]" value="Upload poster event yang sudah berlogo company kami">
-                <label for="step1before-check" class="upload-label-thin">Upload poster event yang sudah berlogo company kami</label>
-              </div>
-              <div class="check-item">
-                <input type="checkbox" id="step2before-check" name="stepBefore[]" value="Isi caption atau tambahan lainnya untuk keperluan upload">
-                <label for="step2before-check" class="upload-label-thin">Isi caption atau tambahan lainnya untuk keperluan upload</label>
-              </div>
-              <div class="check-item">
-                <input type="checkbox" id="step3before-check" name="stepBefore[]" value="Kirim bukti transfer">
-                <label for="step3before-check" class="upload-label-thin">Kirim bukti transfer</label>
-              </div>
+              <?php foreach ($steps_before as $step_before) : ?>
+                <div class="check-item">
+                  <input type="checkbox" id="<?= $step_before ?>" name="stepBefore[]" value="<?= $step_before ?>" checked>
+                  <label for="<?= $step_before ?>" class="upload-label-thin"><?= $step_before ?></label>
+                </div>
+              <?php endforeach; ?>
+              <!-- 
+                  <div class="check-item">
+                    <input type="checkbox" id="step2before-check" name="stepBefore[]" value="Isi caption atau tambahan lainnya untuk keperluan upload">
+                    <label for="step2before-check" class="upload-label-thin">Isi caption atau tambahan lainnya untuk keperluan upload</label>
+                  </div>
+                  <div class="check-item">
+                    <input type="checkbox" id="step3before-check" name="stepBefore[]" value="Kirim bukti transfer">
+                    <label for="step3before-check" class="upload-label-thin">Kirim bukti transfer</label>
+                  </div> -->
               <div id="newRow"></div>
               <button id="addRow" type="button" class="btn-info">+ ADD OTHER STEPS</button>
             </fieldset>
@@ -292,18 +306,21 @@
             <h5>Steps after Checkout</h5>
             <fieldset>
               <p class="upload-label">What should your clients do after checkout?</p>
-              <div class="check-item">
-                <input type="checkbox" id="step1after-check" name="stepAfter[]" value="Join WhatsApp group">
-                <label for="step1after-check" class="upload-label-thin">Join WhatsApp group</label>
-              </div>
-              <div class="check-item">
-                <input type="checkbox" id="step2after-check" name="stepAfter[]" value="Pilih jadwal upload poster saat mengisi formulir">
-                <label for="step2after-check" class="upload-label-thin">Pilih jadwal upload poster saat mengisi formulir</label>
-              </div>
-              <div class="check-item">
-                <input type="checkbox" id="step3after-check" name="stepAfter[]" value="Wait your poster uploaded">
-                <label for="step3after-check" class="upload-label-thin">Wait your poster uploaded</label>
-              </div>
+              <?php foreach ($steps_after as $step_after) : ?>
+                <div class="check-item">
+                  <input type="checkbox" id="<?= $step_after ?>" name="stepAfter[]" value="<?= $step_after ?>" checked>
+                  <label for="<?= $step_after ?>" class="upload-label-thin"><?= $step_after ?></label>
+                </div>
+              <?php endforeach; ?>
+              <!-- <div class="check-item">
+                  <input type="checkbox" id="step2after-check" name="stepAfter[]" value="Pilih jadwal upload poster saat mengisi formulir">
+                  <label for="step2after-check" class="upload-label-thin">Pilih jadwal upload poster saat mengisi formulir</label>
+                </div>
+                <div class="check-item">
+                  <input type="checkbox" id="step3after-check" name="stepAfter[]" value="Wait your poster uploaded">
+                  <label for="step3after-check" class="upload-label-thin">Wait your poster uploaded</label>
+                </div> -->
+
               <div id="newRowAfter"></div>
               <button id="addRowAfter" type="button" class="btn-info">+ ADD OTHER STEPS</button>
             </fieldset>
@@ -315,18 +332,21 @@
             <h5>Value</h5>
             <fieldset>
               <p class="upload-label">What is your company’s values to make client use your service?</p>
-              <div class="check-item">
-                <input type="checkbox" id="value1-check" name="value[]" value="Original followers">
-                <label for="value1-check" class="upload-label-thin">Original followers</label>
-              </div>
-              <div class="check-item">
+              <?php foreach ($values as $value) : ?>
+                <div class="check-item">
+                  <input type="checkbox" id="<?= $value ?>" name="value[]" value="<?= $value ?>" checked>
+                  <label for="<?= $value ?>" class="upload-label-thin"><?= $value ?></label>
+                </div>
+              <?php endforeach; ?>
+              <!-- <div class="check-item">
                 <input type="checkbox" id="value2-check" name="value[]" value="32.000++ active accounts">
                 <label for="value2-check" class="upload-label-thin">32.000++ active accounts</label>
               </div>
               <div class="check-item">
                 <input type="checkbox" id="value3-check" name="value[]" value="Have been a trusted media partner for 5 years">
                 <label for="value3-check" class="upload-label-thin">Have been a trusted media partner for 5 years</label>
-              </div>
+              </div> -->
+
               <div id="newRowValue"></div>
               <button id="addRowValue" type="button" class="btn-info">+ ADD OTHER VALUES</button>
             </fieldset>
@@ -348,12 +368,16 @@
             <h5>Package Category</h5>
             <fieldset>
               <p class="upload-label" style="text-align: justify;">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
-              <label for="package-name" class="upload-label">Package Category Name</label>
-              <input type="text" name="package[0][name]" id="package-name" placeholder="Input package category name here (ex: Bronze, Silver, Gold)" required />
-              <label for="package-desc" class="upload-label">Package Category Description</label>
-              <textarea name="package[0][desc]" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea>
-              <label for="package-prize" class="upload-label">Package Prize (Rp)</label>
-              <input type="number" name="package[0][prize]" id=" package-prize" placeholder="25000" required>
+              <?php foreach ($dataProduk['paket'] as $paket) : ?>
+                <hr class="hr-addpackage">
+
+                <label for="package-name" class="upload-label">Package Category Name</label>
+                <input type="text" name="package[][name]" id="package-name" value="<?= $paket['nama_paket'] ?>" required />
+                <label for="package-desc" class="upload-label">Package Category Description</label>
+                <textarea name="package[][desc]" id="package-desc" cols="30" rows="6" required><?= $paket['deskripsi_paket'] ?></textarea>
+                <label for="package-prize" class="upload-label">Package Prize (Rp)</label>
+                <input type="number" name="package[][prize]" id=" package-prize" value="<?= $paket['harga_paket'] ?>" required>
+              <?php endforeach; ?>
               <div id="newRowPackage"></div>
               <button id="addRowPackage" type="button" class="btn-info">+ ADD PACKAGE CATEGORY</button>
             </fieldset>

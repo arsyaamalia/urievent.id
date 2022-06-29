@@ -50,8 +50,9 @@ class Editlayanan extends BaseController
         $dataProduk = array_shift($daftar_produk);
         $kategori_now = $this->kategori_layanan->getKategori($id_kategori);
         $subKategori_now = $this->subkategori_layanan->getSubKat($id_subkategori);
-        $step_before = explode('__', $dataProduk['step_before']);
-        dd($step_before);
+        $steps_before = explode('__', $dataProduk['step_before']);
+        $steps_after = explode('__', $dataProduk['step_after']);
+        $values = explode('__', $dataProduk['value']);
 
         // dd($subKategori_now);
         // $daftar_produk['nama_kategori'] = $namaKategori['nama_kategori'];
@@ -73,7 +74,10 @@ class Editlayanan extends BaseController
             'dataKategori' => $dataKategori,
             'kategori_now' => $kategori_now,
             'subKategori_now' =>  $subKategori_now,
-            'dataProduk' => $dataProduk
+            'dataProduk' => $dataProduk,
+            'steps_before' => $steps_before,
+            'steps_after' => $steps_after,
+            'values' => $values
         ];
         return view('pages/editlayanan', $dataPage);
     }
