@@ -233,7 +233,7 @@
                 <div class="contact-input" id="contact-input-wa">
                   <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
                   <label data-number="+62">
-                    <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
+                    <input type="tel" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
                     <label>
                 </div>
                 <div class="contact-input" id="contact-input-ig">

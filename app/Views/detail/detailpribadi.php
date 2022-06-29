@@ -58,7 +58,7 @@
                     <div class="detail-action">
                         <div class="action-button">
                             <div class="edit-box">
-                                <a href="/editlayanan/index">
+                                <a href="/editlayanan/index/<?= $detail['id_layanan'] ?>/<?= $dataKategori['id_kategori'] ?>/<?= $dataSubKategori['id_subkategori'] ?>">
                                     <div class="edit-service">
                                         <p>Edit</p>
                                     </div>

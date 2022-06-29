@@ -149,6 +149,7 @@
           </button>
         </div>
       </div>
+
       <div class="upload-form">
         <div class="form-general">
           <div class="basic-container">
@@ -174,7 +175,7 @@
                     <div class="category-input">
                       <label for="category" class="upload-label">Category</label>
                       <select style="cursor: pointer;" class="category" id="category" name="category" required tabindex="1">
-                        <option selected disabled>Select one</option>
+                        <option selected disabled hidden value="<?= $kategori_now['id_kategori'] ?>"><?= $kategori_now['nama_kategori'] ?></option>
                         <?php foreach ($dataKategori as $kategori) : ?>
                           <!-- foreach tabel kategori as kategori -->
                           <option value="<?= $kategori['id_kategori'] ?>"><?= $kategori['nama_kategori'] ?></option>
@@ -184,22 +185,22 @@
                     <div class="subcategory-input">
                       <label for="subcategory" class="upload-label">Subcategory</label>
                       <select style="cursor: pointer;" id="subcategory" name="subcategory" required tabindex="2">
-                        <option selected disabled>Select one</option>
+                        <option selected hidden value="<?= $subKategori_now['id_subkategori'] ?>"><?= $subKategori_now['nama_subkategori'] ?></option>
                       </select>
                     </div>
                   </div>
                   <div class="company-name-input">
                     <label for="company-name" class="upload-label">Company's Name</label>
-                    <input type="text" name="company-name" id="company-name" placeholder="Input name here" tabindex="3" required />
+                    <input type="text" value="<?= $dataProduk['nama_instansi'] ?>" name="company-name" id="company-name" placeholder="Input name here" tabindex="3" required />
                   </div>
                   <div class="company-email-input">
                     <div class="upload-email">
                       <label for="company-email" class="upload-label">Company's Email</label>
-                      <input type="email" name="company-email" id="company-email" placeholder="Input email here" tabindex="4" required />
+                      <input type="email" value="<?= $dataProduk['email_instansi'] ?>" name="company-email" id="company-email" placeholder="Input email here" tabindex="4" required />
                     </div>
                     <div class="upload-confirmemail">
                       <label for="company-conemail" class="upload-label">Confirm Email</label>
-                      <input type="email" name="company-conemail" id="company-conemail" placeholder="Retype email here" tabindex="5" required />
+                      <input type="email" value="<?= $dataProduk['email_instansi'] ?>" name="company-conemail" id="company-conemail" placeholder="Retype email here" tabindex="5" required />
                     </div>
                   </div>
                 </div>
@@ -220,7 +221,7 @@
                       <img src="../icon/whatsapp.png" class="contact-check-img">
                       <label for="whatsapp-check" class="upload-label">Whatsapp</label>
                     </div>
-                    <input type="checkbox" id="whatsapp-check" name="whatsapp-check" value="whatsapp" required>
+                    <input type="checkbox" id="whatsapp-check" name="whatsapp-check" value="whatsapp" required checked>
                   </div>
                   <div class="instagram-box">
                     <div class="grup-icon-label">
@@ -230,12 +231,18 @@
                     <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
                   </div>
                 </div>
-                <div class="contact-input" id="contact-input-wa">
+                <div class="contact-input" id="contact-input-wa" style="display: block;">
                   <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
                   <label data-number="+62">
-                    <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
+                    <input type="tel" value="<?= $dataProduk['whatsapp'] ?>" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
                     <label>
                 </div>
+                <?php if ($dataProduk['instagram'] !== "") : ?>
+                  <div class="contact-input" id="contact-input-ig" style="display: block;">
+                    <label for="instagram-input" class="upload-label">Instagram Username</label>
+                    <input type="text" value="<?= $dataProduk['instagram'] ?>" name="instagram-input" id="instagram-input" placeholder="Example: urievent.id" />
+                  </div>
+                <?php endif; ?>
                 <div class="contact-input" id="contact-input-ig">
                   <label for="instagram-input" class="upload-label">Instagram Username</label>
                   <input type="text" name="instagram-input" id="instagram-input" placeholder="Example: urievent.id" />
@@ -253,7 +260,7 @@
               </p>
               <div class="desc-input">
                 <label for="desc-input" class="upload-label">Company Description</label>
-                <textarea name="desc-input" id="desc-input" cols="30" rows="6" placeholder="Describe your company here" required></textarea>
+                <textarea name="desc-input" id="desc-input" cols="30" rows="6" placeholder="Describe your company here" required><?= $dataProduk['deskripsi'] ?></textarea>
               </div>
               <div class="location-input">
                 <label for="location-input" class="upload-label">Location</label>

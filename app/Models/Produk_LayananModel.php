@@ -16,9 +16,9 @@ class produk_layananModel extends Model
 
     public function getDetail($id_layanan = false)
     {
-        if ($id_layanan == false) {
-            return $this->findAll();
-        }
+        // if ($id_layanan == false) {
+        //     return $this->findAll();
+        // }
 
         return $this->where(['id_layanan' => $id_layanan])->findAll();
     }

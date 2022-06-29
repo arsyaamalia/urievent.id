@@ -9,6 +9,7 @@ use App\Models\subkategori_layananModel;
 
 class Editlayanan extends BaseController
 {
+
     public function __construct()
     {
         $this->produk_layanan = new produk_layananModel();
@@ -16,6 +17,71 @@ class Editlayanan extends BaseController
         $this->kategori_layanan = new kategori_layananModel();
         $this->subkategori_layanan = new subkategori_layananModel();
     }
+
+    public function mapingProdukPaket($dataProduk, $dataPaket)
+    {
+        $daftar_produk = array_map(function ($produk) use ($dataPaket) {
+            $daftar_paket = array_filter($dataPaket, function ($paket) use ($produk) {
+                // dd($paket, $produk);
+                return $paket['id_layanan'] == $produk['id_layanan'];
+            });
+
+            $produk['paket'] = $daftar_paket;
+            $daftar_harga = array_column($daftar_paket, 'harga_paket');
+            if (!empty($daftar_harga)) {
+                $produk['harga_max'] = max($daftar_harga);
+                $produk['harga_min'] = min($daftar_harga);
+            } else {
+                $produk['harga_max'] = '0';
+                $produk['harga_min'] = '0';
+            }
+            return $produk;
+        }, $dataProduk);
+
+        return $daftar_produk;
+    }
+
+    public function index($id_layanan, $id_kategori, $id_subkategori)
+    {
+        $dataProduk = $this->produk_layanan->getDetail($id_layanan);
+        $dataPaket = $this->paket_layanan->findAll();
+        $dataKategori = $this->kategori_layanan->findAll();
+        $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
+        $dataProduk = array_shift($daftar_produk);
+        $kategori_now = $this->kategori_layanan->getKategori($id_kategori);
+        $subKategori_now = $this->subkategori_layanan->getSubKat($id_subkategori);
+        $step_before = explode('__', $dataProduk['step_before']);
+        dd($step_before);
+
+        // dd($subKategori_now);
+        // $daftar_produk['nama_kategori'] = $namaKategori['nama_kategori'];
+
+        // $step_before_list = [
+        //     "Upload poster event yang sudah berlogo company kami",
+        //     "Isi caption atau tambahan lainnya untuk keperluan upload",
+        //     "Kirim bukti transfer"
+        // ];
+        // $step_before_produk = explode('__', $dataProduk['step_before']);
+        // $steps = array_map(function ($step) use($step_before_list)
+        // {
+        //     array_search($step, $step_before_list)
+        // }, $step_before_produk)
+
+        // dd($dataProduk);
+        $dataPage = [
+            'title' => "UriEvent | Edit Service",
+            'dataKategori' => $dataKategori,
+            'kategori_now' => $kategori_now,
+            'subKategori_now' =>  $subKategori_now,
+            'dataProduk' => $dataProduk
+        ];
+        return view('pages/editlayanan', $dataPage);
+    }
+
+    public function saveEdit()
+    {
+    }
+
     public function generateIDLayanan()
     {
         $dataProduk = $this->produk_layanan->orderBy('id_layanan', 'desc')->first();
@@ -75,28 +141,11 @@ class Editlayanan extends BaseController
         return $fileName;
     }
 
-    public function index()
-    {
-        $dataKategori = $this->kategori_layanan->findAll();
-        $dataPage = [
-            'title' => "UriEvent | Edit Service",
-            'dataKategori' => $dataKategori
-        ];
-        return view('pages/upload', $dataPage);
-    }
+
     public function getDataSubKategori($id_kategori)
     {
-        // $id_kategori = $this->input->post('id_kategori');
         $dataSubKategori = $this->subkategori_layanan->getDataSubKategori($id_kategori);
-        // $this->output->set_content_type('application/json')->set_output(json_encode($dataSubKategori));
-        // echo json_encode($dataSubKategori);
         $data = json_encode($dataSubKategori);
-        // echo $data;
-        // foreach ($dataSubKategori as $row) {
-        //     $output = '<option value="' . $row->id_subkategori . '">' . $row->nama_subkategori . '</option>';
-        // }
-        // // $data = json_encode($output);
-        // $this->$output->set_content_type
         echo $data;
     }
 
@@ -153,7 +202,6 @@ class Editlayanan extends BaseController
 
             $this->paket_layanan->save($dataPaket);
         }
-
         return redirect()->to('/pages');
     }
 }

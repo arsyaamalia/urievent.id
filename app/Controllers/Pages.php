@@ -90,7 +90,6 @@ class Pages extends BaseController
 
     public function advertise()
     {
-
         $dataPage = [
             'title' => "UriEvent | Advertise With Us"
         ];
@@ -100,7 +99,6 @@ class Pages extends BaseController
     public function search()
     {
         $cari = $this->request->getVar('cari');
-
         // $dataProduk = $this->produk_layanan->search($cari)->paginate(5, 'daftar_produk');
         $dataProduk = $this->produk_layanan->search($cari)->findAll();
 
@@ -220,9 +218,4 @@ class Pages extends BaseController
 
         return view('pages/venue', $dataPage);
     }
-
-    // public function serviceDraft()
-    // {
-
-    // }
 }

@@ -50,7 +50,7 @@
                                         </div>
                                         <h4><?= $produkDraft['nama_instansi'] ?></h4>
                                     </div>
-                                    <h3><?= $produkDraft['harga_min'] ?></h3>
+                                    <h3>Rp <?= number_format($produkDraft['harga_min'], '0', '', '.'); ?></h3>
                                 </div>
                             </a>
                         </div>
@@ -73,7 +73,7 @@
                                         </div>
                                         <h4><?= $produkActive['nama_instansi'] ?></h4>
                                     </div>
-                                    <h3><?= $produkActive['harga_min'] ?></h3>
+                                    <h3>Rp <?= number_format($produkActive['harga_min'], '0', '', '.'); ?></h3>
                                 </div>
                             </a>
                         </div>

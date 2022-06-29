@@ -86,17 +86,8 @@ class Upload extends BaseController
     }
     public function getDataSubKategori($id_kategori)
     {
-        // $id_kategori = $this->input->post('id_kategori');
         $dataSubKategori = $this->subkategori_layanan->getDataSubKategori($id_kategori);
-        // $this->output->set_content_type('application/json')->set_output(json_encode($dataSubKategori));
-        // echo json_encode($dataSubKategori);
         $data = json_encode($dataSubKategori);
-        // echo $data;
-        // foreach ($dataSubKategori as $row) {
-        //     $output = '<option value="' . $row->id_subkategori . '">' . $row->nama_subkategori . '</option>';
-        // }
-        // // $data = json_encode($output);
-        // $this->$output->set_content_type
         echo $data;
     }
 
@@ -154,6 +145,6 @@ class Upload extends BaseController
             $this->paket_layanan->save($dataPaket);
         }
 
-        return redirect()->to('/pages');
+        return redirect()->to('/pages/uriservice');
     }
 }
