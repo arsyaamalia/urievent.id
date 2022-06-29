@@ -106,6 +106,7 @@ class Upload extends BaseController
         $id_layanan = $this->generateIDLayanan();
 
         $daftarPaket = $this->request->getVar('package');
+        dd($daftarPaket);
         // array to string 
         $step_before = join('__', $this->request->getVar('stepBefore'));
         $step_after = join('__', $this->request->getVar('stepAfter'));

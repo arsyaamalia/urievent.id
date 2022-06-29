@@ -39,11 +39,12 @@ $routes->get('/', 'Home::index');
 $routes->get('/pages', 'Pages::index', ['filter' => 'auth']);
 $routes->get('/detail/(:segment)/(:segment)/(:segment)', '/Detail::index/$1/$2/$3');
 $routes->get('upload/getDataSubKategori(:segment)', '/DataSubKategori/$1');
+// $routes->get('/detail/detailpribadi/(:segment)/(:segment)/(:segment)', '/Detail::detailpribadi/$1/$2/$3');
+// http://localhost:8081/detail/detailpribadi/LAY042/CAT001/SCAT002
+
 
 // $routes->get('upload/save(:segment)', '/upload::save/$1');
-
 // $routes->get('/Upload_coba/save/(:segment)', '/Upload::save/$1');
-
 // $routes->get('/Upload/save/(:segment)', '/Upload::save/$1');
 
 $routes->get('/sign', 'Sign::index', ['filter' => 'signback']);

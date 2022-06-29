@@ -114,9 +114,6 @@ class Pages extends BaseController
         return view('/pages/search', $dataPage);
     }
 
-
-
-
     public function program()
     {
 

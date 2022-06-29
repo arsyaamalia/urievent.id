@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<form action="/upload/save" method="POST" enctype="multipart/form-data">
+<form action="/Editlayanan/saveEdit/<?= $dataProduk['id_layanan'] ?>" method="POST" enctype="multipart/form-data">
   <hr class="hr-service">
   <div id="upload-container">
     <!-- <div class="review-container">
@@ -173,7 +173,7 @@
                     <div class="category-input">
                       <label for="category" class="upload-label">Category</label>
                       <select style="cursor: pointer;" class="category" id="category" name="category" required tabindex="1">
-                        <option selected disabled hidden value="<?= $kategori_now['id_kategori'] ?>"><?= $kategori_now['nama_kategori'] ?></option>
+                        <option value="<?= $kategori_now['id_kategori'] ?>" selected hidden><?= $kategori_now['nama_kategori'] ?></option>
                         <?php foreach ($dataKategori as $kategori) : ?>
                           <!-- foreach tabel kategori as kategori -->
                           <option value="<?= $kategori['id_kategori'] ?>"><?= $kategori['nama_kategori'] ?></option>
@@ -183,7 +183,7 @@
                     <div class="subcategory-input">
                       <label for="subcategory" class="upload-label">Subcategory</label>
                       <select style="cursor: pointer;" id="subcategory" name="subcategory" required tabindex="2">
-                        <option selected hidden value="<?= $subKategori_now['id_subkategori'] ?>"><?= $subKategori_now['nama_subkategori'] ?></option>
+                        <option value="<?= $subKategori_now['id_subkategori'] ?>" selected hidden><?= $subKategori_now['nama_subkategori'] ?></option>
                       </select>
                     </div>
                   </div>
@@ -368,16 +368,15 @@
             <h5>Package Category</h5>
             <fieldset>
               <p class="upload-label" style="text-align: justify;">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
-              <?php foreach ($dataProduk['paket'] as $paket) : ?>
+              <?php for ($i = 0; $i < count($dataPaketNow); $i++) : ?>
                 <hr class="hr-addpackage">
-
                 <label for="package-name" class="upload-label">Package Category Name</label>
-                <input type="text" name="package[][name]" id="package-name" value="<?= $paket['nama_paket'] ?>" required />
+                <input type="text" name="package[<?= $i ?>][name]" id="package-name" value="<?= $dataPaketNow[$i]['nama_paket'] ?>" required />
                 <label for="package-desc" class="upload-label">Package Category Description</label>
-                <textarea name="package[][desc]" id="package-desc" cols="30" rows="6" required><?= $paket['deskripsi_paket'] ?></textarea>
+                <textarea name="package[<?= $i ?>][desc]" id="package-desc" cols="30" rows="6" required><?= $dataPaketNow[$i]['deskripsi_paket'] ?></textarea>
                 <label for="package-prize" class="upload-label">Package Prize (Rp)</label>
-                <input type="number" name="package[][prize]" id=" package-prize" value="<?= $paket['harga_paket'] ?>" required>
-              <?php endforeach; ?>
+                <input type="number" name="package[<?= $i ?>][prize]" id=" package-prize" value="<?= $dataPaketNow[$i]['harga_paket'] ?>" required>
+              <?php endfor; ?>
               <div id="newRowPackage"></div>
               <button id="addRowPackage" type="button" class="btn-info">+ ADD PACKAGE CATEGORY</button>
             </fieldset>
@@ -401,7 +400,7 @@
     </div>
     <div class="upload-form-button">
       <button class="btn-info" type="submit" name="button_save" value="save_draft">Save as draft</button>
-      <button class="btn-info" type="submit" name="button_save" value="save">Submit</button>
+      <button class="btn-info" type="submit" name="button_save" value="save">Save Changes</button>
     </div>
   </div>
 </form>

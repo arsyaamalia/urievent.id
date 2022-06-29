@@ -43,8 +43,11 @@ class Editlayanan extends BaseController
 
     public function index($id_layanan, $id_kategori, $id_subkategori)
     {
+
         $dataProduk = $this->produk_layanan->getDetail($id_layanan);
         $dataPaket = $this->paket_layanan->findAll();
+        $dataPaketNow = $this->paket_layanan->getDetail($id_layanan);
+
         $dataKategori = $this->kategori_layanan->findAll();
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
         $dataProduk = array_shift($daftar_produk);
@@ -68,7 +71,8 @@ class Editlayanan extends BaseController
         //     array_search($step, $step_before_list)
         // }, $step_before_produk)
 
-        // dd($dataProduk);
+        // dd(count($dataProduk['paket']));
+
         $dataPage = [
             'title' => "UriEvent | Edit Service",
             'dataKategori' => $dataKategori,
@@ -77,34 +81,73 @@ class Editlayanan extends BaseController
             'dataProduk' => $dataProduk,
             'steps_before' => $steps_before,
             'steps_after' => $steps_after,
-            'values' => $values
+            'values' => $values,
+            'dataPaketNow' => $dataPaketNow
         ];
         return view('pages/editlayanan', $dataPage);
     }
 
-    public function saveEdit()
+    public function saveEdit($id_layanan)
     {
+        // $button_save = $this->input->post('button_save');
+        // dd($this->request->getVar());
+        $button_save = $this->request->getVar('button_save');
+        if ($button_save == 'save_draft') {
+            $status_layanan = "draft";
+        } else if ($button_save == "save") {
+            $status_layanan = 'uploaded';
+        }
+
+        $id_layanan = $id_layanan;
+        $dataProduk = $this->request->getVar();
+        $dataProduk;
+        // dd($dataProduk);       
+        // array to string 
+        $step_before = join('__', $this->request->getVar('stepBefore'));
+        $step_after = join('__', $this->request->getVar('stepAfter'));
+        $value = join('__', $this->request->getVar('value'));
+
+        $fileGambar = $this->request->getFile('layanan-img');
+        $daftarPaket = $dataProduk['package'];
+        $id_paket = $daftarPaket['id_paket'];
+
+
+        $dataProduk = [
+            'id_layanan' => $id_layanan,
+            'id_kategori' => $this->request->getVar('category'),
+            'id_subkategori' => $this->request->getVar('subcategory'),
+            'id_user' => session()->get('id_user'),
+            'nama_instansi' => $this->request->getVar('company-name'),
+            'email_instansi' => $this->request->getVar('company-email'),
+            'whatsapp' => $this->request->getVar('whatsapp-input'),
+            'instagram' => $this->request->getVar('instagram-input'),
+            'picture_poster' => $this->getImageLayanan($fileGambar),
+            'deskripsi' => $this->request->getVar('desc-input'),
+            'step_before' => $step_before,
+            'step_after' => $step_after,
+            'other' => $this->request->getVar('other-input'),
+            'value' => $value,
+            'status_layanan' => $status_layanan
+        ];
+
+        $this->produk_layanan->save($dataProduk);
+
+        foreach ($daftarPaket as $paket) {
+            $id_paket = $this->generateIDPaket();
+            $dataPaket = [
+                'id_paket' => $id_paket,
+                'id_layanan' => $id_layanan,
+                'nama_paket' => $paket['name'],
+                'deskripsi_paket' => $paket['desc'],
+                'harga_paket' => $paket['prize']
+            ];
+
+            $this->paket_layanan->save($dataPaket);
+        }
+        return redirect()->to('/pages');
     }
 
-    public function generateIDLayanan()
-    {
-        $dataProduk = $this->produk_layanan->orderBy('id_layanan', 'desc')->first();
-        // explode
-        $id_layanan_string =  explode('Y', $dataProduk['id_layanan']);
-        // string to int
-        $id_layanan_terakhir = intval(end($id_layanan_string));
-        // nambah id+1 buat id baru
-        $new_id_layanan =  $id_layanan_terakhir + 1;
-        // balikin jadi string buat id baru
-        $new_str_id_layanan = (string) $new_id_layanan;
-        // cek lenght string dan validasi sekalian bikin 
-        if (strlen($new_str_id_layanan) == 2) {
-            $new_id = 'LAY0' . $new_str_id_layanan;
-        } else {
-            $new_id = 'LAY' . $new_str_id_layanan;
-        }
-        return $new_id;
-    }
+
 
     public function generateIDPaket()
     {
@@ -150,61 +193,5 @@ class Editlayanan extends BaseController
         $dataSubKategori = $this->subkategori_layanan->getDataSubKategori($id_kategori);
         $data = json_encode($dataSubKategori);
         echo $data;
-    }
-
-    public function save()
-    {
-        // $button_save = $this->input->post('button_save');
-        $button_save = $this->request->getVar('button_save');
-        if ($button_save == 'save_draft') {
-            $status_layanan = "draft";
-        } else if ($button_save == "save") {
-            $status_layanan = 'uploaded';
-        }
-
-        $dataProduk = $this->request->getVar();
-        $dataProduk;
-        $id_layanan = $this->generateIDLayanan();
-
-        $daftarPaket = $this->request->getVar('package');
-        // array to string 
-        $step_before = join('__', $this->request->getVar('stepBefore'));
-        $step_after = join('__', $this->request->getVar('stepAfter'));
-        $value = join('__', $this->request->getVar('value'));
-
-        $fileGambar = $this->request->getFile('layanan-img');
-
-        $dataProduk = [
-            'id_layanan' => $id_layanan,
-            'id_kategori' => $this->request->getVar('category'),
-            'id_subkategori' => $this->request->getVar('subcategory'),
-            'id_user' => 'u002',
-            'nama_instansi' => $this->request->getVar('company-name'),
-            'email_instansi' => $this->request->getVar('company-email'),
-            'whatsapp' => $this->request->getVar('whatsapp-input'),
-            'instagram' => $this->request->getVar('instagram-input'),
-            'picture_poster' => $this->getImageLayanan($fileGambar),
-            'deskripsi' => $this->request->getVar('desc-input'),
-            'step_before' => $step_before,
-            'step_after' => $step_after,
-            'other' => $this->request->getVar('other-input'),
-            'value' => $value,
-            'status_layanan' => $status_layanan
-        ];
-
-        $this->produk_layanan->save($dataProduk);
-        foreach ($daftarPaket as $paket) {
-            $id_paket = $this->generateIDPaket();
-            $dataPaket = [
-                'id_paket' => $id_paket,
-                'id_layanan' => $id_layanan,
-                'nama_paket' => $paket['name'],
-                'deskripsi_paket' => $paket['desc'],
-                'harga_paket' => $paket['prize']
-            ];
-
-            $this->paket_layanan->save($dataPaket);
-        }
-        return redirect()->to('/pages');
     }
 }
