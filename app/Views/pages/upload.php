@@ -3,14 +3,11 @@
 <?= $this->section('content'); ?>
 
 <form action="/upload/save" method="POST" enctype="multipart/form-data">
-  <div class="upload-box"></div>
-  <div class="upload-container">
-    <div class="review-container">
+  <hr class="hr-service">
+  <div id="upload-container">
+    <!-- <div class="review-container">
       <div class="review-picture-box">
         <div class="review-picture">
-          <!-- <div class="review-picture-item">
-            <img src="/icon/edit.png" class="edit-icon">
-          </div> -->
           <div class="review-picture-item">
             <img src="/icon/picture2.png" class="picture-icon" />
           </div>
@@ -57,8 +54,9 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="upload-second-field">
+    </div> -->
+    <h2 id="upload-service-title" style="margin: 0; margin-bottom: 40px;">Upload Service</h2>
+    <div class="upload-second-field" style="margin: 0;">
       <div class="upload-tahapan">
         <div class="tahapan-general">
           <button class="general1" type="button" onclick="overlayGeneral()">
@@ -231,10 +229,15 @@
                   </div>
                 </div>
                 <div class="contact-input" id="contact-input-wa">
-                  <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
+                  <!-- <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
                   <label data-number="+62">
-                    <input type="tel" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
-                    <label>
+                    <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
+                    <label> -->
+                  <div class="collabse-number">
+                    <div class="value62">+62</div>
+                    <hr>
+                    <input type="number" name="whatsapp-input" id="whatsapp-input" class="phone-field" placeholder="Company's Whatsapp number" required />
+                  </div>
                 </div>
                 <div class="contact-input" id="contact-input-ig">
                   <label for="instagram-input" class="upload-label">Instagram Username</label>

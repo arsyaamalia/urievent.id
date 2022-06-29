@@ -3,14 +3,11 @@
 <?= $this->section('content'); ?>
 
 <form action="/upload/save" method="POST" enctype="multipart/form-data">
-  <div class="upload-box"></div>
-  <div class="upload-container">
-    <div class="review-container">
+  <hr class="hr-service">
+  <div id="upload-container">
+    <!-- <div class="review-container">
       <div class="review-picture-box">
         <div class="review-picture">
-          <!-- <div class="review-picture-item">
-            <img src="/icon/edit.png" class="edit-icon">
-          </div> -->
           <div class="review-picture-item">
             <img src="/icon/picture2.png" class="picture-icon" />
           </div>
@@ -57,8 +54,9 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="upload-second-field">
+    </div> -->
+    <h2 id="upload-service-title" style="margin: 0; margin-bottom: 40px;">Edit Service</h2>
+    <div class="upload-second-field" style="margin: 0;">
       <div class="upload-tahapan">
         <div class="tahapan-general">
           <button class="general1" type="button" onclick="overlayGeneral()">
@@ -251,6 +249,7 @@
             </fieldset>
           </div>
         </div>
+
         <div class="form-details">
           <div class="desc-container">
             <h5>Company Details</h5>
@@ -261,14 +260,6 @@
               <div class="desc-input">
                 <label for="desc-input" class="upload-label">Company Description</label>
                 <textarea name="desc-input" id="desc-input" cols="30" rows="6" placeholder="Describe your company here" required><?= $dataProduk['deskripsi'] ?></textarea>
-              </div>
-              <div class="location-input">
-                <label for="location-input" class="upload-label">Location</label>
-                <input type="text" name="location-input" id="location-input" placeholder="Enter Location" required>
-              </div>
-              <div class="notes-input">
-                <label for="notes-input" class="upload-label">Notes (optional)</label>
-                <input type="text" name="notes-input" id="notes-input" placeholder="Example: Tower X Ballroom Y">
               </div>
             </fieldset>
           </div>

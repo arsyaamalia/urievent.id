@@ -141,7 +141,6 @@ class Editlayanan extends BaseController
         return $fileName;
     }
 
-
     public function getDataSubKategori($id_kategori)
     {
         $dataSubKategori = $this->subkategori_layanan->getDataSubKategori($id_kategori);
