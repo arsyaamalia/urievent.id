@@ -368,8 +368,14 @@
             <h5>Package Category</h5>
             <fieldset>
               <p class="upload-label" style="text-align: justify;">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
-              <?php for ($i = 0; $i < count($dataPaketNow); $i++) : ?>
+
+              <?php $banyakdata = count($dataPaketNow); ?>
+              <div style="display: none;" id="banyakdata"><?= $banyakdata ?></div>
+
+              <?php for ($i = 0; $i < $banyakdata; $i++) : ?>
+
                 <hr class="hr-addpackage">
+                <input type="text" name="package[<?= $i ?>][id_paket]" value="<?= $dataPaketNow[$i]['id_paket'] ?>">
                 <label for="package-name" class="upload-label">Package Category Name</label>
                 <input type="text" name="package[<?= $i ?>][name]" id="package-name" value="<?= $dataPaketNow[$i]['nama_paket'] ?>" required />
                 <label for="package-desc" class="upload-label">Package Category Description</label>
@@ -377,6 +383,7 @@
                 <label for="package-prize" class="upload-label">Package Prize (Rp)</label>
                 <input type="number" name="package[<?= $i ?>][prize]" id=" package-prize" value="<?= $dataPaketNow[$i]['harga_paket'] ?>" required>
               <?php endfor; ?>
+
               <div id="newRowPackage"></div>
               <button id="addRowPackage" type="button" class="btn-info">+ ADD PACKAGE CATEGORY</button>
             </fieldset>

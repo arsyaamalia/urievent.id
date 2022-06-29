@@ -148,22 +148,22 @@ $(document).ready(function () {
 
   // INI ADD FIELD BUAT PACKAGE
   // add row
-  var ipackage = 0;
+  var ipackage = document.getElementById("banyakdata").innerHTML;
   console.log(ipackage);
   $("#addRowPackage").click(function () {
     ipackage++;
     console.log(ipackage);
-
     var html = "";
     html += '<div id="inputFormRowPackage">';
     html += '<div class="input-group mb-3">';
     html += '<hr class="hr-addpackage">';
+    // html += '<input type="text" name="package[' + ipackage + '][id]" id="package-name" value="" />';
     html += '<label for="package-name" class="upload-label">Package Category Name</label><br>';
-    html += '<input type="text" name="package[i][name]" id="package-name" placeholder="Input package category name here" required />';
+    html += '<input type="text" name="package[' + ipackage + '][name]" id="package-name" placeholder="Input package category name here" required />';
     html += '<label for="package-desc" class="upload-label">Package Category Description</label><br>';
-    html += '<textarea name="package[i][desc]" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea>';
+    html += '<textarea name="package[' + ipackage + '][desc]" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea>';
     html += '<label for="package-prize" class="upload-label">Package Prize (Rp)</label><br>';
-    html += '<input type="number" name="package[i][prize]e" id="package-prize" placeholder="25000" min="0.00"  step="0.01" required>';
+    html += '<input type="number" name="package[' + ipackage + '][prize]" id="package-prize" placeholder="25000" min="0.00"  step="0.01" required>';
     html += '<button id="removeRowPackage" type="button" class="button-red">Remove</button>';
     html += "</div>";
     html += "</div>";
@@ -172,6 +172,7 @@ $(document).ready(function () {
 
   // remove row
   $(document).on("click", "#removeRowPackage", function () {
+    ipackage--;
     $(this).closest("#inputFormRowPackage").remove();
   });
 

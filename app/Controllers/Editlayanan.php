@@ -9,6 +9,7 @@ use App\Models\subkategori_layananModel;
 
 class Editlayanan extends BaseController
 {
+    protected $dataPaketNow;
 
     public function __construct()
     {
@@ -47,16 +48,18 @@ class Editlayanan extends BaseController
         $dataProduk = $this->produk_layanan->getDetail($id_layanan);
         $dataPaket = $this->paket_layanan->findAll();
         $dataPaketNow = $this->paket_layanan->getDetail($id_layanan);
-
         $dataKategori = $this->kategori_layanan->findAll();
+
         $daftar_produk = $this->mapingProdukPaket($dataProduk, $dataPaket);
         $dataProduk = array_shift($daftar_produk);
+
         $kategori_now = $this->kategori_layanan->getKategori($id_kategori);
         $subKategori_now = $this->subkategori_layanan->getSubKat($id_subkategori);
         $steps_before = explode('__', $dataProduk['step_before']);
         $steps_after = explode('__', $dataProduk['step_after']);
         $values = explode('__', $dataProduk['value']);
 
+        // dd($dataProduk);
         // dd($subKategori_now);
         // $daftar_produk['nama_kategori'] = $namaKategori['nama_kategori'];
 
@@ -100,8 +103,6 @@ class Editlayanan extends BaseController
 
         $id_layanan = $id_layanan;
         $dataProduk = $this->request->getVar();
-        $dataProduk;
-        // dd($dataProduk);       
         // array to string 
         $step_before = join('__', $this->request->getVar('stepBefore'));
         $step_after = join('__', $this->request->getVar('stepAfter'));
@@ -109,7 +110,8 @@ class Editlayanan extends BaseController
 
         $fileGambar = $this->request->getFile('layanan-img');
         $daftarPaket = $dataProduk['package'];
-        $id_paket = $daftarPaket['id_paket'];
+
+        // $id_paket = $daftarPaket['id_paket'];        // dd($daftarPaket);
 
 
         $dataProduk = [
@@ -133,7 +135,13 @@ class Editlayanan extends BaseController
         $this->produk_layanan->save($dataProduk);
 
         foreach ($daftarPaket as $paket) {
-            $id_paket = $this->generateIDPaket();
+            // dd(count($daftarPaket));   
+            if (!isset($paket['id_paket'])) {
+                echo ('masuk if id kosong');
+                $id_paket = $this->generateIDPaket();
+            } elseif (isset($paket['id_paket'])) {
+                $id_paket = $paket['id_paket'];
+            }
             $dataPaket = [
                 'id_paket' => $id_paket,
                 'id_layanan' => $id_layanan,
@@ -144,7 +152,7 @@ class Editlayanan extends BaseController
 
             $this->paket_layanan->save($dataPaket);
         }
-        return redirect()->to('/pages');
+        return redirect()->to('/pages/uriservice');
     }
 
 

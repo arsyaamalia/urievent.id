@@ -102,11 +102,11 @@ class Upload extends BaseController
         }
 
         $dataProduk = $this->request->getVar();
-        $dataProduk;
+        // dd($dataProduk);
         $id_layanan = $this->generateIDLayanan();
 
-        $daftarPaket = $this->request->getVar('package');
-        dd($daftarPaket);
+
+        $daftarPaket = $dataProduk['package'];
         // array to string 
         $step_before = join('__', $this->request->getVar('stepBefore'));
         $step_after = join('__', $this->request->getVar('stepAfter'));
@@ -142,10 +142,8 @@ class Upload extends BaseController
                 'deskripsi_paket' => $paket['desc'],
                 'harga_paket' => $paket['prize']
             ];
-
             $this->paket_layanan->save($dataPaket);
         }
-
         return redirect()->to('/pages/uriservice');
     }
 }

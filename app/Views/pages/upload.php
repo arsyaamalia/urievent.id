@@ -353,13 +353,16 @@
             <h5>Package Category</h5>
             <fieldset>
               <p class="upload-label" style="text-align: justify;">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
+              <?php $banyakdata = 0; ?>
+              <div id="banyakdata" style="display: none;"><?= $banyakdata ?></div>
               <label for="package-name" class="upload-label">Package Category Name</label>
               <input type="text" name="package[0][name]" id="package-name" placeholder="Input package category name here (ex: Bronze, Silver, Gold)" required />
               <label for="package-desc" class="upload-label">Package Category Description</label>
               <textarea name="package[0][desc]" id="package-desc" cols="30" rows="6" placeholder="Description of package category. Ex: Bronze Package = 2x Upload Feed" required></textarea>
               <label for="package-prize" class="upload-label">Package Prize (Rp)</label>
               <input type="number" name="package[0][prize]" id=" package-prize" placeholder="25000" required>
-              <div id="newRowPackage"></div>
+              <div id="newRowPackage">
+              </div>
               <button id="addRowPackage" type="button" class="btn-info">+ ADD PACKAGE CATEGORY</button>
             </fieldset>
           </div>
