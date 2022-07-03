@@ -93,8 +93,10 @@ class Upload extends BaseController
 
     public function save()
     {
-        // $button_save = $this->input->post('button_save');
-        $button_save = $this->request->getVar('button_save');
+        // validation input
+        if ($this->validate([]))
+            // $button_save = $this->input->post('button_save');
+            $button_save = $this->request->getVar('button_save');
         if ($button_save == 'save_draft') {
             $status_layanan = "draft";
         } else if ($button_save == "save") {

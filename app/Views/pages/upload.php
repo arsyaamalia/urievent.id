@@ -161,10 +161,10 @@
                       <img id="image" src="foto-arsya.jpg" alt="">
                     </div>
                     <div class="upload-image-content">
-                      <div class="upload-image-icon"><img src="/icon/picture2.png" class="picture-icon"/></div>
+                      <div class="upload-image-icon"><img src="/icon/picture2.png" class="picture-icon" /></div>
                       <div class="upload-image-text">No file choosen, yet!</div>
                     </div>
-                    <div id="cancel-btn"><img src="/icon/trash.png"/></div>
+                    <div id="cancel-btn"><img src="/icon/trash.png" /></div>
                     <div class="file-name">File name here</div>
                   </div>
                   <input type="file" name="layanan-img" id="default-btn" hidden>
@@ -229,7 +229,7 @@
                 <div class="contact-check" style="margin: 0;">
                   <div class="whatsapp-box">
                     <div class="grup-icon-label">
-                      <img src="../icon/whatsapp.png" class="contact-check-img">
+                      <img src="/icon/whatsapp.png" class="contact-check-img">
                       <label for="whatsapp-check" class="upload-label">Whatsapp</label>
                     </div>
                     <input type="checkbox" id="whatsapp-check" name="whatsapp-check" value="whatsapp" required>
@@ -242,11 +242,8 @@
                     <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
                   </div>
                 </div>
+
                 <div class="contact-input" id="contact-input-wa">
-                  <!-- <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
-                  <label data-number="+62">
-                    <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
-                    <label> -->
                   <div class="collabse-number">
                     <div class="value62">+62</div>
                     <hr>
@@ -272,14 +269,14 @@
                 <label for="desc-input" class="upload-label">Company Description</label>
                 <textarea name="desc-input" id="desc-input" cols="30" rows="6" placeholder="Describe your company here" required></textarea>
               </div>
-              <div class="location-input">
+              <!-- <div class="location-input">
                 <label for="location-input" class="upload-label">Location</label>
                 <input type="text" name="location-input" id="location-input" placeholder="Enter Location" required>
               </div>
               <div class="notes-input">
                 <label for="notes-input" class="upload-label">Notes (optional)</label>
                 <input type="text" name="notes-input" id="notes-input" placeholder="Example: Tower X Ballroom Y">
-              </div>
+              </div> -->
             </fieldset>
           </div>
           <div class="upload-line">

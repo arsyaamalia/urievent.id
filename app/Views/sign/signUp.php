@@ -26,7 +26,7 @@
             <main>
                 <div class="auth-content">
                     <h2>Sign up to Urievent</h2>
-                    <div class="auth-connections">
+                    <!-- <div class="auth-connections">
                         <a href="https://accounts.google.com/login" class="link-connect-button">
                             <div class="connect-google">
                                 <img src="/icon/google.png" alt="logo google" class="icon-google-logo">
@@ -35,7 +35,7 @@
                         </a>
                     </div>
                     <hr class="divider">
-                    </hr>
+                    </hr> -->
                     <div class="auth-form">
                         <form action="/sign/save" method="POST">
                             <div class="form-fields">

@@ -1,5 +1,4 @@
 <?= $this->extend('layouts/template') ?>
-
 <?= $this->section('content'); ?>
 
 <div class="batas-body">

@@ -78,23 +78,10 @@ class Pages extends BaseController
         return view('pages/home', $dataPage);
     }
 
-    public function about()
-    {
-        $dataPage = [
-            'title' => "UriEvent | About Us",
-            'tes' => ['satu', 'dua', 'tiga']
-        ];
-        return view('pages/about', $dataPage);
-    }
 
 
-    public function advertise()
-    {
-        $dataPage = [
-            'title' => "UriEvent | Advertise With Us"
-        ];
-        return view('pages/advertise', $dataPage);
-    }
+
+
 
     public function search()
     {
@@ -112,16 +99,6 @@ class Pages extends BaseController
             'pager' => $this->produk_layanan->pager
         ];
         return view('/pages/search', $dataPage);
-    }
-
-    public function program()
-    {
-
-        $dataPage = [
-            'title' => "UriEvent | Program",
-            'tes' => ['satu', 'dua', 'tiga']
-        ];
-        return view('pages/program', $dataPage);
     }
 
 

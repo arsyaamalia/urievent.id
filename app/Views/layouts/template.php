@@ -1,3 +1,4 @@
+<?php session()->get('id_user'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,38 +21,59 @@
         <div class="header">
             <div class="nav-left">
                 <div class="urievent">
-                    <a href="/pages" class="clicked-urievent">UriEvent</a>
+                    <a href="/home" class="clicked-urievent">UriEvent</a>
                 </div>
                 <div class="nav">
                     <ul>
-                        <li><a href="/pages/about" class="nav-link">About Us</a></li>
-                        <li><a href="/pages/advertise" class="nav-link">Advertise With Us</a></li>
-                        <li><a href="/pages/program" class="nav-link">Program</a></li>
+                        <li><a href="/home/about" class="nav-link">About Us</a></li>
+                        <li><a href="/home/advertise" class="nav-link">Advertise With Us</a></li>
+                        <li><a href="/home/program" class="nav-link">Program</a></li>
                         <li>
                             <div class="search-box-2">
-                                <form action="/pages/search">
-                                    <input type="text" placeholder="Mau cari apa?" name="cari" style="color: black;">
-                                    <div class="search-icon">
-                                        <i class="fas fa-search"></i>
+                                <?php if (isset($_SESSION['id_user'])) : ?>
+                                    <form action="/pages/search">
+                                        <input type="text" placeholder="Mau cari apa?" name="cari" style="color: black;">
+                                        <div class="search-icon">
+                                            <i class="fas fa-search"></i>
+                                        </div>
+                                        <button class="search-button">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </form>
+                                    <div class="cancel-icon">
+                                        <i class="fas fa-times"></i>
+                                    <?php else : ?>
+                                        <form action="/sign">
+                                            <input type="text" placeholder="Mau cari apa?" name="cari" style="color: black;">
+                                            <div class="search-icon">
+                                                <i class="fas fa-search"></i>
+                                            </div>
+                                            <button class="search-button">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </form>
+                                        <div class="cancel-icon">
+                                            <i class="fas fa-times"></i>
+                                        <?php endif; ?>
+                                        </div>
                                     </div>
-                                    <button class="search-button">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </form>
-                                <div class="cancel-icon">
-                                    <i class="fas fa-times"></i>
-                                </div>
-                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="header-nav-right">
-                <div class="nav-right-item" id="addheight" onmouseover="mouseOver()" onmouseout="mouseOut()">
-                    <div class="profile-link">
-                        <img src="/img/foto_user/<?= session()->get('foto_user'); ?>" class="nav-right-icon" id="message">
+                <?php if (isset($_SESSION['id_user'])) : ?>
+                    <div class="nav-right-item" id="addheight" onmouseover="mouseOver()" onmouseout="mouseOut()">
+                        <div class="profile-link">
+                            <img src="/img/foto_user/<?= session()->get('foto_user'); ?>" class="nav-right-icon" id="message">
+                        </div>
                     </div>
-                </div>
+                <?php else : ?>
+                    <div class="sign-in" id="margin-nav-right">
+                        <li><a href="/sign" class="sign-in">Sign In</a></li>
+                    </div>
+                <?php endif; ?>
+
                 <div class="nav-right-item">
                     <a href="/pages/urichat">
                         <div class="urichat-icon">
@@ -151,16 +173,16 @@
             <div class="nav-bottom-box">
                 <h5>UriEvent</h5>
                 <div class="nav-container-link">
-                    <a href="/pages/about">
+                    <a href="/home/about">
                         <p class="nav-bottom-link">About Us</p>
                     </a>
-                    <a href="/pages/advertise">
+                    <a href="/home/advertise">
                         <p class="nav-bottom-link">Advertise With Us</p>
                     </a>
                     <a href="#">
                         <p class="nav-bottom-link">Career</p>
                     </a>
-                    <a href="/pages/program">
+                    <a href="/home/program">
                         <p class="nav-bottom-link">Program</p>
                     </a>
                     <a href="/privacy">
@@ -234,7 +256,6 @@
         </div>
     </div>
     </div>
-
 
     <script>
         const hoverprofile = document.getElementById('buathover');

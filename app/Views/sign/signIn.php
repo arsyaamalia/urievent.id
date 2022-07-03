@@ -26,7 +26,7 @@
             <main>
                 <div class="auth-content">
                     <h2>Sign in to UriEvent</h2>
-                    <div class="auth-connections">
+                    <!-- <div class="auth-connections">
                         <a href="https://accounts.google.com/login" class="link-connect-button">
                             <div class="connect-google">
                                 <img src="/icon/google.png" alt="logo google" class="icon-google-logo">
@@ -34,14 +34,14 @@
                             </div>
                         </a>
                     </div>
-                    <hr class="divider">
+                    <hr class="divider"> -->
                     </hr>
                     <div class="auth-form">
-                        <?php if(session()->getFlashdata('msg')):?>
+                        <?php if (session()->getFlashdata('msg')) : ?>
                             <div class="alert alert-warning">
                                 <?= session()->getFlashdata('msg') ?>
                             </div>
-                        <?php endif;?>
+                        <?php endif; ?>
                         <form action="/sign/signIn" method="POST">
                             <div class="form-fields">
                                 <fieldset>
