@@ -14,7 +14,7 @@ class Sign extends BaseController
 
     public function __construct()
     {
-        $this->User = new UserModel();
+        $this->UserModel = new UserModel();
         // $this->produk_layanan = new produk_layananModel();
 
     }
@@ -65,16 +65,13 @@ class Sign extends BaseController
     //validasi sign up
     public function save()
     {
-        // $session = session();
         $userModel = new UserModel();
         $new_username = $this->request->getVar('username');
-
-
         //cek username unik
         $data = $userModel->where('username_user', $new_username)->first();
         if (!$data) {
             // aman
-            $temp = $this->UserModel->orderBy('id_user', 'desc')->first();
+            $temp = $userModel->orderBy('id_user', 'desc')->first();
             // dd($temp);
             $id_user_str = explode('u', $temp['id_user']);
             // dd($id_user_str);

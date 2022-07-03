@@ -156,7 +156,26 @@
               <p class="upload-label" style="text-align: justify;">Instruction: Standard image dimension is multiplication of 5x5 with maximum image size 3 MB. Supports JPEG, JPG, and PNG. Please attach your company's LOGO down here.</p>
               <br>
               <div class="basic-box">
-                <div class="picture-input">
+                <div class="edit-picture">
+                  <!-- ini fotonya sudah keisi foto yg lama -->
+                  <?php if ($dataProduk['picture_poster'] == NULL) : ?>
+                    <div class="edit-image-container">
+                      <div class="edit-image-wrapper">
+                        <div class="edit-image-image">
+                          <img id="edit-image-img" src="/img/avatar.png" alt="">
+                        </div>
+                      </div>
+                      <input type="file" name="layanan-img" id="default-btn" hidden>
+                    </div>
+                  <?php elseif (isset($dataUser['foto_user'])) : ?>
+                    <img src="/img/foto_user/<?= $dataUser['foto_user'] ?>">
+                  <?php endif; ?>
+                  <div class="edit-image-button">
+                    <button id="custom-btn" onclick="defaultBtnActive()">Upload new picture</button>
+                    <!-- <button onclick="deleteBtnActive()" id="delete-btn-avatar" class="button-grey">Delete</button> -->
+                  </div>
+                </div>
+                <!-- <div class="picture-input">
                   <div class="drag-area">
                     <div class="picture-field">
                       <img src="/icon/picture2.png" class="picture-icon" />
@@ -167,7 +186,7 @@
                   </div>
                   <input type="file" hidden id="layanan-img" name="layanan-img">
 
-                </div>
+                </div> -->
                 <div class="basic-right-input">
                   <div class="jenis-input">
                     <div class="category-input">
