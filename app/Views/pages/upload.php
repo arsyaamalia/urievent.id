@@ -155,7 +155,7 @@
               <p class="upload-label" style="text-align: justify;">Instruction: Standard image dimension is multiplication of 5x5 with maximum image size 3 MB. Supports JPEG, JPG, and PNG. Please attach your company's LOGO down here.</p>
               <br>
               <div class="basic-box">
-                <div class="upload-image-container">
+                <!-- <div class="upload-image-container">
                   <div class="upload-image-wrapper">
                     <div class="upload-image-image">
                       <img id="image" src="foto-arsya.jpg" alt="">
@@ -169,18 +169,18 @@
                   </div>
                   <input type="file" name="layanan-img" id="default-btn" hidden>
                   <button onclick="defaultBtnActive()" id="custom-btn">Choose an image</button>
-                </div>
-                <!-- <div class="picture-input">
+                </div> -->
+                <div class="picture-input">
                   <div class="drag-area">
                     <div class="picture-field">
                       <img src="/icon/picture2.png" class="picture-icon" />
                     </div>
                     <header>Drag and drop an image</header>
-                    <span>or</span>
-                    <button>Browse</button>
+                    <!-- <span>or</span> -->
                   </div>
-                  <input type="file" hidden id="layanan-img" name="layanan-img">
-                </div> -->
+                  <button id="browse">Browse</button>
+                  <input type="file" id="layanan-img" name="layanan-img" hidden>
+                </div>
                 <div class="basic-right-input">
                   <div class="jenis-input">
                     <div class="category-input">
