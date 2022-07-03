@@ -14,7 +14,9 @@ class Sign extends BaseController
 
     public function __construct()
     {
-        $this->UserModel = new UserModel();
+        $this->User = new UserModel();
+        // $this->produk_layanan = new produk_layananModel();
+
     }
 
     public function signIn()
@@ -115,8 +117,7 @@ class Sign extends BaseController
     {
 
         $dataPage = [
-            'title' => "Urievent | Forgot Password?",
-            'tes' => ['satu', 'dua', 'tiga']
+            'title' => "Urievent | Forgot Password?"
         ];
         return view('sign/resetPass', $dataPage);
     }
@@ -125,5 +126,47 @@ class Sign extends BaseController
     {
         session()->destroy();
         return redirect()->to('/');
+    }
+
+    public function getImageUser($fileImage, $product = null)
+    {
+        if ($fileImage->getError() == 4) {
+            return ($product != null) ? $product['image'] : null;
+        }
+
+        $fileName = $fileImage->getRandomName();
+        $fileImage->move('img/foto_user', $fileName);
+
+
+        if ($product != null && $product['image'] != 'product-default.jpg') {
+            unlink('img/foto_user' . $product['image']);
+        }
+
+        return $fileName;
+    }
+
+    public function editProfile()
+    {
+        $userModel = new UserModel();
+        $id_user = session()->get('id_user');
+        $dataUser = $userModel->where('id_user', $id_user)->first();
+        $dataPage = [
+            'title' => "Urievent | Edit Profile",
+            'dataUser' => $dataUser
+        ];
+        return view('sign/editprofile', $dataPage);
+    }
+
+    function saveEditGen()
+    {
+        $userModel = new UserModel();
+
+        // $id_user = session()->get('id_user');
+        $dataUser = $this->request->getVar();
+        $dataUser = [
+            'username_user' => $this->request->getVar('user-username'),
+            'email_user' => $this->request->getVar('user-email'),
+        ];
+        $userModel->save($dataUser);
     }
 }

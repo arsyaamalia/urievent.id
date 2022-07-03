@@ -15,7 +15,7 @@
                 <h1><?= session()->get('nama_user'); ?></h1>
             </div>
             <div class="edit-button">
-                <button type="button">Edit Profile</button>
+                <a href="/sign/editProfile"><button type="button">Edit Profile</button></a>
             </div>
         </div>
     </div>

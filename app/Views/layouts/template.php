@@ -71,7 +71,7 @@
     </header>
     <div class="profile-hover" id="buathover" onmouseover="mouseOver()" onmouseout="mouseOut()">
         <div class="profil-hover-wrap">
-            <a href="/pages/editprofile">
+            <a href="/sign/editProfile">
                 <div class="profile-hover-item">
                     <h3>Edit Profile</h3>
                 </div>

@@ -369,6 +369,7 @@
             <fieldset>
               <p class="upload-label" style="text-align: justify;">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
 
+              <!-- untuk mengenali paket keberapa dari sebuah layanan -->
               <?php $banyakdata = count($dataPaketNow); ?>
               <div style="display: none;" id="banyakdata"><?= $banyakdata ?></div>
 

@@ -150,6 +150,7 @@ $(document).ready(function () {
   // add row
   var ipackage = document.getElementById("banyakdata").innerHTML;
   console.log(ipackage);
+  // mulai nambah paket
   $("#addRowPackage").click(function () {
     ipackage++;
     console.log(ipackage);
