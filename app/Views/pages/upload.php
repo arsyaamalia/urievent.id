@@ -214,28 +214,25 @@
                 <div class="contact-check" style="margin: 0;">
                   <div class="whatsapp-box">
                     <div class="grup-icon-label">
-                      <img src="../icon/whatsapp.png" class="contact-check-img">
+                      <img src="/icon/whatsapp.png" class="contact-check-img">
                       <label for="whatsapp-check" class="upload-label">Whatsapp</label>
                     </div>
                     <input type="checkbox" id="whatsapp-check" name="whatsapp-check" value="whatsapp" required>
                   </div>
                   <div class="instagram-box">
                     <div class="grup-icon-label">
-                      <img src="../icon/instagram.png" class="contact-check-img">
+                      <img src="/icon/instagram.png" class="contact-check-img">
                       <label for="instagram-check" class="upload-label">Instagram</label>
                     </div>
                     <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
                   </div>
                 </div>
                 <div class="contact-input" id="contact-input-wa">
-                  <!-- <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
-                  <label data-number="+62">
-                    <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
-                    <label> -->
-                  <div class="collabse-number">
-                    <div class="value62">+62</div>
+                  <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
+                  <div class="collabse-number-whatsapp">
+                    <div class="value62-whatsapp">+62</div>
                     <hr>
-                    <input type="number" name="whatsapp-input" id="whatsapp-input" class="phone-field" placeholder="Company's Whatsapp number" required />
+                    <input style="border-radius: 0 15px 15px 0;" type="number" name="whatsapp-input" id="whatsapp-input" class="phone-field" placeholder="Company's Whatsapp number" required />
                   </div>
                 </div>
                 <div class="contact-input" id="contact-input-ig">
@@ -348,7 +345,7 @@
           </div>
         </div>
         <div class="form-checkout">
-          <div class="package-category-container">
+          <div class="package-category-container" style="margin: 0;">
             <h5>Package Category</h5>
             <fieldset>
               <p class="upload-label" style="text-align: justify;">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
