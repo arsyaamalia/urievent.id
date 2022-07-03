@@ -134,7 +134,21 @@
         <form action="#">
           <div class="edit-picture">
             <!-- ini fotonya sudah keisi foto yg lama -->
-            <img src="/img/foto-arsya.jpg">
+            <?php if ($dataUser['foto_user'] == NULL) : ?>
+              <div class="picture-input" style="margin-right: 20px;">
+                <div class="drag-area">
+                  <div class="picture-field">
+                    <img src="/icon/picture2.png" class="picture-icon" />
+                  </div>
+                  <header>Drag and drop an image</header>
+                  <span>or</span>
+                  <button>Browse</button>
+                </div>
+                <input type="file" hidden id="layanan-img" name="layanan-img">
+              </div>
+            <?php elseif (isset($dataUser['foto_user'])) : ?>
+              <img src="/img/foto_user/<?= $dataUser['foto_user'] ?>">
+            <?php endif; ?>
             <button type="button" class="button-red">Upload new picture</button>
             <button type="reset" class="button-grey">Delete</button>
           </div>
