@@ -196,9 +196,13 @@
       </div>
       <div class="form-status" style="display: none;">
         <form action="#">
+          <div class="ktp-status">
+            <label for="user-status" class="edit-label">Status</label>
+            <input type="text" name="user-status" id="user-status" readonly tabindex="2" value="<?= $dataUser['status'] ?> " />
+          </div>
           <div class="upload-ktp">
             <label for="user-ktp" class="edit-label">Upload KTP Picture</label>
-            <div class="drag-area" style="margin: 15px 0">
+            <div class="drag-area" style="margin-top: 3px">
               <div class="picture-field">
                 <img src="/icon/picture2.png" class="picture-icon" />
               </div>
@@ -207,10 +211,6 @@
               <button>Browse</button>
               <input type="file" hidden>
             </div>
-          </div>
-          <div class="ktp-status">
-            <label for="user-status" class="edit-label">Status</label>
-            <input type="text" name="user-status" id="user-status" readonly tabindex="2" value="<?= $dataUser['status'] ?> " />
           </div>
           <!-- <button type="submit" class="button-red">Confirm</button> -->
         </form>
