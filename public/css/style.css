@@ -20,7 +20,7 @@ li {
   display: inline-block;
 }
 
-textarea{
+textarea {
   resize: none;
 }
 
@@ -776,7 +776,7 @@ a.privacy {
   float: left;
 }
 
-.advertise-back{
+.advertise-back {
   background: radial-gradient(700px 600px at center, #d1e6ff, #f4f5f5);
 }
 
@@ -786,15 +786,15 @@ a.privacy {
   padding: 50px 0;
 }
 
-#advertise-head{
+#advertise-head {
   margin-bottom: 50px;
 }
 
-#advertise-head h1{
+#advertise-head h1 {
   font-size: 38px;
 }
 
-p#advertise-text{
+p#advertise-text {
   font-size: 20px;
   font-weight: 500;
   margin-top: 10px;
@@ -809,18 +809,18 @@ p#advertise-text{
   margin-bottom: 15px;
 }
 
-.ad-label{
+.ad-label {
   font-size: 14px;
   font-weight: 500;
 }
 
-.collabse-number{
+.collabse-number {
   display: flex;
   flex-direction: row;
-  
 }
 
-#advertise-form input, #advertise-form textarea{
+#advertise-form input,
+#advertise-form textarea {
   display: block;
   width: 100%;
   height: 42px;
@@ -834,7 +834,7 @@ p#advertise-text{
   font-family: "Poppins", sans-serif;
 }
 
-.value62{
+.value62 {
   height: 42px;
   border-radius: 15px 0 0 15px;
   padding: 0 20px;
@@ -848,11 +848,11 @@ p#advertise-text{
   font-weight: 500;
 }
 
-input#institut-nomor{
+input#institut-nomor {
   border-radius: 0 15px 15px 0;
 }
 
-.collabse-number hr{
+.collabse-number hr {
   width: 2px;
   height: 42px;
   border: none;
@@ -860,19 +860,19 @@ input#institut-nomor{
   margin-top: 3px;
 }
 
-textarea#institut-desc{
+textarea#institut-desc {
   height: 150px;
   padding: 15px 20px;
 }
 
-input#institut-lampiran{
+input#institut-lampiran {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-button.submit-form-advertise{
+button.submit-form-advertise {
   background-color: #e94560;
   height: 42px;
   width: 100%;
@@ -886,14 +886,14 @@ button.submit-form-advertise{
   margin: 25px 0 10px 0;
 }
 
-hr.hr-white{
+hr.hr-white {
   background-color: #fff;
   width: 100%;
   height: 2px;
   border: none;
 }
 
-.program-container{
+.program-container {
   width: 100%;
   height: 1200px;
   margin: 0px auto;
@@ -901,12 +901,12 @@ hr.hr-white{
   padding: 100px;
 }
 
-.program-box{
+.program-box {
   width: 70%;
   margin: 0px auto;
 }
 
-.program-box h1{
+.program-box h1 {
   font-size: 70px;
 }
 
@@ -1748,8 +1748,6 @@ img.edit-icon {
   align-items: center;
 } */
 
-
-
 .upload-second-field,
 .edit-profile-field {
   margin-top: 40px;
@@ -1805,7 +1803,8 @@ img.edit-icon {
   background-color: #f4f5f5;
 }
 
-.tahapan-nomor, .nav-nomor {
+.tahapan-nomor,
+.nav-nomor {
   background-color: #ddd;
   border-radius: 100%;
   margin-right: 10px;
@@ -1827,7 +1826,7 @@ img.edit-icon {
   color: rgb(143, 143, 143);
 }
 
-.nav-delete .nav-nama h3{
+.nav-delete .nav-nama h3 {
   color: #e94560;
 }
 
@@ -1947,14 +1946,27 @@ img.edit-icon {
   column-gap: 30px;
 }
 
-.upload-image-container{
-  width: 180px;
+.form-gene,
+.form-password,
+.form-edit-profile {
+  margin-bottom: 25px;
 }
 
-.upload-image-container .upload-image-wrapper{
+.edit-picture,
+.edit-image-button {
+  display: flex;
+  align-items: center;
+}
+
+.edit-image-container {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.edit-image-container .edit-image-wrapper {
   position: relative;
-  height: 180px;
-  width: 100%;
+  height: 120px;
+  width: 120px;
   background-color: #f4f5f5;
   border-radius: 100%;
   border: 2px dashed rgb(143, 143, 143);
@@ -1965,7 +1977,7 @@ img.edit-icon {
   overflow: hidden;
 }
 
-.upload-image-wrapper .upload-image-image{
+.edit-image-wrapper .edit-image-image {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1974,61 +1986,17 @@ img.edit-icon {
   justify-content: center;
 }
 
-.upload-image-wrapper .upload-image-image img{
+.edit-image-wrapper .edit-image-image img#edit-image-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.upload-image-wrapper .upload-image-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.upload-image-wrapper img.picture-icon{
-  width: 50px;
-}
-
-.upload-image-wrapper .upload-image-text{
-  font-size: 12px;
-  font-weight: 500;
-  color: rgb(143, 143, 143);
-}
-
-.upload-image-wrapper #cancel-btn{
-  position: absolute;
-  top: 5px;
-  cursor: pointer;
-  background-color: rgb(244, 245, 245, 0.5);
-  border-radius: 100%;
-  padding: 5px 5px 0 5px;
-  display: none;
-}
-
-.upload-image-wrapper #cancel-btn img{
-  width: 25px;
-}
-
-.upload-image-wrapper .file-name{
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  color: #fff;
-  padding: 8px 50px;
-  font-size: 8px;
-  text-align: center;
-  display: none;
-  background-color: #0f3460;
-  overflow: hidden;
-}
-
-.upload-image-container button#custom-btn{
-  margin-top: 20px;
-  margin-bottom: 5px;
-  width: 100%;
+.edit-picture button#custom-btn {
+  padding: 0px 20px;
   height: 33px;
+  margin-right: 10px;
+  margin-left: 20px;
   display: block;
   border: none;
   outline: none;
@@ -2041,7 +2009,13 @@ img.edit-icon {
   cursor: pointer;
 }
 
-/* .drag-area {
+.picture-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.drag-area {
   border: 2px dashed rgb(143, 143, 143);
   height: 180px;
   width: 180px;
@@ -2072,9 +2046,10 @@ img.edit-icon {
   font-weight: 500;
   color: rgb(143, 143, 143);
 }
-.drag-area button {
+.picture-input button {
   padding: 0px 20px;
-  margin-top: 7px;
+  margin-top: 20px;
+  margin-bottom: 5px;
   height: 33px;
   font-size: 11px;
   font-weight: 400;
@@ -2091,7 +2066,7 @@ img.edit-icon {
   width: 100%;
   border-radius: 100%;
   object-fit: cover;
-} */
+}
 
 label.upload-label {
   font-size: 11px;
@@ -2263,16 +2238,16 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-div#input-group{
+div#input-group {
   display: flex;
   align-items: center;
 }
 
-div.input-group{
+div.input-group {
   width: 100%;
 }
 
-#input-group img{
+#input-group img {
   width: 35px;
   height: auto;
   cursor: pointer;
@@ -2288,7 +2263,6 @@ div.input-group{
 
 .profile-photo img,
 .edit-picture img {
-  margin-right: 30px;
   width: 120px;
   border-radius: 100%;
 }
@@ -2312,7 +2286,7 @@ hr.hr-service {
   height: 2px;
 }
 
-hr.hr-addpackage{
+hr.hr-addpackage {
   border: none;
   background-color: #eee;
   width: 100%;
@@ -2423,7 +2397,11 @@ hr.hr-addpackage{
   margin: 0;
 }
 
-.nav-gene, .nav-edit-profile, .nav-password, .nav-status, .nav-delete{
+.nav-gene,
+.nav-edit-profile,
+.nav-password,
+.nav-status,
+.nav-delete {
   display: flex;
   flex-direction: column;
 }
@@ -2436,19 +2414,19 @@ hr.hr-nav-edit {
   margin: 30px 0;
 }
 
-.edit-profile-form{
+.edit-profile-form {
   background-color: #ffffff;
   border: 2px solid #eeeeee;
   border-radius: 15px;
   padding: 30px;
 }
 
-label.edit-label{
+label.edit-label {
   font-size: 12px;
   font-weight: 500;
 }
 
-.edit-profile-form input{
+.edit-profile-form input {
   background-color: #f4f5f5;
   border: none;
   border-radius: 15px;
@@ -2463,7 +2441,8 @@ label.edit-label{
   margin-bottom: 10px;
 }
 
-button.button-red, button.button-grey{
+button.button-red,
+button.button-grey {
   background-color: #e94560;
   border-radius: 15px;
   padding: 0 20px;
@@ -2477,13 +2456,13 @@ button.button-red, button.button-grey{
   cursor: pointer;
 }
 
-button.button-grey{
+button.button-grey {
   background-color: #f4f5f5;
   color: #0f3460;
   cursor: pointer;
 }
 
-.edit-picture{
+.edit-picture {
   display: flex;
   align-items: center;
 }

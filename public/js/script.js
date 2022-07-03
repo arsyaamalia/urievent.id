@@ -222,7 +222,7 @@ $(document).ready(function () {
 //selecting all required elements
 const dropArea = document.querySelector(".drag-area"),
   dragText = dropArea.querySelector("header"),
-  button = dropArea.querySelector("button"),
+  button = document.querySelector("#browse"),
   input = document.querySelector("#layanan-img");
 let file; //this is a global variable and we'll use it inside multiple functions
 
@@ -268,6 +268,7 @@ function showFile() {
     fileReader.onload = () => {
       let fileURL = fileReader.result; //passing user file source in fileURL variable
       // UNCOMMENT THIS BELOW LINE. I GOT AN ERROR WHILE UPLOADING THIS POST SO I COMMENTED IT
+      button.textContent = "Edit Logo";
       let imgTag = `<img src="${fileURL}" alt="image" style="border-radius: 100%">`; //creating an img tag and passing user selected file source inside src attribute
       dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
     };
@@ -278,26 +279,6 @@ function showFile() {
     dragText.textContent = "Drag and drop an image";
   }
 }
-
-const customBtn = document.querySelector("#custom-btn");
-const photo = document.querySelector("#image");
-
-function defaultBtnActive() {
-  const defaultBtn = document.querySelector("#default-btn");
-  console.log("hloo");
-  defaultBtn.click();
-}
-defaultBtn.addEventListener("change", function () {
-  const file = this.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function () {
-      const result = reader.result;
-      photo.src = result;
-    };
-    reader.readAsDataURL(file);
-  }
-});
 
 // const subcategory = document.querySelector(".subcategory");
 

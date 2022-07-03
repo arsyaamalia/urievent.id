@@ -94,14 +94,15 @@ class Upload extends BaseController
     public function save()
     {
         // validation input
-        if ($this->validate([]))
-            // $button_save = $this->input->post('button_save');
-            $button_save = $this->request->getVar('button_save');
+        // if ($this->validate([]))
+        $button_save = $this->request->getVar('button_save');
         if ($button_save == 'save_draft') {
             $status_layanan = "draft";
         } else if ($button_save == "save") {
             $status_layanan = 'uploaded';
         }
+        $fileGambar = $this->request->getFile('layanan-img');
+        // dd($fileGambar);
 
         $dataProduk = $this->request->getVar();
         // dd($dataProduk);
@@ -114,7 +115,7 @@ class Upload extends BaseController
         $step_after = join('__', $this->request->getVar('stepAfter'));
         $value = join('__', $this->request->getVar('value'));
 
-        $fileGambar = $this->request->getFile('layanan-img');
+
 
         $dataProduk = [
             'id_layanan' => $id_layanan,

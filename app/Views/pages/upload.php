@@ -155,32 +155,17 @@
               <p class="upload-label" style="text-align: justify;">Instruction: Standard image dimension is multiplication of 5x5 with maximum image size 3 MB. Supports JPEG, JPG, and PNG. Please attach your company's LOGO down here.</p>
               <br>
               <div class="basic-box">
-                <div class="upload-image-container">
-                  <div class="upload-image-wrapper">
-                    <div class="upload-image-image">
-                      <img id="image" src="foto-arsya.jpg" alt="">
-                    </div>
-                    <div class="upload-image-content">
-                      <div class="upload-image-icon"><img src="/icon/picture2.png" class="picture-icon" /></div>
-                      <div class="upload-image-text">No file choosen, yet!</div>
-                    </div>
-                    <div id="cancel-btn"><img src="/icon/trash.png" /></div>
-                    <div class="file-name">File name here</div>
-                  </div>
-                  <input type="file" name="layanan-img" id="default-btn" hidden>
-                  <button onclick="defaultBtnActive()" id="custom-btn">Choose an image</button>
-                </div>
-                <!-- <div class="picture-input">
+                <div class="picture-input">
                   <div class="drag-area">
                     <div class="picture-field">
-                      <img src="/icon/picture2.png" class="picture-icon" />
+                      <img name="layanan-img" src="/icon/picture2.png" class="picture-icon" />
                     </div>
                     <header>Drag and drop an image</header>
-                    <span>or</span>
-                    <button>Browse</button>
+                    <!-- <span>or</span> -->
                   </div>
-                  <input type="file" hidden id="layanan-img" name="layanan-img">
-                </div> -->
+                  <button id="browse">Browse</button>
+                  <input type="file" id="layanan-img" name="layanan-img" hidden>
+                </div>
                 <div class="basic-right-input">
                   <div class="jenis-input">
                     <div class="category-input">
@@ -229,7 +214,7 @@
                 <div class="contact-check" style="margin: 0;">
                   <div class="whatsapp-box">
                     <div class="grup-icon-label">
-                      <img src="/icon/whatsapp.png" class="contact-check-img">
+                      <img src="../icon/whatsapp.png" class="contact-check-img">
                       <label for="whatsapp-check" class="upload-label">Whatsapp</label>
                     </div>
                     <input type="checkbox" id="whatsapp-check" name="whatsapp-check" value="whatsapp" required>
@@ -242,8 +227,11 @@
                     <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
                   </div>
                 </div>
-
                 <div class="contact-input" id="contact-input-wa">
+                  <!-- <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
+                  <label data-number="+62">
+                    <input type="number" name="whatsapp-input" id="whatsapp-input" value="+62" placeholder="Company's Whatsapp number" required />
+                    <label> -->
                   <div class="collabse-number">
                     <div class="value62">+62</div>
                     <hr>
@@ -380,7 +368,7 @@
               <button id="addRowPackage" type="button" class="btn-info">+ ADD PACKAGE CATEGORY</button>
             </fieldset>
           </div>
-          <div class="upload-line">
+          <!-- <div class="upload-line">
             <hr>
           </div>
           <div class="checkout-form-container">
@@ -393,7 +381,7 @@
                 <input type="button" value="Add a field" class="add" id="add" />
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
