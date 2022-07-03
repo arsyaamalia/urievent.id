@@ -116,6 +116,7 @@
       </div>
     </div>
     <div class="edit-profile-form">
+      <button type="submit" class="button-red" style="margin: 0; margin-bottom: 5px; position: relative; left: 450px;">Save Changes</button>
       <div class="form-gene">
         <form action="/sign/saveEditGen" method="POST">
           <div class="edit-username">
@@ -127,7 +128,7 @@
             <label for="user-email" class="edit-label">Email</label>
             <input type="email" name="user-email" id="user-email" required tabindex="2" value="<?= $dataUser['email_user'] ?> " />
           </div>
-          <button type="submit" class="button-red">Save Changes</button>
+          <!-- <button type="submit" class="button-red">Save Changes</button> -->
         </form>
       </div>
       <div class="form-edit-profile" style="display: none;">
@@ -135,22 +136,21 @@
           <div class="edit-picture">
             <!-- ini fotonya sudah keisi foto yg lama -->
             <?php if ($dataUser['foto_user'] == NULL) : ?>
-              <div class="picture-input" style="margin-right: 20px;">
-                <div class="drag-area">
-                  <div class="picture-field">
-                    <img src="/icon/picture2.png" class="picture-icon" />
+              <div class="edit-image-container">
+                <div class="edit-image-wrapper">
+                  <div class="edit-image-image">
+                    <img id="edit-image-img" src="/img/avatar.png" alt="">
                   </div>
-                  <header>Drag and drop an image</header>
-                  <span>or</span>
-                  <button>Browse</button>
                 </div>
-                <input type="file" hidden id="layanan-img" name="layanan-img">
+                <input type="file" name="layanan-img" id="default-btn" hidden>
+              </div>
+              <div class="edit-image-button">
+                <button onclick="defaultBtnActive()" id="custom-btn">Upload new picture</button>
+                <!-- <button onclick="deleteBtnActive()" id="delete-btn-avatar" class="button-grey">Delete</button> -->
               </div>
             <?php elseif (isset($dataUser['foto_user'])) : ?>
               <img src="/img/foto_user/<?= $dataUser['foto_user'] ?>">
             <?php endif; ?>
-            <button type="button" class="button-red">Upload new picture</button>
-            <button type="reset" class="button-grey">Delete</button>
           </div>
           <div class="edit-name">
             <!-- ini inputnya sudah keisi name yg lama -->
@@ -161,13 +161,13 @@
             <!-- ini inputnya sudah keisi domisili yg lama atau
               kl blm ada brati kosong karna user awal cuman login aja blm isi profile-->
             <label for="user-domisili" class="edit-label">Domicile</label>
-            <input type="text" name="user-domisili" id="user-domisili" required tabindex="2" value="<?= $dataUser['domisili_user'] ?> " />
+            <input type="text" name="user-domisili" id="user-domisili" placeholder="Insert your domicile" required tabindex="2" value="<?= $dataUser['domisili_user'] ?> " />
           </div>
           <div class="edit-notelp">
             <!-- ini inputnya sudah keisi notelp yg lama atau
               kl blm ada brati kosong karna user awal cuman login aja blm isi profile-->
             <label for="user-notelp" class="edit-label">Phone Number</label>
-            <input type="number" name="user-notelp" id="user-notelp" required tabindex="3" value="<?= $dataUser['telp_user'] ?>" />
+            <input type="number" name="user-notelp" id="user-notelp" placeholder="Insert your phone number" required tabindex="3" value="<?= $dataUser['telp_user'] ?>" />
           </div>
           <div class="edit-birth">
             <!-- ini inputnya sudah keisi birth yg lama atau
@@ -175,7 +175,7 @@
             <label for="user-birth" class="edit-label">Birthday</label>
             <input type="date" name="user-birth" id="user-birth" required tabindex="4" value="<?= $dataUser['birthdate_user'] ?>" />
           </div>
-          <button type="submit" class="button-red">Save Profile</button>
+          <!-- <button type="submit" class="button-red">Save Profile</button> -->
         </form>
       </div>
       <div class="form-password" style="display: none;">
@@ -191,14 +191,14 @@
             <label for="user-newpass" class="edit-label">New Password</label>
             <input type="password" name="user-newpass" id="user-newpass" placeholder="Minimum 6 characters" tabindex="2" required>
           </div>
-          <button type="submit" class="button-red">Change</button>
+          <!-- <button type="submit" class="button-red">Change</button> -->
         </form>
       </div>
       <div class="form-status" style="display: none;">
         <form action="#">
           <div class="upload-ktp">
             <label for="user-ktp" class="edit-label">Upload KTP Picture</label>
-            <div class="drag-area">
+            <div class="drag-area" style="margin: 15px 0">
               <div class="picture-field">
                 <img src="/icon/picture2.png" class="picture-icon" />
               </div>
@@ -212,7 +212,7 @@
             <label for="user-status" class="edit-label">Status</label>
             <input type="text" name="user-status" id="user-status" readonly tabindex="2" value="<?= $dataUser['status'] ?> " />
           </div>
-          <button type="submit" class="button-red">Confirm</button>
+          <!-- <button type="submit" class="button-red">Confirm</button> -->
         </form>
       </div>
       <div class="form-delete" style="display: none;">
@@ -235,5 +235,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
 <script src="<?= base_url('/js/script.js') ?>"></script>
+<script src="<?= base_url('/js/edit.js') ?>"></script>
 
 <?= $this->endsection(); ?>
