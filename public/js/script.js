@@ -278,6 +278,26 @@ function showFile() {
   }
 }
 
+const customBtn = document.querySelector("#custom-btn");
+const photo = document.querySelector("#image");
+
+function defaultBtnActive(){
+  const defaultBtn = document.querySelector("#default-btn");
+  console.log("hloo");
+  defaultBtn.click();
+}
+defaultBtn.addEventListener("change", function(){
+  const file = this.files[0];
+  if(file){
+    const reader = new FileReader();
+    reader.onload = function(){
+      const result = reader.result;
+      photo.src = result;
+    }
+    reader.readAsDataURL(file);
+  }
+});
+
 // const subcategory = document.querySelector(".subcategory");
 
 // if(document.getElementById("category").value = "coba"){
