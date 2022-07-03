@@ -103,6 +103,7 @@ class Editlayanan extends BaseController
 
         $id_layanan = $id_layanan;
         $dataProduk = $this->request->getVar();
+
         // array to string 
         $step_before = join('__', $this->request->getVar('stepBefore'));
         $step_after = join('__', $this->request->getVar('stepAfter'));
@@ -110,9 +111,6 @@ class Editlayanan extends BaseController
 
         $fileGambar = $this->request->getFile('layanan-img');
         $daftarPaket = $dataProduk['package'];
-
-        // $id_paket = $daftarPaket['id_paket'];        // dd($daftarPaket);
-
 
         $dataProduk = [
             'id_layanan' => $id_layanan,
@@ -135,9 +133,7 @@ class Editlayanan extends BaseController
         $this->produk_layanan->save($dataProduk);
 
         foreach ($daftarPaket as $paket) {
-            // dd(count($daftarPaket));   
             if (!isset($paket['id_paket'])) {
-                echo ('masuk if id kosong');
                 $id_paket = $this->generateIDPaket();
             } elseif (isset($paket['id_paket'])) {
                 $id_paket = $paket['id_paket'];

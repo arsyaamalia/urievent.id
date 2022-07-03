@@ -367,8 +367,11 @@
             <h5>Package Category</h5>
             <fieldset>
               <p class="upload-label" style="text-align: justify;">e.g. Media Partner (Bronze, Silver, Gold), Vendor (Sound System, Light System, Stage), Venue (VIP Ballroom, Exhibition Center), etc.</p>
+
+              <!-- untuk mengenali paket keberapa dari sebuah layanan -->
               <?php $banyakdata = 0; ?>
               <div id="banyakdata" style="display: none;"><?= $banyakdata ?></div>
+
               <label for="package-name" class="upload-label">Package Category Name</label>
               <input type="text" name="package[0][name]" id="package-name" placeholder="Input package category name here (ex: Bronze, Silver, Gold)" required />
               <label for="package-desc" class="upload-label">Package Category Description</label>

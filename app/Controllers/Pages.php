@@ -62,7 +62,7 @@ class Pages extends BaseController
 
     public function index()
     {
-        $session = session();
+        // $session = session();
         $dataProduk = $this->produk_layanan->showUploaded()->paginate(15, 'daftar_produk');
         // dd($dataProduk);
         // $dataProduk = $this->produk_layanan->paginate(15, 'daftar_produk');
@@ -172,14 +172,6 @@ class Pages extends BaseController
             'daftar_produk_active' => $daftar_produk_active
         ];
         return view('pages/uriservice', $dataPage);
-    }
-
-    public function editprofile()
-    {
-        $dataPage = [
-            'title' => "UriEvent | Edit Profile"
-        ];
-        return view('pages/editprofile', $dataPage);
     }
 
     public function vendor()
