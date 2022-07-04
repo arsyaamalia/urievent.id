@@ -46,7 +46,7 @@
                                 <div class="product-item">
                                     <div class="product-grup">
                                         <div class="item-circle" style="overflow: hidden;">
-                                            <img src="/img/picture_poster_layanan/<?= $produkDraft['picture_poster'] ?>" style="object-fit: cover; width: auto; height: 100%;">
+                                            <img src="/img/picture_poster_layanan/<?= $produkDraft['picture_poster'] ?>" id="product-image">
                                         </div>
                                         <h4><?= $produkDraft['nama_instansi'] ?></h4>
                                     </div>
@@ -69,7 +69,7 @@
                                 <div class="product-item">
                                     <div class="product-grup">
                                         <div class="item-circle" style="overflow: hidden;">
-                                            <img src="/img/picture_poster_layanan/<?= $produkActive['picture_poster'] ?>" style="object-fit: cover; width: auto; height: 100%;">
+                                            <img src="/img/picture_poster_layanan/<?= $produkActive['picture_poster'] ?>" id="product-image">
                                         </div>
                                         <h4><?= $produkActive['nama_instansi'] ?></h4>
                                     </div>

@@ -68,7 +68,7 @@
                             <?php if (isset($_SESSION['foto_user'])) : ?>
                                 <img src="/img/foto_user/<?= session()->get('foto_user'); ?>" class="nav-right-icon" id="message">
                             <?php else : ?>
-                                <img src="/icon/picture2.png" class="nav-right-icon" id="message">
+                                <img src="/img/avatar2.png" class="nav-right-icon" id="message">
                             <?php endif; ?>
                         </div>
                     </div>

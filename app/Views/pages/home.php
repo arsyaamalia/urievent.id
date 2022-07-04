@@ -77,7 +77,7 @@
                                 <div class="product-grup">
                                     <!-- <div class="item-circle" style="background-size: cover; background-image: url('/img/picture_poster_layanan/$produk['picture_poster'] ') ;"> -->
                                     <div class="item-circle" style="overflow: hidden;">
-                                        <img src="/img/picture_poster_layanan/<?= $produk['picture_poster'] ?>" alt="" style="object-fit: cover; width: auto; height: 100%;">
+                                        <img src="/img/picture_poster_layanan/<?= $produk['picture_poster'] ?>" alt="" id="product-image">
                                     </div>
                                     <h4><?= $produk['nama_instansi'] ?></h4>
                                 </div>
