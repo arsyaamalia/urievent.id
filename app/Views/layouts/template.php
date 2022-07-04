@@ -65,10 +65,10 @@
                 <?php if (isset($_SESSION['id_user'])) : ?>
                     <div class="nav-right-item" id="addheight" onmouseover="mouseOver()" onmouseout="mouseOut()">
                         <div class="profile-link">
-                            <?php if (isset($_SESSION['foto_user'])) : ?>
+                            <?php if (!isset($_SESSION['foto_user'])) : ?>
                                 <img src="/img/foto_user/<?= session()->get('foto_user'); ?>" class="nav-right-icon" id="message">
                             <?php else : ?>
-                                <img src="/img/avatar2.png" class="nav-right-icon" id="message">
+                                <img src="/img/avatar.png" class="nav-right-icon" id="message">
                             <?php endif; ?>
                         </div>
                     </div>
