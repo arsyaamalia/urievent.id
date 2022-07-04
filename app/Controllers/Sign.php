@@ -125,7 +125,7 @@ class Sign extends BaseController
         return redirect()->to('/');
     }
 
-    public function getImageUser($fileImage, $product = null)
+    public function getImageLayanan($fileImage, $product = null)
     {
         if ($fileImage->getError() == 4) {
             return ($product != null) ? $product['image'] : null;
@@ -154,16 +154,58 @@ class Sign extends BaseController
         return view('sign/editprofile', $dataPage);
     }
 
-    function saveEditGen()
+    function saveEdit()
     {
         $userModel = new UserModel();
-
-        // $id_user = session()->get('id_user');
         $dataUser = $this->request->getVar();
+        $fileGambar = $this->request->getFile('layanan-img');
+
+        if ($this->request->getVar('user-newpass') !== "") {
+            $password = $this->request->getVar('user-newpass');
+        } else {
+            $password = session()->get('password_user');
+        }
+
+        $id_user = session()->get('id_user');
+
         $dataUser = [
+            'id_user' => $id_user,
+            'nama_user' =>  $this->request->getVar('user-name'),
             'username_user' => $this->request->getVar('user-username'),
             'email_user' => $this->request->getVar('user-email'),
+            'password_user' => $password,
+            'foto_user' => $this->getImageLayanan($fileGambar),
+            'telp_user' => $this->request->getVar('user-notelp'),
+            'domisili_user' => $this->request->getVar('user-domisili'),
+            'birthdate_user' => $this->request->getVar('user-birth'),
+            'status' => 'verified'
         ];
         $userModel->save($dataUser);
+
+        session()->set([
+            'id_user' => $dataUser['id_user'],
+            'nama_user' => $dataUser['nama_user'],
+            'username_user' => $dataUser['username_user'],
+            'email_user' => $dataUser['email_user'],
+            'password_user' => $dataUser['password_user'],
+            'telp_user' => $dataUser['telp_user'],
+            'foto_user' => $dataUser['foto_user'],
+            'domilisi_user' => $dataUser['domisili_user'],
+            'birthdate_user' => $dataUser['birthdate_user'],
+            'userstatus' => $dataUser['status']
+        ]);
+        return redirect()->to('/pages/uriservice');
+    }
+
+
+    public function deleteAcc()
+    {
+        $id_user = session()->get('id_user');
+        dd($id_user);
+        $this->userModel->delete($id_user);
+        // $this->paket_layanan->delete($id_layanan);
+        // produk layanan udah kedelete tapi paketnya belum
+        session()->destroy();
+        return redirect()->to('/index');
     }
 }

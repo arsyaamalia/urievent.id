@@ -102,7 +102,8 @@ class Editlayanan extends BaseController
         }
 
         $id_layanan = $id_layanan;
-        $dataProduk = $this->request->getVar();
+        $dataProduk = $this->produk_layanan->getDetail($id_layanan);
+        $dataProduk_new = $this->request->getVar();
 
         // array to string 
         $step_before = join('__', $this->request->getVar('stepBefore'));
@@ -110,7 +111,8 @@ class Editlayanan extends BaseController
         $value = join('__', $this->request->getVar('value'));
 
         $fileGambar = $this->request->getFile('layanan-img');
-        $daftarPaket = $dataProduk['package'];
+
+        $daftarPaket = $dataProduk_new['package'];
 
         $dataProduk = [
             'id_layanan' => $id_layanan,
@@ -121,7 +123,7 @@ class Editlayanan extends BaseController
             'email_instansi' => $this->request->getVar('company-email'),
             'whatsapp' => $this->request->getVar('whatsapp-input'),
             'instagram' => $this->request->getVar('instagram-input'),
-            'picture_poster' => $this->getImageLayanan($fileGambar),
+            'picture_poster' => $this->getImageLayanan($fileGambar, $dataProduk),
             'deskripsi' => $this->request->getVar('desc-input'),
             'step_before' => $step_before,
             'step_after' => $step_after,
@@ -178,15 +180,18 @@ class Editlayanan extends BaseController
     public function getImageLayanan($fileImage, $product = null)
     {
         if ($fileImage->getError() == 4) {
-            return ($product != null) ? $product['image'] : null;
+            if ($product[0] != null && isset($product[0]['picture_poster'])) {
+                return $product[0]['picture_poster'];
+            }
+            return null;
         }
 
         $fileName = $fileImage->getRandomName();
         $fileImage->move('img/picture_poster_layanan', $fileName);
 
-
-        if ($product != null && $product['image'] != 'product-default.jpg') {
-            unlink('img/picture_poster_layanan/' . $product['image']);
+        if ($product[0] != null && isset($product[0]['picture_poster'])) {
+            // unlink('img/picture_poster_layanan/' . $product['picture_poster']);
+            return $product[0]['picture_poster'];
         }
 
         return $fileName;

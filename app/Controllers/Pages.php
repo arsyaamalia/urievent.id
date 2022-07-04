@@ -78,11 +78,6 @@ class Pages extends BaseController
         return view('pages/home', $dataPage);
     }
 
-
-
-
-
-
     public function search()
     {
         $cari = $this->request->getVar('cari');

@@ -814,7 +814,7 @@ p#advertise-text {
   font-weight: 500;
 }
 
-.collabse-number {
+.collabse-number, .collabse-number-whatsapp {
   display: flex;
   flex-direction: row;
 }
@@ -1946,10 +1946,21 @@ img.edit-icon {
   column-gap: 30px;
 }
 
-.form-gene,
-.form-password,
-.form-edit-profile {
-  margin-bottom: 25px;
+.edit-profile-submit{
+  margin: 0; 
+  margin-top: 40px; 
+  width: 100%; 
+  height: 40px; 
+  display: block;
+  background-color: #e94560;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
 
 .edit-picture,
@@ -1969,7 +1980,7 @@ img.edit-icon {
   width: 120px;
   background-color: #f4f5f5;
   border-radius: 100%;
-  border: 2px dashed rgb(143, 143, 143);
+  border: 2px solid #f4f5f5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2100,6 +2111,10 @@ input.add-input,
   display: block;
 }
 
+input.add-input{
+  margin-bottom: 10px;
+}
+
 .basic-right-input select {
   padding: 0 10px;
 }
@@ -2150,6 +2165,29 @@ input.add-input,
 
 .whatsapp-check:checked {
   background-color: #e94560;
+}
+
+.value62-whatsapp{
+  height: 33px;
+  border-radius: 15px 0 0 15px;
+  padding: 0 15px;
+  background-color: #f4f5f5;
+  border: none;
+  outline: none;
+  margin: 3px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.collabse-number-whatsapp hr {
+  width: 2px;
+  height: 33px;
+  border: none;
+  background-color: #ddd;
+  margin-top: 3px;
 }
 
 .grup-icon-label {

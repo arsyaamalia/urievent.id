@@ -9,7 +9,7 @@ function defaultBtnActive() {
   defaultBtn.click();
 }
 
-defaultBtn.addEventListener("change", function () {
+defaultBtn.addEventListener("click", function () {
   console.log("halooo");
   const file = this.files[0];
   if (file) {

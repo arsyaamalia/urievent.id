@@ -158,22 +158,43 @@
               <div class="basic-box">
                 <div class="edit-picture">
                   <!-- ini fotonya sudah keisi foto yg lama -->
+
                   <?php if ($dataProduk['picture_poster'] == NULL) : ?>
-                    <div class="edit-image-container">
+                    <div class="picture-input">
+                      <div class="drag-area">
+                        <div class="picture-field">
+                          <img name="layanan-img" src="/icon/picture2.png" class="picture-icon" />
+                        </div>
+                        <header>Drag and drop an image</header>
+                        <!-- <span>or</span> -->
+                      </div>
+                      <button id="browse">Browse</button>
+                      <input type="file" id="layanan-img" name="layanan-img" hidden>
+                    </div>
+                    <!-- <div class="edit-image-container">
                       <div class="edit-image-wrapper">
                         <div class="edit-image-image">
                           <img id="edit-image-img" src="/img/avatar.png" alt="">
                         </div>
                       </div>
                       <input type="file" name="layanan-img" id="default-btn" hidden>
+                    </div> -->
+                  <?php elseif ($dataProduk['picture_poster'] !== NULL) : ?>
+                    <div class="picture-input">
+                      <div class="drag-area active">
+                        <img src="/img/picture_poster_layanan/<?= $dataProduk['picture_poster'] ?>" alt="img" style="border-radius:100%">
+                      </div>
+                      <button id="browse">Edit Logo</button>
+                      <input type="file" id="layanan-img" name="layanan-img" hidden>
                     </div>
-                  <?php elseif (isset($dataUser['foto_user'])) : ?>
-                    <img src="/img/foto_user/<?= $dataUser['foto_user'] ?>">
+
+                    <!-- 
+                    <div class="edit-image-button">
+                      <button type="button" id="custom-btn" onclick="defaultBtnActive()">Upload new picture</button>
+                      <button onclick="deleteBtnActive()" id="delete-btn-avatar" class="button-grey">Delete</button>
+                    </div> -->
                   <?php endif; ?>
-                  <div class="edit-image-button">
-                    <button id="custom-btn" onclick="defaultBtnActive()">Upload new picture</button>
-                    <!-- <button onclick="deleteBtnActive()" id="delete-btn-avatar" class="button-grey">Delete</button> -->
-                  </div>
+
                 </div>
                 <!-- <div class="picture-input">
                   <div class="drag-area">
@@ -257,7 +278,6 @@
                       <input type="checkbox" id="instagram-check" name="instagram-check" value="instagram">
                     </div>
                   <?php endif; ?>
-
                 </div>
                 <div class="contact-input" id="contact-input-wa" style="display: block;">
                   <label for="whatsapp-input" class="upload-label">Whatsapp Number</label>
@@ -357,14 +377,6 @@
                   <label for="<?= $value ?>" class="upload-label-thin"><?= $value ?></label>
                 </div>
               <?php endforeach; ?>
-              <!-- <div class="check-item">
-                <input type="checkbox" id="value2-check" name="value[]" value="32.000++ active accounts">
-                <label for="value2-check" class="upload-label-thin">32.000++ active accounts</label>
-              </div>
-              <div class="check-item">
-                <input type="checkbox" id="value3-check" name="value[]" value="Have been a trusted media partner for 5 years">
-                <label for="value3-check" class="upload-label-thin">Have been a trusted media partner for 5 years</label>
-              </div> -->
 
               <div id="newRowValue"></div>
               <button id="addRowValue" type="button" class="btn-info">+ ADD OTHER VALUES</button>
@@ -393,7 +405,6 @@
               <div style="display: none;" id="banyakdata"><?= $banyakdata ?></div>
 
               <?php for ($i = 0; $i < $banyakdata; $i++) : ?>
-
                 <hr class="hr-addpackage">
                 <input type="text" name="package[<?= $i ?>][id_paket]" value="<?= $dataPaketNow[$i]['id_paket'] ?>">
                 <label for="package-name" class="upload-label">Package Category Name</label>
@@ -434,6 +445,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="<?= base_url('/js/jquery-3.6.0.min.js') ?>"></script>
 <script src="<?= base_url('/js/script.js') ?>"></script>
+<script src="<?= base_url('/js/edit.js') ?>"></script>
 <script>
   $(document).ready(function() {
     $('#category').change(function() {
