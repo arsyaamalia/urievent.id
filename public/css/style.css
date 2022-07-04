@@ -265,7 +265,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: .4s;
+  transition: .3s;
 }
 
 .category-circle {
@@ -313,7 +313,7 @@ h5 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: .4s;
+  transition: .3s;
 }
 
 .category-item:hover, .product-item:hover {
