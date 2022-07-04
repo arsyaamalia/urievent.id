@@ -292,7 +292,7 @@ h5 {
 }
 
 .product-hover {
-  transition: .2s;
+  transition: 0.2s;
   border-radius: 15px 15px 15px 0;
   height: 220px;
 }
@@ -312,11 +312,12 @@ h5 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: .2s;
+  transition: 0.2s;
 }
 
-.category-item:hover, .product-item:hover {
-  transition: all .2s;
+.category-item:hover,
+.product-item:hover {
+  transition: all 0.2s;
   position: relative;
   margin-top: 6px;
   margin-left: 6px;
