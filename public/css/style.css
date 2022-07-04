@@ -251,7 +251,13 @@ h5 {
   row-gap: 50px;
 }
 
-.categories-item {
+.hover {
+  transition: 0.2s;
+  border-radius: 15px 15px 15px 0;
+  height: 180px;
+}
+
+.category-item {
   height: 180px;
   background-color: #f4f5f5;
   border-radius: 15px 15px 15px 0;
@@ -277,107 +283,26 @@ h5 {
   width: 60px;
 }
 
-.categories-container,
-.recommendation-container {
-  margin: 30px 0;
-}
-
-.similar-container {
-  margin-bottom: 0px;
-}
-
-.search-container {
-  margin-left: 200px;
-}
-
-.recommendation-box,
-.recommendation-box-detail,
-.similar-box,
-.draft-box,
-.active-box {
-  margin-top: 30px;
+.product-box {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   column-gap: 30px;
+  row-gap: 30px;
+  margin-bottom: 30px;
 }
 
-.search-box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.hover {
-  transition: 0.2s;
+.product-hover {
+  transition: .2s;
   border-radius: 15px 15px 15px 0;
-  height: 180px;
-}
-
-.recom-hover,
-.search-hover,
-.similar-hover,
-.draft-hover,
-.active-hover {
-  transition: 0.2s;
-  border-radius: 15px 15px 15px 0;
-  width: 150px;
   height: 220px;
 }
 
 .hover:hover,
-.recom-hover:hover,
-.similar-hover:hover,
-.draft-hover:hover,
-.active-hover:hover {
+.product-hover:hover {
   background-color: #0f3460;
 }
 
-.search-hover:hover {
-  background-color: #0f3460;
-}
-
-.categories-item,
-.recom-item,
-.similar-item,
-.search-item,
-.draft-item,
-.active-item {
-  transition: 0.4s;
-}
-
-.categories-item:hover,
-.recom-item:hover,
-.similar-item:hover,
-.draft-item:hover,
-.active-item:hover {
-  position: relative;
-  margin-top: 6px;
-  margin-left: 6px;
-}
-
-.search-item:hover {
-  position: relative;
-  margin-top: 6px;
-  margin-left: 6px;
-}
-
-.recom-grup,
-.search-grup,
-.similar-grup,
-.draft-grup,
-.active-grup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.recom-item,
-.search-item,
-.similar-item,
-.draft-item,
-.active-item {
-  width: 150px;
+.product-item {
   height: 220px;
   margin-bottom: 30px;
   padding: 20px 20px;
@@ -387,16 +312,25 @@ h5 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  transition: .2s;
 }
 
-.recom-hover,
-.search-hover,
-.similar-hover {
-  margin-bottom: 30px;
+.category-item:hover, .product-item:hover {
+  transition: all .2s;
+  position: relative;
+  margin-top: 6px;
+  margin-left: 6px;
+  margin-right: -6px;
 }
 
-.item-circle,
-.search-circle {
+.product-grup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.item-circle {
   background-color: #0f3460;
   height: 100px;
   width: 100px;
@@ -814,7 +748,8 @@ p#advertise-text {
   font-weight: 500;
 }
 
-.collabse-number, .collabse-number-whatsapp {
+.collabse-number,
+.collabse-number-whatsapp {
   display: flex;
   flex-direction: row;
 }
@@ -1946,11 +1881,11 @@ img.edit-icon {
   column-gap: 30px;
 }
 
-.edit-profile-submit{
-  margin: 0; 
-  margin-top: 40px; 
-  width: 100%; 
-  height: 40px; 
+.edit-profile-submit {
+  margin: 0;
+  margin-top: 40px;
+  width: 100%;
+  height: 40px;
   display: block;
   background-color: #e94560;
   border: none;
@@ -2111,7 +2046,7 @@ input.add-input,
   display: block;
 }
 
-input.add-input{
+input.add-input {
   margin-bottom: 10px;
 }
 
@@ -2167,7 +2102,7 @@ input.add-input{
   background-color: #e94560;
 }
 
-.value62-whatsapp{
+.value62-whatsapp {
   height: 33px;
   border-radius: 15px 0 0 15px;
   padding: 0 15px;
@@ -2334,7 +2269,6 @@ hr.hr-addpackage {
 
 .service-container {
   margin: 40px auto;
-  width: 70%;
 }
 
 .service-slide,

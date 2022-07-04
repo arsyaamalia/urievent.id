@@ -24,13 +24,13 @@
         <div class="recommendation-container">
             <h2>Medpart</h2>
 
-            <div class="recommendation-box">
+            <div class="product-box">
                 <?php
                 foreach ($daftar_produk as $produk) : ?>
-                    <div class="recom-hover">
+                    <div class="product-hover">
                         <a href="/detail/index/<?= $produk['id_layanan']; ?>/<?= $produk['id_kategori']; ?>/<?= $produk['id_subkategori']; ?>">
-                            <div class="recom-item">
-                                <div class="recom-grup">
+                            <div class="product-item">
+                                <div class="product-grup">
                                     <div class="item-circle"><img src="/img/<?= $produk['picture_poster'] ?>" alt=""></div>
                                     <h4><?= $produk['nama_instansi'] ?></h4>
                                 </div>
