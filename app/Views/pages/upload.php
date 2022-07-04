@@ -152,7 +152,7 @@
           <div class="basic-container">
             <h5>Basic Information</h5>
             <fieldset>
-              <p class="upload-label" style="text-align: justify;">Instruction: Standard image dimension is multiplication of 5x5 with maximum image size 3 MB. Supports JPEG, JPG, and PNG. Please attach your company's LOGO down here.</p>
+              <p class="upload-label" style="text-align: justify;">Instruction: Standard image dimension is multiplication of 1:1 with maximum image size 3 MB. Supports JPEG, JPG, and PNG. Please attach your company's LOGO down here.</p>
               <br>
               <div class="basic-box">
                 <div class="picture-input">

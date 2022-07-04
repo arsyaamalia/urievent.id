@@ -265,6 +265,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: .4s;
 }
 
 .category-circle {
@@ -285,7 +286,7 @@ h5 {
 
 .product-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, .2fr));
   column-gap: 30px;
   row-gap: 30px;
   margin-bottom: 30px;
@@ -312,11 +313,10 @@ h5 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: .2s;
+  transition: .4s;
 }
 
 .category-item:hover, .product-item:hover {
-  transition: all .2s;
   position: relative;
   margin-top: 6px;
   margin-left: 6px;
@@ -331,7 +331,7 @@ h5 {
 }
 
 .item-circle {
-  background-color: #0f3460;
+  background-color: #fff;
   height: 100px;
   width: 100px;
   border-radius: 100%;
@@ -2007,7 +2007,7 @@ img.edit-icon {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
 }
-.drag-area img {
+.drag-area img, #product-image {
   height: 100%;
   width: 100%;
   border-radius: 100%;
