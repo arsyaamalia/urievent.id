@@ -24,7 +24,7 @@
             <div class="categories-box">
                 <div class="hover">
                     <a href="/pages/medpart">
-                        <div class="categories-item">
+                        <div class="category-item">
                             <div class="category-circle">
                                 <img src="../ICON/medpart.png" alt="medpart">
                             </div>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="hover">
                     <a href="/pages/sponsorship">
-                        <div class="categories-item">
+                        <div class="category-item">
                             <div class="category-circle">
                                 <img src="../ICON/sponsorship.png" alt="sponsorship">
                             </div>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="hover">
                     <a href="/pages/vendor">
-                        <div class="categories-item">
+                        <div class="category-item">
                             <div class="category-circle">
                                 <img src="../ICON/vendor.png" alt="vendor">
                             </div>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="hover">
                     <a href="/pages/venue">
-                        <div class="categories-item">
+                        <div class="category-item">
                             <div class="category-circle">
                                 <img src="../ICON/venue.png" alt="venue">
                             </div>
@@ -68,13 +68,13 @@
         <div class="recommendation-container">
             <h2>Recommendations</h2>
 
-            <div class="recommendation-box">
+            <div class="product-box">
                 <?php
                 foreach ($daftar_produk as $produk) : ?>
-                    <div class="recom-hover">
+                    <div class="product-hover">
                         <a href="/detail/index/<?= $produk['id_layanan']; ?>/<?= $produk['id_kategori']; ?>/<?= $produk['id_subkategori']; ?>">
-                            <div class="recom-item">
-                                <div class="recom-grup">
+                            <div class="product-item">
+                                <div class="product-grup">
                                     <!-- <div class="item-circle" style="background-size: cover; background-image: url('/img/picture_poster_layanan/$produk['picture_poster'] ') ;"> -->
                                     <div class="item-circle" style="overflow: hidden;">
                                         <img src="/img/picture_poster_layanan/<?= $produk['picture_poster'] ?>" alt="" style="object-fit: cover; width: auto; height: 100%;">

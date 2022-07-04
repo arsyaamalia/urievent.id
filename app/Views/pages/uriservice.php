@@ -36,15 +36,15 @@
         <div class="service-menu">
             <div class="menu-draft">
                 <h2>Draft</h2>
-                <div class="draft-box">
+                <div class="product-box">
                     <!-- draft box ini dalemnya buat looping service item yg draft -->
                     <?php foreach ($daftar_produk_draft as $produkDraft) : ?>
 
-                        <div class="draft-hover">
+                        <div class="product-hover">
                             <!-- link to detail-pribadi -->
                             <a href="/detail/detailpribadi/<?= $produkDraft['id_layanan']; ?>/<?= $produkDraft['id_kategori']; ?>/<?= $produkDraft['id_subkategori']; ?>">
-                                <div class="draft-item">
-                                    <div class="draft-grup">
+                                <div class="product-item">
+                                    <div class="product-grup">
                                         <div class="item-circle" style="overflow: hidden;">
                                             <img src="/img/picture_poster_layanan/<?= $produkDraft['picture_poster'] ?>" style="object-fit: cover; width: auto; height: 100%;">
                                         </div>
@@ -62,12 +62,12 @@
 
             <div class="menu-active" style="display: none;">
                 <h2>Active</h2>
-                <div class="active-box">
+                <div class="product-box">
                     <?php foreach ($daftar_produk_active as $produkActive) : ?>
-                        <div class="draft-hover">
+                        <div class="product-hover">
                             <a href="/detail/detailpribadi/<?= $produkActive['id_layanan']; ?>/<?= $produkActive['id_kategori']; ?>/<?= $produkActive['id_subkategori']; ?>">
-                                <div class="draft-item">
-                                    <div class="draft-grup">
+                                <div class="product-item">
+                                    <div class="product-grup">
                                         <div class="item-circle" style="overflow: hidden;">
                                             <img src="/img/picture_poster_layanan/<?= $produkActive['picture_poster'] ?>" style="object-fit: cover; width: auto; height: 100%;">
                                         </div>
