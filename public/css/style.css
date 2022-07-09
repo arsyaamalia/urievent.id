@@ -268,6 +268,9 @@ h5 {
   transition: 0.3s;
 }
 
+.detail-picture {
+  margin-right: 50px;
+}
 .category-circle {
   background-color: #0f3460;
   height: 100px;
@@ -286,7 +289,7 @@ h5 {
 
 .product-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 0.2fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 0.2fr));
   column-gap: 30px;
   row-gap: 30px;
   margin-bottom: 30px;
@@ -332,7 +335,7 @@ h5 {
 }
 
 .item-circle {
-  background-color: #fff;
+  background-color: #f4f5f5;
   height: 100px;
   width: 100px;
   border-radius: 100%;
@@ -2240,6 +2243,10 @@ div.input-group {
 .edit-picture img {
   width: 120px;
   border-radius: 100%;
+}
+
+.profile-photo {
+  margin-right: 20px;
 }
 
 .edit-button button {

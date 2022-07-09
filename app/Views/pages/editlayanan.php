@@ -187,7 +187,6 @@
                       <button id="browse">Edit Logo</button>
                       <input type="file" id="layanan-img" name="layanan-img" hidden>
                     </div>
-
                     <!-- 
                     <div class="edit-image-button">
                       <button type="button" id="custom-btn" onclick="defaultBtnActive()">Upload new picture</button>
@@ -406,7 +405,7 @@
 
               <?php for ($i = 0; $i < $banyakdata; $i++) : ?>
                 <hr class="hr-addpackage">
-                <input type="text" name="package[<?= $i ?>][id_paket]" value="<?= $dataPaketNow[$i]['id_paket'] ?>">
+                <input style="display: none;" type="text" name="package[<?= $i ?>][id_paket]" value="<?= $dataPaketNow[$i]['id_paket'] ?>">
                 <label for="package-name" class="upload-label">Package Category Name</label>
                 <input type="text" name="package[<?= $i ?>][name]" id="package-name" value="<?= $dataPaketNow[$i]['nama_paket'] ?>" required />
                 <label for="package-desc" class="upload-label">Package Category Description</label>
@@ -422,7 +421,7 @@
           <div class="upload-line">
             <hr>
           </div>
-          <div class="checkout-form-container">
+          <!-- <div class="checkout-form-container">
             <h5>Checkout Form</h5>
             <div class="fieldset-form">
               <p class="upload-label" style="text-align: justify;">Your clients are required to give Name, Email and Phone Number. You can ask customized questions for general in this part</p>
@@ -432,7 +431,7 @@
                 <input type="button" value="Add a field" class="add" id="add" />
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

@@ -140,7 +140,7 @@
                   <div class="picture-field">
                     <img name="layanan-img" src="/icon/picture2.png" class="picture-icon" />
                   </div>
-                  <header>Drag and drop an image</header>
+                  <header>Belum Ada Foto</header>
                   <!-- <span>or</span> -->
                 </div>
                 <button id="browse">Browse</button>

@@ -189,10 +189,10 @@ class Editlayanan extends BaseController
         $fileName = $fileImage->getRandomName();
         $fileImage->move('img/picture_poster_layanan', $fileName);
 
-        if ($product[0] != null && isset($product[0]['picture_poster'])) {
-            // unlink('img/picture_poster_layanan/' . $product['picture_poster']);
-            return $product[0]['picture_poster'];
-        }
+        // if ($product[0] != null && isset($product[0]['picture_poster'])) {
+        //     // unlink('img/picture_poster_layanan/' . $product[0]['picture_poster']);
+        //     return $product[0]['picture_poster'];
+        // }
 
         return $fileName;
     }

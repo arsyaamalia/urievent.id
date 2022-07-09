@@ -38,9 +38,9 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/pages', 'Pages::index', ['filter' => 'auth']);
 $routes->get('/upload', 'Upload::index', ['filter' => 'auth']);
-// $routes->get('/detail', 'Detail::index', ['filter' => 'auth']);
 $routes->get('/detail/(:segment)/(:segment)/(:segment)', '/Detail::index/$1/$2/$3');
 $routes->get('upload/getDataSubKategori(:segment)', '/DataSubKategori/$1');
+// $routes->get('/detail', 'Detail::index', ['filter' => 'auth']);
 // $routes->get('/detail/detailpribadi/(:segment)/(:segment)/(:segment)', '/Detail::detailpribadi/$1/$2/$3');
 // http://localhost:8081/detail/detailpribadi/LAY042/CAT001/SCAT002
 

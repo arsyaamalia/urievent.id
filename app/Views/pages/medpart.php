@@ -1,8 +1,9 @@
 <?= $this->extend('layouts/template') ?>
 <?= $this->section('content'); ?>
+<hr class="hr-service">
 
 <div class="batas-body">
-    <div class="sponsor-search">
+    <!-- <div class="sponsor-search">
         <div class="boxContainer">
             <table class="table-search">
                 <tr>
@@ -16,7 +17,7 @@
             </table>
         </div>
 
-    </div>
+    </div> -->
 
     <div class="body-urievent">
 
