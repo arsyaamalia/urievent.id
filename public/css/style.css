@@ -265,9 +265,12 @@ h5 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: .3s;
+  transition: 0.3s;
 }
 
+.detail-picture {
+  margin-right: 50px;
+}
 .category-circle {
   background-color: #0f3460;
   height: 100px;
@@ -286,14 +289,14 @@ h5 {
 
 .product-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, .2fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 0.2fr));
   column-gap: 30px;
   row-gap: 30px;
   margin-bottom: 30px;
 }
 
 .product-hover {
-  transition: .2s;
+  transition: 0.2s;
   border-radius: 15px 15px 15px 0;
   height: 220px;
 }
@@ -313,10 +316,11 @@ h5 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.category-item:hover, .product-item:hover {
+.category-item:hover,
+.product-item:hover {
   position: relative;
   margin-top: 6px;
   margin-left: 6px;
@@ -331,7 +335,7 @@ h5 {
 }
 
 .item-circle {
-  background-color: #fff;
+  background-color: #f4f5f5;
   height: 100px;
   width: 100px;
   border-radius: 100%;
@@ -2007,7 +2011,8 @@ img.edit-icon {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
 }
-.drag-area img, #product-image {
+.drag-area img,
+#product-image {
   height: 100%;
   width: 100%;
   border-radius: 100%;
@@ -2240,7 +2245,11 @@ div.input-group {
   border-radius: 100%;
 }
 
+<<<<<<< HEAD
 .profile-photo{
+=======
+.profile-photo {
+>>>>>>> 90128180551b5e30bde343147b6bd1ebdaf4ebc1
   margin-right: 20px;
 }
 

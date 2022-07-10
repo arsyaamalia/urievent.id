@@ -9,7 +9,7 @@
             <h2><a href="/pages/uriservice">＜<?= $detail['nama_instansi'] ?></a></h2>
             <div class="detail-item">
                 <div class="detail-picture">
-                    <img src="/img/picture_poster_layanan/<?= $detail['picture_poster'] ?>" class="img-logo" />
+                    <img src="/img/picture_poster_layanan/<?= $detail['picture_poster'] ?>" class="img-logo" id="product-image" />
                 </div>
                 <div class="detail-data">
                     <div class="detail-jenis">

@@ -7,7 +7,7 @@
     <h2><a href="/pages">＜<?= $detail['nama_instansi']; ?></a></h2>
     <div class="detail-item">
       <div class="detail-picture">
-        <img src="/img/picture_poster_layanan/<?= $detail['picture_poster'] ?>" class="img-logo" />
+        <img src="/img/picture_poster_layanan/<?= $detail['picture_poster'] ?>" class="img-logo" id="product-image" />
       </div>
 
       <div class="detail-data">
@@ -245,7 +245,10 @@
             <a href="/detail/index/<?= $daftarSimiliar[$i]['id_layanan']; ?>/<?= $daftarSimiliar[$i]['id_kategori']; ?>/<?= $daftarSimiliar[$i]['id_subkategori']; ?>">
               <div class="similar-item">
                 <div class="similar-grup">
-                  <div class="item-circle"></div>
+                  <div class="item-circle">
+                    <img src="/img/picture_poster_layanan/<?= $daftarSimiliar[$i]['picture_poster'] ?>" alt="" id="product-image">
+
+                  </div>
                   </form>
                   <h4><?= $daftarSimiliar[$i]['nama_instansi']; ?></h4>
                 </div>
