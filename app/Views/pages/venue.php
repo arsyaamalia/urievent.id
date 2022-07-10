@@ -22,7 +22,7 @@
     <div class="body-urievent">
 
         <div class="recommendation-container">
-            <h2>Medpart</h2>
+            <h2>Venue</h2>
 
             <div class="product-box">
                 <?php

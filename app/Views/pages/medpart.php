@@ -2,7 +2,7 @@
 <?= $this->section('content'); ?>
 
 <div class="batas-body">
-    <div class="sponsor-search">
+    <!-- <div class="sponsor-search">
         <div class="boxContainer">
             <table class="table-search">
                 <tr>
@@ -15,13 +15,24 @@
                 </tr>
             </table>
         </div>
+    </div> -->
 
-    </div>
+    <div class="layanan-box"></div>
+    <form action="#">
+        <div class="layanan-search-container">
+            <div class="layanan-search-icon">
+                <img src="/icon/search.png" alt="">
+            </div>
+            <div class="layanan-search-input">
+                <input type="text" name="search" placeholder="Search Media Partner">
+            </div>
+        </div>
+    </form>
 
     <div class="body-urievent">
 
         <div class="recommendation-container">
-            <h2>Medpart</h2>
+            <h2>Media Partner</h2>
             <div class="product-box">
                 <?php
                 foreach ($daftar_produk as $produk) : ?>

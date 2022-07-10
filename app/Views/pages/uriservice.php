@@ -8,7 +8,11 @@
 
     <div class="profile-container">
         <div class="profile-photo">
-            <img src="/img/foto_user/<?= session()->get('foto_user'); ?>" class=" photo-user">
+            <?php if (isset($_SESSION['foto_user'])) : ?>
+                <img src="/img/foto_user/<?= session()->get('foto_user'); ?>" class="photo-user">
+            <?php else : ?>
+                <img src="/img/avatar.png" class="nav-right-icon" id="message" style="border: 3px solid #f4f5f5">
+            <?php endif; ?>
         </div>
         <div class="name-edit">
             <div class="profile-name">

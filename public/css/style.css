@@ -2240,6 +2240,10 @@ div.input-group {
   border-radius: 100%;
 }
 
+.profile-photo{
+  margin-right: 20px;
+}
+
 .edit-button button {
   background-color: #e94560;
   border-radius: 15px;
@@ -2437,4 +2441,11 @@ button.button-grey {
 .edit-picture {
   display: flex;
   align-items: center;
+}
+
+.layanan-search-container{
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 0 rgb(22, 22, 37, 0.15);
+  display: flex;
 }
